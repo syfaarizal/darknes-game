@@ -1,0 +1,12 @@
+{
+  "id": "nathael",
+  "displayName": "Nathael",
+  "title": "The Heir",
+  "color": "#B91C1C",
+  "defaultExpression": "neutral",
+  "expressions": [
+    { "key": "neutral", "file": "neutral.webp" },
+    { "key": "smile", "file": "smile.webp" },
+    { "key": "serious", "file": "serious.webp" }
+  ]
+}

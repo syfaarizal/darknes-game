@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene10",
+    "title": "Placeholder \u2014 scene10",
+    "background": "office",
+    "entry": "scene10_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene10_n001",
+      "type": "narration",
+      "text": "The contracts are already signed. Only the details remain.",
+      "next": "scene10_n002"
+    },
+    {
+      "id": "scene10_n002",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene10_end"
+    },
+    {
+      "id": "scene10_end",
+      "type": "end"
+    }
+  ]
+}

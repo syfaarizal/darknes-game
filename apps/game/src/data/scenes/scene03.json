@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene03",
+    "title": "Placeholder \u2014 scene03",
+    "background": "basement",
+    "entry": "scene03_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene03_n001",
+      "type": "narration",
+      "text": "Somewhere below, the air smells like old concrete and secrets.",
+      "next": "scene03_n002"
+    },
+    {
+      "id": "scene03_n002",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene03_end"
+    },
+    {
+      "id": "scene03_end",
+      "type": "end"
+    }
+  ]
+}

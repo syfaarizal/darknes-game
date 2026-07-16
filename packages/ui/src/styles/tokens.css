@@ -1,0 +1,39 @@
+/**
+ * DARKNES design tokens.
+ * Every component in @darknes/ui reads colors/fonts from these variables —
+ * never a hardcoded hex — so a second game can re-skin the whole engine by
+ * swapping this one file.
+ */
+
+:root {
+  /* Core palette — dark, elegant, luxury mafia */
+  --color-void: #0a0a0a; /* page background */
+  --color-charcoal: #141414; /* panel background */
+  --color-graphite: #1c1c1c; /* raised surface / hover */
+  --color-hairline: rgba(255, 255, 255, 0.08); /* thin borders */
+
+  --color-accent: #8b0000; /* primary red accent */
+  --color-accent-strong: #b91c1c; /* hover / active red */
+  --color-accent-soft: rgba(139, 0, 0, 0.16); /* red tint fills */
+
+  --color-ink: #f5f4f0; /* primary text (near white) */
+  --color-ink-muted: rgba(245, 244, 240, 0.6); /* secondary text */
+  --color-ink-faint: rgba(245, 244, 240, 0.35); /* disabled / hints */
+
+  --color-glass-fill: rgba(20, 20, 20, 0.72);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Motion */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 400ms;
+  --duration-slow: 800ms;
+
+  /* Radii */
+  --radius-panel: 2px;
+  --radius-pill: 999px;
+}

@@ -1,0 +1,59 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+*.tsbuildinfo
+
+# Caches & tool outputs
+.turbo
+.vite
+.eslintcache
+.prettiercache
+.parcel-cache
+.netlify
+
+# Environment & secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Editor & IDE
+.idea/
+*.suo
+*.user
+*.sln.docstates
+*.swp
+*.swo
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Game-specific runtime artifacts
+*.log
+logs/
+saves/
+.tmp/
+*.tmp
+
+# Engine build output
+darknes-engine.zip
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Misc
+*.local
+*.pid
+*.seed
+*.pid.lock

@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene01",
+    "title": "Placeholder \u2014 scene01",
+    "background": "office",
+    "entry": "scene01_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene01_n001",
+      "type": "narration",
+      "text": "The city lights blur through the rain-streaked window.",
+      "next": "scene01_n002"
+    },
+    {
+      "id": "scene01_n002",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene01_end"
+    },
+    {
+      "id": "scene01_end",
+      "type": "end"
+    }
+  ]
+}

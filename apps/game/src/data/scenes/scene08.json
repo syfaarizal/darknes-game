@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene08",
+    "title": "Placeholder \u2014 scene08",
+    "background": "living-room",
+    "entry": "scene08_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene08_n001",
+      "type": "narration",
+      "text": "Alaric pours two glasses. He only drinks from one of them.",
+      "next": "scene08_n002"
+    },
+    {
+      "id": "scene08_n002",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene08_end"
+    },
+    {
+      "id": "scene08_end",
+      "type": "end"
+    }
+  ]
+}

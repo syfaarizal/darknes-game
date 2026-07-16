@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene12",
+    "title": "Placeholder \u2014 scene12",
+    "background": "basement",
+    "entry": "scene12_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene12_n001",
+      "type": "narration",
+      "text": "The final room. Damian holds the only key.",
+      "next": "scene12_n002"
+    },
+    {
+      "id": "scene12_n002",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene12_end"
+    },
+    {
+      "id": "scene12_end",
+      "type": "end"
+    }
+  ]
+}

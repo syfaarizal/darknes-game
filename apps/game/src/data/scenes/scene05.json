@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene05",
+    "title": "Placeholder \u2014 scene05",
+    "background": "library",
+    "entry": "scene05_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene05_n001",
+      "type": "narration",
+      "text": "Rows of leather spines. Alaric never keeps a book he hasn't read twice.",
+      "next": "scene05_n002"
+    },
+    {
+      "id": "scene05_n002",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene05_end"
+    },
+    {
+      "id": "scene05_end",
+      "type": "end"
+    }
+  ]
+}

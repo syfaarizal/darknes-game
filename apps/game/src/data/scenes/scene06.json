@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene06",
+    "title": "Placeholder \u2014 scene06",
+    "background": "office",
+    "entry": "scene06_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene06_n001",
+      "type": "narration",
+      "text": "Damian doesn't knock. He never has.",
+      "next": "scene06_n002"
+    },
+    {
+      "id": "scene06_n002",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene06_end"
+    },
+    {
+      "id": "scene06_end",
+      "type": "end"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene11",
+    "title": "Placeholder \u2014 scene11",
+    "background": "living-room",
+    "entry": "scene11_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene11_n001",
+      "type": "narration",
+      "text": "Nathael waits by the window, watching for a car that isn't coming.",
+      "next": "scene11_n002"
+    },
+    {
+      "id": "scene11_n002",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene11_end"
+    },
+    {
+      "id": "scene11_end",
+      "type": "end"
+    }
+  ]
+}

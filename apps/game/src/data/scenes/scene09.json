@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "id": "scene09",
+    "title": "Placeholder \u2014 scene09",
+    "background": "library",
+    "entry": "scene09_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene09_n001",
+      "type": "narration",
+      "text": "Azaroth reads in the dark. He always has.",
+      "next": "scene09_n002"
+    },
+    {
+      "id": "scene09_n002",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "next": "scene09_end"
+    },
+    {
+      "id": "scene09_end",
+      "type": "end"
+    }
+  ]
+}

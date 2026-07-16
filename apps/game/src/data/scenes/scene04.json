@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "id": "scene04",
+    "title": "The Office, After Hours",
+    "background": "office",
+    "music": "office-tension",
+    "entry": "s04_n001"
+  },
+  "nodes": [
+    {
+      "id": "s04_n001",
+      "type": "narration",
+      "text": "Rain against glass. Somewhere above the city, a light stays on long after everyone else has gone home.",
+      "camera": { "type": "zoom-in", "duration": 1200, "scale": 1.08 },
+      "next": "s04_n002"
+    },
+    {
+      "id": "s04_n002",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "serious",
+      "characters": [
+        { "characterId": "nathael", "expression": "serious", "position": "center", "isSpeaking": true }
+      ],
+      "text": "You're late.",
+      "next": "s04_n003"
+    },
+    {
+      "id": "s04_n003",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "text": "In this world, lateness is the same as betrayal.",
+      "next": "s04_n004"
+    },
+    {
+      "id": "s04_n004",
+      "type": "choice",
+      "prompt": "What will you say?",
+      "options": [
+        {
+          "id": "s04_c1",
+          "text": "Tell the truth.",
+          "hint": "Be honest with him.",
+          "goTo": "s04_truth_1",
+          "setFlags": [{ "key": "toldTruth", "value": true }]
+        },
+        {
+          "id": "s04_c2",
+          "text": "Accept the offer.",
+          "hint": "Take the deal.",
+          "goTo": "s04_deal_1",
+          "setVariables": [{ "key": "trustNathael", "op": "add", "value": 1 }]
+        },
+        {
+          "id": "s04_c3",
+          "text": "Walk away.",
+          "hint": "Leave while you can.",
+          "goTo": "s04_walk_1",
+          "setFlags": [{ "key": "walkedAway", "value": true }]
+        }
+      ]
+    },
+    {
+      "id": "s04_truth_1",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "text": "Honesty. How refreshing. Let's see how long that lasts.",
+      "camera": { "type": "punch", "duration": 250 },
+      "next": "s04_check_trust"
+    },
+    {
+      "id": "s04_deal_1",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "text": "Smart. Loyalty is rare here. Trust is lethal — but it's the only currency that matters.",
+      "next": "s04_check_trust"
+    },
+    {
+      "id": "s04_walk_1",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "serious",
+      "text": "Walk, then. But remember — you don't leave this room until I say you do.",
+      "next": "s04_check_trust"
+    },
+    {
+      "id": "s04_check_trust",
+      "type": "conditional",
+      "conditions": [{ "key": "trustNathael", "kind": "variable", "operator": ">=", "value": 1 }],
+      "ifTrue": "s04_end_good",
+      "ifFalse": "s04_end_neutral"
+    },
+    {
+      "id": "s04_end_good",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "text": "Perhaps you'll survive this family after all.",
+      "next": "s04_end"
+    },
+    {
+      "id": "s04_end_neutral",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "serious",
+      "text": "We'll see how long your resolve holds.",
+      "next": "s04_end"
+    },
+    {
+      "id": "s04_end",
+      "type": "end",
+      "endingId": "good-end"
+    }
+  ]
+}
