@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { DialogueNodeType } from '@darknes/shared';
 import { useDialogueRunner, useDialogueStore } from '@darknes/engine';
-import { NameBox } from '../NameBox';
 import { DialogueBox } from '../DialogueBox';
 import { ChoiceBox } from '../ChoiceBox';
 import { Typewriter } from '../Typewriter';
@@ -77,18 +76,17 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
     const color = currentNode.speaker ? speakerColorOf?.(currentNode.speaker) : undefined;
 
     return (
-      <div>
-        {currentNode.speaker && <NameBox name={currentNode.speaker} color={color} />}
-        <DialogueBox
-          onNext={next}
-          onToggleLog={onToggleLog}
-          onToggleAuto={toggleAutoMode}
-          isAutoMode={isAutoMode}
-          isAdvanceable
-        >
-          <Typewriter text={currentNode.text} />
-        </DialogueBox>
-      </div>
+      <DialogueBox
+        onNext={next}
+        onToggleLog={onToggleLog}
+        onToggleAuto={toggleAutoMode}
+        isAutoMode={isAutoMode}
+        isAdvanceable
+        name={currentNode.speaker}
+        nameColor={color}
+      >
+        <Typewriter text={currentNode.text} />
+      </DialogueBox>
     );
   }
 

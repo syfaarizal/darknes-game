@@ -8,6 +8,8 @@ export interface DialogueBoxProps {
   onToggleAuto: () => void;
   isAutoMode: boolean;
   isAdvanceable: boolean;
+  name?: string;
+  nameColor?: string;
 }
 
 export function DialogueBox({
@@ -17,13 +19,27 @@ export function DialogueBox({
   onToggleAuto,
   isAutoMode,
   isAdvanceable,
+  name,
+  nameColor = 'var(--color-accent-strong)',
 }: DialogueBoxProps) {
   return (
     <div
       onClick={() => isAdvanceable && onNext()}
-      className="relative mx-auto w-[90%] max-w-4xl cursor-pointer border border-[var(--color-glass-border)] bg-[var(--color-glass-fill)] px-6 py-5 backdrop-blur-md"
+      className="relative mx-auto w-[90%] max-w-4xl cursor-pointer border border-[var(--color-glass-border)] bg-[var(--color-glass-fill)] px-6 pt-5 pb-4 backdrop-blur-md"
       style={{ borderRadius: 'var(--radius-panel)' }}
     >
+      {name && (
+        <div className="mb-3 flex items-center gap-3">
+          <div
+            className="shrink-0 border-b-2 px-1 pb-0.5 font-display text-sm tracking-[0.14em] uppercase"
+            style={{ color: nameColor, borderColor: nameColor }}
+          >
+            {name}
+          </div>
+          <div className="h-px flex-1 border-t border-[var(--color-glass-border)]" />
+        </div>
+      )}
+
       <div className="min-h-[4.5rem] font-body text-[15px] leading-relaxed text-[var(--color-ink)]">
         {children}
       </div>
