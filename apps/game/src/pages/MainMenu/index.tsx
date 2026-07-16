@@ -31,13 +31,13 @@ export function MainMenu() {
         <img
           src="/assets/logo/logo-darknes.png"
           alt="Darknes"
-          className="mb-5 h-10 w-auto select-none object-contain"
+          className="mb-5 mx-auto block h-10 w-auto select-none object-contain"
           draggable="false"
         />
         <h1 className="mb-2 font-display text-7xl uppercase tracking-[0.08em] text-[var(--color-ink)]">
           Darknes
         </h1>
-        <p className="mb-8 font-display text-3xs uppercase tracking-[0.3em] text-[var(--color-accent-strong)]">
+        <p className="mb-8 mx-auto font-display text-3xs uppercase tracking-[0.3em] text-[var(--color-accent-strong)]">
           Interactive Novel Game
         </p>
 

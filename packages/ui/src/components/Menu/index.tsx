@@ -14,7 +14,7 @@ export interface MenuProps {
 /** Vertical menu stack used by MainMenu / Pause. First item renders as the primary CTA. */
 export function Menu({ items }: MenuProps) {
   return (
-    <nav className="flex w-full max-w-[20rem] flex-col items-stretch gap-3">
+    <nav className="flex w-full max-w-[22rem] flex-col items-stretch gap-3">
       {items.map((item) => {
         return (
           <motion.button
