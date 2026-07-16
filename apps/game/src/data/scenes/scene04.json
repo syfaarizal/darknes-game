@@ -2,7 +2,7 @@
   "meta": {
     "id": "scene04",
     "title": "Kantor Ravenscroft Corporation",
-    "background": "office",
+    "background": "office-room-player",
     "entry": "scene04_n001"
   },
   "nodes": [

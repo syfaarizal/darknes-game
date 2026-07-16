@@ -1,17 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu } from '@darknes/ui';
-import { StoryEngine, useSaveStore } from '@darknes/engine';
-
-const FIRST_SCENE_ID = 'scene04';
+import { useSaveStore } from '@darknes/engine';
 
 export function MainMenu() {
   const navigate = useNavigate();
   const hasSaves = useSaveStore((s) => s.slots.length > 0);
 
-  const startNewGame = async () => {
-    await StoryEngine.startScene(FIRST_SCENE_ID);
-    navigate('/game');
+  const startNewGame = () => {
+    navigate('/intro');
   };
 
   return (

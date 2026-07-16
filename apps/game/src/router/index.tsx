@@ -1,6 +1,7 @@
 import { createHashRouter } from 'react-router-dom';
 import { Splash } from '../pages/Splash';
 import { MainMenu } from '../pages/MainMenu';
+import { Intro } from '../pages/Intro';
 import { Game } from '../pages/Game';
 import { Pause } from '../pages/Pause';
 import { Settings } from '../pages/Settings';
@@ -16,6 +17,7 @@ import { Credits } from '../pages/Credits';
 export const router = createHashRouter([
   { path: '/', element: <Splash /> },
   { path: '/menu', element: <MainMenu /> },
+  { path: '/intro', element: <Intro /> },
   { path: '/game', element: <Game /> },
   { path: '/pause', element: <Pause /> },
   { path: '/settings', element: <Settings /> },

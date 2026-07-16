@@ -20,6 +20,11 @@ export interface BackgroundManifestEntry {
 
 export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
   office: { id: 'office', path: 'backgrounds/office/default.webp', label: 'Office' },
+  'office-room-player': {
+    id: 'office-room-player',
+    path: 'backgrounds/office/office-room-player.webp',
+    label: 'Office Room Player',
+  },
   basement: { id: 'basement', path: 'backgrounds/basement/default.webp', label: 'Basement' },
   'living-room': {
     id: 'living-room',
