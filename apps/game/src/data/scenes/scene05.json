@@ -1,31 +1,607 @@
 {
   "meta": {
     "id": "scene05",
-    "title": "Placeholder \u2014 scene05",
-    "background": "library",
+    "title": "Rumah Ravenscroft — Ruang Kerja — Malam Hari",
+    "background": "workspace-night",
     "entry": "scene05_n001"
   },
   "nodes": [
     {
       "id": "scene05_n001",
       "type": "narration",
-      "text": "Rows of leather spines. Alaric never keeps a book he hasn't read twice.",
+      "text": "Tumpukan dokumen memenuhi meja kerja. Player masih sibuk membaca laporan. Suara pintu balkon terbuka pelan. Angin malam masuk membawa udara dingin. Seorang pria berambut hitam bersandar di kusen pintu sambil tersenyum kecil.",
       "next": "scene05_n002"
     },
     {
       "id": "scene05_n002",
       "type": "line",
-      "speaker": "alaric",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Masih bekerja?",
+      "next": "scene05_n003"
+    },
+    {
+      "id": "scene05_n003",
+      "type": "line",
+      "speaker": "player",
       "expression": "neutral",
       "characters": [
         {
-          "characterId": "alaric",
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "...",
+      "next": "scene05_n004"
+    },
+    {
+      "id": "scene05_n004",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
           "expression": "neutral",
           "position": "center",
           "isSpeaking": true
         }
       ],
-      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "text": "Ada sesuatu?",
+      "next": "scene05_n005"
+    },
+    {
+      "id": "scene05_n005",
+      "type": "narration",
+      "text": "Nathael berjalan masuk. Ia duduk santai di atas meja.",
+      "next": "scene05_n006"
+    },
+    {
+      "id": "scene05_n006",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau belum menjawab pertanyaanku.",
+      "next": "scene05_n007"
+    },
+    {
+      "id": "scene05_n007",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Masih banyak yang harus kuselesaikan",
+          "goTo": "scene05_n008a"
+        },
+        {
+          "text": "Aku tidak bisa tidur",
+          "goTo": "scene05_n008b"
+        },
+        {
+          "text": "(Tetap fokus membaca dokumen)",
+          "goTo": "scene05_n008c"
+        }
+      ]
+    },
+    {
+      "id": "scene05_n008a",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku tahu kau akan seperti ini.",
+      "next": "scene05_n009"
+    },
+    {
+      "id": "scene05_n008b",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku tahu kau akan seperti ini.",
+      "next": "scene05_n009"
+    },
+    {
+      "id": "scene05_n008c",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku tahu kau akan seperti ini.",
+      "next": "scene05_n009"
+    },
+    {
+      "id": "scene05_n009",
+      "type": "narration",
+      "text": "Ruangan kembali hening. Nathael mengambil salah satu map di meja.",
+      "next": "scene05_n010"
+    },
+    {
+      "id": "scene05_n010",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Laporan lagi?",
+      "next": "scene05_n011"
+    },
+    {
+      "id": "scene05_n011",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Kalau aku berhenti, perusahaan ini ikut berhenti",
+          "goTo": "scene05_n012a"
+        },
+        {
+          "text": "Ini sudah menjadi rutinitasku",
+          "goTo": "scene05_n012b"
+        },
+        {
+          "text": "Aku hanya tidak ingin membuat kesalahan",
+          "goTo": "scene05_n012c"
+        }
+      ]
+    },
+    {
+      "id": "scene05_n012a",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau masih sama. Dulu... kalau nilai ujianmu sembilan puluh sembilan... kau menangis semalaman hanya karena kurang satu angka.",
+      "next": "scene05_n013"
+    },
+    {
+      "id": "scene05_n012b",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau masih sama. Dulu... kalau nilai ujianmu sembilan puluh sembilan... kau menangis semalaman hanya karena kurang satu angka.",
+      "next": "scene05_n013"
+    },
+    {
+      "id": "scene05_n012c",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau masih sama. Dulu... kalau nilai ujianmu sembilan puluh sembilan... kau menangis semalaman hanya karena kurang satu angka.",
+      "next": "scene05_n013"
+    },
+    {
+      "id": "scene05_n013",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(terdiam) ...Aku pernah seperti itu?",
+      "next": "scene05_n014"
+    },
+    {
+      "id": "scene05_n014",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(terkekeh pelan) Lebih parah.",
+      "next": "scene05_n015"
+    },
+    {
+      "id": "scene05_n015",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Aku sudah banyak berubah",
+          "goTo": "scene05_n016a"
+        },
+        {
+          "text": "Aku bahkan hampir tidak mengingatnya",
+          "goTo": "scene05_n016b"
+        },
+        {
+          "text": "(Terdiam)",
+          "goTo": "scene05_n016c"
+        }
+      ]
+    },
+    {
+      "id": "scene05_n016a",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Menurutmu... kalau mereka masih ada... apa mereka akan bangga melihatmu sekarang?",
+      "next": "scene05_n017"
+    },
+    {
+      "id": "scene05_n016b",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Menurutmu... kalau mereka masih ada... apa mereka akan bangga melihatmu sekarang?",
+      "next": "scene05_n017"
+    },
+    {
+      "id": "scene05_n016c",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Menurutmu... kalau mereka masih ada... apa mereka akan bangga melihatmu sekarang?",
+      "next": "scene05_n017"
+    },
+    {
+      "id": "scene05_n017",
+      "type": "narration",
+      "text": "Ruangan mendadak sunyi. Player menggenggam pulpen sedikit lebih erat.",
+      "next": "scene05_n018"
+    },
+    {
+      "id": "scene05_n018",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Aku tidak tahu",
+          "goTo": "scene05_n019a"
+        },
+        {
+          "text": "Aku harap begitu",
+          "goTo": "scene05_n019b"
+        },
+        {
+          "text": "Aku belum pantas",
+          "goTo": "scene05_n019c"
+        }
+      ]
+    },
+    {
+      "id": "scene05_n019a",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau masih menyalahkan dirimu sendiri.",
+      "next": "scene05_n020"
+    },
+    {
+      "id": "scene05_n019b",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau masih menyalahkan dirimu sendiri.",
+      "next": "scene05_n020"
+    },
+    {
+      "id": "scene05_n019c",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kau masih menyalahkan dirimu sendiri.",
+      "next": "scene05_n020"
+    },
+    {
+      "id": "scene05_n020",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Kalau malam itu aku lebih kuat...",
+          "goTo": "scene05_n021a"
+        },
+        {
+          "text": "Aku gagal melindungi mereka",
+          "goTo": "scene05_n021b"
+        },
+        {
+          "text": "Aku tidak ingin membahasnya",
+          "goTo": "scene05_n021c"
+        }
+      ]
+    },
+    {
+      "id": "scene05_n021a",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menghela napas pelan) Luka yang dipendam... tidak akan sembuh hanya karena kau berpura-pura melupakannya.",
+      "next": "scene05_n022"
+    },
+    {
+      "id": "scene05_n021b",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menghela napas pelan) Luka yang dipendam... tidak akan sembuh hanya karena kau berpura-pura melupakannya.",
+      "next": "scene05_n022"
+    },
+    {
+      "id": "scene05_n021c",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menghela napas pelan) Luka yang dipendam... tidak akan sembuh hanya karena kau berpura-pura melupakannya.",
+      "next": "scene05_n022"
+    },
+    {
+      "id": "scene05_n022",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(menundukkan kepala) Aku tidak pernah mencoba melupakannya. Aku hanya... tidak ingin mengalaminya lagi.",
+      "next": "scene05_n023"
+    },
+    {
+      "id": "scene05_n023",
+      "type": "narration",
+      "text": "Nathael tersenyum lembut. Ia turun dari meja. Kemudian mengusap pelan kepala Player. Seketika Player mulai tenang dan nyaman.",
+      "next": "scene05_n024"
+    },
+    {
+      "id": "scene05_n024",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Dengar baik-baik. Kau boleh membenci masa lalumu. Kau boleh menangisinya. Tapi jangan biarkan masa lalu itu mengambil masa depanmu juga.",
+      "next": "scene05_n025"
+    },
+    {
+      "id": "scene05_n025",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Aku akan mencoba",
+          "goTo": "scene05_n026a"
+        },
+        {
+          "text": "Itu tidak semudah yang kau pikir",
+          "goTo": "scene05_n026b"
+        },
+        {
+          "text": "(Menutup mata sejenak)",
+          "goTo": "scene05_n026c"
+        }
+      ]
+    },
+    {
+      "id": "scene05_n026a",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(tersenyum) Itu sudah cukup.",
+      "next": "scene05_n027"
+    },
+    {
+      "id": "scene05_n026b",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(tersenyum) Itu sudah cukup.",
+      "next": "scene05_n027"
+    },
+    {
+      "id": "scene05_n026c",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(tersenyum) Itu sudah cukup.",
+      "next": "scene05_n027"
+    },
+    {
+      "id": "scene05_n027",
+      "type": "narration",
+      "text": "Ia berjalan menuju balkon. Sebelum keluar, ia berhenti. Tanpa menoleh.",
+      "next": "scene05_n028"
+    },
+    {
+      "id": "scene05_n028",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "...Apa pun yang terjadi nanti, aku akan tetap berada di sisimu... sampai kau tidak lagi membutuhkanku.",
+      "next": "scene05_n029"
+    },
+    {
+      "id": "scene05_n029",
+      "type": "narration",
+      "text": "Nathael meninggalkan ruangan. Player menatap punggungnya yang perlahan menghilang dalam gelap. Tanpa sadar, sudut bibirnya terangkat membentuk senyum tipis.",
       "next": "scene05_end"
     },
     {

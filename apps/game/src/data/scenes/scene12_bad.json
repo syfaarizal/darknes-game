@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "id": "scene12_bad",
+    "title": "Rumah Sakit — Bad Ending",
+    "background": "hospital",
+    "entry": "scene12_bad_n001"
+  },
+  "nodes": [
+    {
+      "id": "scene12_bad_n001",
+      "type": "narration",
+      "text": "Damian berada di ICU. Player berdiri sendirian di lorong rumah sakit. Tangannya masih berlumuran darah Damian.",
+      "next": "scene12_bad_n002"
+    },
+    {
+      "id": "scene12_bad_n002",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "...Nathael?",
+      "next": "scene12_bad_n003"
+    },
+    {
+      "id": "scene12_bad_n003",
+      "type": "narration",
+      "text": "Tidak ada jawaban. Player mulai berjalan menyusuri lorong.",
+      "next": "scene12_bad_n004"
+    },
+    {
+      "id": "scene12_bad_n004",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Nathael... aku harus bagaimana?",
+      "next": "scene12_bad_n005"
+    },
+    {
+      "id": "scene12_bad_n005",
+      "type": "narration",
+      "text": "Masih sunyi. Ia mulai panik.",
+      "next": "scene12_bad_n006"
+    },
+    {
+      "id": "scene12_bad_n006",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Nathael! Nathael!",
+      "next": "scene12_bad_n007"
+    },
+    {
+      "id": "scene12_bad_n007",
+      "type": "narration",
+      "text": "Alaric berlari menghampiri.",
+      "next": "scene12_bad_n008"
+    },
+    {
+      "id": "scene12_bad_n008",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kak! Ada apa?",
+      "next": "scene12_bad_n009"
+    },
+    {
+      "id": "scene12_bad_n009",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Di mana Nathael?",
+          "goTo": "scene12_bad_n010a"
+        },
+        {
+          "text": "Tolong panggilkan dia",
+          "goTo": "scene12_bad_n010b"
+        },
+        {
+          "text": "Aku butuh dia...",
+          "goTo": "scene12_bad_n010c"
+        }
+      ]
+    },
+    {
+      "id": "scene12_bad_n010a",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menundukkan kepala) ...Player, soal Nathael... dia... dia nggak pernah ada.",
+      "next": "scene12_bad_n011"
+    },
+    {
+      "id": "scene12_bad_n010b",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menundukkan kepala) ...Player, soal Nathael... dia... dia nggak pernah ada.",
+      "next": "scene12_bad_n011"
+    },
+    {
+      "id": "scene12_bad_n010c",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menundukkan kepala) ...Player, soal Nathael... dia... dia nggak pernah ada.",
+      "next": "scene12_bad_n011"
+    },
+    {
+      "id": "scene12_bad_n011",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(membeku) Apa?",
+      "next": "scene12_bad_n012"
+    },
+    {
+      "id": "scene12_bad_n012",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(ragu) Selama ini... yang kami lihat... dirimu selalu bicara sendiri. Orang yang kamu panggil Nathael itu tidak pernah bisa kami lihat wujudnya.",
+      "next": "scene12_bad_n013"
+    },
+    {
+      "id": "scene12_bad_n013",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(menggeleng) Tidak, itu tidak mungkin. Dia selalu ada dan selalu menemaniku.",
+      "next": "scene12_bad_n014"
+    },
+    {
+      "id": "scene12_bad_n014",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Player... Kami udah lama tahu. Kami cuma... ngga mau kamu terluka.",
+      "next": "scene12_bad_n015"
+    },
+    {
+      "id": "scene12_bad_n015",
+      "type": "narration",
+      "text": "Player mundur beberapa langkah. Air matanya mulai jatuh.",
+      "next": "scene12_bad_n016"
+    },
+    {
+      "id": "scene12_bad_n016",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Dia nyata. Dia selalu ada...",
+      "next": "scene12_bad_n017"
+    },
+    {
+      "id": "scene12_bad_n017",
+      "type": "narration",
+      "text": "Saat itulah, sosok Nathael muncul di ujung lorong. Tersenyum. Mengulurkan tangan.",
+      "next": "scene12_bad_n018"
+    },
+    {
+      "id": "scene12_bad_n018",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Jangan menangis, Player.",
+      "next": "scene12_bad_n019"
+    },
+    {
+      "id": "scene12_bad_n019",
+      "type": "narration",
+      "text": "Player langsung berlari ke arahnya. Alaric hanya melihat Player berlari ke lorong kosong. Ia menangis.",
+      "next": "scene12_bad_n020"
+    },
+    {
+      "id": "scene12_bad_n020",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(memeluk Nathael) Mereka semua bohong...",
+      "next": "scene12_bad_n021"
+    },
+    {
+      "id": "scene12_bad_n021",
+      "type": "narration",
+      "text": "Alaric menatap Player tidak tega. Layar perlahan menghitam.",
+      "next": "scene12_bad_end"
+    },
+    {
+      "id": "scene12_bad_end",
+      "type": "end",
+      "endingId": "bad-ending"
+    }
+  ]
+}

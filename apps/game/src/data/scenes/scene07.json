@@ -1,31 +1,409 @@
 {
   "meta": {
     "id": "scene07",
-    "title": "Placeholder \u2014 scene07",
-    "background": "basement",
+    "title": "Kantor Ravenscroft Corporation — Keesokan Hari",
+    "background": "office",
     "entry": "scene07_n001"
   },
   "nodes": [
     {
       "id": "scene07_n001",
       "type": "narration",
-      "text": "The basement door was left open. That was never an accident.",
+      "text": "Matahari mulai tenggelam di balik gedung-gedung kota. Player menutup map berisi informasi mengenai Victor Hale. Ia berdiri, mengambil mantel hitamnya. Belum sempat melangkah keluar, suara Damian menghentikannya.",
       "next": "scene07_n002"
     },
     {
       "id": "scene07_n002",
       "type": "line",
-      "speaker": "nathael",
+      "speaker": "damian",
       "expression": "neutral",
       "characters": [
         {
-          "characterId": "nathael",
+          "characterId": "damian",
           "expression": "neutral",
           "position": "center",
           "isSpeaking": true
         }
       ],
-      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "text": "Mau ke mana?",
+      "next": "scene07_n003"
+    },
+    {
+      "id": "scene07_n003",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Ada urusan",
+          "goTo": "scene07_n004a"
+        },
+        {
+          "text": "Menyelidiki seseorang",
+          "goTo": "scene07_n004b"
+        },
+        {
+          "text": "Bukan urusanmu",
+          "goTo": "scene07_n004c"
+        }
+      ]
+    },
+    {
+      "id": "scene07_n004a",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
+      "next": "scene07_n005"
+    },
+    {
+      "id": "scene07_n004b",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
+      "next": "scene07_n005"
+    },
+    {
+      "id": "scene07_n004c",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
+      "next": "scene07_n005"
+    },
+    {
+      "id": "scene07_n005",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kalau itu urusan perusahaan... aku pasti sudah tahu.",
+      "next": "scene07_n006"
+    },
+    {
+      "id": "scene07_n006",
+      "type": "narration",
+      "text": "Ruangan kembali hening. Player menghela napas pelan.",
+      "next": "scene07_n007"
+    },
+    {
+      "id": "scene07_n007",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "Aku mendapat petunjuk baru. Namanya Victor Hale. Besok aku akan menemuinya.",
+      "next": "scene07_n008"
+    },
+    {
+      "id": "scene07_n008",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Tidak.",
+      "next": "scene07_n009"
+    },
+    {
+      "id": "scene07_n009",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Aku tidak meminta izin",
+          "goTo": "scene07_n010a"
+        },
+        {
+          "text": "Aku hanya memberitahumu",
+          "goTo": "scene07_n010b"
+        },
+        {
+          "text": "Aku bisa menanganinya sendiri",
+          "goTo": "scene07_n010c"
+        }
+      ]
+    },
+    {
+      "id": "scene07_n010a",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(melangkah mendekat) Itulah masalahnya. Kau selalu ingin menanganinya sendiri.",
+      "next": "scene07_n011"
+    },
+    {
+      "id": "scene07_n010b",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(melangkah mendekat) Itulah masalahnya. Kau selalu ingin menanganinya sendiri.",
+      "next": "scene07_n011"
+    },
+    {
+      "id": "scene07_n010c",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(melangkah mendekat) Itulah masalahnya. Kau selalu ingin menanganinya sendiri.",
+      "next": "scene07_n011"
+    },
+    {
+      "id": "scene07_n011",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Karena ini urusanku",
+          "goTo": "scene07_n012a"
+        },
+        {
+          "text": "Aku tidak ingin melibatkan siapa pun",
+          "goTo": "scene07_n012b"
+        },
+        {
+          "text": "Semakin sedikit yang tahu, semakin aman",
+          "goTo": "scene07_n012c"
+        }
+      ]
+    },
+    {
+      "id": "scene07_n012a",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menatap Player beberapa detik) Sepuluh tahun lalu... kau juga berpikir bisa menghadapi semuanya sendiri.",
+      "next": "scene07_n013"
+    },
+    {
+      "id": "scene07_n012b",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menatap Player beberapa detik) Sepuluh tahun lalu... kau juga berpikir bisa menghadapi semuanya sendiri.",
+      "next": "scene07_n013"
+    },
+    {
+      "id": "scene07_n012c",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menatap Player beberapa detik) Sepuluh tahun lalu... kau juga berpikir bisa menghadapi semuanya sendiri.",
+      "next": "scene07_n013"
+    },
+    {
+      "id": "scene07_n013",
+      "type": "narration",
+      "text": "Player terdiam.",
+      "next": "scene07_n014"
+    },
+    {
+      "id": "scene07_n014",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku ikut.",
+      "next": "scene07_n015"
+    },
+    {
+      "id": "scene07_n015",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Tidak",
+          "goTo": "scene07_n016a"
+        },
+        {
+          "text": "Aku tidak butuh bantuan",
+          "goTo": "scene07_n016b"
+        },
+        {
+          "text": "Itu terlalu berbahaya",
+          "goTo": "scene07_n016c"
+        }
+      ]
+    },
+    {
+      "id": "scene07_n016a",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menyilangkan tangan) Kalau memang berbahaya... justru itu alasan aku harus ikut.",
+      "next": "scene07_n017"
+    },
+    {
+      "id": "scene07_n016b",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menyilangkan tangan) Kalau memang berbahaya... justru itu alasan aku harus ikut.",
+      "next": "scene07_n017"
+    },
+    {
+      "id": "scene07_n016c",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menyilangkan tangan) Kalau memang berbahaya... justru itu alasan aku harus ikut.",
+      "next": "scene07_n017"
+    },
+    {
+      "id": "scene07_n017",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "Aku hanya tidak ingin kehilangan siapapun lagi.",
+      "next": "scene07_n018"
+    },
+    {
+      "id": "scene07_n018",
+      "type": "narration",
+      "text": "Player langsung pergi meninggalkan Damian sendiri di ruang kerjanya.",
+      "next": "scene07_n019"
+    },
+    {
+      "id": "scene07_n019",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menghela nafas)",
       "next": "scene07_end"
     },
     {

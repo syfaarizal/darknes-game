@@ -1,19 +1,583 @@
 {
   "meta": {
     "id": "scene11",
-    "title": "Placeholder \u2014 scene11",
-    "background": "living-room",
+    "title": "Ruang Kerja Victor Hale — Konfrontasi",
+    "background": "mansion-office",
     "entry": "scene11_n001"
   },
   "nodes": [
     {
       "id": "scene11_n001",
       "type": "narration",
-      "text": "Nathael waits by the window, watching for a car that isn't coming.",
+      "text": "Player tanpa sengaja masuk ke ruang kerja. Ia melihat sebuah foto lama di atas meja. Foto Samuel Ravenscroft bersama Victor Hale. Di belakangnya tertulis: 'Kesepakatan terakhir.'",
       "next": "scene11_n002"
     },
     {
       "id": "scene11_n002",
+      "type": "narration",
+      "text": "Player membuka laci. Puluhan dokumen bertuliskan RAVENSCROFT memenuhi isinya. Di halaman terakhir, dua tanda tangan: Samuel Ravenscroft. Azaroth.",
+      "next": "scene11_n003"
+    },
+    {
+      "id": "scene11_n003",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(membelalak) ...Azaroth?",
+      "next": "scene11_n004"
+    },
+    {
+      "id": "scene11_n004",
+      "type": "narration",
+      "text": "Tep... Tep... Tep... Suara tepuk tangan terdengar dari belakang. Victor berdiri di ambang pintu. Senyumnya kini berbeda.",
+      "next": "scene11_n005"
+    },
+    {
+      "id": "scene11_n005",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(smirk) Apakah aku sudah ketahuan?",
+      "next": "scene11_n006"
+    },
+    {
+      "id": "scene11_n006",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(menggenggam pistolnya) Jadi... Kaulah pembunuh mereka.",
+      "next": "scene11_n007"
+    },
+    {
+      "id": "scene11_n007",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(tertawa) Biar aku perkenalkan diri ku lagi dari awal. Diri ku Azaroth, rekan bisnis ayah tercintamu.",
+      "next": "scene11_n008"
+    },
+    {
+      "id": "scene11_n008",
+      "type": "narration",
+      "text": "Beberapa pria bersenjata masuk. Mereka menyeret Alaric. Tangannya terikat. Sebuah pistol menempel di kepalanya.",
+      "next": "scene11_n009"
+    },
+    {
+      "id": "scene11_n009",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "K-Kak... Aku minta maaf... Aku benar-benar nggak tahu... Aku kira beliau teman Om Samuel... dia memanfaatkan ku (air matanya jatuh) Aku... pengkhianat.",
+      "next": "scene11_n010"
+    },
+    {
+      "id": "scene11_n010",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(tertawa) Anak itu sangat berguna. Dia memberiku semua informasi yang kubutuhkan.",
+      "next": "scene11_n011"
+    },
+    {
+      "id": "scene11_n011",
+      "type": "narration",
+      "text": "Azaroth meletakkan sebuah kontrak di atas meja.",
+      "next": "scene11_n012"
+    },
+    {
+      "id": "scene11_n012",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Tandatangani. Bisnismu menjadi milikku. Atau... (menodongkan pistol ke kepala Alaric) ...dia mati.",
+      "next": "scene11_n013"
+    },
+    {
+      "id": "scene11_n013",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menggeleng) Jangan... Jangan lakukan, Player.",
+      "next": "scene11_n014"
+    },
+    {
+      "id": "scene11_n014",
+      "type": "narration",
+      "text": "Player membeku. Kontrak itu persis seperti sepuluh tahun lalu.",
+      "next": "scene11_n015"
+    },
+    {
+      "id": "scene11_n015",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Tandatangani kontrak — 'Setidaknya Alaric selamat...'",
+          "goTo": "scene11_sign"
+        },
+        {
+          "text": "Mengulur waktu — 'Aku butuh kesempatan...'",
+          "goTo": "scene11_stall"
+        },
+        {
+          "text": "Robek kontrak — 'Sejarah tidak akan terulang lagi.'",
+          "goTo": "scene11_rip"
+        }
+      ]
+    },
+    {
+      "id": "scene11_sign",
+      "type": "narration",
+      "text": "Player perlahan mengambil pena. Tangannya gemetar. Azaroth tersenyum puas.",
+      "next": "scene11_sign_02"
+    },
+    {
+      "id": "scene11_sign_02",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Seperti ayahmu. Pada akhirnya... keluarga Ravenscroft selalu memilih orang yang mereka cintai.",
+      "next": "scene11_sign_03"
+    },
+    {
+      "id": "scene11_sign_03",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menggeleng sambil menangis) Jangan... Aku nggak pantas diselamatkan...",
+      "next": "scene11_sign_04"
+    },
+    {
+      "id": "scene11_sign_04",
+      "type": "narration",
+      "text": "Player menandatangani kontrak.",
+      "next": "scene11_sign_05"
+    },
+    {
+      "id": "scene11_sign_05",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "...Lepaskan dia.",
+      "next": "scene11_sign_06"
+    },
+    {
+      "id": "scene11_sign_06",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(tertawa) Hahaha... Hebat. ternyata sejarah memang suka mengulang dirinya.",
+      "next": "scene11_sign_07"
+    },
+    {
+      "id": "scene11_sign_07",
+      "type": "narration",
+      "text": "BRAK!! Pintu ruang kerja terbuka. Damian masuk bersama beberapa anak buah Ravenscroft.",
+      "next": "scene11_sign_08"
+    },
+    {
+      "id": "scene11_sign_08",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Player!",
+      "next": "scene11_sign_09"
+    },
+    {
+      "id": "scene11_sign_09",
+      "type": "narration",
+      "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Damian mendorong Player menjauh. DOR!! Peluru menembus tubuh Damian.",
+      "next": "scene11_sign_10"
+    },
+    {
+      "id": "scene11_sign_10",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "...DAMIAN!!",
+      "next": "scene11_sign_11"
+    },
+    {
+      "id": "scene11_sign_11",
+      "type": "narration",
+      "text": "Damian roboh. Pasukan Ravenscroft membalas tembakan. Azaroth mundur bersama anak buahnya. Sebelum pergi, ia tersenyum.",
+      "next": "scene11_sign_12"
+    },
+    {
+      "id": "scene11_sign_12",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Terima kasih... atas perusahaanmu.",
+      "next": "scene11_sign_13"
+    },
+    {
+      "id": "scene11_sign_13",
+      "type": "scene-change",
+      "targetSceneId": "scene12_bad"
+    },
+    {
+      "id": "scene11_stall",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "Aku punya satu pertanyaan.",
+      "next": "scene11_stall_02"
+    },
+    {
+      "id": "scene11_stall_02",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Tapi silakan.",
+      "next": "scene11_stall_03"
+    },
+    {
+      "id": "scene11_stall_03",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "Kenapa keluargaku?",
+      "next": "scene11_stall_04"
+    },
+    {
+      "id": "scene11_stall_04",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(berjalan perlahan) Karena ayahmu... terlalu mudah percaya pada orang lain.",
+      "next": "scene11_stall_05"
+    },
+    {
+      "id": "scene11_stall_05",
+      "type": "narration",
+      "text": "Player melirik jam di dinding. Azaroth menyadarinya.",
+      "next": "scene11_stall_06"
+    },
+    {
+      "id": "scene11_stall_06",
+      "type": "narration",
+      "text": "BRAK!! Pintu didobrak. Damian masuk bersama beberapa anak buah Ravenscroft.",
+      "next": "scene11_stall_07"
+    },
+    {
+      "id": "scene11_stall_07",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Player!",
+      "next": "scene11_stall_08"
+    },
+    {
+      "id": "scene11_stall_08",
+      "type": "narration",
+      "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Damian mendorong Player menjauh. DOR! Sebuah peluru menggores bahu Damian.",
+      "next": "scene11_stall_09"
+    },
+    {
+      "id": "scene11_stall_09",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "Damian!",
+      "next": "scene11_stall_10"
+    },
+    {
+      "id": "scene11_stall_10",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Hanya lecet. Alaric, cepat keluar bersama Player.",
+      "next": "scene11_stall_11"
+    },
+    {
+      "id": "scene11_stall_11",
+      "type": "narration",
+      "text": "Azaroth dan pasukannya lumpuh. Player berjalan mendekati Azaroth yang sudah tidak berdaya. Menodongkan pistol ke kepala Azaroth.",
+      "next": "scene11_stall_12"
+    },
+    {
+      "id": "scene11_stall_12",
+      "type": "line",
+      "speaker": "player",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "(tersenyum tipis) Aku akan mengambil sesuatu yang harusnya menjadi milikku.",
+      "next": "scene11_stall_13"
+    },
+    {
+      "id": "scene11_stall_13",
+      "type": "narration",
+      "text": "DOR! Layar perlahan menggelap.",
+      "next": "scene11_stall_14"
+    },
+    {
+      "id": "scene11_stall_14",
+      "type": "end",
+      "endingId": "neutral-end"
+    },
+    {
+      "id": "scene11_rip",
+      "type": "narration",
+      "text": "Player menatap kontrak itu beberapa detik. Lalu...",
+      "next": "scene11_rip_02"
+    },
+    {
+      "id": "scene11_rip_02",
+      "type": "narration",
+      "text": "SREEK!! Ia merobeknya menjadi dua. Ruangan langsung hening. Senyum Azaroth menghilang.",
+      "next": "scene11_rip_03"
+    },
+    {
+      "id": "scene11_rip_03",
+      "type": "line",
+      "speaker": "azaroth",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "azaroth",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "...Berani sekali (mengangkat senjatanya)",
+      "next": "scene11_rip_04"
+    },
+    {
+      "id": "scene11_rip_04",
+      "type": "narration",
+      "text": "BRAK!! Pintu didobrak. Damian masuk bersama beberapa anak buah Ravenscroft.",
+      "next": "scene11_rip_05"
+    },
+    {
+      "id": "scene11_rip_05",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Player!",
+      "next": "scene11_rip_06"
+    },
+    {
+      "id": "scene11_rip_06",
+      "type": "narration",
+      "text": "DOR!! Suara tembakan memenuhi ruangan.",
+      "next": "scene11_rip_07"
+    },
+    {
+      "id": "scene11_rip_07",
+      "type": "line",
+      "speaker": "damian",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "damian",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Player!",
+      "next": "scene11_rip_08"
+    },
+    {
+      "id": "scene11_rip_08",
+      "type": "narration",
+      "text": "Peluru menembus dada Player. Tubuhnya jatuh ke lantai. Pandangannya mulai kabur. Suara tembakan semakin jauh. Samar-samar, ia melihat seseorang berlutut di sampingnya. Pria berambut hitam. Mata biru seperti lautan.",
+      "next": "scene11_rip_09"
+    },
+    {
+      "id": "scene11_rip_09",
       "type": "line",
       "speaker": "nathael",
       "expression": "neutral",
@@ -25,12 +589,51 @@
           "isSpeaking": true
         }
       ],
-      "text": "(placeholder dialogue \u2014 replace with real script)",
-      "next": "scene11_end"
+      "text": "...Kau memang keras kepala.",
+      "next": "scene11_rip_10"
     },
     {
-      "id": "scene11_end",
-      "type": "end"
+      "id": "scene11_rip_10",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "...Maaf.",
+      "next": "scene11_rip_11"
+    },
+    {
+      "id": "scene11_rip_11",
+      "type": "line",
+      "speaker": "nathael",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Sudah. Ayo pulang.",
+      "next": "scene11_rip_12"
+    },
+    {
+      "id": "scene11_rip_12",
+      "type": "narration",
+      "text": "Cahaya putih mulai memenuhi pandangan. Suara tembakan perlahan menghilang. Yang tersisa, hanya genggaman hangat di tangan Player. Layar berubah putih.",
+      "next": "scene11_rip_13"
+    },
+    {
+      "id": "scene11_rip_13",
+      "type": "scene-change",
+      "targetSceneId": "scene12_hidden"
     }
   ]
 }

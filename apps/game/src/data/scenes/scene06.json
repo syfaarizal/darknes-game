@@ -1,31 +1,241 @@
 {
   "meta": {
     "id": "scene06",
-    "title": "Placeholder \u2014 scene06",
-    "background": "office",
+    "title": "Ruang Bawah Tanah",
+    "background": "basement",
     "entry": "scene06_n001"
   },
   "nodes": [
     {
       "id": "scene06_n001",
       "type": "narration",
-      "text": "Damian doesn't knock. He never has.",
+      "text": "Seorang pria paruh baya duduk terikat di kursi besi. Wajahnya dipenuhi luka lebam. Player berdiri di depannya dengan kedua tangan di dalam saku jas. Tatapannya tetap dingin.",
       "next": "scene06_n002"
     },
     {
       "id": "scene06_n002",
       "type": "line",
-      "speaker": "damian",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku hanya akan bertanya sekali. Siapa yang berada di rumah keluarga Ravenscroft malam itu?",
+      "next": "scene06_n003"
+    },
+    {
+      "id": "scene06_n003",
+      "type": "line",
+      "speaker": "captive",
       "expression": "neutral",
       "characters": [
         {
-          "characterId": "damian",
+          "characterId": "captive",
           "expression": "neutral",
           "position": "center",
           "isSpeaking": true
         }
       ],
-      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "text": "(tertunduk) ...Aku tidak tahu.",
+      "next": "scene06_n004"
+    },
+    {
+      "id": "scene06_n004",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menghela napas pelan) Jawaban yang buruk.",
+      "next": "scene06_n005"
+    },
+    {
+      "id": "scene06_n005",
+      "type": "narration",
+      "text": "Player meletakkan sebuah foto lama di hadapan pria tersebut. Foto keluarga Ravenscroft. Di belakangnya tampak beberapa pria mengenakan jas. Mata pria itu langsung membelalak.",
+      "next": "scene06_n006"
+    },
+    {
+      "id": "scene06_n006",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "...Kau mengenal salah satu dari mereka.",
+      "next": "scene06_n007"
+    },
+    {
+      "id": "scene06_n007",
+      "type": "line",
+      "speaker": "captive",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "captive",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(terdiam beberapa saat) ...Aku hanya tahu satu orang.",
+      "next": "scene06_n008"
+    },
+    {
+      "id": "scene06_n008",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Siapa?",
+      "next": "scene06_n009"
+    },
+    {
+      "id": "scene06_n009",
+      "type": "line",
+      "speaker": "captive",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "captive",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "...Victor Hale.",
+      "next": "scene06_n010"
+    },
+    {
+      "id": "scene06_n010",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Lanjutkan.",
+      "next": "scene06_n011"
+    },
+    {
+      "id": "scene06_n011",
+      "type": "line",
+      "speaker": "captive",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "captive",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Dia... mantan rekan bisnis ayahmu. Setelah malam itu... dia menghilang.",
+      "next": "scene06_n012"
+    },
+    {
+      "id": "scene06_n012",
+      "type": "line",
+      "speaker": "player",
+      "expression": "serious",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "serious",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(mempersempit tatapannya) Di mana dia sekarang?",
+      "next": "scene06_n013"
+    },
+    {
+      "id": "scene06_n013",
+      "type": "line",
+      "speaker": "captive",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "captive",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(menelan ludah) ...Pinggiran Kota Elaris. Daerah Blackwood. Rumah tua di dekat danau. Itu saja yang aku tahu.",
+      "next": "scene06_n014"
+    },
+    {
+      "id": "scene06_n014",
+      "type": "narration",
+      "text": "Ruangan kembali sunyi. Player menatap foto di tangannya beberapa detik. Ia menyerahkan foto itu kepada pengawal.",
+      "next": "scene06_n015"
+    },
+    {
+      "id": "scene06_n015",
+      "type": "line",
+      "speaker": "player",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "player",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Cari informasi tentang rumah itu.",
+      "next": "scene06_n016"
+    },
+    {
+      "id": "scene06_n016",
+      "type": "line",
+      "speaker": "guard",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "guard",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "(mengangguk) Baik, Nona Ravenscroft.",
+      "next": "scene06_n017"
+    },
+    {
+      "id": "scene06_n017",
+      "type": "narration",
+      "text": "Player berjalan meninggalkan ruang bawah tanah. Tatapannya tak lagi kosong. Untuk pertama kalinya... setelah sepuluh tahun... ia memiliki arah yang harus dituju.",
       "next": "scene06_end"
     },
     {

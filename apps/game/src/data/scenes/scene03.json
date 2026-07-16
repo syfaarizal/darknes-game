@@ -1,31 +1,331 @@
 {
   "meta": {
     "id": "scene03",
-    "title": "Placeholder \u2014 scene03",
-    "background": "basement",
+    "title": "Ruang Keluarga — Pagi Hari",
+    "background": "family-room",
     "entry": "scene03_n001"
   },
   "nodes": [
     {
       "id": "scene03_n001",
       "type": "narration",
-      "text": "Somewhere below, the air smells like old concrete and secrets.",
+      "text": "Keesokan harinya, di kediaman Ravenscroft, semua sedang asik melakukan kesibukannya masing-masing. Sampai akhirnya Player keluar kamar.",
       "next": "scene03_n002"
     },
     {
       "id": "scene03_n002",
       "type": "line",
-      "speaker": "azaroth",
+      "speaker": "mike",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "mike",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kak!",
+      "next": "scene03_n003"
+    },
+    {
+      "id": "scene03_n003",
+      "type": "narration",
+      "text": "Mike berlari dan memeluk Player erat.",
+      "next": "scene03_n004"
+    },
+    {
+      "id": "scene03_n004",
+      "type": "line",
+      "speaker": "mike",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "mike",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Akhirnya kakak bangun juga!",
+      "next": "scene03_n005"
+    },
+    {
+      "id": "scene03_n005",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Selamat pagi, Mike",
+          "goTo": "scene03_n006a"
+        },
+        {
+          "text": "(Mengusap kepala Mike tanpa berkata apa pun)",
+          "goTo": "scene03_n006b"
+        },
+        {
+          "text": "Pagi... jangan lari di dalam rumah",
+          "goTo": "scene03_n006c"
+        }
+      ]
+    },
+    {
+      "id": "scene03_n006a",
+      "type": "line",
+      "speaker": "mike",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "mike",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kakak pasti belum sarapan!",
+      "next": "scene03_n007"
+    },
+    {
+      "id": "scene03_n006b",
+      "type": "line",
+      "speaker": "mike",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "mike",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kakak pasti belum sarapan!",
+      "next": "scene03_n007"
+    },
+    {
+      "id": "scene03_n006c",
+      "type": "line",
+      "speaker": "mike",
+      "expression": "smile",
+      "characters": [
+        {
+          "characterId": "mike",
+          "expression": "smile",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Kakak pasti belum sarapan!",
+      "next": "scene03_n007"
+    },
+    {
+      "id": "scene03_n007",
+      "type": "narration",
+      "text": "Alaric berjalan mendekat sambil membawa tablet.",
+      "next": "scene03_n008"
+    },
+    {
+      "id": "scene03_n008",
+      "type": "line",
+      "speaker": "alaric",
       "expression": "neutral",
       "characters": [
         {
-          "characterId": "azaroth",
+          "characterId": "alaric",
           "expression": "neutral",
           "position": "center",
           "isSpeaking": true
         }
       ],
-      "text": "(placeholder dialogue \u2014 replace with real script)",
+      "text": "Hm... maaf ganggu pagi-pagi. Tapi ada sedikit laporan.",
+      "next": "scene03_n009"
+    },
+    {
+      "id": "scene03_n009",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Katakan",
+          "goTo": "scene03_n010a"
+        },
+        {
+          "text": "Masalah apa lagi?",
+          "goTo": "scene03_n010b"
+        },
+        {
+          "text": "Semoga bukan kabar buruk",
+          "goTo": "scene03_n010c"
+        }
+      ]
+    },
+    {
+      "id": "scene03_n010a",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Ini soal kontrak bisnis di Eropa. Kontrak tersebut sudah disetujui. Tapi mereka minta jadwal pengiriman dimajukan.",
+      "next": "scene03_n011"
+    },
+    {
+      "id": "scene03_n010b",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Ini soal kontrak bisnis di Eropa. Kontrak tersebut sudah disetujui. Tapi mereka minta jadwal pengiriman dimajukan.",
+      "next": "scene03_n011"
+    },
+    {
+      "id": "scene03_n010c",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Ini soal kontrak bisnis di Eropa. Kontrak tersebut sudah disetujui. Tapi mereka minta jadwal pengiriman dimajukan.",
+      "next": "scene03_n011"
+    },
+    {
+      "id": "scene03_n011",
+      "type": "choice",
+      "options": [
+        {
+          "text": "(Berpikir)",
+          "goTo": "scene03_n012a"
+        },
+        {
+          "text": "Apa kata Damian?",
+          "goTo": "scene03_n012b"
+        },
+        {
+          "text": "Damian sudah tahu?",
+          "goTo": "scene03_n012c"
+        }
+      ]
+    },
+    {
+      "id": "scene03_n012a",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
+      "next": "scene03_n013"
+    },
+    {
+      "id": "scene03_n012b",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
+      "next": "scene03_n013"
+    },
+    {
+      "id": "scene03_n012c",
+      "type": "line",
+      "speaker": "alaric",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "alaric",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
+      "next": "scene03_n013"
+    },
+    {
+      "id": "scene03_n013",
+      "type": "narration",
+      "text": "Henry meregangkan badan dari sofa.",
+      "next": "scene03_n014"
+    },
+    {
+      "id": "scene03_n014",
+      "type": "line",
+      "speaker": "henry",
+      "expression": "neutral",
+      "characters": [
+        {
+          "characterId": "henry",
+          "expression": "neutral",
+          "position": "center",
+          "isSpeaking": true
+        }
+      ],
+      "text": "Astaga... masih pagi udah ngomongin kerjaan.",
+      "next": "scene03_n015"
+    },
+    {
+      "id": "scene03_n015",
+      "type": "choice",
+      "options": [
+        {
+          "text": "(Tidak menghiraukan)",
+          "goTo": "scene03_n016a"
+        },
+        {
+          "text": "Bukan kah sudah biasa?",
+          "goTo": "scene03_n016b"
+        },
+        {
+          "text": "Kamu mau gantiin?",
+          "goTo": "scene03_n016c"
+        }
+      ]
+    },
+    {
+      "id": "scene03_n016a",
+      "type": "narration",
+      "text": "Henry hanya terdiam dan menggelengkan kepalanya.",
+      "next": "scene03_end"
+    },
+    {
+      "id": "scene03_n016b",
+      "type": "narration",
+      "text": "Henry hanya terdiam dan menggelengkan kepalanya.",
+      "next": "scene03_end"
+    },
+    {
+      "id": "scene03_n016c",
+      "type": "narration",
+      "text": "Henry hanya terdiam dan menggelengkan kepalanya.",
       "next": "scene03_end"
     },
     {
