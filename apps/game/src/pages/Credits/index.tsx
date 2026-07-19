@@ -12,8 +12,8 @@ export function Credits() {
       <h1 className="mb-6 font-display text-3xl uppercase tracking-[0.15em] text-[var(--color-ink)]">
         Darknes
       </h1>
-      <p className="text-sm text-[var(--color-ink-muted)]">Written &amp; Directed — LIBR</p>
-      <p className="text-sm text-[var(--color-ink-muted)]">Engine &amp; Engineering — LIBR</p>
+      <p className="text-sm text-[var(--color-ink-muted)]">Written &amp; Directed — Seika Ryu</p>
+      <p className="text-sm text-[var(--color-ink-muted)]">Engine &amp; Engineering — Kai Shi</p>
       <p className="mb-8 text-sm text-[var(--color-ink-muted)]">Built with the DARKNES VN Engine</p>
       <GhostButton onClick={() => navigate('/menu')}>Back to Menu</GhostButton>
     </div>
