@@ -1,34 +1,13 @@
 import { TEXT_SPEED_MS_PER_CHAR, TextSpeed } from '@darknes/shared';
 import type { HistoryEntry, LineNode, VariableValue } from '@darknes/shared';
 import { useDialogueStore } from '../../store/dialogueStore';
+import { replaceVariables, getVariableContext } from '../VariableEngine';
 
 /**
- * Replaces all variable placeholders in text with their actual values.
- * Supported placeholders:
- *   {playerName} — the player's chosen name
- *   {variableKey} — any game variable (e.g. {money}, {trustDamian})
- *
- * Placeholders are replaced in order, so future variables can be added
- * simply by including them in the game variables map.
+ * @deprecated Use replaceVariables from VariableEngine instead.
+ * This re-export exists for backward compatibility.
  */
-export function replaceVariables(
-  text: string,
-  variables: Record<string, VariableValue>,
-  playerName: string,
-): string {
-  let result = text;
-
-  // Always replace playerName first
-  result = result.replace(/\{playerName\}/g, playerName);
-
-  // Replace any variable placeholders
-  for (const [key, value] of Object.entries(variables)) {
-    const pattern = new RegExp(`\\{${key}\\}`, 'g');
-    result = result.replace(pattern, String(value));
-  }
-
-  return result;
-}
+export { replaceVariables, getVariableContext } from '../VariableEngine';
 
 /**
  * Runs the typewriter reveal for a line node. Resolves once the full text
@@ -90,12 +69,21 @@ export function buildHistoryEntry(
   node: LineNode,
   sceneId: string,
   resolvedText?: string,
+  playerName?: string,
+  variables?: Record<string, VariableValue>,
 ): HistoryEntry {
+  // If resolvedText is not provided, resolve variables now
+  const text = resolvedText ?? (
+    playerName && variables
+      ? replaceVariables(node.text, getVariableContext(playerName, variables))
+      : node.text
+  );
+
   return {
     nodeId: node.id,
     sceneId,
     speaker: node.speaker,
-    text: resolvedText ?? node.text,
+    text,
     timestamp: Date.now(),
   };
 }

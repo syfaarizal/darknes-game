@@ -7,7 +7,8 @@ import { getNodeById, loadScene } from '../SceneEngine';
 import { applyLineToStage } from '../CharacterEngine';
 import { setBackground } from '../BackgroundEngine';
 import { presentChoices, resolveChoice } from '../ChoiceEngine';
-import { buildHistoryEntry, recordHistory, runTypewriter, replaceVariables } from '../DialogueEngine';
+import { buildHistoryEntry, recordHistory, runTypewriter } from '../DialogueEngine';
+import { replaceVariables, getVariableContext } from '../VariableEngine';
 import { playCue } from '../AudioEngine';
 import { useSettingsStore } from '../../store/settingsStore';
 
@@ -72,11 +73,12 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
         // ui layer reads dialogueStore.currentNode.transition directly
       }
       const { playerName, variables } = useGameStore.getState();
-      const resolvedText = replaceVariables(node.text, variables, playerName);
+      const ctx = getVariableContext(playerName, variables);
+      const resolvedText = replaceVariables(node.text, ctx);
       const { textSpeedPreset } = useSettingsStore.getState();
       const { promise } = runTypewriter(resolvedText, textSpeedPreset);
       await promise;
-      recordHistory(buildHistoryEntry(node, scene.meta.id, resolvedText));
+      recordHistory(buildHistoryEntry(node, scene.meta.id, resolvedText, playerName, variables));
 
       if (useDialogueStore.getState().isAutoMode) {
         const delay = useSettingsStore.getState().text.autoModeDelayMs;

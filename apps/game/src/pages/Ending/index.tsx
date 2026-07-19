@@ -1,9 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PrimaryButton, SecondaryButton } from '@darknes/ui';
+import { useGameStore, VariableEngine } from '@darknes/engine';
+
+const { replaceVariables, getVariableContext } = VariableEngine;
 
 export function Ending() {
   const navigate = useNavigate();
+  const { playerName, variables } = useGameStore();
+  const ctx = getVariableContext(playerName, variables);
 
   return (
     <div className="relative flex h-screen w-screen flex-col items-center justify-center bg-[var(--color-void)] px-6 text-center">
@@ -33,8 +38,10 @@ export function Ending() {
         transition={{ delay: 0.6, duration: 0.6 }}
         className="mb-10 max-w-md font-body text-sm leading-relaxed text-[var(--color-ink-muted)]"
       >
-        You made the choices that kept you alive. But in this world, survival is just the
-        beginning.
+        {replaceVariables(
+          '{playerName}, you made the choices that kept you alive. But in this world, survival is just the beginning.',
+          ctx,
+        )}
       </motion.p>
 
       <div className="flex gap-3">

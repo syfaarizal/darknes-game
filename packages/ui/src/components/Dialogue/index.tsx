@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { DialogueNodeType } from '@darknes/shared';
-import { useDialogueRunner, useDialogueStore } from '@darknes/engine';
+import {
+  useDialogueRunner,
+  useDialogueStore,
+  useGameStore,
+  VariableEngine,
+} from '@darknes/engine';
 import { DialogueBox } from '../DialogueBox';
-import { ChoiceBox } from '../ChoiceBox';
 import { Typewriter } from '../Typewriter';
+
+const { replaceVariables, getVariableContext, resolveSpeakerName } = VariableEngine;
 
 export interface DialogueLayerProps {
   onToggleLog: () => void;
@@ -20,6 +26,8 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
   const { currentNode, pendingChoices, isAutoMode, toggleAutoMode, next, pick } =
     useDialogueRunner();
   const history = useDialogueStore((s) => s.history);
+  const { playerName, variables } = useGameStore();
+  const ctx = getVariableContext(playerName, variables);
 
   if (!currentNode) return null;
 
@@ -30,7 +38,7 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
         <div className="absolute bottom-full left-0 right-0 mb-2 flex flex-col items-end gap-2">
           {currentNode.prompt && (
             <p className="self-start font-body text-sm uppercase tracking-[0.1em] text-[var(--color-ink-muted)]">
-              {currentNode.prompt}
+              {replaceVariables(currentNode.prompt, ctx)}
             </p>
           )}
           <div className="flex w-full flex-col items-end gap-2 sm:w-auto sm:min-w-[280px] sm:max-w-sm">
@@ -73,7 +81,13 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
   }
 
   if (currentNode.type === DialogueNodeType.Line || currentNode.type === DialogueNodeType.Narration) {
-    const color = currentNode.speaker ? speakerColorOf?.(currentNode.speaker) : undefined;
+    // Resolve the speaker name: handles {playerName} placeholder + PLAYER fallback
+    const resolvedSpeaker = resolveSpeakerName(currentNode.speaker ?? '', ctx);
+
+    // Resolve all variable placeholders in the dialogue text
+    const resolvedText = replaceVariables(currentNode.text, ctx);
+
+    const color = resolvedSpeaker ? speakerColorOf?.(resolvedSpeaker) : undefined;
 
     return (
       <DialogueBox
@@ -82,10 +96,10 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
         onToggleAuto={toggleAutoMode}
         isAutoMode={isAutoMode}
         isAdvanceable
-        name={currentNode.speaker}
+        name={resolvedSpeaker}
         nameColor={color}
       >
-        <Typewriter text={currentNode.text} />
+        <Typewriter text={resolvedText} />
       </DialogueBox>
     );
   }

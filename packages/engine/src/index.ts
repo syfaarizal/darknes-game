@@ -3,6 +3,7 @@ export * from './store';
 export * as StoryEngine from './engines/StoryEngine';
 export * as SceneEngine from './engines/SceneEngine';
 export * as DialogueEngine from './engines/DialogueEngine';
+export * as VariableEngine from './engines/VariableEngine';
 export * as ChoiceEngine from './engines/ChoiceEngine';
 export * as CharacterEngine from './engines/CharacterEngine';
 export * as BackgroundEngine from './engines/BackgroundEngine';

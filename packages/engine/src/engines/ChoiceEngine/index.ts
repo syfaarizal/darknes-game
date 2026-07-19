@@ -2,6 +2,17 @@ import { evaluateConditions } from '@darknes/shared';
 import type { ChoiceNode, SceneChoiceOption } from '@darknes/shared';
 import { useGameStore } from '../../store/gameStore';
 import { useDialogueStore } from '../../store/dialogueStore';
+import { replaceVariables, getVariableContext } from '../VariableEngine';
+
+interface ResolvedChoiceOption {
+  id: string;
+  text: string;
+  hint?: string;
+  goTo: string;
+  conditions?: ChoiceNode['options'][0]['conditions'];
+  setFlags?: ChoiceNode['options'][0]['setFlags'];
+  setVariables?: ChoiceNode['options'][0]['setVariables'];
+}
 
 /** Returns only the options whose conditions currently pass. */
 export function getAvailableOptions(node: ChoiceNode): SceneChoiceOption[] {
@@ -9,8 +20,27 @@ export function getAvailableOptions(node: ChoiceNode): SceneChoiceOption[] {
   return node.options.filter((option) => evaluateConditions(option.conditions, flags, variables));
 }
 
+/**
+ * Presents choices to the player, with all variable placeholders resolved.
+ * e.g. "You have {money} coins" → "You have 150 coins"
+ */
 export function presentChoices(node: ChoiceNode): void {
-  useDialogueStore.getState().setPendingChoices(getAvailableOptions(node));
+  const { playerName, variables } = useGameStore.getState();
+  const ctx = getVariableContext(playerName, variables);
+
+  const available = getAvailableOptions(node);
+
+  const resolved: ResolvedChoiceOption[] = available.map((option) => ({
+    id: option.id,
+    text: replaceVariables(option.text, ctx),
+    hint: option.hint ? replaceVariables(option.hint, ctx) : undefined,
+    goTo: option.goTo,
+    conditions: option.conditions,
+    setFlags: option.setFlags,
+    setVariables: option.setVariables,
+  }));
+
+  useDialogueStore.getState().setPendingChoices(resolved as SceneChoiceOption[]);
 }
 
 /**

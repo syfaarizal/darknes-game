@@ -36,15 +36,39 @@ export function Load() {
         {slots.map((slot) => (
           <div
             key={slot.meta.id}
-            className="flex items-center justify-between border border-[var(--color-glass-border)] bg-[var(--color-glass-fill)] px-5 py-3"
+            className="flex items-center justify-between border border-[var(--color-glass-border)] bg-[var(--color-glass-fill)] px-5 py-4"
           >
-            <div>
+            <div className="flex-1">
+              {/* Slot header */}
               <p className="font-body text-sm text-[var(--color-ink)]">{slot.meta.label}</p>
-              <p className="text-xs text-[var(--color-ink-faint)]">
-                {new Date(slot.meta.createdAt).toLocaleString()} — {slot.meta.sceneId}
-              </p>
+
+              {/* Slot meta grid */}
+              <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+                <span className="flex items-center gap-1.5 text-xs text-[var(--color-ink-faint)]">
+                  <span className="font-display uppercase tracking-[0.08em] text-[var(--color-ink-muted)]">
+                    Player
+                  </span>
+                  <span className="text-[var(--color-ink)]">{slot.playerName || '—'}</span>
+                </span>
+                <span className="flex items-center gap-1.5 text-xs text-[var(--color-ink-faint)]">
+                  <span className="font-display uppercase tracking-[0.08em] text-[var(--color-ink-muted)]">
+                    Scene
+                  </span>
+                  <span className="text-[var(--color-ink)]">{slot.meta.sceneId}</span>
+                </span>
+                <span className="flex items-center gap-1.5 text-xs text-[var(--color-ink-faint)]">
+                  <span className="font-display uppercase tracking-[0.08em] text-[var(--color-ink-muted)]">
+                    Saved
+                  </span>
+                  <span className="text-[var(--color-ink)]">
+                    {new Date(slot.meta.createdAt).toLocaleString()}
+                  </span>
+                </span>
+              </div>
             </div>
-            <SecondaryButton onClick={() => handleLoad(slot.meta.id)}>Load</SecondaryButton>
+            <SecondaryButton onClick={() => handleLoad(slot.meta.id)} className="ml-4 shrink-0">
+              Load
+            </SecondaryButton>
           </div>
         ))}
       </div>

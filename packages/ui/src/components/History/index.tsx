@@ -1,7 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { X } from 'lucide-react';
 import type { HistoryEntry } from '@darknes/shared';
+import { useGameStore, VariableEngine } from '@darknes/engine';
 import { IconButton } from '../Buttons';
+
+const { getVariableContext, resolveSpeakerName } = VariableEngine;
 
 export interface HistoryLogProps {
   open: boolean;
@@ -10,6 +13,9 @@ export interface HistoryLogProps {
 }
 
 export function HistoryLog({ open, entries, onClose }: HistoryLogProps) {
+  const { playerName, variables } = useGameStore();
+  const ctx = getVariableContext(playerName, variables);
+
   return (
     <AnimatePresence>
       {open && (
@@ -30,18 +36,26 @@ export function HistoryLog({ open, entries, onClose }: HistoryLogProps) {
               <p className="text-sm text-[var(--color-ink-faint)]">Nothing said yet.</p>
             )}
             <ul className="space-y-4">
-              {entries.map((entry, i) => (
-                <li key={`${entry.nodeId}-${i}`} className="border-b border-[var(--color-hairline)] pb-3">
-                  {entry.speaker && (
-                    <p className="mb-1 font-display text-xs uppercase tracking-[0.1em] text-[var(--color-accent-strong)]">
-                      {entry.speaker}
+              {entries.map((entry, i) => {
+                const resolvedSpeaker = entry.speaker
+                  ? resolveSpeakerName(entry.speaker, ctx)
+                  : '';
+                return (
+                  <li
+                    key={`${entry.nodeId}-${i}`}
+                    className="border-b border-[var(--color-hairline)] pb-3"
+                  >
+                    {resolvedSpeaker && (
+                      <p className="mb-1 font-display text-xs uppercase tracking-[0.1em] text-[var(--color-accent-strong)]">
+                        {resolvedSpeaker}
+                      </p>
+                    )}
+                    <p className="text-sm leading-relaxed text-[var(--color-ink-muted)]">
+                      {entry.text}
                     </p>
-                  )}
-                  <p className="text-sm leading-relaxed text-[var(--color-ink-muted)]">
-                    {entry.text}
-                  </p>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </motion.div>

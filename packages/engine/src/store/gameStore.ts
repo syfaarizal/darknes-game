@@ -57,7 +57,9 @@ export const useGameStore = create<GameState>((set) => ({
     set({
       ...initial,
       playerName,
-      phase: GamePhase.InGame,
+      // Set to MainMenu phase so the flow goes through Intro:
+      // MainMenu → IdentitySetup → Intro (video) → Game (startScene sets InGame)
+      phase: GamePhase.MainMenu,
     }),
 
   hydrate: (partial) => set(partial),

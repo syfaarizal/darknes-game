@@ -4,9 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { IdentityLayout } from './IdentityLayout';
 import { PlayerNameInput } from './PlayerNameInput';
 import { PrimaryButton } from '@darknes/ui';
-import { SaveEngine, StoryEngine, useGameStore } from '@darknes/engine';
-
-const FIRST_SCENE_ID = 'scene02';
+import { SaveEngine, useGameStore } from '@darknes/engine';
 
 const CINEMATIC_SENTENCES = [
   '...',
@@ -81,10 +79,9 @@ export function IdentitySetup() {
     // Show welcome screen
     setIsWelcome(true);
 
-    // Wait, then navigate to intro
+    // Wait, then navigate to intro video
     await new Promise((resolve) => setTimeout(resolve, 2200));
-    await StoryEngine.startScene(FIRST_SCENE_ID);
-    navigate('/game');
+    navigate('/intro');
   }, [isValid, trimmed, navigate]);
 
   return (

@@ -185,9 +185,12 @@ written as first-person and never rendered as a portrait.
 ## 7. How player identity works
 
 When the player starts a new game from the Main Menu, they are taken to the
-**Identity Setup** page (`/identity`) instead of jumping directly into the
-story. The page displays a cinematic message using the existing Typewriter
-system, then presents a premium input field for the player's chosen name.
+**Identity Setup** page (`/identity`) to enter their name before the story begins.
+After the welcome screen, the Intro video plays, then the game starts.
+
+```
+Splash → Main Menu → New Game → Identity Setup → Intro → Game
+```
 
 The name is stored as `playerName` in `gameStore` and persisted in every save
 file via `SaveFilePayload.playerName`.
@@ -209,43 +212,61 @@ function MyComponent() {
 `playerName` from `gameStore` in the snapshot. `SaveEngine.applySave()` restores
 it when loading.
 
-## 8. How dialogue variables work
+## 8. How the Variable Engine works
 
-Dialogue text can include **variable placeholders** that are automatically
-replaced with their current values before rendering. This lets a single scene
-JSON work across different playthroughs without modification.
+The **Variable Engine** (`packages/engine/src/engines/VariableEngine`) is the single
+source of truth for replacing variable placeholders in **any** text across the
+entire game — dialogue, speaker names, choices, history, save previews,
+endings, notifications, and future UI.
+
+```ts
+import { VariableEngine } from '@darknes/engine';
+
+const { replaceVariables, getVariableContext, resolveSpeakerName } = VariableEngine;
+
+// Anywhere in your code:
+const ctx = getVariableContext(playerName, variables);
+const resolved = replaceVariables("Hello, {playerName}!", ctx);
+// → "Hello, Syfa!"
+```
 
 ### Supported placeholders
 
-| Placeholder       | Source                              |
-|-------------------|-------------------------------------|
-| `{playerName}`    | `gameStore.playerName`               |
-| `{money}`         | `gameStore.variables.money`         |
-| `{trustDamian}`   | `gameStore.variables.trustDamian`   |
-| `{mentalState}`   | `gameStore.variables.mentalState`   |
-| `{chapter}`       | Any `set-variable` node in scene JSON |
+| Placeholder | Source | Example |
+|---|---|---|
+| `{playerName}` / `{PLAYER}` | `gameStore.playerName` | `{playerName}` → `Syfa` |
+| `{money}` | `gameStore.variables.money` | `{money}` → `150` |
+| `{chapter}` | `gameStore.variables.chapter` | `{chapter}` → `3` |
+| `{damianTrust}` | `gameStore.variables.damianTrust` | `{damianTrust}` → `78` |
+| `{mentalState}` | `gameStore.variables.mentalState` | `{mentalState}` → `Stable` |
+| `{date}` / `{time}` | Any variable | context-dependent |
 
-Any variable in `gameStore.variables` is automatically available as a
-placeholder using its key wrapped in curly braces.
+Any variable key set via `set-variable` nodes in scene JSON is automatically
+available as a placeholder — no engine changes needed.
 
-### Example dialogue
+### Where variables are resolved
+
+- [x] Dialogue text (line/narration nodes)
+- [x] Speaker names (`{playerName}` in speaker field, `PLAYER` label)
+- [x] Choice text and hints
+- [x] Choice prompts
+- [x] History log entries (speaker + text)
+- [x] Save/Load slot previews (player name shown)
+- [x] Ending screen text
+- [x] Notification messages
+- [x] Pause screen (player name displayed)
+
+### Example: full scene with variables
 
 ```json
 {
   "type": "line",
   "speaker": "nathael",
-  "text": "Good morning, {playerName}. You have {money} coins."
+  "text": "Good morning, {playerName}. Mental State: {mentalState}. Damian Trust: {damianTrust}."
 }
 ```
 
-Renders as: `Good morning, Syfa. You have 150 coins.`
-
-### How the replacement works
-
-`DialogueEngine.replaceVariables(text, variables, playerName)` runs at render
-time — every line and narration node is processed through this function before
-the typewriter receives it. History entries also store the resolved text, so
-the log always shows the substituted values.
+Renders as: `Good morning, Syfa. Mental State: Stable. Damian Trust: 78.`
 
 ### Adding future variables
 
@@ -260,23 +281,53 @@ the log always shows the substituted values.
 }
 ```
 
-2. Use the variable in any subsequent dialogue:
+2. Use it anywhere — the Variable Engine handles it automatically:
 
 ```json
 { "text": "You now have {money} coins." }
 ```
 
-No engine changes are needed — variables are resolved from `gameStore.variables`
-at runtime.
+## 9. How the Intro Video works
 
-## 9. How backgrounds work
+The **Intro** page (`/intro`) plays an opening cinematic before the story begins.
+
+### Video file location
+
+```
+public/assets/videos/intro.mp4
+```
+
+### How it works
+
+1. On mount, the Intro page checks if `intro.mp4` exists
+2. **If the file exists**: plays it with fullscreen autoplay, fade-in on start,
+   fade-out on end, and a Skip button
+3. **If the file is missing**: shows an elegant placeholder screen (the game does
+   **not crash**)
+4. When the video ends (or is skipped), `StoryEngine.startScene('scene01')` is
+   called and the player is navigated to `/game`
+
+### Adding the intro video
+
+1. Place your video file as `intro.mp4` in `public/assets/videos/`
+2. The game automatically detects and plays it — no config changes needed
+
+### Video requirements
+
+- Format: `.mp4` (recommended) or `.webm`
+- Audio: enabled (`muted={false}`)
+- Resolution: 1920×1080 recommended
+- Codec: H.264 for maximum compatibility
+- File size: under 50MB for fast loading
+
+## 10. How backgrounds work
 
 `packages/assets/src/manifest/index.ts`'s `BACKGROUNDS` map is the single
 source of truth from background id → file path. `BackgroundEngine` just
 sets `sceneStore.backgroundId`; the `ui` package's `<Background>` component
 resolves that id to a URL and cross-fades to it.
 
-## 10. How audio will work
+## 11. How audio will work
 
 `AudioEngine` is a thin Howler.js wrapper, one `Howl` instance per audio
 id, organized by `AudioChannel` (`music`/`sfx`/`voice`/`ambience`/`ui`).
@@ -286,7 +337,7 @@ field; `AUDIO_TRACKS` in `packages/assets` currently starts empty —
 register real tracks there as files are added to
 `public/assets/audio/{music,sfx,voice}/`.
 
-## 11. How voice will work (prepared, not implemented)
+## 12. How voice will work (prepared, not implemented)
 
 `VoiceEngine` (`packages/engine/src/engines/VoiceEngine`) defines the
 target shape — `playLine`, `getLipSyncFrames`, `isBlinkEnabled` — without a
@@ -295,7 +346,7 @@ real implementation yet. Voice clips can already play today as plain
 amplitude-driven lip sync and blink timing, which is future work layered
 on top.
 
-## 12. How future assets are added
+## 13. How future assets are added
 
 1. Drop the file into the matching `public/assets/**` subfolder (see that
    folder's own `README.md` for naming conventions).
@@ -304,7 +355,7 @@ on top.
 3. Reference it by id from scene JSON or component props — never by raw
    path.
 
-## 13. Naming convention
+## 14. Naming convention
 
 - Scene ids: `sceneNN` (zero-padded to 2 digits), matching the filename.
 - Node ids: `<sceneId>_<shortLabel>` (e.g. `s04_n001`, `s04_end_good`) —
@@ -317,7 +368,7 @@ on top.
 - Variables: `camelCase` nouns tracking a quantity (`trustNathael`,
   `suspicionLevel`).
 
-## 14. Best practices
+## 15. Best practices
 
 - **Never hardcode dialogue, colors, or file paths in `.tsx` files.** Text
   comes from scene JSON, color comes from `tokens.css`/character JSON,
@@ -333,7 +384,7 @@ on top.
   now — a typed no-op API is worth writing even before the real
   implementation.
 
-## 15. Future roadmap
+## 16. Future roadmap
 
 Explicitly prepared-for, not yet built (per the original project brief):
 
