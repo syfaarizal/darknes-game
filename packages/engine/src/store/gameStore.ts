@@ -6,22 +6,26 @@ export interface GameState {
   phase: GamePhase;
   currentSceneId: string | null;
   currentNodeId: string | null;
+  playerName: string;
   flags: Record<string, FlagValue>;
   variables: Record<string, VariableValue>;
 
   setPhase: (phase: GamePhase) => void;
   setPosition: (sceneId: string, nodeId: string) => void;
+  setPlayerName: (name: string) => void;
   setFlag: (key: string, value: FlagValue) => void;
   setVariable: (key: string, value: VariableValue) => void;
   addToVariable: (key: string, delta: number) => void;
   resetGame: () => void;
-  hydrate: (partial: Partial<Pick<GameState, 'flags' | 'variables' | 'currentSceneId' | 'currentNodeId'>>) => void;
+  createNewGame: (playerName: string) => void;
+  hydrate: (partial: Partial<Pick<GameState, 'flags' | 'variables' | 'currentSceneId' | 'currentNodeId' | 'playerName'>>) => void;
 }
 
 const initial = {
   phase: GamePhase.Boot,
   currentSceneId: null as string | null,
   currentNodeId: null as string | null,
+  playerName: '' as string,
   flags: {} as Record<string, FlagValue>,
   variables: {} as Record<string, VariableValue>,
 };
@@ -32,6 +36,8 @@ export const useGameStore = create<GameState>((set) => ({
   setPhase: (phase) => set({ phase }),
 
   setPosition: (sceneId, nodeId) => set({ currentSceneId: sceneId, currentNodeId: nodeId }),
+
+  setPlayerName: (name) => set({ playerName: name }),
 
   setFlag: (key, value) =>
     set((state) => ({ flags: { ...state.flags, [key]: value } })),
@@ -46,6 +52,13 @@ export const useGameStore = create<GameState>((set) => ({
     }),
 
   resetGame: () => set({ ...initial, phase: GamePhase.MainMenu }),
+
+  createNewGame: (playerName) =>
+    set({
+      ...initial,
+      playerName,
+      phase: GamePhase.InGame,
+    }),
 
   hydrate: (partial) => set(partial),
 }));

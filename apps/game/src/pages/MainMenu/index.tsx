@@ -8,7 +8,7 @@ export function MainMenu() {
   const hasSaves = useSaveStore((s) => s.slots.length > 0);
 
   const startNewGame = () => {
-    navigate('/intro');
+    navigate('/identity');
   };
 
   return (

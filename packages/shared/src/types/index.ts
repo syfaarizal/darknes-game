@@ -263,6 +263,15 @@ export interface GameSettings {
 }
 
 /* -------------------------------------------------------------------------- */
+/*  Player Profile                                                             */
+/* -------------------------------------------------------------------------- */
+
+export interface PlayerProfile {
+  name: string;
+  createdAt: number;
+}
+
+/* -------------------------------------------------------------------------- */
 /*  Save files                                                                */
 /* -------------------------------------------------------------------------- */
 
@@ -278,6 +287,7 @@ export interface SaveFileMeta {
 
 export interface SaveFilePayload {
   meta: SaveFileMeta;
+  playerName: string;
   flags: Record<string, FlagValue>;
   variables: Record<string, VariableValue>;
   history: HistoryEntry[];

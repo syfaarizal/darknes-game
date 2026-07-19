@@ -36,6 +36,7 @@ function buildSnapshot(kind: SaveSlotKind, label: string): SaveFilePayload {
       nodeId: game.currentNodeId ?? '',
       label,
     },
+    playerName: game.playerName,
     flags: game.flags,
     variables: game.variables,
     history: dialogue.history,
@@ -71,6 +72,7 @@ export function deleteSave(id: string): void {
 
 export function applySave(payload: SaveFilePayload): void {
   useGameStore.getState().hydrate({
+    playerName: payload.playerName,
     flags: payload.flags,
     variables: payload.variables,
     currentSceneId: payload.meta.sceneId,
