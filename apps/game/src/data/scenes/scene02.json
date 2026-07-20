@@ -1,258 +1,238 @@
 {
-  "meta": {
-    "id": "scene02",
-    "title": "Ruang Kerja — Dua Minggu Kemudian",
-    "background": "workspace-night",
-    "entry": "scene02_n001"
-  },
-  "nodes": [
-    {
-      "id": "scene02_n001",
-      "type": "narration",
-      "text": "PLAYER terbangun dari tidur dengan nafas tidak teratur dan keringat dingin. Malam hari, di ruang kerja, Player fokus mengurus dokumen-dokumen bisnisnya.",
-      "next": "scene02_n002"
-    },
-    {
-      "id": "scene02_n002",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Masih belum tidur?",
-      "next": "scene02_n003"
-    },
-    {
-      "id": "scene02_n003",
-      "type": "line",
-      "speaker": "player",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "Masih banyak yang perlu aku urus.",
-      "next": "scene02_n004"
-    },
-    {
-      "id": "scene02_n004",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Tidakkah kamu lelah dengan semua ini?",
-      "next": "scene02_n005"
-    },
-    {
-      "id": "scene02_n005",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Iya, aku sangat lelah tapi aku tidak punya pilihan lain",
-          "goTo": "scene02_n006a"
-        },
-        {
-          "text": "Aku sudah terbiasa",
-          "goTo": "scene02_n006b"
-        },
-        {
-          "text": "...",
-          "goTo": "scene02_n006c"
-        }
-      ]
-    },
-    {
-      "id": "scene02_n006a",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Sampai kapan kamu menyiksa dirimu seperti ini? Setidaknya pikirkanlah kesehatanmu.",
-      "next": "scene02_n007"
-    },
-    {
-      "id": "scene02_n006b",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Sampai kapan kamu menyiksa dirimu seperti ini? Setidaknya pikirkanlah kesehatanmu.",
-      "next": "scene02_n007"
-    },
-    {
-      "id": "scene02_n006c",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Sampai kapan kamu menyiksa dirimu seperti ini? Setidaknya pikirkanlah kesehatanmu.",
-      "next": "scene02_n007"
-    },
-    {
-      "id": "scene02_n007",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Baiklah, hanya sebentar lagi, setelah itu aku akan beristirahat",
-          "goTo": "scene02_n008a"
-        },
-        {
-          "text": "Bukan urusanmu",
-          "goTo": "scene02_n008b"
-        },
-        {
-          "text": "Aku hanya tidak ingin melakukan kesalahan sedikitpun",
-          "goTo": "scene02_n008c"
-        }
-      ]
-    },
-    {
-      "id": "scene02_n008a",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
-      "next": "scene02_n009"
-    },
-    {
-      "id": "scene02_n008b",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
-      "next": "scene02_n009"
-    },
-    {
-      "id": "scene02_n008c",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
-      "next": "scene02_n009"
-    },
-    {
-      "id": "scene02_n009",
-      "type": "narration",
-      "text": "Nathael mendekat ke arah Player, duduk di atas meja. Wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
-      "next": "scene02_n010"
-    },
-    {
-      "id": "scene02_n010",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Aku akan selalu berada di sampingmu, karena itu alasan aku hidup.",
-      "next": "scene02_n011"
-    },
-    {
-      "id": "scene02_n011",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Iya, aku tahu",
-          "goTo": "scene02_n012a"
-        },
-        {
-          "text": "Terima kasih",
-          "goTo": "scene02_n012b"
-        },
-        {
-          "text": "...",
-          "goTo": "scene02_n012c"
-        }
-      ]
-    },
-    {
-      "id": "scene02_n012a",
-      "type": "narration",
-      "text": "Player tersenyum tipis mendengar слова Nathael. Untuk sesaat, rasa lelah dan sunyi terasa sedikit berkurang.",
-      "next": "scene02_end"
-    },
-    {
-      "id": "scene02_n012b",
-      "type": "narration",
-      "text": "Player terdiam sejenak, membalas senyuman Nathael dengan pelan.",
-      "next": "scene02_end"
-    },
-    {
-      "id": "scene02_n012c",
-      "type": "narration",
-      "text": "Player diam, tetapi rasa hangat menyebar ke seluruh tubuhnya.",
-      "next": "scene02_end"
-    },
-    {
-      "id": "scene02_end",
-      "type": "end"
-    }
-  ]
+    "meta":  {
+                 "id":  "scene02",
+                 "title":  "Ruang Kerja — Dua Minggu Kemudian",
+                 "background":  "workspace-night",
+                 "entry":  "scene02_n001"
+             },
+    "nodes":  [
+                  {
+                      "id":  "scene02_n001",
+                      "type":  "narration",
+                      "text":  "{playerName} terbangun dari tidur dengan nafas tidak teratur dan keringat dingin. Malam hari, di ruang kerja, {playerName} fokus mengurus dokumen-dokumen bisnisnya.",
+                      "next":  "scene02_n002"
+                  },
+                  {
+                      "id":  "scene02_n002",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Masih belum tidur?",
+                      "next":  "scene02_n003"
+                  },
+                  {
+                      "id":  "scene02_n003",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "Masih banyak yang perlu aku urus.",
+                      "next":  "scene02_n004"
+                  },
+                  {
+                      "id":  "scene02_n004",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Tidakkah kamu lelah dengan semua ini?",
+                      "next":  "scene02_n005"
+                  },
+                  {
+                      "id":  "scene02_n005",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Iya, aku sangat lelah tapi aku tidak punya pilihan lain",
+                                          "goTo":  "scene02_n006a"
+                                      },
+                                      {
+                                          "text":  "Aku sudah terbiasa",
+                                          "goTo":  "scene02_n006b"
+                                      },
+                                      {
+                                          "text":  "...",
+                                          "goTo":  "scene02_n006c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene02_n006a",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Sampai kapan kamu menyiksa dirimu seperti ini? Setidaknya pikirkanlah kesehatanmu.",
+                      "next":  "scene02_n007"
+                  },
+                  {
+                      "id":  "scene02_n006b",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Sampai kapan kamu menyiksa dirimu seperti ini? Setidaknya pikirkanlah kesehatanmu.",
+                      "next":  "scene02_n007"
+                  },
+                  {
+                      "id":  "scene02_n006c",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Sampai kapan kamu menyiksa dirimu seperti ini? Setidaknya pikirkanlah kesehatanmu.",
+                      "next":  "scene02_n007"
+                  },
+                  {
+                      "id":  "scene02_n007",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Baiklah, hanya sebentar lagi, setelah itu aku akan beristirahat",
+                                          "goTo":  "scene02_n008a"
+                                      },
+                                      {
+                                          "text":  "Bukan urusanmu",
+                                          "goTo":  "scene02_n008b"
+                                      },
+                                      {
+                                          "text":  "Aku hanya tidak ingin melakukan kesalahan sedikitpun",
+                                          "goTo":  "scene02_n008c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene02_n008a",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
+                      "next":  "scene02_n009"
+                  },
+                  {
+                      "id":  "scene02_n008b",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
+                      "next":  "scene02_n009"
+                  },
+                  {
+                      "id":  "scene02_n008c",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
+                      "next":  "scene02_n009"
+                  },
+                  {
+                      "id":  "scene02_n009",
+                      "type":  "narration",
+                      "text":  "Nathael mendekat ke arah {playerName}, duduk di atas meja. Wajahnya tersenyum tipis sambil mengusap kepala {playerName}. Rasa nyaman dan tenang seketika menguasai {playerName}.",
+                      "next":  "scene02_n010"
+                  },
+                  {
+                      "id":  "scene02_n010",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Aku akan selalu berada di sampingmu, karena itu alasan aku hidup.",
+                      "next":  "scene02_n011"
+                  },
+                  {
+                      "id":  "scene02_n011",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Iya, aku tahu",
+                                          "goTo":  "scene02_n012a"
+                                      },
+                                      {
+                                          "text":  "Terima kasih",
+                                          "goTo":  "scene02_n012b"
+                                      },
+                                      {
+                                          "text":  "...",
+                                          "goTo":  "scene02_n012c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene02_n012a",
+                      "type":  "narration",
+                      "text":  "{playerName} tersenyum tipis mendengar слова Nathael. Untuk sesaat, rasa lelah dan sunyi terasa sedikit berkurang.",
+                      "next":  "scene02_end"
+                  },
+                  {
+                      "id":  "scene02_n012b",
+                      "type":  "narration",
+                      "text":  "{playerName} terdiam sejenak, membalas senyuman Nathael dengan pelan.",
+                      "next":  "scene02_end"
+                  },
+                  {
+                      "id":  "scene02_n012c",
+                      "type":  "narration",
+                      "text":  "{playerName} diam, tetapi rasa hangat menyebar ke seluruh tubuhnya.",
+                      "next":  "scene02_end"
+                  },
+                  {
+                      "id":  "scene02_end",
+                      "type":  "end"
+                  }
+              ]
 }

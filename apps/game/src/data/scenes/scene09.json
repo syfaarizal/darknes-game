@@ -1,434 +1,398 @@
 {
-  "meta": {
-    "id": "scene09",
-    "title": "Ruang Kerja — Malam Hari",
-    "background": "workspace-night",
-    "entry": "scene09_n001"
-  },
-  "nodes": [
-    {
-      "id": "scene09_n001",
-      "type": "narration",
-      "text": "Rumah kembali sunyi. Player duduk di depan meja kerjanya. Di atas meja tergeletak sebuah map bertuliskan: Victor Hale. Tak lama kemudian, suara pintu balkon kembali terbuka. Nathael masuk sambil membawa dua cangkir kopi. Ia meletakkan salah satunya di meja.",
-      "next": "scene09_n002"
-    },
-    {
-      "id": "scene09_n002",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Kopi. Biar matamu nggak kalah sama laporan itu.",
-      "next": "scene09_n003"
-    },
-    {
-      "id": "scene09_n003",
-      "type": "line",
-      "speaker": "player",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "(tersenyum tipis) ...Terima kasih.",
-      "next": "scene09_n004"
-    },
-    {
-      "id": "scene09_n004",
-      "type": "narration",
-      "text": "Nathael duduk di atas meja seperti biasanya. Tatapannya tertuju pada foto Victor.",
-      "next": "scene09_n005"
-    },
-    {
-      "id": "scene09_n005",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Besok?",
-      "next": "scene09_n006"
-    },
-    {
-      "id": "scene09_n006",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Aku akan menemuinya",
-          "goTo": "scene09_n007a"
-        },
-        {
-          "text": "Semoga dia benar-benar tahu sesuatu",
-          "goTo": "scene09_n007b"
-        },
-        {
-          "text": "(Mengangguk pelan)",
-          "goTo": "scene09_n007c"
-        }
-      ]
-    },
-    {
-      "id": "scene09_n007a",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
-      "next": "scene09_n008"
-    },
-    {
-      "id": "scene09_n007b",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
-      "next": "scene09_n008"
-    },
-    {
-      "id": "scene09_n007c",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
-      "next": "scene09_n008"
-    },
-    {
-      "id": "scene09_n008",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Aku tidak akan berhenti",
-          "goTo": "scene09_n009a"
-        },
-        {
-          "text": "Aku sudah terlalu jauh untuk menyerah",
-          "goTo": "scene09_n009b"
-        },
-        {
-          "text": "Aku hanya ingin mengetahui kebenarannya",
-          "goTo": "scene09_n009c"
-        }
-      ]
-    },
-    {
-      "id": "scene09_n009a",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
-      "next": "scene09_n010"
-    },
-    {
-      "id": "scene09_n009b",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
-      "next": "scene09_n010"
-    },
-    {
-      "id": "scene09_n009c",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
-      "next": "scene09_n010"
-    },
-    {
-      "id": "scene09_n010",
-      "type": "narration",
-      "text": "Ruangan mendadak hening.",
-      "next": "scene09_n011"
-    },
-    {
-      "id": "scene09_n011",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Membalas mereka",
-          "goTo": "scene09_n012a"
-        },
-        {
-          "text": "Mengambil kembali apa yang menjadi milik keluargaku",
-          "goTo": "scene09_n012b"
-        },
-        {
-          "text": "Aku belum tahu",
-          "goTo": "scene09_n012c"
-        }
-      ]
-    },
-    {
-      "id": "scene09_n012a",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
-      "next": "scene09_n013"
-    },
-    {
-      "id": "scene09_n012b",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
-      "next": "scene09_n013"
-    },
-    {
-      "id": "scene09_n012c",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
-      "next": "scene09_n013"
-    },
-    {
-      "id": "scene09_n013",
-      "type": "line",
-      "speaker": "player",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "(menatap kopi yang mulai mengepulkan uap) Aku rasa... aku sudah kehilangan itu sejak lama.",
-      "next": "scene09_n014"
-    },
-    {
-      "id": "scene09_n014",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menggeleng pelan) Belum. Kalau benar kau sudah kehilangannya... kau tidak akan masih pulang ke rumah.",
-      "next": "scene09_n015"
-    },
-    {
-      "id": "scene09_n015",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Rumah adalah satu-satunya alasan aku terus maju",
-          "goTo": "scene09_n016a"
-        },
-        {
-          "text": "Mereka adalah keluargaku",
-          "goTo": "scene09_n016b"
-        },
-        {
-          "text": "Karena hanya rumah ini yang tersisa",
-          "goTo": "scene09_n016c"
-        }
-      ]
-    },
-    {
-      "id": "scene09_n016a",
-      "type": "narration",
-      "text": "Nathael tersenyum hangat, sembari mengusap kepala Player. Ia berdiri dan berjalan menuju balkon. Namun sebelum keluar, ia berhenti.",
-      "next": "scene09_n017"
-    },
-    {
-      "id": "scene09_n016b",
-      "type": "narration",
-      "text": "Nathael tersenyum hangat, sembari mengusap kepala Player. Ia berdiri dan berjalan menuju balkon. Namun sebelum keluar, ia berhenti.",
-      "next": "scene09_n017"
-    },
-    {
-      "id": "scene09_n016c",
-      "type": "narration",
-      "text": "Nathael tersenyum hangat, sembari mengusap kepala Player. Ia berdiri dan berjalan menuju balkon. Namun sebelum keluar, ia berhenti.",
-      "next": "scene09_n017"
-    },
-    {
-      "id": "scene09_n017",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Besok... jangan terlalu keras pada dirimu sendiri. Dan jangan lupa, kau tidak harus memikul semuanya sendirian.",
-      "next": "scene09_n018"
-    },
-    {
-      "id": "scene09_n018",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Aku akan mengingatnya",
-          "goTo": "scene09_n019a"
-        },
-        {
-          "text": "Aku akan mencoba",
-          "goTo": "scene09_n019b"
-        },
-        {
-          "text": "...Selama kau masih di sini",
-          "goTo": "scene09_n019c"
-        }
-      ]
-    },
-    {
-      "id": "scene09_n019a",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
-      "next": "scene09_n020"
-    },
-    {
-      "id": "scene09_n019b",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
-      "next": "scene09_n020"
-    },
-    {
-      "id": "scene09_n019c",
-      "type": "line",
-      "speaker": "nathael",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
-      "next": "scene09_n020"
-    },
-    {
-      "id": "scene09_n020",
-      "type": "narration",
-      "text": "Sesaat setelah kalimat itu terucap, ia melangkah keluar ke balkon. Player hanya memandang ke arah langit malam. Tangannya menggenggam map bertuliskan Victor Hale.",
-      "next": "scene09_end"
-    },
-    {
-      "id": "scene09_end",
-      "type": "end"
-    }
-  ]
+    "meta":  {
+                 "id":  "scene09",
+                 "title":  "Ruang Kerja — Malam Hari",
+                 "background":  "workspace-night",
+                 "entry":  "scene09_n001"
+             },
+    "nodes":  [
+                  {
+                      "id":  "scene09_n001",
+                      "type":  "narration",
+                      "text":  "Rumah kembali sunyi. {playerName} duduk di depan meja kerjanya. Di atas meja tergeletak sebuah map bertuliskan: Victor Hale. Tak lama kemudian, suara pintu balkon kembali terbuka. Nathael masuk sambil membawa dua cangkir kopi. Ia meletakkan salah satunya di meja.",
+                      "next":  "scene09_n002"
+                  },
+                  {
+                      "id":  "scene09_n002",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Kopi. Biar matamu nggak kalah sama laporan itu.",
+                      "next":  "scene09_n003"
+                  },
+                  {
+                      "id":  "scene09_n003",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "(tersenyum tipis) ...Terima kasih.",
+                      "next":  "scene09_n004"
+                  },
+                  {
+                      "id":  "scene09_n004",
+                      "type":  "narration",
+                      "text":  "Nathael duduk di atas meja seperti biasanya. Tatapannya tertuju pada foto Victor.",
+                      "next":  "scene09_n005"
+                  },
+                  {
+                      "id":  "scene09_n005",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Besok?",
+                      "next":  "scene09_n006"
+                  },
+                  {
+                      "id":  "scene09_n006",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Aku akan menemuinya",
+                                          "goTo":  "scene09_n007a"
+                                      },
+                                      {
+                                          "text":  "Semoga dia benar-benar tahu sesuatu",
+                                          "goTo":  "scene09_n007b"
+                                      },
+                                      {
+                                          "text":  "(Mengangguk pelan)",
+                                          "goTo":  "scene09_n007c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene09_n007a",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
+                      "next":  "scene09_n008"
+                  },
+                  {
+                      "id":  "scene09_n007b",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
+                      "next":  "scene09_n008"
+                  },
+                  {
+                      "id":  "scene09_n007c",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
+                      "next":  "scene09_n008"
+                  },
+                  {
+                      "id":  "scene09_n008",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Aku tidak akan berhenti",
+                                          "goTo":  "scene09_n009a"
+                                      },
+                                      {
+                                          "text":  "Aku sudah terlalu jauh untuk menyerah",
+                                          "goTo":  "scene09_n009b"
+                                      },
+                                      {
+                                          "text":  "Aku hanya ingin mengetahui kebenarannya",
+                                          "goTo":  "scene09_n009c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene09_n009a",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName}) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
+                      "next":  "scene09_n010"
+                  },
+                  {
+                      "id":  "scene09_n009b",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName}) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
+                      "next":  "scene09_n010"
+                  },
+                  {
+                      "id":  "scene09_n009c",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName}) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
+                      "next":  "scene09_n010"
+                  },
+                  {
+                      "id":  "scene09_n010",
+                      "type":  "narration",
+                      "text":  "Ruangan mendadak hening.",
+                      "next":  "scene09_n011"
+                  },
+                  {
+                      "id":  "scene09_n011",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Membalas mereka",
+                                          "goTo":  "scene09_n012a"
+                                      },
+                                      {
+                                          "text":  "Mengambil kembali apa yang menjadi milik keluargaku",
+                                          "goTo":  "scene09_n012b"
+                                      },
+                                      {
+                                          "text":  "Aku belum tahu",
+                                          "goTo":  "scene09_n012c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene09_n012a",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
+                      "next":  "scene09_n013"
+                  },
+                  {
+                      "id":  "scene09_n012b",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
+                      "next":  "scene09_n013"
+                  },
+                  {
+                      "id":  "scene09_n012c",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
+                      "next":  "scene09_n013"
+                  },
+                  {
+                      "id":  "scene09_n013",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "(menatap kopi yang mulai mengepulkan uap) Aku rasa... aku sudah kehilangan itu sejak lama.",
+                      "next":  "scene09_n014"
+                  },
+                  {
+                      "id":  "scene09_n014",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menggeleng pelan) Belum. Kalau benar kau sudah kehilangannya... kau tidak akan masih pulang ke rumah.",
+                      "next":  "scene09_n015"
+                  },
+                  {
+                      "id":  "scene09_n015",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Rumah adalah satu-satunya alasan aku terus maju",
+                                          "goTo":  "scene09_n016a"
+                                      },
+                                      {
+                                          "text":  "Mereka adalah keluargaku",
+                                          "goTo":  "scene09_n016b"
+                                      },
+                                      {
+                                          "text":  "Karena hanya rumah ini yang tersisa",
+                                          "goTo":  "scene09_n016c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene09_n016a",
+                      "type":  "narration",
+                      "text":  "Nathael tersenyum hangat, sembari mengusap kepala {playerName}. Ia berdiri dan berjalan menuju balkon. Namun sebelum keluar, ia berhenti.",
+                      "next":  "scene09_n017"
+                  },
+                  {
+                      "id":  "scene09_n016b",
+                      "type":  "narration",
+                      "text":  "Nathael tersenyum hangat, sembari mengusap kepala {playerName}. Ia berdiri dan berjalan menuju balkon. Namun sebelum keluar, ia berhenti.",
+                      "next":  "scene09_n017"
+                  },
+                  {
+                      "id":  "scene09_n016c",
+                      "type":  "narration",
+                      "text":  "Nathael tersenyum hangat, sembari mengusap kepala {playerName}. Ia berdiri dan berjalan menuju balkon. Namun sebelum keluar, ia berhenti.",
+                      "next":  "scene09_n017"
+                  },
+                  {
+                      "id":  "scene09_n017",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Besok... jangan terlalu keras pada dirimu sendiri. Dan jangan lupa, kau tidak harus memikul semuanya sendirian.",
+                      "next":  "scene09_n018"
+                  },
+                  {
+                      "id":  "scene09_n018",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Aku akan mengingatnya",
+                                          "goTo":  "scene09_n019a"
+                                      },
+                                      {
+                                          "text":  "Aku akan mencoba",
+                                          "goTo":  "scene09_n019b"
+                                      },
+                                      {
+                                          "text":  "...Selama kau masih di sini",
+                                          "goTo":  "scene09_n019c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene09_n019a",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
+                      "next":  "scene09_n020"
+                  },
+                  {
+                      "id":  "scene09_n019b",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
+                      "next":  "scene09_n020"
+                  },
+                  {
+                      "id":  "scene09_n019c",
+                      "type":  "line",
+                      "speaker":  "nathael",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "nathael",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
+                      "next":  "scene09_n020"
+                  },
+                  {
+                      "id":  "scene09_n020",
+                      "type":  "narration",
+                      "text":  "Sesaat setelah kalimat itu terucap, ia melangkah keluar ke balkon. {playerName} hanya memandang ke arah langit malam. Tangannya menggenggam map bertuliskan Victor Hale.",
+                      "next":  "scene09_end"
+                  },
+                  {
+                      "id":  "scene09_end",
+                      "type":  "end"
+                  }
+              ]
 }

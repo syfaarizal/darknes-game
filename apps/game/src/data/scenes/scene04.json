@@ -1,410 +1,374 @@
 {
-  "meta": {
-    "id": "scene04",
-    "title": "Kantor Ravenscroft Corporation",
-    "background": "office-room-player",
-    "entry": "scene04_n001"
-  },
-  "nodes": [
-    {
-      "id": "scene04_n001",
-      "type": "narration",
-      "text": "Beberapa saat setelah rapat. Pintu ruang direktur terbuka. Seorang pria berambut hitam memasuki ruangan sambil membawa beberapa map. Tatapannya tajam. Langkahnya tenang. Ia meletakkan dokumen di atas meja tanpa banyak bicara.",
-      "next": "scene04_n002"
-    },
-    {
-      "id": "scene04_n002",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Kontrak bisnis di Asia. Aku sudah memeriksanya.",
-      "next": "scene04_n003"
-    },
-    {
-      "id": "scene04_n003",
-      "type": "narration",
-      "text": "Player mengambil dokumen tersebut. Baru beberapa detik membaca...",
-      "next": "scene04_n004"
-    },
-    {
-      "id": "scene04_n004",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Halaman tujuh. Baris kedua. Angkanya salah.",
-      "next": "scene04_n005"
-    },
-    {
-      "id": "scene04_n005",
-      "type": "narration",
-      "text": "Player berhenti membaca. Ia membuka halaman yang dimaksud. Benar saja. Ada satu angka yang tertukar.",
-      "next": "scene04_n006"
-    },
-    {
-      "id": "scene04_n006",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Aku akan merevisinya",
-          "goTo": "scene04_n007a"
-        },
-        {
-          "text": "Kesalahan kecil",
-          "goTo": "scene04_n007b"
-        },
-        {
-          "text": "Aku melewatkannya",
-          "goTo": "scene04_n007c"
-        }
-      ]
-    },
-    {
-      "id": "scene04_n007a",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengangguk pelan) Bagus. Kesalahan yang diperbaiki lebih baik daripada kesalahan yang dipertahankan.",
-      "next": "scene04_n008"
-    },
-    {
-      "id": "scene04_n007b",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap tajam Player) Dalam bisnis... tidak ada yang namanya kesalahan kecil.",
-      "next": "scene04_n008"
-    },
-    {
-      "id": "scene04_n007c",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menutup map di tangannya) Itu alasan aku memeriksa ulang. Kau selalu ceroboh.",
-      "next": "scene04_n008"
-    },
-    {
-      "id": "scene04_n008",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Investor dari Jerman meminta negosiasi ulang. Mereka ingin menaikkan harga lima belas persen.",
-      "next": "scene04_n009"
-    },
-    {
-      "id": "scene04_n009",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Tolak",
-          "goTo": "scene04_n010a"
-        },
-        {
-          "text": "Undang mereka untuk bernegosiasi",
-          "goTo": "scene04_n010b"
-        },
-        {
-          "text": "Cari alternatif lain",
-          "goTo": "scene04_n010c"
-        }
-      ]
-    },
-    {
-      "id": "scene04_n010a",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(sedikit mengangguk) Keputusan yang cepat.",
-      "next": "scene04_n011"
-    },
-    {
-      "id": "scene04_n010b",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum tipis) Itu juga pilihanku.",
-      "next": "scene04_n011"
-    },
-    {
-      "id": "scene04_n010c",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player beberapa saat) Kau mulai berpikir beberapa langkah ke depan ya?",
-      "next": "scene04_n011"
-    },
-    {
-      "id": "scene04_n011",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menaruh satu map terakhir) Ini laporan Gudang, ada selisih stok.",
-      "next": "scene04_n012"
-    },
-    {
-      "id": "scene04_n012",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Audit semuanya",
-          "goTo": "scene04_n013a"
-        },
-        {
-          "text": "Periksa CCTV",
-          "goTo": "scene04_n013b"
-        },
-        {
-          "text": "Cari orang dalam",
-          "goTo": "scene04_n013c"
-        }
-      ]
-    },
-    {
-      "id": "scene04_n013a",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengangguk) Prosedur yang tepat.",
-      "next": "scene04_n014"
-    },
-    {
-      "id": "scene04_n013b",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Sudah, namun tidak ada yang mencurigakan.",
-      "next": "scene04_n014"
-    },
-    {
-      "id": "scene04_n013c",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum tipis) Akhirnya kau mulai curiga.",
-      "next": "scene04_n014"
-    },
-    {
-      "id": "scene04_n014",
-      "type": "narration",
-      "text": "Ruangan kembali hening. Player menandatangani beberapa dokumen. Damian memperhatikannya beberapa saat. Lalu berkata pelan.",
-      "next": "scene04_n015"
-    },
-    {
-      "id": "scene04_n015",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Semalam... Kau tidur?",
-      "next": "scene04_n016"
-    },
-    {
-      "id": "scene04_n016",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Sedikit",
-          "goTo": "scene04_n017a"
-        },
-        {
-          "text": "Tidak",
-          "goTo": "scene04_n017b"
-        },
-        {
-          "text": "Tidak ada urusannya denganmu, bukan?",
-          "goTo": "scene04_n017c"
-        }
-      ]
-    },
-    {
-      "id": "scene04_n017a",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengangguk) Bagus.",
-      "next": "scene04_n018"
-    },
-    {
-      "id": "scene04_n017b",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menghela napas) Kebiasaan buruk.",
-      "next": "scene04_n018"
-    },
-    {
-      "id": "scene04_n017c",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "serious",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "serious",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player datar) Itu bukan jawaban.",
-      "next": "scene04_n018"
-    },
-    {
-      "id": "scene04_n018",
-      "type": "narration",
-      "text": "Damian mengambil kembali seluruh dokumen. Ia berjalan menuju pintu. Sebelum keluar, ia berhenti sejenak. Tanpa menoleh.",
-      "next": "scene04_n019"
-    },
-    {
-      "id": "scene04_n019",
-      "type": "line",
-      "speaker": "damian",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "damian",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "...Jangan memaksakan dirimu. Kita masih punya banyak pekerjaan besok.",
-      "next": "scene04_n020"
-    },
-    {
-      "id": "scene04_n020",
-      "type": "narration",
-      "text": "Ia membuka pintu dan pergi. Player menatap pintu yang perlahan tertutup. Kalimat itu terdengar seperti perintah. Namun entah mengapa, untuk sesaat, kalimat itu terdengar seperti seseorang yang sedang mengkhawatirkannya.",
-      "next": "scene04_end"
-    },
-    {
-      "id": "scene04_end",
-      "type": "end"
-    }
-  ]
+    "meta":  {
+                 "id":  "scene04",
+                 "title":  "Kantor Ravenscroft Corporation",
+                 "background":  "office-room-player",
+                 "entry":  "scene04_n001"
+             },
+    "nodes":  [
+                  {
+                      "id":  "scene04_n001",
+                      "type":  "narration",
+                      "text":  "Beberapa saat setelah rapat. Pintu ruang direktur terbuka. Seorang pria berambut hitam memasuki ruangan sambil membawa beberapa map. Tatapannya tajam. Langkahnya tenang. Ia meletakkan dokumen di atas meja tanpa banyak bicara.",
+                      "next":  "scene04_n002"
+                  },
+                  {
+                      "id":  "scene04_n002",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Kontrak bisnis di Asia. Aku sudah memeriksanya.",
+                      "next":  "scene04_n003"
+                  },
+                  {
+                      "id":  "scene04_n003",
+                      "type":  "narration",
+                      "text":  "{playerName} mengambil dokumen tersebut. Baru beberapa detik membaca...",
+                      "next":  "scene04_n004"
+                  },
+                  {
+                      "id":  "scene04_n004",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Halaman tujuh. Baris kedua. Angkanya salah.",
+                      "next":  "scene04_n005"
+                  },
+                  {
+                      "id":  "scene04_n005",
+                      "type":  "narration",
+                      "text":  "{playerName} berhenti membaca. Ia membuka halaman yang dimaksud. Benar saja. Ada satu angka yang tertukar.",
+                      "next":  "scene04_n006"
+                  },
+                  {
+                      "id":  "scene04_n006",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Aku akan merevisinya",
+                                          "goTo":  "scene04_n007a"
+                                      },
+                                      {
+                                          "text":  "Kesalahan kecil",
+                                          "goTo":  "scene04_n007b"
+                                      },
+                                      {
+                                          "text":  "Aku melewatkannya",
+                                          "goTo":  "scene04_n007c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene04_n007a",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengangguk pelan) Bagus. Kesalahan yang diperbaiki lebih baik daripada kesalahan yang dipertahankan.",
+                      "next":  "scene04_n008"
+                  },
+                  {
+                      "id":  "scene04_n007b",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap tajam {playerName}) Dalam bisnis... tidak ada yang namanya kesalahan kecil.",
+                      "next":  "scene04_n008"
+                  },
+                  {
+                      "id":  "scene04_n007c",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menutup map di tangannya) Itu alasan aku memeriksa ulang. Kau selalu ceroboh.",
+                      "next":  "scene04_n008"
+                  },
+                  {
+                      "id":  "scene04_n008",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Investor dari Jerman meminta negosiasi ulang. Mereka ingin menaikkan harga lima belas persen.",
+                      "next":  "scene04_n009"
+                  },
+                  {
+                      "id":  "scene04_n009",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Tolak",
+                                          "goTo":  "scene04_n010a"
+                                      },
+                                      {
+                                          "text":  "Undang mereka untuk bernegosiasi",
+                                          "goTo":  "scene04_n010b"
+                                      },
+                                      {
+                                          "text":  "Cari alternatif lain",
+                                          "goTo":  "scene04_n010c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene04_n010a",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(sedikit mengangguk) Keputusan yang cepat.",
+                      "next":  "scene04_n011"
+                  },
+                  {
+                      "id":  "scene04_n010b",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum tipis) Itu juga pilihanku.",
+                      "next":  "scene04_n011"
+                  },
+                  {
+                      "id":  "scene04_n010c",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName} beberapa saat) Kau mulai berpikir beberapa langkah ke depan ya?",
+                      "next":  "scene04_n011"
+                  },
+                  {
+                      "id":  "scene04_n011",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menaruh satu map terakhir) Ini laporan Gudang, ada selisih stok.",
+                      "next":  "scene04_n012"
+                  },
+                  {
+                      "id":  "scene04_n012",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Audit semuanya",
+                                          "goTo":  "scene04_n013a"
+                                      },
+                                      {
+                                          "text":  "Periksa CCTV",
+                                          "goTo":  "scene04_n013b"
+                                      },
+                                      {
+                                          "text":  "Cari orang dalam",
+                                          "goTo":  "scene04_n013c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene04_n013a",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengangguk) Prosedur yang tepat.",
+                      "next":  "scene04_n014"
+                  },
+                  {
+                      "id":  "scene04_n013b",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Sudah, namun tidak ada yang mencurigakan.",
+                      "next":  "scene04_n014"
+                  },
+                  {
+                      "id":  "scene04_n013c",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum tipis) Akhirnya kau mulai curiga.",
+                      "next":  "scene04_n014"
+                  },
+                  {
+                      "id":  "scene04_n014",
+                      "type":  "narration",
+                      "text":  "Ruangan kembali hening. {playerName} menandatangani beberapa dokumen. Damian memperhatikannya beberapa saat. Lalu berkata pelan.",
+                      "next":  "scene04_n015"
+                  },
+                  {
+                      "id":  "scene04_n015",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Semalam... Kau tidur?",
+                      "next":  "scene04_n016"
+                  },
+                  {
+                      "id":  "scene04_n016",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Sedikit",
+                                          "goTo":  "scene04_n017a"
+                                      },
+                                      {
+                                          "text":  "Tidak",
+                                          "goTo":  "scene04_n017b"
+                                      },
+                                      {
+                                          "text":  "Tidak ada urusannya denganmu, bukan?",
+                                          "goTo":  "scene04_n017c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene04_n017a",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengangguk) Bagus.",
+                      "next":  "scene04_n018"
+                  },
+                  {
+                      "id":  "scene04_n017b",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menghela napas) Kebiasaan buruk.",
+                      "next":  "scene04_n018"
+                  },
+                  {
+                      "id":  "scene04_n017c",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "serious",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "serious",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName} datar) Itu bukan jawaban.",
+                      "next":  "scene04_n018"
+                  },
+                  {
+                      "id":  "scene04_n018",
+                      "type":  "narration",
+                      "text":  "Damian mengambil kembali seluruh dokumen. Ia berjalan menuju pintu. Sebelum keluar, ia berhenti sejenak. Tanpa menoleh.",
+                      "next":  "scene04_n019"
+                  },
+                  {
+                      "id":  "scene04_n019",
+                      "type":  "line",
+                      "speaker":  "damian",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "damian",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "...Jangan memaksakan dirimu. Kita masih punya banyak pekerjaan besok.",
+                      "next":  "scene04_n020"
+                  },
+                  {
+                      "id":  "scene04_n020",
+                      "type":  "narration",
+                      "text":  "Ia membuka pintu dan pergi. {playerName} menatap pintu yang perlahan tertutup. Kalimat itu terdengar seperti perintah. Namun entah mengapa, untuk sesaat, kalimat itu terdengar seperti seseorang yang sedang mengkhawatirkannya.",
+                      "next":  "scene04_end"
+                  },
+                  {
+                      "id":  "scene04_end",
+                      "type":  "end"
+                  }
+              ]
 }

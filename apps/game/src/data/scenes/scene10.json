@@ -1,478 +1,432 @@
 {
-  "meta": {
-    "id": "scene10",
-    "title": "Kediaman Victor Hale — Sore Hari",
-    "background": "mansion",
-    "entry": "scene10_n001"
-  },
-  "nodes": [
-    {
-      "id": "scene10_n001",
-      "type": "narration",
-      "text": "Mobil berhenti di depan sebuah mansion tua yang berdiri megah di pinggir danau. Seorang pria paruh baya telah menunggu di depan pintu utama. Rambutnya mulai memutih. Senyumnya hangat. Tatapannya tenang.",
-      "next": "scene10_n002"
-    },
-    {
-      "id": "scene10_n002",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Sudah lama aku ingin bertemu langsung dengan putri Samuel Ravenscroft.",
-      "next": "scene10_n003"
-    },
-    {
-      "id": "scene10_n003",
-      "type": "line",
-      "speaker": "player",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "(tersenyum tipis) Selamat sore, Tuan.",
-      "next": "scene10_n004"
-    },
-    {
-      "id": "scene10_n004",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum) Masuklah. Anggap saja rumah sendiri.",
-      "next": "scene10_n005"
-    },
-    {
-      "id": "scene10_n005",
-      "type": "narration",
-      "text": "Player terus mengamati seluruh ruangan. Beberapa saat kemudian, mereka duduk di ruang tamu. Seorang pelayan menyajikan teh. Victor menuangkan teh ke cangkir Player.",
-      "next": "scene10_n006"
-    },
-    {
-      "id": "scene10_n006",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Ayahmu dulu selalu memilih teh yang sama.",
-      "next": "scene10_n007"
-    },
-    {
-      "id": "scene10_n007",
-      "type": "line",
-      "speaker": "player",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "Menatap cangkirnya... Begitu?",
-      "next": "scene10_n008"
-    },
-    {
-      "id": "scene10_n008",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum kecil) Samuel punya selera yang sederhana. Tapi kepalanya sangat keras.",
-      "next": "scene10_n009"
-    },
-    {
-      "id": "scene10_n009",
-      "type": "line",
-      "speaker": "player",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "Berarti hubungan Anda cukup dekat.",
-      "next": "scene10_n010"
-    },
-    {
-      "id": "scene10_n010",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tertawa pelan) Cukup dekat. Dulu kami sering berdiskusi soal bisnis. Lalu... jalan kami berbeda.",
-      "next": "scene10_n011"
-    },
-    {
-      "id": "scene10_n011",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Ayah tidak pernah menceritakan Anda",
-          "goTo": "scene10_n012a"
-        },
-        {
-          "text": "Hubungan kalian berakhir buruk?",
-          "goTo": "scene10_n012b"
-        },
-        {
-          "text": "Apa terakhir kali kalian bertemu... malam itu?",
-          "goTo": "scene10_n012c"
-        }
-      ]
-    },
-    {
-      "id": "scene10_n012a",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(terdiam sejenak) Malam itu... adalah malam yang ingin kulupakan. Aku datang terlambat. Ketika sampai... semuanya sudah selesai.",
-      "next": "scene10_n013"
-    },
-    {
-      "id": "scene10_n012b",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(terdiam sejenak) Malam itu... adalah malam yang ingin kulupakan. Aku datang terlambat. Ketika sampai... semuanya sudah selesai.",
-      "next": "scene10_n013"
-    },
-    {
-      "id": "scene10_n012c",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(terdiam sejenak) Malam itu... adalah malam yang ingin kulupakan. Aku datang terlambat. Ketika sampai... semuanya sudah selesai.",
-      "next": "scene10_n013"
-    },
-    {
-      "id": "scene10_n013",
-      "type": "narration",
-      "text": "Player memperhatikan ekspresi Victor. Tidak ada keraguan. Tidak ada kepanikan. Seolah ia telah mengulang cerita itu ratusan kali. Victor mengganti topik pembicaraan.",
-      "next": "scene10_n014"
-    },
-    {
-      "id": "scene10_n014",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Ngomong-ngomong... bagaimana kabar Alaric?",
-      "next": "scene10_n015"
-    },
-    {
-      "id": "scene10_n015",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Anda mengenalnya?",
-          "goTo": "scene10_n016a"
-        },
-        {
-          "text": "Dia baik",
-          "goTo": "scene10_n016b"
-        },
-        {
-          "text": "Kenapa bertanya tentang dia?",
-          "goTo": "scene10_n016c"
-        }
-      ]
-    },
-    {
-      "id": "scene10_n016a",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum ramah) Anak itu sering mengunjungiku. Dari dulu. Dia anak yang polos. Selalu bercerita banyak hal.",
-      "next": "scene10_n017"
-    },
-    {
-      "id": "scene10_n016b",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum ramah) Anak itu sering mengunjungiku. Dari dulu. Dia anak yang polos. Selalu bercerita banyak hal.",
-      "next": "scene10_n017"
-    },
-    {
-      "id": "scene10_n016c",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(tersenyum ramah) Anak itu sering mengunjungiku. Dari dulu. Dia anak yang polos. Selalu bercerita banyak hal.",
-      "next": "scene10_n017"
-    },
-    {
-      "id": "scene10_n017",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Dia sering khawatir padamu. Katanya... kau sering lupa makan dan terlalu banyak bekerja.",
-      "next": "scene10_n018"
-    },
-    {
-      "id": "scene10_n018",
-      "type": "narration",
-      "text": "Player menggenggam cangkirnya sedikit lebih erat.",
-      "next": "scene10_n019"
-    },
-    {
-      "id": "scene10_n019",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Dia memang seperti itu",
-          "goTo": "scene10_n020a"
-        },
-        {
-          "text": "Dia terlalu banyak bicara",
-          "goTo": "scene10_n020b"
-        },
-        {
-          "text": "Dia hanya peduli",
-          "goTo": "scene10_n020c"
-        }
-      ]
-    },
-    {
-      "id": "scene10_n020a",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengangguk pelan) Peduli... Itu sifat yang langka. Sama seperti ayahmu.",
-      "next": "scene10_n021"
-    },
-    {
-      "id": "scene10_n020b",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengangguk pelan) Peduli... Itu sifat yang langka. Sama seperti ayahmu.",
-      "next": "scene10_n021"
-    },
-    {
-      "id": "scene10_n020c",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(mengangguk pelan) Peduli... Itu sifat yang langka. Sama seperti ayahmu.",
-      "next": "scene10_n021"
-    },
-    {
-      "id": "scene10_n021",
-      "type": "narration",
-      "text": "Ruangan kembali hening. Beberapa detik berlalu. Victor kembali berbicara.",
-      "next": "scene10_n022"
-    },
-    {
-      "id": "scene10_n022",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Kadang aku berpikir... Kalau saja Samuel tidak mudah mempercayai orang lain... mungkin malam itu tidak akan terjadi.",
-      "next": "scene10_n023"
-    },
-    {
-      "id": "scene10_n023",
-      "type": "line",
-      "speaker": "player",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
-      "text": "(mengerutkan dahi) Apa maksud Anda?",
-      "next": "scene10_n024"
-    },
-    {
-      "id": "scene10_n024",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(hanya tersenyum) Ah... Mungkin hanya penyesalan orang tua.",
-      "next": "scene10_n025"
-    },
-    {
-      "id": "scene10_n025",
-      "type": "narration",
-      "text": "Ia berdiri.",
-      "next": "scene10_n026"
-    },
-    {
-      "id": "scene10_n026",
-      "type": "line",
-      "speaker": "victor",
-      "expression": "smile",
-      "characters": [
-        {
-          "characterId": "victor",
-          "expression": "smile",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "Maaf, aku harus menerima telepon sebentar. Silakan nikmati tehnya.",
-      "next": "scene10_n027"
-    },
-    {
-      "id": "scene10_n027",
-      "type": "narration",
-      "text": "Ia berjalan meninggalkan ruang tamu. Pintu perlahan tertutup. Player terdiam. Ia mengingat kembali ucapan Victor. 'Alaric sering mengunjungiku.' Tangannya perlahan mengepal.",
-      "next": "scene10_end"
-    },
-    {
-      "id": "scene10_end",
-      "type": "end"
-    }
-  ]
+    "meta":  {
+                 "id":  "scene10",
+                 "title":  "Kediaman Victor Hale — Sore Hari",
+                 "background":  "mansion",
+                 "entry":  "scene10_n001"
+             },
+    "nodes":  [
+                  {
+                      "id":  "scene10_n001",
+                      "type":  "narration",
+                      "text":  "Mobil berhenti di depan sebuah mansion tua yang berdiri megah di pinggir danau. Seorang pria paruh baya telah menunggu di depan pintu utama. Rambutnya mulai memutih. Senyumnya hangat. Tatapannya tenang.",
+                      "next":  "scene10_n002"
+                  },
+                  {
+                      "id":  "scene10_n002",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Sudah lama aku ingin bertemu langsung dengan putri Samuel Ravenscroft.",
+                      "next":  "scene10_n003"
+                  },
+                  {
+                      "id":  "scene10_n003",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "(tersenyum tipis) Selamat sore, Tuan.",
+                      "next":  "scene10_n004"
+                  },
+                  {
+                      "id":  "scene10_n004",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum) Masuklah. Anggap saja rumah sendiri.",
+                      "next":  "scene10_n005"
+                  },
+                  {
+                      "id":  "scene10_n005",
+                      "type":  "narration",
+                      "text":  "{playerName} terus mengamati seluruh ruangan. Beberapa saat kemudian, mereka duduk di ruang tamu. Seorang pelayan menyajikan teh. Victor menuangkan teh ke cangkir {playerName}.",
+                      "next":  "scene10_n006"
+                  },
+                  {
+                      "id":  "scene10_n006",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Ayahmu dulu selalu memilih teh yang sama.",
+                      "next":  "scene10_n007"
+                  },
+                  {
+                      "id":  "scene10_n007",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "Menatap cangkirnya... Begitu?",
+                      "next":  "scene10_n008"
+                  },
+                  {
+                      "id":  "scene10_n008",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum kecil) Samuel punya selera yang sederhana. Tapi kepalanya sangat keras.",
+                      "next":  "scene10_n009"
+                  },
+                  {
+                      "id":  "scene10_n009",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "Berarti hubungan Anda cukup dekat.",
+                      "next":  "scene10_n010"
+                  },
+                  {
+                      "id":  "scene10_n010",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tertawa pelan) Cukup dekat. Dulu kami sering berdiskusi soal bisnis. Lalu... jalan kami berbeda.",
+                      "next":  "scene10_n011"
+                  },
+                  {
+                      "id":  "scene10_n011",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Ayah tidak pernah menceritakan Anda",
+                                          "goTo":  "scene10_n012a"
+                                      },
+                                      {
+                                          "text":  "Hubungan kalian berakhir buruk?",
+                                          "goTo":  "scene10_n012b"
+                                      },
+                                      {
+                                          "text":  "Apa terakhir kali kalian bertemu... malam itu?",
+                                          "goTo":  "scene10_n012c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene10_n012a",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(terdiam sejenak) Malam itu... adalah malam yang ingin kulupakan. Aku datang terlambat. Ketika sampai... semuanya sudah selesai.",
+                      "next":  "scene10_n013"
+                  },
+                  {
+                      "id":  "scene10_n012b",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(terdiam sejenak) Malam itu... adalah malam yang ingin kulupakan. Aku datang terlambat. Ketika sampai... semuanya sudah selesai.",
+                      "next":  "scene10_n013"
+                  },
+                  {
+                      "id":  "scene10_n012c",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(terdiam sejenak) Malam itu... adalah malam yang ingin kulupakan. Aku datang terlambat. Ketika sampai... semuanya sudah selesai.",
+                      "next":  "scene10_n013"
+                  },
+                  {
+                      "id":  "scene10_n013",
+                      "type":  "narration",
+                      "text":  "{playerName} memperhatikan ekspresi Victor. Tidak ada keraguan. Tidak ada kepanikan. Seolah ia telah mengulang cerita itu ratusan kali. Victor mengganti topik pembicaraan.",
+                      "next":  "scene10_n014"
+                  },
+                  {
+                      "id":  "scene10_n014",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Ngomong-ngomong... bagaimana kabar Alaric?",
+                      "next":  "scene10_n015"
+                  },
+                  {
+                      "id":  "scene10_n015",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Anda mengenalnya?",
+                                          "goTo":  "scene10_n016a"
+                                      },
+                                      {
+                                          "text":  "Dia baik",
+                                          "goTo":  "scene10_n016b"
+                                      },
+                                      {
+                                          "text":  "Kenapa bertanya tentang dia?",
+                                          "goTo":  "scene10_n016c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene10_n016a",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum ramah) Anak itu sering mengunjungiku. Dari dulu. Dia anak yang polos. Selalu bercerita banyak hal.",
+                      "next":  "scene10_n017"
+                  },
+                  {
+                      "id":  "scene10_n016b",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum ramah) Anak itu sering mengunjungiku. Dari dulu. Dia anak yang polos. Selalu bercerita banyak hal.",
+                      "next":  "scene10_n017"
+                  },
+                  {
+                      "id":  "scene10_n016c",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(tersenyum ramah) Anak itu sering mengunjungiku. Dari dulu. Dia anak yang polos. Selalu bercerita banyak hal.",
+                      "next":  "scene10_n017"
+                  },
+                  {
+                      "id":  "scene10_n017",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Dia sering khawatir padamu. Katanya... kau sering lupa makan dan terlalu banyak bekerja.",
+                      "next":  "scene10_n018"
+                  },
+                  {
+                      "id":  "scene10_n018",
+                      "type":  "narration",
+                      "text":  "{playerName} menggenggam cangkirnya sedikit lebih erat.",
+                      "next":  "scene10_n019"
+                  },
+                  {
+                      "id":  "scene10_n019",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Dia memang seperti itu",
+                                          "goTo":  "scene10_n020a"
+                                      },
+                                      {
+                                          "text":  "Dia terlalu banyak bicara",
+                                          "goTo":  "scene10_n020b"
+                                      },
+                                      {
+                                          "text":  "Dia hanya peduli",
+                                          "goTo":  "scene10_n020c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene10_n020a",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengangguk pelan) Peduli... Itu sifat yang langka. Sama seperti ayahmu.",
+                      "next":  "scene10_n021"
+                  },
+                  {
+                      "id":  "scene10_n020b",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengangguk pelan) Peduli... Itu sifat yang langka. Sama seperti ayahmu.",
+                      "next":  "scene10_n021"
+                  },
+                  {
+                      "id":  "scene10_n020c",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(mengangguk pelan) Peduli... Itu sifat yang langka. Sama seperti ayahmu.",
+                      "next":  "scene10_n021"
+                  },
+                  {
+                      "id":  "scene10_n021",
+                      "type":  "narration",
+                      "text":  "Ruangan kembali hening. Beberapa detik berlalu. Victor kembali berbicara.",
+                      "next":  "scene10_n022"
+                  },
+                  {
+                      "id":  "scene10_n022",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Kadang aku berpikir... Kalau saja Samuel tidak mudah mempercayai orang lain... mungkin malam itu tidak akan terjadi.",
+                      "next":  "scene10_n023"
+                  },
+                  {
+                      "id":  "scene10_n023",
+                      "type":  "line",
+                      "speaker":  "player",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  false
+                                     },
+                      "text":  "(mengerutkan dahi) Apa maksud Anda?",
+                      "next":  "scene10_n024"
+                  },
+                  {
+                      "id":  "scene10_n024",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(hanya tersenyum) Ah... Mungkin hanya penyesalan orang tua.",
+                      "next":  "scene10_n025"
+                  },
+                  {
+                      "id":  "scene10_n025",
+                      "type":  "narration",
+                      "text":  "Ia berdiri.",
+                      "next":  "scene10_n026"
+                  },
+                  {
+                      "id":  "scene10_n026",
+                      "type":  "line",
+                      "speaker":  "victor",
+                      "expression":  "smile",
+                      "characters":  {
+                                         "characterId":  "victor",
+                                         "expression":  "smile",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "Maaf, aku harus menerima telepon sebentar. Silakan nikmati tehnya.",
+                      "next":  "scene10_n027"
+                  },
+                  {
+                      "id":  "scene10_n027",
+                      "type":  "narration",
+                      "text":  "Ia berjalan meninggalkan ruang tamu. Pintu perlahan tertutup. {playerName} terdiam. Ia mengingat kembali ucapan Victor. \u0027Alaric sering mengunjungiku.\u0027 Tangannya perlahan mengepal.",
+                      "next":  "scene10_end"
+                  },
+                  {
+                      "id":  "scene10_end",
+                      "type":  "end"
+                  }
+              ]
 }

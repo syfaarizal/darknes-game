@@ -1,306 +1,280 @@
 {
-  "meta": {
-    "id": "scene08",
-    "title": "Ruang Keluarga — Malam Hari",
-    "background": "family-room",
-    "entry": "scene08_n001"
-  },
-  "nodes": [
-    {
-      "id": "scene08_n001",
-      "type": "narration",
-      "text": "Player baru saja pulang. Belum sempat menuju pintu ruang kerja, Alaric menghentikannya.",
-      "next": "scene08_n002"
-    },
-    {
-      "id": "scene08_n002",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "...Aku dengar kamu sedang menyelidiki seseorang.",
-      "next": "scene08_n003"
-    },
-    {
-      "id": "scene08_n003",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Beritanya cepat sekali",
-          "goTo": "scene08_n004a"
-        },
-        {
-          "text": "Iya",
-          "goTo": "scene08_n004b"
-        },
-        {
-          "text": "(Diam)",
-          "goTo": "scene08_n004c"
-        }
-      ]
-    },
-    {
-      "id": "scene08_n004a",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player) ...Apa kamu akan pergi sendiri?",
-      "next": "scene08_n005"
-    },
-    {
-      "id": "scene08_n004b",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player) ...Apa kamu akan pergi sendiri?",
-      "next": "scene08_n005"
-    },
-    {
-      "id": "scene08_n004c",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menatap Player) ...Apa kamu akan pergi sendiri?",
-      "next": "scene08_n005"
-    },
-    {
-      "id": "scene08_n005",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Iya",
-          "goTo": "scene08_n006a"
-        },
-        {
-          "text": "Aku terbiasa",
-          "goTo": "scene08_n006b"
-        },
-        {
-          "text": "Aku akan baik-baik saja",
-          "goTo": "scene08_n006c"
-        }
-      ]
-    },
-    {
-      "id": "scene08_n006a",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, Player. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
-      "next": "scene08_n007"
-    },
-    {
-      "id": "scene08_n006b",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, Player. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
-      "next": "scene08_n007"
-    },
-    {
-      "id": "scene08_n006c",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, Player. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
-      "next": "scene08_n007"
-    },
-    {
-      "id": "scene08_n007",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Aku bisa menjaga diriku",
-          "goTo": "scene08_n008a"
-        },
-        {
-          "text": "Aku tidak ingin kalian ikut menanggung risikonya",
-          "goTo": "scene08_n008b"
-        },
-        {
-          "text": "(Tersenyum tipis)",
-          "goTo": "scene08_n008c"
-        }
-      ]
-    },
-    {
-      "id": "scene08_n008a",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
-      "next": "scene08_n009"
-    },
-    {
-      "id": "scene08_n008b",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
-      "next": "scene08_n009"
-    },
-    {
-      "id": "scene08_n008c",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
-      "next": "scene08_n009"
-    },
-    {
-      "id": "scene08_n009",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Aku akan pulang cepat",
-          "goTo": "scene08_n010a"
-        },
-        {
-          "text": "Aku akan baik-baik saja",
-          "goTo": "scene08_n010b"
-        },
-        {
-          "text": "Jangan membuat mereka menungguku",
-          "goTo": "scene08_n010c"
-        }
-      ]
-    },
-    {
-      "id": "scene08_n010a",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menggeleng pelan) Baiklah.",
-      "next": "scene08_n011"
-    },
-    {
-      "id": "scene08_n010b",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menggeleng pelan) Baiklah.",
-      "next": "scene08_n011"
-    },
-    {
-      "id": "scene08_n010c",
-      "type": "line",
-      "speaker": "alaric",
-      "expression": "neutral",
-      "characters": [
-        {
-          "characterId": "alaric",
-          "expression": "neutral",
-          "position": "center",
-          "isSpeaking": true
-        }
-      ],
-      "text": "(menggeleng pelan) Baiklah.",
-      "next": "scene08_n011"
-    },
-    {
-      "id": "scene08_n011",
-      "type": "narration",
-      "text": "Untuk sesaat, ia merasa rumah ini terlalu hangat untuk seseorang yang sudah terbiasa hidup di dunia yang penuh darah.",
-      "next": "scene08_end"
-    },
-    {
-      "id": "scene08_end",
-      "type": "end"
-    }
-  ]
+    "meta":  {
+                 "id":  "scene08",
+                 "title":  "Ruang Keluarga — Malam Hari",
+                 "background":  "family-room",
+                 "entry":  "scene08_n001"
+             },
+    "nodes":  [
+                  {
+                      "id":  "scene08_n001",
+                      "type":  "narration",
+                      "text":  "{playerName} baru saja pulang. Belum sempat menuju pintu ruang kerja, Alaric menghentikannya.",
+                      "next":  "scene08_n002"
+                  },
+                  {
+                      "id":  "scene08_n002",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "...Aku dengar kamu sedang menyelidiki seseorang.",
+                      "next":  "scene08_n003"
+                  },
+                  {
+                      "id":  "scene08_n003",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Beritanya cepat sekali",
+                                          "goTo":  "scene08_n004a"
+                                      },
+                                      {
+                                          "text":  "Iya",
+                                          "goTo":  "scene08_n004b"
+                                      },
+                                      {
+                                          "text":  "(Diam)",
+                                          "goTo":  "scene08_n004c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene08_n004a",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName}) ...Apa kamu akan pergi sendiri?",
+                      "next":  "scene08_n005"
+                  },
+                  {
+                      "id":  "scene08_n004b",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName}) ...Apa kamu akan pergi sendiri?",
+                      "next":  "scene08_n005"
+                  },
+                  {
+                      "id":  "scene08_n004c",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menatap {playerName}) ...Apa kamu akan pergi sendiri?",
+                      "next":  "scene08_n005"
+                  },
+                  {
+                      "id":  "scene08_n005",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Iya",
+                                          "goTo":  "scene08_n006a"
+                                      },
+                                      {
+                                          "text":  "Aku terbiasa",
+                                          "goTo":  "scene08_n006b"
+                                      },
+                                      {
+                                          "text":  "Aku akan baik-baik saja",
+                                          "goTo":  "scene08_n006c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene08_n006a",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, {playerName}. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
+                      "next":  "scene08_n007"
+                  },
+                  {
+                      "id":  "scene08_n006b",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, {playerName}. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
+                      "next":  "scene08_n007"
+                  },
+                  {
+                      "id":  "scene08_n006c",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, {playerName}. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
+                      "next":  "scene08_n007"
+                  },
+                  {
+                      "id":  "scene08_n007",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Aku bisa menjaga diriku",
+                                          "goTo":  "scene08_n008a"
+                                      },
+                                      {
+                                          "text":  "Aku tidak ingin kalian ikut menanggung risikonya",
+                                          "goTo":  "scene08_n008b"
+                                      },
+                                      {
+                                          "text":  "(Tersenyum tipis)",
+                                          "goTo":  "scene08_n008c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene08_n008a",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
+                      "next":  "scene08_n009"
+                  },
+                  {
+                      "id":  "scene08_n008b",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
+                      "next":  "scene08_n009"
+                  },
+                  {
+                      "id":  "scene08_n008c",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
+                      "next":  "scene08_n009"
+                  },
+                  {
+                      "id":  "scene08_n009",
+                      "type":  "choice",
+                      "options":  [
+                                      {
+                                          "text":  "Aku akan pulang cepat",
+                                          "goTo":  "scene08_n010a"
+                                      },
+                                      {
+                                          "text":  "Aku akan baik-baik saja",
+                                          "goTo":  "scene08_n010b"
+                                      },
+                                      {
+                                          "text":  "Jangan membuat mereka menungguku",
+                                          "goTo":  "scene08_n010c"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene08_n010a",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menggeleng pelan) Baiklah.",
+                      "next":  "scene08_n011"
+                  },
+                  {
+                      "id":  "scene08_n010b",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menggeleng pelan) Baiklah.",
+                      "next":  "scene08_n011"
+                  },
+                  {
+                      "id":  "scene08_n010c",
+                      "type":  "line",
+                      "speaker":  "alaric",
+                      "expression":  "neutral",
+                      "characters":  {
+                                         "characterId":  "alaric",
+                                         "expression":  "neutral",
+                                         "position":  "center",
+                                         "isSpeaking":  true
+                                     },
+                      "text":  "(menggeleng pelan) Baiklah.",
+                      "next":  "scene08_n011"
+                  },
+                  {
+                      "id":  "scene08_n011",
+                      "type":  "narration",
+                      "text":  "Untuk sesaat, ia merasa rumah ini terlalu hangat untuk seseorang yang sudah terbiasa hidup di dunia yang penuh darah.",
+                      "next":  "scene08_end"
+                  },
+                  {
+                      "id":  "scene08_end",
+                      "type":  "end"
+                  }
+              ]
 }
