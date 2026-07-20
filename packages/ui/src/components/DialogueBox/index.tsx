@@ -31,7 +31,7 @@ export function DialogueBox({
       {name && (
         <div className="mb-3 flex items-center gap-3">
           <div
-            className="shrink-0 border-b-2 px-1 pb-0.5 font-display text-sm tracking-[0.14em] uppercase"
+            className="shrink-0 border-b-2 px-1 pb-0.5 font-character text-[15px] font-semibold italic tracking-[0.08em] uppercase"
             style={{ color: nameColor, borderColor: nameColor }}
           >
             {name}

@@ -1,9 +1,5 @@
 @import '@darknes/ui/src/styles/tokens.css';
 
-/* Fonts loaded from Google Fonts for local dev. Swap for @font-face + files
-   in assets/fonts/ before shipping — see assets/fonts/README.md. */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

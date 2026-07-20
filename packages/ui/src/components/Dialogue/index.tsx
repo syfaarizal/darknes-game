@@ -88,6 +88,7 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
     const resolvedText = replaceVariables(currentNode.text, ctx);
 
     const color = resolvedSpeaker ? speakerColorOf?.(resolvedSpeaker) : undefined;
+    const isNarration = currentNode.type === DialogueNodeType.Narration;
 
     return (
       <DialogueBox
@@ -99,7 +100,15 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
         name={resolvedSpeaker}
         nameColor={color}
       >
-        <Typewriter text={resolvedText} />
+        <p
+          className={`min-h-[4.5rem] leading-relaxed ${
+            isNarration
+              ? 'font-subtitle text-[17px] italic text-[var(--color-ink-muted)]'
+              : 'font-body text-[15px] text-[var(--color-ink)]'
+          }`}
+        >
+          <Typewriter text={resolvedText} />
+        </p>
       </DialogueBox>
     );
   }

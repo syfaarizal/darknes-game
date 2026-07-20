@@ -3,37 +3,55 @@
  * Every component in @darknes/ui reads colors/fonts from these variables —
  * never a hardcoded hex — so a second game can re-skin the whole engine by
  * swapping this one file.
+ *
+ * Style reference:
+ *   John Wick · Mafia Definitive Edition · Peaky Blinders
+ *   Detroit: Become Human · Heavy Rain · Death Stranding · The Order 1886
+ *   — elegant, dark, generous whitespace, restrained ornaments
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
 :root {
-  /* Core palette — dark, elegant, luxury mafia */
-  --color-void: #0a0a0a; /* page background */
-  --color-charcoal: #141414; /* panel background */
-  --color-graphite: #1c1c1c; /* raised surface / hover */
-  --color-hairline: rgba(255, 255, 255, 0.08); /* thin borders */
+  /* ── Core palette — dark luxury / mafia aristocrat ── */
+  --color-void: #050507;           /* page / app background */
+  --color-charcoal: #111114;        /* panel surfaces */
+  --color-graphite: #1a1a1e;       /* raised surfaces / hover */
+  --color-hairline: rgba(255, 255, 255, 0.07);  /* thin structural lines */
 
-  --color-accent: #8b0000; /* primary red accent */
-  --color-accent-strong: #b91c1c; /* hover / active red */
-  --color-accent-soft: rgba(139, 0, 0, 0.16); /* red tint fills */
+  /* ── Accent — deep crimson, aristocrat red ── */
+  --color-accent:       #7a1010;   /* base accent */
+  --color-accent-strong:#b51919;   /* hover / active state */
+  --color-accent-soft:  rgba(127, 16, 16, 0.18); /* tinted fills */
+  --color-accent-glow:  rgba(181, 25, 25, 0.35); /* glow / shadow */
 
-  --color-ink: #f5f4f0; /* primary text (near white) */
-  --color-ink-muted: rgba(245, 244, 240, 0.6); /* secondary text */
-  --color-ink-faint: rgba(245, 244, 240, 0.35); /* disabled / hints */
+  /* ── Ink — warm near-white text ── */
+  --color-ink:          #f0ede6;   /* primary text */
+  --color-ink-muted:   rgba(240, 237, 230, 0.55); /* secondary / label */
+  --color-ink-faint:    rgba(240, 237, 230, 0.28); /* disabled / placeholder */
 
-  --color-glass-fill: rgba(20, 20, 20, 0.72);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
+  /* ── Glass panels ── */
+  --color-glass-fill:   rgba(12, 12, 14, 0.76);
+  --color-glass-border: rgba(255, 255, 255, 0.09);
 
-  /* Typography */
-  --font-display: 'Cinzel', serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  /* ── Typography scale ──
+     Cinzel    → game title "DARKNES"
+     Cormorant Garamond → subtitles / narrator text
+     EB Garamond SemiBold → character names in dialogue
+     Inter     → body / UI text                            */
+  --font-display:    'Cinzel', serif;
+  --font-subtitle:   'Cormorant Garamond', serif;
+  --font-character:   'EB Garamond', serif;
+  --font-body:        'Inter', system-ui, sans-serif;
 
-  /* Motion */
-  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
-  --duration-fast: 180ms;
-  --duration-normal: 400ms;
-  --duration-slow: 800ms;
+  /* ── Motion ── */
+  --ease-cinematic:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-dramatic:   cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast:   160ms;
+  --duration-normal: 380ms;
+  --duration-slow:   900ms;
 
-  /* Radii */
-  --radius-panel: 2px;
-  --radius-pill: 999px;
+  /* ── Radii — razor-sharp, brutalist ── */
+  --radius-panel: 1px;
+  --radius-pill:  999px;
 }
