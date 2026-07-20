@@ -11,14 +11,6 @@ export interface MenuProps {
   items: MenuItem[];
 }
 
-/**
- * Elegant, cinematic vertical menu.
- *
- * Primary — full-width underline bar with crimson accent, animated on hover.
- * Ghost    — minimal underline, letter-spacing reveal on hover.
- *
- * Reference: Death Stranding / The Order 1886 / John Wick title cards.
- */
 export function Menu({ items }: MenuProps) {
   return (
     <nav className="flex w-full max-w-[22rem] flex-col items-stretch gap-1">

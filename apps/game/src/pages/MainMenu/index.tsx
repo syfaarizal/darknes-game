@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu } from '@darknes/ui';
-import { useSaveStore } from '@darknes/engine';
+import { useSaveStore, useSettingsStore } from '@darknes/engine';
 
 /* ── Staggered entrance animation constants ── */
 const FADE_UP = {
@@ -29,12 +29,58 @@ export function MainMenu() {
   const navigate  = useNavigate();
   const hasSaves  = useSaveStore((s) => s.slots.length > 0);
   const videoRef  = useRef<HTMLVideoElement>(null);
+  const audioRef  = useRef<HTMLAudioElement | null>(null);
+  const musicVolumeRef = useRef(1);
+  const musicVolume = useSettingsStore((s) => s.audio.master * s.audio.music);
 
-  /* Ensure video loops seamlessly */
+  if (!audioRef.current) {
+    audioRef.current = new Audio('/assets/audio/music/main-menu-bs.mp3');
+  }
+  musicVolumeRef.current = musicVolume;
+
+  /* Keep the menu backsound in sync with the settings panel. */
   useEffect(() => {
-    const vid = videoRef.current;
-    if (!vid) return;
-    vid.addEventListener('ended', () => { vid.currentTime = 0; vid.play(); });
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.loop = true;
+    audio.preload = 'auto';
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = musicVolume;
+    if (musicVolume <= 0) {
+      audio.pause();
+      return;
+    }
+    void audio.play().catch(() => {
+      // Browser autoplay policy may block sound until the first interaction.
+    });
+  }, [musicVolume]);
+
+  /* Retry playback on the first user gesture if autoplay was blocked. */
+  useEffect(() => {
+    const tryPlay = () => {
+      const audio = audioRef.current;
+      if (!audio || musicVolumeRef.current <= 0) return;
+      void audio.play().catch(() => {});
+    };
+
+    window.addEventListener('pointerdown', tryPlay, { once: true });
+    window.addEventListener('keydown', tryPlay, { once: true });
+
+    return () => {
+      window.removeEventListener('pointerdown', tryPlay);
+      window.removeEventListener('keydown', tryPlay);
+    };
+  }, []);
+
+  useEffect(() => () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.pause();
+    audio.currentTime = 0;
   }, []);
 
   const updatedItems = menuItems.map((item) => {
@@ -50,8 +96,10 @@ export function MainMenu() {
         ref={videoRef}
         src="/assets/backgrounds/library/main-menu-bg.mp4"
         autoPlay
-        muted
+        loop
         playsInline
+        preload="auto"
+        muted
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
       />
 
@@ -91,7 +139,7 @@ export function MainMenu() {
           <img
             src="/assets/logo/logo-darknes.png"
             alt="Darknes"
-            className="mb-1 h-10 w-auto select-none object-contain"
+            className="mb-1 mx-auto block h-10 w-auto select-none object-contain"
             draggable={false}
           />
         </motion.div>
@@ -148,7 +196,7 @@ export function MainMenu() {
           className="mt-16 font-body text-[10px] uppercase tracking-[0.22em]
             text-[var(--color-ink-faint)]"
         >
-          &copy; 2026 Syfa Arizal Studio &nbsp;&middot;&nbsp; All Rights Reserved
+          &copy; 2026 Kai Shi & Sei Ryuka &nbsp;&middot;&nbsp; All Rights Reserved
         </motion.p>
       </motion.div>
 
