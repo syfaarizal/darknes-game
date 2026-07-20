@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene03",
-                 "title":  "Ruang Keluarga — Pagi Hari",
+                 "title":  "Ruang Keluarga â€” Pagi Hari",
                  "background":  "family-room",
                  "entry":  "scene03_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "mike",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "mike",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mike",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kak!",
                       "next":  "scene03_n003"
                   },
@@ -37,12 +39,14 @@
                       "type":  "line",
                       "speaker":  "mike",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "mike",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mike",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Akhirnya kakak bangun juga!",
                       "next":  "scene03_n005"
                   },
@@ -69,12 +73,14 @@
                       "type":  "line",
                       "speaker":  "mike",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "mike",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mike",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kakak pasti belum sarapan!",
                       "next":  "scene03_n007"
                   },
@@ -83,12 +89,14 @@
                       "type":  "line",
                       "speaker":  "mike",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "mike",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mike",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kakak pasti belum sarapan!",
                       "next":  "scene03_n007"
                   },
@@ -97,12 +105,14 @@
                       "type":  "line",
                       "speaker":  "mike",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "mike",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mike",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kakak pasti belum sarapan!",
                       "next":  "scene03_n007"
                   },
@@ -117,12 +127,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Hm... maaf ganggu pagi-pagi. Tapi ada sedikit laporan.",
                       "next":  "scene03_n009"
                   },
@@ -149,12 +161,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Ini soal kontrak bisnis di Eropa. Kontrak tersebut sudah disetujui. Tapi mereka minta jadwal pengiriman dimajukan.",
                       "next":  "scene03_n011"
                   },
@@ -163,12 +177,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Ini soal kontrak bisnis di Eropa. Kontrak tersebut sudah disetujui. Tapi mereka minta jadwal pengiriman dimajukan.",
                       "next":  "scene03_n011"
                   },
@@ -177,12 +193,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Ini soal kontrak bisnis di Eropa. Kontrak tersebut sudah disetujui. Tapi mereka minta jadwal pengiriman dimajukan.",
                       "next":  "scene03_n011"
                   },
@@ -209,12 +227,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
                       "next":  "scene03_n013"
                   },
@@ -223,12 +243,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
                       "next":  "scene03_n013"
                   },
@@ -237,12 +259,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
                       "next":  "scene03_n013"
                   },
@@ -257,12 +281,14 @@
                       "type":  "line",
                       "speaker":  "henry",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "henry",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "henry",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Astaga... masih pagi udah ngomongin kerjaan.",
                       "next":  "scene03_n015"
                   },

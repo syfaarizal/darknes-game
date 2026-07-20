@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene09",
-                 "title":  "Ruang Kerja — Malam Hari",
+                 "title":  "Ruang Kerja â€” Malam Hari",
                  "background":  "workspace-night",
                  "entry":  "scene09_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kopi. Biar matamu nggak kalah sama laporan itu.",
                       "next":  "scene09_n003"
                   },
@@ -31,12 +33,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) ...Terima kasih.",
                       "next":  "scene09_n004"
                   },
@@ -51,12 +55,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Besok?",
                       "next":  "scene09_n006"
                   },
@@ -83,12 +89,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
                       "next":  "scene09_n008"
                   },
@@ -97,12 +105,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
                       "next":  "scene09_n008"
                   },
@@ -111,12 +121,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengambil foto itu) ...Sudah sepuluh tahun. Kau masih mengejarnya.",
                       "next":  "scene09_n008"
                   },
@@ -143,12 +155,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName}) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
                       "next":  "scene09_n010"
                   },
@@ -157,12 +171,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName}) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
                       "next":  "scene09_n010"
                   },
@@ -171,12 +187,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName}) Lalu setelah kau menemukannya... apa yang akan kau lakukan?",
                       "next":  "scene09_n010"
                   },
@@ -209,12 +227,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
                       "next":  "scene09_n013"
                   },
@@ -223,12 +243,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
                       "next":  "scene09_n013"
                   },
@@ -237,12 +259,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) Kalau begitu, jangan sampai pencarianmu membuatmu kehilangan dirimu sendiri.",
                       "next":  "scene09_n013"
                   },
@@ -251,12 +275,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(menatap kopi yang mulai mengepulkan uap) Aku rasa... aku sudah kehilangan itu sejak lama.",
                       "next":  "scene09_n014"
                   },
@@ -265,12 +291,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menggeleng pelan) Belum. Kalau benar kau sudah kehilangannya... kau tidak akan masih pulang ke rumah.",
                       "next":  "scene09_n015"
                   },
@@ -315,12 +343,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Besok... jangan terlalu keras pada dirimu sendiri. Dan jangan lupa, kau tidak harus memikul semuanya sendirian.",
                       "next":  "scene09_n018"
                   },
@@ -347,12 +377,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
                       "next":  "scene09_n020"
                   },
@@ -361,12 +393,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
                       "next":  "scene09_n020"
                   },
@@ -375,12 +409,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Aku selalu di sini... Selama kau masih bisa melihatku.",
                       "next":  "scene09_n020"
                   },

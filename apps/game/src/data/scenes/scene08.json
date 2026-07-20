@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene08",
-                 "title":  "Ruang Keluarga — Malam Hari",
+                 "title":  "Ruang Keluarga â€” Malam Hari",
                  "background":  "family-room",
                  "entry":  "scene08_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Aku dengar kamu sedang menyelidiki seseorang.",
                       "next":  "scene08_n003"
                   },
@@ -49,12 +51,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName}) ...Apa kamu akan pergi sendiri?",
                       "next":  "scene08_n005"
                   },
@@ -63,12 +67,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName}) ...Apa kamu akan pergi sendiri?",
                       "next":  "scene08_n005"
                   },
@@ -77,12 +83,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName}) ...Apa kamu akan pergi sendiri?",
                       "next":  "scene08_n005"
                   },
@@ -109,12 +117,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, {playerName}. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
                       "next":  "scene08_n007"
                   },
@@ -123,12 +133,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, {playerName}. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
                       "next":  "scene08_n007"
                   },
@@ -137,12 +149,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas) Tidakkah itu akan membahayakanmu? Sangat berbahaya pergi sendiri, {playerName}. Kamu selalu bilang semuanya baik-baik saja... padahal sebaliknya.",
                       "next":  "scene08_n007"
                   },
@@ -169,12 +183,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
                       "next":  "scene08_n009"
                   },
@@ -183,12 +199,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
                       "next":  "scene08_n009"
                   },
@@ -197,12 +215,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menundukkan kepala) Aku tahu. Tapi... sesekali, biarkan orang lain yang menjagamu. Aku, dan adik-adikmu akan selalu berusaha untuk menjagamu.",
                       "next":  "scene08_n009"
                   },
@@ -229,12 +249,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menggeleng pelan) Baiklah.",
                       "next":  "scene08_n011"
                   },
@@ -243,12 +265,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menggeleng pelan) Baiklah.",
                       "next":  "scene08_n011"
                   },
@@ -257,12 +281,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menggeleng pelan) Baiklah.",
                       "next":  "scene08_n011"
                   },

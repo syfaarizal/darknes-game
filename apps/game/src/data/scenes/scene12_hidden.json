@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene12_hidden",
-                 "title":  "Rumah Sakit — Hidden Ending",
+                 "title":  "Rumah Sakit â€” Hidden Ending",
                  "background":  "white",
                  "entry":  "scene12_hidden_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Kita di mana?",
                       "next":  "scene12_hidden_n003"
                   },
@@ -31,12 +33,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Tempat ini tidak seharusnya kamu datangi secepat ini. Tapi ada seseorang... yang ingin bertemu.",
                       "next":  "scene12_hidden_n004"
                   },
@@ -57,12 +61,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "father",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "father",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku merindukan kalian.",
                       "next":  "scene12_hidden_n007"
                   },
@@ -71,12 +77,14 @@
                       "type":  "line",
                       "speaker":  "mother",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "mother",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mother",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengusap rambutnya) Kami juga.",
                       "next":  "scene12_hidden_n008"
                   },
@@ -85,12 +93,14 @@
                       "type":  "line",
                       "speaker":  "father",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "father",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "father",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Kau hebat sekali, anakku.",
                       "next":  "scene12_hidden_n009"
                   },
@@ -99,12 +109,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "father",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "father",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(tersenyum) Iya. (menoleh kepada Nathael) Dia selalu menemaniku di saat aku merasa sendiri.",
                       "next":  "scene12_hidden_n010"
                   },
@@ -113,12 +125,14 @@
                       "type":  "line",
                       "speaker":  "father",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "father",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "father",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum hangat) Setelah malam itu... Kami tidak bisa lagi menjagamu.",
                       "next":  "scene12_hidden_n011"
                   },
@@ -127,12 +141,14 @@
                       "type":  "line",
                       "speaker":  "mother",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "mother",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "mother",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Jadi... Hatimu menciptakan seseorang... yang bisa menggantikan kami. Seseorang itu adalah Nathael.",
                       "next":  "scene12_hidden_n012"
                   },
@@ -141,12 +157,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku bukan ayahmu. Aku bukan ibumu. Aku hanyalah... wujud kasih sayang yang tidak sempat mereka berikan.",
                       "next":  "scene12_hidden_n013"
                   },
@@ -155,12 +173,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(menangis) Terima kasih...",
                       "next":  "scene12_hidden_n014"
                   },
@@ -175,12 +195,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Sekarang... mereka yang akan menjagamu.",
                       "next":  "scene12_hidden_n016"
                   },

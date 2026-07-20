@@ -22,10 +22,16 @@ export function getCharacterDefinition(id: string): CharacterDefinition | undefi
  */
 export function applyLineToStage(node: LineNode): CharacterStageState[] {
   const current = useSceneStore.getState().stageCharacters;
+  const stageDirections = node.characters as CharacterStageState[] | CharacterStageState | undefined;
 
-  if (node.characters) {
-    useSceneStore.getState().setStageCharacters(node.characters);
-    return node.characters;
+  const normalizeStageDirections = (
+    value: CharacterStageState[] | CharacterStageState,
+  ): CharacterStageState[] => (Array.isArray(value) ? value : [value]);
+
+  if (stageDirections) {
+    const next = normalizeStageDirections(stageDirections);
+    useSceneStore.getState().setStageCharacters(next);
+    return next;
   }
 
   if (node.speaker) {

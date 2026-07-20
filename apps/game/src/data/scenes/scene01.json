@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene01",
-                 "title":  "Placeholder — scene01",
+                 "title":  "Placeholder â€” scene01",
                  "background":  "office",
                  "entry":  "scene01_n001"
              },
@@ -17,13 +17,15 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
-                      "text":  "(placeholder dialogue — replace with real script)",
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
+                      "text":  "(placeholder dialogue â€” replace with real script)",
                       "next":  "scene01_end"
                   },
                   {

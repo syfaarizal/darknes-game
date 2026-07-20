@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene07",
-                 "title":  "Kantor Ravenscroft Corporation — Keesokan Hari",
+                 "title":  "Kantor Ravenscroft Corporation â€” Keesokan Hari",
                  "background":  "office",
                  "entry":  "scene07_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Mau ke mana?",
                       "next":  "scene07_n003"
                   },
@@ -49,12 +51,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
@@ -63,12 +67,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
@@ -77,12 +83,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
@@ -91,12 +99,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kalau itu urusan perusahaan... aku pasti sudah tahu.",
                       "next":  "scene07_n006"
                   },
@@ -111,12 +121,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Aku mendapat petunjuk baru. Namanya Victor Hale. Besok aku akan menemuinya.",
                       "next":  "scene07_n008"
                   },
@@ -125,12 +137,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Tidak.",
                       "next":  "scene07_n009"
                   },
@@ -157,12 +171,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(melangkah mendekat) Itulah masalahnya. Kau selalu ingin menanganinya sendiri.",
                       "next":  "scene07_n011"
                   },
@@ -171,12 +187,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(melangkah mendekat) Itulah masalahnya. Kau selalu ingin menanganinya sendiri.",
                       "next":  "scene07_n011"
                   },
@@ -185,12 +203,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(melangkah mendekat) Itulah masalahnya. Kau selalu ingin menanganinya sendiri.",
                       "next":  "scene07_n011"
                   },
@@ -217,12 +237,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName} beberapa detik) Sepuluh tahun lalu... kau juga berpikir bisa menghadapi semuanya sendiri.",
                       "next":  "scene07_n013"
                   },
@@ -231,12 +253,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName} beberapa detik) Sepuluh tahun lalu... kau juga berpikir bisa menghadapi semuanya sendiri.",
                       "next":  "scene07_n013"
                   },
@@ -245,12 +269,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName} beberapa detik) Sepuluh tahun lalu... kau juga berpikir bisa menghadapi semuanya sendiri.",
                       "next":  "scene07_n013"
                   },
@@ -265,12 +291,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku ikut.",
                       "next":  "scene07_n015"
                   },
@@ -297,12 +325,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menyilangkan tangan) Kalau memang berbahaya... justru itu alasan aku harus ikut.",
                       "next":  "scene07_n017"
                   },
@@ -311,12 +341,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menyilangkan tangan) Kalau memang berbahaya... justru itu alasan aku harus ikut.",
                       "next":  "scene07_n017"
                   },
@@ -325,12 +357,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menyilangkan tangan) Kalau memang berbahaya... justru itu alasan aku harus ikut.",
                       "next":  "scene07_n017"
                   },
@@ -339,12 +373,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Aku hanya tidak ingin kehilangan siapapun lagi.",
                       "next":  "scene07_n018"
                   },
@@ -359,12 +395,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela nafas)",
                       "next":  "scene07_end"
                   },

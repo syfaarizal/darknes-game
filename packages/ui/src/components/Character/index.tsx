@@ -17,10 +17,12 @@ export interface CharacterLayerProps {
 }
 
 export function CharacterLayer({ characters }: CharacterLayerProps) {
+  const visibleCharacters = Array.isArray(characters) ? characters : [];
+
   return (
     <div className="absolute inset-0">
       <AnimatePresence>
-        {characters
+        {visibleCharacters
           .filter((c) => c.position !== CharacterPosition.Offscreen)
           .map((c) => (
             <CharacterPortrait key={c.characterId} state={c} />

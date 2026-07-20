@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene11",
-                 "title":  "Ruang Kerja Victor Hale — Konfrontasi",
+                 "title":  "Ruang Kerja Victor Hale â€” Konfrontasi",
                  "background":  "mansion-office",
                  "entry":  "scene11_n001"
              },
@@ -23,12 +23,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(membelalak) ...Azaroth?",
                       "next":  "scene11_n004"
                   },
@@ -43,12 +45,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(smirk) Apakah aku sudah ketahuan?",
                       "next":  "scene11_n006"
                   },
@@ -57,12 +61,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(menggenggam pistolnya) Jadi... Kaulah pembunuh mereka.",
                       "next":  "scene11_n007"
                   },
@@ -71,12 +77,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tertawa) Biar aku perkenalkan diri ku lagi dari awal. Diri ku Azaroth, rekan bisnis ayah tercintamu.",
                       "next":  "scene11_n008"
                   },
@@ -91,12 +99,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "K-Kak... Aku minta maaf... Aku benar-benar nggak tahu... Aku kira beliau teman Om Samuel... dia memanfaatkan ku (air matanya jatuh) Aku... pengkhianat.",
                       "next":  "scene11_n010"
                   },
@@ -105,12 +115,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tertawa) Anak itu sangat berguna. Dia memberiku semua informasi yang kubutuhkan.",
                       "next":  "scene11_n011"
                   },
@@ -125,12 +137,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Tandatangani. Bisnismu menjadi milikku. Atau... (menodongkan pistol ke kepala Alaric) ...dia mati.",
                       "next":  "scene11_n013"
                   },
@@ -139,12 +153,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menggeleng) Jangan... Jangan lakukan, {playerName}.",
                       "next":  "scene11_n014"
                   },
@@ -159,15 +175,15 @@
                       "type":  "choice",
                       "options":  [
                                       {
-                                          "text":  "Tandatangani kontrak — \u0027Setidaknya Alaric selamat...\u0027",
+                                          "text":  "Tandatangani kontrak â€” \u0027Setidaknya Alaric selamat...\u0027",
                                           "goTo":  "scene11_sign"
                                       },
                                       {
-                                          "text":  "Mengulur waktu — \u0027Aku butuh kesempatan...\u0027",
+                                          "text":  "Mengulur waktu â€” \u0027Aku butuh kesempatan...\u0027",
                                           "goTo":  "scene11_stall"
                                       },
                                       {
-                                          "text":  "Robek kontrak — \u0027Sejarah tidak akan terulang lagi.\u0027",
+                                          "text":  "Robek kontrak â€” \u0027Sejarah tidak akan terulang lagi.\u0027",
                                           "goTo":  "scene11_rip"
                                       }
                                   ]
@@ -183,12 +199,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Seperti ayahmu. Pada akhirnya... keluarga Ravenscroft selalu memilih orang yang mereka cintai.",
                       "next":  "scene11_sign_03"
                   },
@@ -197,12 +215,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menggeleng sambil menangis) Jangan... Aku nggak pantas diselamatkan...",
                       "next":  "scene11_sign_04"
                   },
@@ -217,12 +237,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...Lepaskan dia.",
                       "next":  "scene11_sign_06"
                   },
@@ -231,12 +253,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tertawa) Hahaha... Hebat. ternyata sejarah memang suka mengulang dirinya.",
                       "next":  "scene11_sign_07"
                   },
@@ -251,12 +275,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "{playerName}!",
                       "next":  "scene11_sign_09"
                   },
@@ -271,12 +297,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...DAMIAN!!",
                       "next":  "scene11_sign_11"
                   },
@@ -291,12 +319,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Terima kasih... atas perusahaanmu.",
                       "next":  "scene11_sign_13"
                   },
@@ -310,12 +340,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Aku punya satu pertanyaan.",
                       "next":  "scene11_stall_02"
                   },
@@ -324,12 +356,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Tapi silakan.",
                       "next":  "scene11_stall_03"
                   },
@@ -338,12 +372,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Kenapa keluargaku?",
                       "next":  "scene11_stall_04"
                   },
@@ -352,12 +388,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(berjalan perlahan) Karena ayahmu... terlalu mudah percaya pada orang lain.",
                       "next":  "scene11_stall_05"
                   },
@@ -378,12 +416,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "{playerName}!",
                       "next":  "scene11_stall_08"
                   },
@@ -398,12 +438,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Damian!",
                       "next":  "scene11_stall_10"
                   },
@@ -412,12 +454,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Hanya lecet. Alaric, cepat keluar bersama {playerName}.",
                       "next":  "scene11_stall_11"
                   },
@@ -432,12 +476,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) Aku akan mengambil sesuatu yang harusnya menjadi milikku.",
                       "next":  "scene11_stall_13"
                   },
@@ -469,12 +515,14 @@
                       "type":  "line",
                       "speaker":  "azaroth",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "azaroth",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "azaroth",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Berani sekali (mengangkat senjatanya)",
                       "next":  "scene11_rip_04"
                   },
@@ -489,12 +537,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "{playerName}!",
                       "next":  "scene11_rip_06"
                   },
@@ -509,12 +559,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "{playerName}!",
                       "next":  "scene11_rip_08"
                   },
@@ -529,12 +581,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Kau memang keras kepala.",
                       "next":  "scene11_rip_10"
                   },
@@ -543,12 +597,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...Maaf.",
                       "next":  "scene11_rip_11"
                   },
@@ -557,12 +613,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Sudah. Ayo pulang.",
                       "next":  "scene11_rip_12"
                   },

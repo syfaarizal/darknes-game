@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene05",
-                 "title":  "Rumah Ravenscroft — Ruang Kerja — Malam Hari",
+                 "title":  "Rumah Ravenscroft â€” Ruang Kerja â€” Malam Hari",
                  "background":  "workspace-night",
                  "entry":  "scene05_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Masih bekerja?",
                       "next":  "scene05_n003"
                   },
@@ -31,12 +33,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...",
                       "next":  "scene05_n004"
                   },
@@ -45,12 +49,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Ada sesuatu?",
                       "next":  "scene05_n005"
                   },
@@ -65,12 +71,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau belum menjawab pertanyaanku.",
                       "next":  "scene05_n007"
                   },
@@ -97,12 +105,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku tahu kau akan seperti ini.",
                       "next":  "scene05_n009"
                   },
@@ -111,12 +121,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku tahu kau akan seperti ini.",
                       "next":  "scene05_n009"
                   },
@@ -125,12 +137,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku tahu kau akan seperti ini.",
                       "next":  "scene05_n009"
                   },
@@ -145,12 +159,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Laporan lagi?",
                       "next":  "scene05_n011"
                   },
@@ -177,12 +193,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih sama. Dulu... kalau nilai ujianmu sembilan puluh sembilan... kau menangis semalaman hanya karena kurang satu angka.",
                       "next":  "scene05_n013"
                   },
@@ -191,12 +209,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih sama. Dulu... kalau nilai ujianmu sembilan puluh sembilan... kau menangis semalaman hanya karena kurang satu angka.",
                       "next":  "scene05_n013"
                   },
@@ -205,12 +225,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih sama. Dulu... kalau nilai ujianmu sembilan puluh sembilan... kau menangis semalaman hanya karena kurang satu angka.",
                       "next":  "scene05_n013"
                   },
@@ -219,12 +241,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(terdiam) ...Aku pernah seperti itu?",
                       "next":  "scene05_n014"
                   },
@@ -233,12 +257,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(terkekeh pelan) Lebih parah.",
                       "next":  "scene05_n015"
                   },
@@ -265,12 +291,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Menurutmu... kalau mereka masih ada... apa mereka akan bangga melihatmu sekarang?",
                       "next":  "scene05_n017"
                   },
@@ -279,12 +307,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Menurutmu... kalau mereka masih ada... apa mereka akan bangga melihatmu sekarang?",
                       "next":  "scene05_n017"
                   },
@@ -293,12 +323,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Menurutmu... kalau mereka masih ada... apa mereka akan bangga melihatmu sekarang?",
                       "next":  "scene05_n017"
                   },
@@ -331,12 +363,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih menyalahkan dirimu sendiri.",
                       "next":  "scene05_n020"
                   },
@@ -345,12 +379,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih menyalahkan dirimu sendiri.",
                       "next":  "scene05_n020"
                   },
@@ -359,12 +395,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih menyalahkan dirimu sendiri.",
                       "next":  "scene05_n020"
                   },
@@ -391,12 +429,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas pelan) Luka yang dipendam... tidak akan sembuh hanya karena kau berpura-pura melupakannya.",
                       "next":  "scene05_n022"
                   },
@@ -405,12 +445,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas pelan) Luka yang dipendam... tidak akan sembuh hanya karena kau berpura-pura melupakannya.",
                       "next":  "scene05_n022"
                   },
@@ -419,12 +461,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas pelan) Luka yang dipendam... tidak akan sembuh hanya karena kau berpura-pura melupakannya.",
                       "next":  "scene05_n022"
                   },
@@ -433,12 +477,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "(menundukkan kepala) Aku tidak pernah mencoba melupakannya. Aku hanya... tidak ingin mengalaminya lagi.",
                       "next":  "scene05_n023"
                   },
@@ -453,12 +499,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Dengar baik-baik. Kau boleh membenci masa lalumu. Kau boleh menangisinya. Tapi jangan biarkan masa lalu itu mengambil masa depanmu juga.",
                       "next":  "scene05_n025"
                   },
@@ -485,12 +533,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Itu sudah cukup.",
                       "next":  "scene05_n027"
                   },
@@ -499,12 +549,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Itu sudah cukup.",
                       "next":  "scene05_n027"
                   },
@@ -513,12 +565,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum) Itu sudah cukup.",
                       "next":  "scene05_n027"
                   },
@@ -533,12 +587,14 @@
                       "type":  "line",
                       "speaker":  "nathael",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "nathael",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "nathael",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Apa pun yang terjadi nanti, aku akan tetap berada di sisimu... sampai kau tidak lagi membutuhkanku.",
                       "next":  "scene05_n029"
                   },

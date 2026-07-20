@@ -1,4 +1,4 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene04",
                  "title":  "Kantor Ravenscroft Corporation",
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kontrak bisnis di Asia. Aku sudah memeriksanya.",
                       "next":  "scene04_n003"
                   },
@@ -37,12 +39,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Halaman tujuh. Baris kedua. Angkanya salah.",
                       "next":  "scene04_n005"
                   },
@@ -75,12 +79,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengangguk pelan) Bagus. Kesalahan yang diperbaiki lebih baik daripada kesalahan yang dipertahankan.",
                       "next":  "scene04_n008"
                   },
@@ -89,12 +95,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap tajam {playerName}) Dalam bisnis... tidak ada yang namanya kesalahan kecil.",
                       "next":  "scene04_n008"
                   },
@@ -103,12 +111,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menutup map di tangannya) Itu alasan aku memeriksa ulang. Kau selalu ceroboh.",
                       "next":  "scene04_n008"
                   },
@@ -117,12 +127,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Investor dari Jerman meminta negosiasi ulang. Mereka ingin menaikkan harga lima belas persen.",
                       "next":  "scene04_n009"
                   },
@@ -149,12 +161,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(sedikit mengangguk) Keputusan yang cepat.",
                       "next":  "scene04_n011"
                   },
@@ -163,12 +177,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) Itu juga pilihanku.",
                       "next":  "scene04_n011"
                   },
@@ -177,12 +193,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName} beberapa saat) Kau mulai berpikir beberapa langkah ke depan ya?",
                       "next":  "scene04_n011"
                   },
@@ -191,12 +209,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menaruh satu map terakhir) Ini laporan Gudang, ada selisih stok.",
                       "next":  "scene04_n012"
                   },
@@ -223,12 +243,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengangguk) Prosedur yang tepat.",
                       "next":  "scene04_n014"
                   },
@@ -237,12 +259,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Sudah, namun tidak ada yang mencurigakan.",
                       "next":  "scene04_n014"
                   },
@@ -251,12 +275,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum tipis) Akhirnya kau mulai curiga.",
                       "next":  "scene04_n014"
                   },
@@ -271,12 +297,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Semalam... Kau tidur?",
                       "next":  "scene04_n016"
                   },
@@ -303,12 +331,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengangguk) Bagus.",
                       "next":  "scene04_n018"
                   },
@@ -317,12 +347,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas) Kebiasaan buruk.",
                       "next":  "scene04_n018"
                   },
@@ -331,12 +363,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menatap {playerName} datar) Itu bukan jawaban.",
                       "next":  "scene04_n018"
                   },
@@ -351,12 +385,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Jangan memaksakan dirimu. Kita masih punya banyak pekerjaan besok.",
                       "next":  "scene04_n020"
                   },

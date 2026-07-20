@@ -1,4 +1,4 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene06",
                  "title":  "Ruang Bawah Tanah",
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Aku hanya akan bertanya sekali. Siapa yang berada di rumah keluarga Ravenscroft malam itu?",
                       "next":  "scene06_n003"
                   },
@@ -31,12 +33,14 @@
                       "type":  "line",
                       "speaker":  "captive",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "captive",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "captive",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tertunduk) ...Aku tidak tahu.",
                       "next":  "scene06_n004"
                   },
@@ -45,12 +49,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela napas pelan) Jawaban yang buruk.",
                       "next":  "scene06_n005"
                   },
@@ -65,12 +71,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Kau mengenal salah satu dari mereka.",
                       "next":  "scene06_n007"
                   },
@@ -79,12 +87,14 @@
                       "type":  "line",
                       "speaker":  "captive",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "captive",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "captive",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(terdiam beberapa saat) ...Aku hanya tahu satu orang.",
                       "next":  "scene06_n008"
                   },
@@ -93,12 +103,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Siapa?",
                       "next":  "scene06_n009"
                   },
@@ -107,12 +119,14 @@
                       "type":  "line",
                       "speaker":  "captive",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "captive",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "captive",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Victor Hale.",
                       "next":  "scene06_n010"
                   },
@@ -121,12 +135,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Lanjutkan.",
                       "next":  "scene06_n011"
                   },
@@ -135,12 +151,14 @@
                       "type":  "line",
                       "speaker":  "captive",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "captive",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "captive",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Dia... mantan rekan bisnis ayahmu. Setelah malam itu... dia menghilang.",
                       "next":  "scene06_n012"
                   },
@@ -149,12 +167,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "serious",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "serious",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mempersempit tatapannya) Di mana dia sekarang?",
                       "next":  "scene06_n013"
                   },
@@ -163,12 +183,14 @@
                       "type":  "line",
                       "speaker":  "captive",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "captive",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "captive",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menelan ludah) ...Pinggiran Kota Elaris. Daerah Blackwood. Rumah tua di dekat danau. Itu saja yang aku tahu.",
                       "next":  "scene06_n014"
                   },
@@ -183,12 +205,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Cari informasi tentang rumah itu.",
                       "next":  "scene06_n016"
                   },
@@ -197,12 +221,14 @@
                       "type":  "line",
                       "speaker":  "guard",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "guard",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "guard",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(mengangguk) Baik, Nona Ravenscroft.",
                       "next":  "scene06_n017"
                   },

@@ -1,7 +1,7 @@
-{
+﻿{
     "meta":  {
                  "id":  "scene12",
-                 "title":  "Rumah Sakit — Akhir Cerita",
+                 "title":  "Rumah Sakit â€” Akhir Cerita",
                  "background":  "hospital",
                  "entry":  "scene12_n001"
              },
@@ -17,12 +17,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...Maaf.",
                       "next":  "scene12_n003"
                   },
@@ -31,12 +33,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "smile",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum kecil) Kau selamat. Itu sudah cukup.",
                       "next":  "scene12_n004"
                   },
@@ -45,12 +49,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "smile",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...Terima kasih.",
                       "next":  "scene12_n005"
                   },
@@ -59,12 +65,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(hanya mengangguk)",
                       "next":  "scene12_n006"
                   },
@@ -79,12 +87,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "...Nathael?",
                       "next":  "scene12_n008"
                   },
@@ -99,12 +109,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "player",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "player",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Nathael?",
                       "next":  "scene12_n010"
                   },
@@ -119,12 +131,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "{playerName}, ada sesuatu yang harus aku katakan.",
                       "next":  "scene12_n012"
                   },
@@ -151,12 +165,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela nafas) Dengarkan aku baik-baik. Nathael... nggak pernah ada.",
                       "next":  "scene12_n014"
                   },
@@ -165,12 +181,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela nafas) Dengarkan aku baik-baik. Nathael... nggak pernah ada.",
                       "next":  "scene12_n014"
                   },
@@ -179,12 +197,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(menghela nafas) Dengarkan aku baik-baik. Nathael... nggak pernah ada.",
                       "next":  "scene12_n014"
                   },
@@ -193,12 +213,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "serious",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Apa maksudmu?",
                       "next":  "scene12_n015"
                   },
@@ -207,12 +229,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(tersenyum pahit) Selama ini... yang kamu ajak bicara... nggak pernah bisa kami lihat. Kami diam... karena kami takut kamu semakin hancur.",
                       "next":  "scene12_n016"
                   },
@@ -227,12 +251,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "...Jadi... selama ini aku sendirian?",
                       "next":  "scene12_n018"
                   },
@@ -241,12 +267,14 @@
                       "type":  "line",
                       "speaker":  "alaric",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "alaric",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "alaric",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "(langsung memegang tangan {playerName}) Tidak. Kamu nggak pernah sendirian.",
                       "next":  "scene12_n019"
                   },
@@ -261,12 +289,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Kau masih punya kami.",
                       "next":  "scene12_n021"
                   },
@@ -303,12 +333,14 @@
                       "type":  "line",
                       "speaker":  "damian",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  true
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "text":  "Mungkin sosok itu menghilang karena kini kamu sudah menyadari sesuatu.",
                       "next":  "scene12_n024"
                   },
@@ -317,12 +349,14 @@
                       "type":  "line",
                       "speaker":  "player",
                       "expression":  "neutral",
-                      "characters":  {
-                                         "characterId":  "damian",
-                                         "expression":  "neutral",
-                                         "position":  "center",
-                                         "isSpeaking":  false
-                                     },
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "neutral",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "text":  "Iya, aku baru menyadarinya sekarang, bahwa aku tidak pernah sendiri. Selalu ada kalian yang menjaga dan menemaniku. Maaf ya...",
                       "next":  "scene12_n025"
                   },
