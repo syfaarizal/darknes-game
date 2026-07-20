@@ -119,7 +119,7 @@
                   {
                       "id":  "scene07_n007",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {
@@ -371,7 +371,7 @@
                   {
                       "id":  "scene07_n017",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "serious",
                       "characters":  [
                                          {

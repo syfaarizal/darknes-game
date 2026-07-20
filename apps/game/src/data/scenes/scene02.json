@@ -31,7 +31,7 @@
     {
       "id": "scene02_n003",
       "type": "line",
-      "speaker": "player",
+      "speaker": "{playerName}",
       "expression": "neutral",
       "characters": [
         {

@@ -1,20 +1,10 @@
 import { TEXT_SPEED_MS_PER_CHAR, TextSpeed } from '@darknes/shared';
 import type { HistoryEntry, LineNode, VariableValue } from '@darknes/shared';
 import { useDialogueStore } from '../../store/dialogueStore';
-import { replaceVariables, getVariableContext } from '../VariableEngine';
+import { replaceVariables, getVariableContext, resolveSpeakerName } from '../VariableEngine';
 
-/**
- * @deprecated Use replaceVariables from VariableEngine instead.
- * This re-export exists for backward compatibility.
- */
-export { replaceVariables, getVariableContext } from '../VariableEngine';
+export { replaceVariables, getVariableContext, resolveSpeakerName } from '../VariableEngine';
 
-/**
- * Runs the typewriter reveal for a line node. Resolves once the full text
- * is revealed (or immediately, if the store's `isSkipping`/instant speed is
- * active). Cancellable via the returned `cancel()` so a click-to-complete
- * interaction can jump straight to the full text.
- */
 export function runTypewriter(
   text: string,
   speed: TextSpeed,
@@ -72,17 +62,24 @@ export function buildHistoryEntry(
   playerName?: string,
   variables?: Record<string, VariableValue>,
 ): HistoryEntry {
-  // If resolvedText is not provided, resolve variables now
+  const ctx = playerName && variables ? getVariableContext(playerName, variables) : null;
+
+  // Resolve text
   const text = resolvedText ?? (
-    playerName && variables
-      ? replaceVariables(node.text, getVariableContext(playerName, variables))
+    ctx
+      ? replaceVariables(node.text, ctx)
       : node.text
   );
+
+  // Resolve speaker name (converts "player"/"PLAYER"/"{playerName}" → actual playerName)
+  const speaker = ctx
+    ? resolveSpeakerName(node.speaker, ctx)
+    : (node.speaker ?? '');
 
   return {
     nodeId: node.id,
     sceneId,
-    speaker: node.speaker,
+    speaker,
     text,
     timestamp: Date.now(),
   };

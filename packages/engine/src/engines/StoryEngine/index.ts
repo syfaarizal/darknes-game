@@ -12,12 +12,6 @@ import { replaceVariables, getVariableContext } from '../VariableEngine';
 import { playCue } from '../AudioEngine';
 import { useSettingsStore } from '../../store/settingsStore';
 
-/**
- * The single entry point components should call to drive the story
- * forward. It owns the node-graph traversal so `ui` components never need
- * to know about node types — they call `advance()` / `choose()` and
- * subscribe to `dialogueStore` / `sceneStore` for what to render.
- */
 export async function startScene(sceneId: string): Promise<void> {
   const scene = await loadScene(sceneId);
   useGameStore.getState().setPhase(GamePhase.InGame);
@@ -36,7 +30,6 @@ export async function advance(): Promise<void> {
   const scene = requireCurrentScene();
 
   if (currentNode.type === DialogueNodeType.Choice) {
-    // Advancing on a choice node does nothing — the player must pick.
     return;
   }
 

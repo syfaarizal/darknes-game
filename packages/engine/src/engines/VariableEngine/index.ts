@@ -14,6 +14,7 @@ export interface VariableContext {
  *   {variableKey}           — any variable in gameStore.variables
  *                             e.g. {money}, {chapter}, {damianTrust},
  *                             {mentalState}, {date}, {time}, etc.
+ *   PLAYER / Player / player (standalone word) — replaced with playerName
  *
  * Usage:
  *   const resolved = replaceVariables("Hello, {playerName}!", context);
@@ -33,6 +34,12 @@ export function replaceVariables(text: string, ctx: VariableContext): string {
   result = result.replace(/\{playerName\}/gi, ctx.playerName);
   result = result.replace(/\{PLAYER\}/g, ctx.playerName);
 
+  // Replace standalone word "PLAYER"/"Player"/"player" with playerName
+  // Using word boundary to avoid matching "players" or "player's"
+  result = result.replace(/\bPLAYER\b/g, ctx.playerName);
+  result = result.replace(/\bPlayer\b/g, ctx.playerName);
+  result = result.replace(/\bplayer\b/g, ctx.playerName);
+
   // Resolve any game variable placeholders
   for (const [key, value] of Object.entries(ctx.variables)) {
     const pattern = new RegExp(`\\{${key}\\}`, 'gi');
@@ -44,17 +51,18 @@ export function replaceVariables(text: string, ctx: VariableContext): string {
 
 /**
  * Resolves the speaker name field of a dialogue node.
- * Handles cases like {playerName} or PLAYER in the speaker field.
+ * Handles cases like {playerName}, PLAYER, Player, player in the speaker field.
  */
 export function resolveSpeakerName(rawSpeaker: string | undefined, ctx: VariableContext): string {
   if (!rawSpeaker) return '';
 
   // First resolve variables in the speaker name itself
-  const resolved = replaceVariables(rawSpeaker, ctx);
+  let resolved = replaceVariables(rawSpeaker, ctx);
 
-  // Then handle the PLAYER fallback label
-  if (resolved.toUpperCase() === 'PLAYER') {
-    return ctx.playerName || 'PLAYER';
+  // Then handle the PLAYER fallback label (all case variations)
+  const upper = resolved.toUpperCase();
+  if (upper === 'PLAYER') {
+    return ctx.playerName || '';
   }
 
   return resolved;

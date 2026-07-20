@@ -31,7 +31,7 @@
                   {
                       "id":  "scene05_n003",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {
@@ -239,7 +239,7 @@
                   {
                       "id":  "scene05_n013",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {
@@ -475,7 +475,7 @@
                   {
                       "id":  "scene05_n022",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {

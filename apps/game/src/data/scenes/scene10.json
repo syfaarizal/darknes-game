@@ -31,7 +31,7 @@
                   {
                       "id":  "scene10_n003",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "smile",
                       "characters":  [
                                          {
@@ -85,7 +85,7 @@
                   {
                       "id":  "scene10_n007",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {
@@ -117,7 +117,7 @@
                   {
                       "id":  "scene10_n009",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {
@@ -413,7 +413,7 @@
                   {
                       "id":  "scene10_n023",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {

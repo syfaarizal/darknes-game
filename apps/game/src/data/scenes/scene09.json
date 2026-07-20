@@ -31,7 +31,7 @@
                   {
                       "id":  "scene09_n003",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "smile",
                       "characters":  [
                                          {
@@ -273,7 +273,7 @@
                   {
                       "id":  "scene09_n013",
                       "type":  "line",
-                      "speaker":  "player",
+                      "speaker": "{playerName}",
                       "expression":  "neutral",
                       "characters":  [
                                          {

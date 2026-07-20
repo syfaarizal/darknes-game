@@ -35,6 +35,11 @@ export function applyLineToStage(node: LineNode): CharacterStageState[] {
   }
 
   if (node.speaker) {
+    // "player" is not a real character — don't update stage, just leave
+    // whatever characters are currently on screen untouched.
+    if (node.speaker.toLowerCase() === 'player') {
+      return current;
+    }
     const next = current.map((c) => ({ ...c, isSpeaking: c.characterId === node.speaker }));
     useSceneStore.getState().setStageCharacters(next);
     return next;
