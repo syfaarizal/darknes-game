@@ -8,9 +8,9 @@ import { SaveEngine, useGameStore } from '@darknes/engine';
 
 const CINEMATIC_SENTENCES = [
   '...',
-  'Before this story begins...',
-  'There is one thing I need to know.',
-  'What is your name?',
+  'Sebelum kisah ini dimulai...',
+  'Ada satu hal yang perlu kuketahui.',
+  'Siapa namamu?',
 ] as const;
 
 function useInputValidation(value: string) {
@@ -48,12 +48,9 @@ export function IdentitySetup() {
   // Cinematic sentence reveal
   useEffect(() => {
     if (currentSentence >= CINEMATIC_SENTENCES.length) {
-      // All sentences shown — show input
-      setTimeout(() => {
-        setIsReady(true);
-        // Focus input after animation
-        setTimeout(() => inputRef.current?.focus(), 300);
-      }, 600);
+      // All sentences shown — show input immediately.
+      setIsReady(true);
+      window.setTimeout(() => inputRef.current?.focus(), 300);
       return;
     }
 
@@ -64,6 +61,14 @@ export function IdentitySetup() {
 
     return () => window.clearTimeout(timer);
   }, [currentSentence]);
+
+  const handleCinematicClick = useCallback(() => {
+    if (isReady) return;
+
+    setCurrentSentence((prev) =>
+      Math.min(prev + 1, CINEMATIC_SENTENCES.length),
+    );
+  }, [isReady]);
 
   const handleContinue = useCallback(async () => {
     if (!isValid) return;
@@ -85,7 +90,7 @@ export function IdentitySetup() {
   }, [isValid, trimmed, navigate]);
 
   return (
-    <IdentityLayout>
+    <IdentityLayout onClick={handleCinematicClick}>
       <AnimatePresence mode="wait">
         {isWelcome ? (
           // Welcome back screen
@@ -103,7 +108,7 @@ export function IdentitySetup() {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="mb-2 font-display text-lg uppercase tracking-[0.2em] text-[var(--color-ink-muted)]"
             >
-              Welcome back,
+              Selamat datang kembali,
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -176,7 +181,7 @@ export function IdentitySetup() {
                     disabled={!isValid}
                     className="w-full"
                   >
-                    Continue
+                    Lanjutkan
                   </PrimaryButton>
                 </motion.div>
               )}
