@@ -5,27 +5,41 @@ import { useDialogueStore } from '../../store/dialogueStore';
 import { useSceneStore } from '../../store/sceneStore';
 import { getNodeById, loadScene } from '../SceneEngine';
 import { applyLineToStage } from '../CharacterEngine';
-import { setBackground } from '../BackgroundEngine';
 import { presentChoices, resolveChoice } from '../ChoiceEngine';
-import { buildHistoryEntry, recordHistory, runTypewriter } from '../DialogueEngine';
+import { buildHistoryEntry, finishTypewriter, recordHistory, runTypewriter } from '../DialogueEngine';
 import { replaceVariables, getVariableContext } from '../VariableEngine';
 import { playCue } from '../AudioEngine';
 import { useSettingsStore } from '../../store/settingsStore';
 
-export async function startScene(sceneId: string): Promise<void> {
+export async function startScene(
+  sceneId: string,
+  options: { waitForText?: boolean } = {},
+): Promise<void> {
   const scene = await loadScene(sceneId);
   useGameStore.getState().setPhase(GamePhase.InGame);
   useGameStore.getState().setPosition(sceneId, scene.meta.entry);
   if (scene.meta.music) {
     playCue({ channel: AudioChannel.Music, id: scene.meta.music, loop: true });
   }
-  await goToNode(scene, scene.meta.entry);
+  const goToFirstNode = goToNode(scene, scene.meta.entry);
+  if (options.waitForText === false) return;
+  await goToFirstNode;
 }
 
 export async function advance(): Promise<void> {
   const { currentNode } = useDialogueStore.getState();
   const { currentSceneId } = useGameStore.getState();
   if (!currentNode || !currentSceneId) return;
+
+  if (
+    (currentNode.type === DialogueNodeType.Line || currentNode.type === DialogueNodeType.Narration) &&
+    useDialogueStore.getState().isTyping
+  ) {
+    const { playerName, variables } = useGameStore.getState();
+    const ctx = getVariableContext(playerName, variables);
+    finishTypewriter(replaceVariables(currentNode.text, ctx));
+    return;
+  }
 
   const scene = requireCurrentScene();
 

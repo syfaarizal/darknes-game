@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { div } from 'framer-motion/m';
 
 interface HeadsetReminderProps {
   onSkip: () => void;
@@ -114,7 +113,7 @@ export function HeadsetReminder({ onSkip }: HeadsetReminderProps) {
         >
           Gunakan headset untuk pengalaman lebih baik
         </motion.p>
-      </div>    
-  </motion.div>
+      </div>
+    </motion.div>
   );
 }

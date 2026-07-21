@@ -2,13 +2,21 @@
   "meta": {
     "id": "scene02",
     "title": "Ruang Kerja — Dua Minggu Kemudian",
-    "background": "workspace-night",
+    "background": "scene02-office",
     "entry": "scene02_n001"
   },
   "nodes": [
     {
       "id": "scene02_n001",
       "type": "narration",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "scene-two-dlg1",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "text": "PLAYER terbangun dari tidur dengan nafas tidak teratur dan keringat dingin. Malam hari, di ruang kerja, Player fokus mengurus dokumen-dokumen bisnisnya.",
       "next": "scene02_n002"
     },
@@ -16,11 +24,11 @@
       "id": "scene02_n002",
       "type": "line",
       "speaker": "nathael",
-      "expression": "neutral",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "neutral",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -32,11 +40,11 @@
       "id": "scene02_n003",
       "type": "line",
       "speaker": "{playerName}",
-      "expression": "neutral",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "neutral",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": false
         }
@@ -48,11 +56,11 @@
       "id": "scene02_n004",
       "type": "line",
       "speaker": "nathael",
-      "expression": "serious",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "serious",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -82,11 +90,11 @@
       "id": "scene02_n006a",
       "type": "line",
       "speaker": "nathael",
-      "expression": "serious",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "serious",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -98,11 +106,11 @@
       "id": "scene02_n006b",
       "type": "line",
       "speaker": "nathael",
-      "expression": "serious",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "serious",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -114,11 +122,11 @@
       "id": "scene02_n006c",
       "type": "line",
       "speaker": "nathael",
-      "expression": "serious",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "serious",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -148,11 +156,11 @@
       "id": "scene02_n008a",
       "type": "line",
       "speaker": "nathael",
-      "expression": "smile",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "smile",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -164,11 +172,11 @@
       "id": "scene02_n008b",
       "type": "line",
       "speaker": "nathael",
-      "expression": "smile",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "smile",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -180,11 +188,11 @@
       "id": "scene02_n008c",
       "type": "line",
       "speaker": "nathael",
-      "expression": "smile",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "smile",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -195,6 +203,14 @@
     {
       "id": "scene02_n009",
       "type": "narration",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "scene-two-dlg1",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "text": "Nathael mendekat ke arah Player, duduk di atas meja. Wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
       "next": "scene02_n010"
     },
@@ -202,11 +218,11 @@
       "id": "scene02_n010",
       "type": "line",
       "speaker": "nathael",
-      "expression": "smile",
+      "expression": "scene-two-dlg1",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "smile",
+          "expression": "scene-two-dlg1",
           "position": "center",
           "isSpeaking": true
         }
@@ -235,18 +251,42 @@
     {
       "id": "scene02_n012a",
       "type": "narration",
-      "text": "Player tersenyum tipis mendengar слова Nathael. Untuk sesaat, rasa lelah dan sunyi terasa sedikit berkurang.",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "scene-two-dlg1",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
+      "text": "Player tersenyum tipis mendengar kata-kata Nathael. Untuk sesaat, rasa lelah dan sunyi terasa sedikit berkurang.",
       "next": "scene02_end"
     },
     {
       "id": "scene02_n012b",
       "type": "narration",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "scene-two-dlg1",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "text": "Player terdiam sejenak, membalas senyuman Nathael dengan pelan.",
       "next": "scene02_end"
     },
     {
       "id": "scene02_n012c",
       "type": "narration",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "scene-two-dlg1",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "text": "Player diam, tetapi rasa hangat menyebar ke seluruh tubuhnya.",
       "next": "scene02_end"
     },

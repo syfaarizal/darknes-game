@@ -1,4 +1,4 @@
-import { AUDIO_TRACKS, BACKGROUNDS, CHARACTERS } from '../manifest';
+import { AUDIO_TRACKS, BACKGROUNDS, CHARACTERS, SCENE_CHARACTERS } from '../manifest';
 
 /**
  * Base URL that real asset files are served from. The `game` app points
@@ -26,6 +26,10 @@ export function resolveBackgroundUrl(backgroundId: string): string {
 
 export function resolveCharacterExpressionUrl(characterId: string, expression: string): string {
   const key = `${characterId}.${expression}`;
+  // Check scene-specific expressions first
+  const sceneEntry = SCENE_CHARACTERS[key];
+  if (sceneEntry) return join(sceneEntry.path);
+  // Fall back to default expressions
   const entry = CHARACTERS[key];
   if (!entry) {
     console.warn(`[assets] Unknown character expression "${key}"`);

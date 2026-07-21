@@ -32,6 +32,11 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
     label: 'Living Room',
   },
   library: { id: 'library', path: 'backgrounds/library/default.webp', label: 'Library' },
+  'scene02-office': {
+    id: 'scene02-office',
+    path: 'backgrounds/office/bg-scene-two-nathael.png',
+    label: 'Scene 02 — Office Night',
+  },
 };
 
 export interface CharacterManifestEntry {
@@ -42,6 +47,7 @@ export interface CharacterManifestEntry {
 
 const characterIds = ['nathael', 'damian', 'alaric', 'azaroth'] as const;
 const defaultExpressions = ['neutral', 'smile', 'serious'] as const;
+const sceneExpressions = ['scene-two-dlg1'] as const;
 
 export const CHARACTERS: Record<string, CharacterManifestEntry> = characterIds.reduce(
   (acc, characterId) => {
@@ -57,6 +63,15 @@ export const CHARACTERS: Record<string, CharacterManifestEntry> = characterIds.r
   },
   {} as Record<string, CharacterManifestEntry>,
 );
+
+// Scene-specific expressions (not all characters have all scene expressions)
+export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
+  'nathael.scene-two-dlg1': {
+    characterId: 'nathael',
+    expression: 'scene-two-dlg1',
+    path: 'characters/nathael/nathael-scene-two-dlg1.png',
+  },
+};
 
 export interface AudioManifestEntry {
   id: string;

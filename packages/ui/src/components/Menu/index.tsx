@@ -81,9 +81,9 @@ export function Menu({ items }: MenuProps) {
             {/* Ornate button frame */}
             <div className="relative overflow-hidden px-10 py-3.5">
               {/* Corner decorations - top left */}
-              <span className="absolute left-0 top-0 h-4 w-4 border-b-2 border-l-2 border-[#8B1A1A] opacity-60 group-hover:border-[#DC143C] group-hover:opacity-100 transition-all duration-300" />
+              <span className="absolute left-0 top-0 h-4 w-4 rotate-90 border-b-2 border-l-2 border-[#8B1A1A] opacity-60 group-hover:border-[#DC143C] group-hover:opacity-100 transition-all duration-300" />
               {/* Corner decorations - top right */}
-              <span className="absolute right-0 top-0 h-4 w-4 border-b-2 border-r-2 border-[#8B1A1A] opacity-60 group-hover:border-[#DC143C] group-hover:opacity-100 transition-all duration-300" />
+              <span className="absolute right-0 top-0 h-4 w-4 -rotate-90 border-b-2 border-r-2 border-[#8B1A1A] opacity-60 group-hover:border-[#DC143C] group-hover:opacity-100 transition-all duration-300" />
               {/* Corner decorations - bottom left */}
               <span className="absolute bottom-0 left-0 h-4 w-4 border-b-2 border-l-2 border-[#8B1A1A] opacity-60 group-hover:border-[#DC143C] group-hover:opacity-100 transition-all duration-300" />
               {/* Corner decorations - bottom right */}
@@ -128,7 +128,7 @@ export function Menu({ items }: MenuProps) {
                   hover: { scaleX: 1, opacity: 1 },
                 }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute bottom-1 left-1/2 h-px w-16 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#DC143C] to-transparent"
+                className="absolute bottom-1 left-1/2 h-px w-12 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#DC143C] to-transparent"
               />
             </div>
 

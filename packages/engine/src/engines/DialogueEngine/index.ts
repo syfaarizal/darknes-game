@@ -5,12 +5,15 @@ import { replaceVariables, getVariableContext, resolveSpeakerName } from '../Var
 
 export { replaceVariables, getVariableContext, resolveSpeakerName } from '../VariableEngine';
 
+let typewriterGeneration = 0;
+
 export function runTypewriter(
   text: string,
   speed: TextSpeed,
 ): { promise: Promise<void>; cancel: () => void } {
   const store = useDialogueStore.getState();
   const msPerChar = TEXT_SPEED_MS_PER_CHAR[speed];
+  const generation = ++typewriterGeneration;
 
   if (msPerChar === 0 || store.isSkipping) {
     store.setRevealedCharCount(text.length);
@@ -29,6 +32,10 @@ export function runTypewriter(
         resolve();
         return;
       }
+      if (generation !== typewriterGeneration) {
+        resolve();
+        return;
+      }
       i += 1;
       useDialogueStore.getState().setRevealedCharCount(i);
       if (i >= text.length) {
@@ -43,12 +50,20 @@ export function runTypewriter(
 
   const cancel = () => {
     cancelled = true;
+    typewriterGeneration += 1;
     if (timeoutId) clearTimeout(timeoutId);
     useDialogueStore.getState().setRevealedCharCount(text.length);
     useDialogueStore.getState().setTyping(false);
   };
 
   return { promise, cancel };
+}
+
+/** Finish the active typewriter before advancing to the next node. */
+export function finishTypewriter(text: string): void {
+  typewriterGeneration += 1;
+  useDialogueStore.getState().setRevealedCharCount(text.length);
+  useDialogueStore.getState().setTyping(false);
 }
 
 export function recordHistory(entry: HistoryEntry): void {

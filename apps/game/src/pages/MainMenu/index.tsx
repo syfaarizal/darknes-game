@@ -223,7 +223,7 @@ export function MainMenu() {
           <img
             src="/assets/logo/logo-darknes.png"
             alt="Darknes Logo"
-            className="h-[4rem] w-auto select-none object-contain"
+            className="h-[3rem] w-auto select-none object-contain brightness-[0.95] contrast-[1.2]"
             draggable={false}
             style={{
               filter: 'drop-shadow(0 0 20px rgba(139, 26, 26, 0.6)) drop-shadow(0 0 40px rgba(220, 20, 60, 0.3))'
@@ -247,7 +247,7 @@ export function MainMenu() {
         <motion.p
           variants={FADE_UP}
           transition={{ duration: 1.0, ease: EASE }}
-          className="mb-8 text-xl italic tracking-[0.15em]
+          className="mb-8 text-2xl italic tracking-[0.15em]
             text-[#fffff]"
           style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
         >
