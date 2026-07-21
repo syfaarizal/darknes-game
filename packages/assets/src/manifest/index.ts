@@ -47,7 +47,7 @@ export interface CharacterManifestEntry {
 
 const characterIds = ['nathael', 'damian', 'alaric', 'azaroth'] as const;
 const defaultExpressions = ['neutral', 'smile', 'serious'] as const;
-const sceneExpressions = ['scene-two-dlg1'] as const;
+const sceneExpressions = ['scene-two-dlg1', 'nathael-shut-scene02', 'nathael-speak-scene02', 'nathael-pat-scene02'] as const;
 
 export const CHARACTERS: Record<string, CharacterManifestEntry> = characterIds.reduce(
   (acc, characterId) => {
@@ -70,6 +70,21 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     characterId: 'nathael',
     expression: 'scene-two-dlg1',
     path: 'characters/nathael/nathael-scene-two-dlg1.png',
+  },
+  'nathael.nathael-shut-scene02': {
+    characterId: 'nathael',
+    expression: 'nathael-shut-scene02',
+    path: 'characters/nathael/nathael-shut-scene02.webp',
+  },
+  'nathael.nathael-speak-scene02': {
+    characterId: 'nathael',
+    expression: 'nathael-speak-scene02',
+    path: 'characters/nathael/nathael-speak-scene02.webp',
+  },
+  'nathael.nathael-pat-scene02': {
+    characterId: 'nathael',
+    expression: 'nathael-pat-scene02',
+    path: 'characters/nathael/nathael-pat-scene02.webp',
   },
 };
 

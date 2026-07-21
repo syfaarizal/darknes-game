@@ -12,7 +12,7 @@
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -24,11 +24,11 @@
       "id": "scene02_n002",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -40,11 +40,11 @@
       "id": "scene02_n003",
       "type": "line",
       "speaker": "{playerName}",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-shut-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -56,11 +56,11 @@
       "id": "scene02_n004",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -71,6 +71,14 @@
     {
       "id": "scene02_n005",
       "type": "choice",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "nathael-shut-scene02",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "options": [
         {
           "text": "Iya, aku sangat lelah tapi aku tidak punya pilihan lain",
@@ -90,11 +98,11 @@
       "id": "scene02_n006a",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -106,11 +114,11 @@
       "id": "scene02_n006b",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -122,11 +130,11 @@
       "id": "scene02_n006c",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -137,6 +145,14 @@
     {
       "id": "scene02_n007",
       "type": "choice",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "nathael-shut-scene02",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "options": [
         {
           "text": "Baiklah, hanya sebentar lagi, setelah itu aku akan beristirahat",
@@ -156,11 +172,11 @@
       "id": "scene02_n008a",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -172,11 +188,11 @@
       "id": "scene02_n008b",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -188,11 +204,11 @@
       "id": "scene02_n008c",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -206,7 +222,7 @@
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-pat-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -218,11 +234,11 @@
       "id": "scene02_n010",
       "type": "line",
       "speaker": "nathael",
-      "expression": "scene-two-dlg1",
+      "expression": "nathael-speak-scene02",
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -233,6 +249,14 @@
     {
       "id": "scene02_n011",
       "type": "choice",
+      "characters": [
+        {
+          "characterId": "nathael",
+          "expression": "nathael-shut-scene02",
+          "position": "center",
+          "isSpeaking": false
+        }
+      ],
       "options": [
         {
           "text": "Iya, aku tahu",
@@ -254,7 +278,7 @@
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -268,7 +292,7 @@
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -282,7 +306,7 @@
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "scene-two-dlg1",
+          "expression": "nathael-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }

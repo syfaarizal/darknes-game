@@ -34,7 +34,10 @@ export function CharacterLayer({ characters }: CharacterLayerProps) {
 
 function CharacterPortrait({ state }: { state: CharacterStageState }) {
   const url = resolveCharacterExpressionUrl(state.characterId, state.expression);
-  const positionClass = POSITION_CLASSES[state.position];
+  const positionClass =
+    state.position === CharacterPosition.Center
+      ? 'center left-[10rem] -translate-x-1/2 w-auto'
+      : POSITION_CLASSES[state.position];
 
   return (
     <motion.img
@@ -42,13 +45,14 @@ function CharacterPortrait({ state }: { state: CharacterStageState }) {
       alt={state.characterId}
       initial={{ opacity: 0, y: 24 }}
       animate={{
-        opacity: state.isSpeaking === false ? 0.55 : 1,
+        opacity: 1,
         y: 0,
-        filter: state.isSpeaking === false ? 'brightness(0.6) saturate(0.7)' : 'brightness(1)',
+        scale: 1.08,
+        filter: 'brightness(1)',
       }}
       exit={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      className={`absolute bottom-0 h-[92%] object-contain object-bottom ${positionClass}`}
+      className={`absolute bottom-0 h-[95%] object-contain object-bottom mx-auto ${positionClass}`}
     />
   );
 }
