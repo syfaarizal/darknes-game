@@ -50,15 +50,48 @@ export function MainMenu() {
   const hasSaves  = useSaveStore((s) => s.slots.length > 0);
   const videoRef  = useRef<HTMLVideoElement>(null);
   const audioRef  = useRef<HTMLAudioElement | null>(null);
+  const clickSoundRef = useRef<HTMLAudioElement | null>(null);
   const musicVolumeRef = useRef(1);
   const [, forceUpdate] = useState({});
 
   const musicVolume = useSettingsStore((s) => s.audio.master * s.audio.music);
+  const sfxVolume = useSettingsStore((s) => s.audio.sfx * s.audio.master);
   const isMusicOn = musicVolume > 0;
 
   if (!audioRef.current) {
     audioRef.current = new Audio('/assets/audio/music/main-menu-bs.mp3');
   }
+
+  /* Initialize click sound */
+  useEffect(() => {
+    clickSoundRef.current = new Audio('/assets/audio/sfx/click-sfx.mp3');
+    clickSoundRef.current.volume = sfxVolume;
+    clickSoundRef.current.preload = 'auto';
+
+    return () => {
+      if (clickSoundRef.current) {
+        clickSoundRef.current.pause();
+        clickSoundRef.current = null;
+      }
+    };
+  }, []);
+
+  /* Update click sound volume when settings change */
+  useEffect(() => {
+    if (clickSoundRef.current) {
+      clickSoundRef.current.volume = sfxVolume;
+    }
+  }, [sfxVolume]);
+
+  /* Play click sound */
+  const playClickSound = () => {
+    if (sfxVolume <= 0) return;
+    if (clickSoundRef.current) {
+      clickSoundRef.current.currentTime = 0;
+      clickSoundRef.current.play().catch(() => {});
+    }
+  };
+
   musicVolumeRef.current = musicVolume;
 
   /* Keep the menu backsound in sync with the settings panel. */
@@ -111,12 +144,37 @@ export function MainMenu() {
     return item;
   });
 
-  /* Toggle music on/off */
+  /* Toggle music on/off with click sound */
   const toggleMusic = () => {
+    playClickSound();
     const settings = useSettingsStore.getState();
     const newMusicVolume = settings.audio.music > 0 ? 0 : 1;
     useSettingsStore.getState().setVolume('music', newMusicVolume);
     forceUpdate({});
+  };
+
+  /* Navigate to settings with click sound */
+  const navigateToSettings = () => {
+    playClickSound();
+    navigate('/settings');
+  };
+
+  /* Navigate to credits with click sound */
+  const navigateToCredits = () => {
+    playClickSound();
+    navigate('/credits');
+  };
+
+  /* Navigate to identity with click sound */
+  const navigateToIdentity = () => {
+    playClickSound();
+    navigate('/identity');
+  };
+
+  /* Navigate to load with click sound */
+  const navigateToLoad = () => {
+    playClickSound();
+    navigate('/load');
   };
 
   return (
@@ -175,7 +233,7 @@ export function MainMenu() {
         <motion.button
           whileHover={{ scale: 1.1, rotate: 45 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => navigate('/settings')}
+          onClick={navigateToSettings}
           className="group flex items-center justify-center p-2"
           title="Settings"
         >
@@ -252,10 +310,10 @@ export function MainMenu() {
               variant:  item.variant,
               disabled: item.disabled,
               onClick: () => {
-                if (item.key === 'new')     navigate('/identity');
-                if (item.key === 'continue') navigate('/load');
-                if (item.key === 'settings') navigate('/settings');
-                if (item.key === 'credits')  navigate('/credits');
+                if (item.key === 'new')     navigateToIdentity();
+                if (item.key === 'continue') navigateToLoad();
+                if (item.key === 'settings') navigateToSettings();
+                if (item.key === 'credits')  navigateToCredits();
                 if (item.key === 'exit')     window.close();
               },
             }))}
