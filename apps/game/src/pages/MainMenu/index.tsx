@@ -293,16 +293,6 @@ export function MainMenu() {
           <span className="text-[#8B1A1A]/40 text-xs">&#10022;</span>
           <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#8B1A1A]/40" />
         </motion.div>
-
-        {/* Bottom tagline */}
-        <motion.p
-          variants={FADE_UP}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="mt-8 font-body text-[9px] uppercase tracking-[0.25em]
-            text-[#fffff]/60"
-        >
-          &#169; 2026 Kai Shi &amp; Sei Ryuka &nbsp;&middot;&nbsp; All Rights Reserved
-        </motion.p>
       </motion.div>
 
     </div>
