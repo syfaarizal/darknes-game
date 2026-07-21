@@ -13,7 +13,7 @@ export interface MenuProps {
 
 export function Menu({ items }: MenuProps) {
   return (
-    <nav className="flex w-full max-w-[22rem] flex-col items-stretch gap-1">
+    <nav className="flex w-full flex-col items-center gap-3">
       {items.map((item) => {
         const isPrimary = item.variant === 'primary';
 
@@ -25,74 +25,71 @@ export function Menu({ items }: MenuProps) {
             whileHover="hover"
             whileTap="tap"
             initial="rest"
-            className="group relative flex items-center gap-4 py-3 text-left
-              disabled:cursor-not-allowed disabled:opacity-30"
+            className="group relative disabled:cursor-not-allowed disabled:opacity-30"
           >
-            {/* ── Primary: full underline bar ── */}
-            {isPrimary && (
-              <motion.span
+            {/* Ornate button frame */}
+            <div className="relative px-10 py-3.5 overflow-hidden">
+              {/* Corner decorations - top left */}
+              <span className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#8B1A1A] opacity-60 group-hover:opacity-100 group-hover:border-[#DC143C] transition-all duration-300" />
+              {/* Corner decorations - top right */}
+              <span className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#8B1A1A] opacity-60 group-hover:opacity-100 group-hover:border-[#DC143C] transition-all duration-300" />
+              {/* Corner decorations - bottom left */}
+              <span className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#8B1A1A] opacity-60 group-hover:opacity-100 group-hover:border-[#DC143C] transition-all duration-300" />
+              {/* Corner decorations - bottom right */}
+              <span className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#8B1A1A] opacity-60 group-hover:opacity-100 group-hover:border-[#DC143C] transition-all duration-300" />
+
+              {/* Background fill */}
+              <motion.div
                 variants={{
-                  rest:  { scaleX: 1, opacity: 0.9 },
-                  hover: { scaleX: 1, opacity: 1   },
+                  rest:  { opacity: 0.85 },
+                  hover: { opacity: 1 },
                 }}
-                className="absolute inset-x-0 bottom-0 -mb-1 block h-px origin-left
-                  bg-[var(--color-accent-strong)]"
+                className="absolute inset-0 bg-[rgba(15,5,5,0.95)]"
               />
-            )}
 
-            {/* ── Ghost: minimal underline reveal ── */}
-            {!isPrimary && (
-              <motion.span
+              {/* Inner border glow on hover */}
+              <motion.div
                 variants={{
-                  rest:  { scaleX: 0, opacity: 0 },
-                  hover: { scaleX: 1, opacity: 0.5 },
+                  rest:  { opacity: 0 },
+                  hover: { opacity: 1 },
                 }}
-                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-x-0 bottom-0 -mb-1 block h-px origin-left
-                  bg-[var(--color-hairline)]"
+                className="absolute inset-[3px] border border-[#DC143C]/30 pointer-events-none"
               />
-            )}
 
-            {/* ── Label ── */}
-            <motion.span
-              variants={{
-                rest:  { x: 0,    color: 'var(--color-ink-muted)', letterSpacing: '0.14em' },
-                hover: { x: 10,   color: 'var(--color-ink)',        letterSpacing: '0.22em' },
-                tap:   { x: 6,    color: 'var(--color-ink)' },
-              }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className={`font-body text-sm uppercase
-                ${isPrimary ? 'font-medium text-[var(--color-accent-strong)]' : ''}`}
-            >
-              {item.label}
-            </motion.span>
-
-            {/* ── Right arrow indicator (ghost only) ── */}
-            {!isPrimary && (
+              {/* Label */}
               <motion.span
                 variants={{
-                  rest:  { x: 0,    opacity: 0 },
-                  hover: { x: 0,    opacity: 0.5 },
+                  rest:  { x: 0,    color: '#A05252', letterSpacing: '0.25em' },
+                  hover: { x: 0,    color: '#DC143C', letterSpacing: '0.35em' },
+                  tap:   { x: 0,    color: '#FF4444' },
                 }}
-                transition={{ duration: 0.3 }}
-                className="absolute right-0 font-body text-xs text-[var(--color-ink-muted)]"
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="relative text-base uppercase font-medium"
+                style={{ fontFamily: '"Cinzel", serif' }}
               >
-                &rsaquo;
+                {item.label}
               </motion.span>
-            )}
 
-            {/* ── Primary: left accent pip ── */}
-            {isPrimary && (
-              <motion.span
+              {/* Decorative line under text */}
+              <motion.div
                 variants={{
                   rest:  { scaleX: 0, opacity: 0 },
-                  hover: { scaleX: 1, opacity: 1   },
+                  hover: { scaleX: 1, opacity: 1 },
                 }}
-                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute -left-4 top-1/2 -translate-y-1/2 block h-4 w-px
-                  origin-left bg-[var(--color-accent-strong)]"
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute bottom-1 left-1/2 -translate-x-1/2 h-px w-16 bg-gradient-to-r from-transparent via-[#DC143C] to-transparent"
               />
-            )}
+            </div>
+
+            {/* Outer glow effect on hover */}
+            <motion.div
+              variants={{
+                rest:  { opacity: 0, scale: 1 },
+                hover: { opacity: 1, scale: 1 },
+              }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0 -z-10 bg-[#DC143C]/10 blur-xl rounded-sm pointer-events-none"
+            />
           </motion.button>
         );
       })}

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu } from '@darknes/ui';
@@ -9,21 +9,41 @@ const FADE_UP = {
   hidden:  { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0  },
 };
-const STAGGER_BASE = 0.1;
+const STAGGER_BASE = 0.12;
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const container = {
-  hidden: {},
-  visible: { transition: { staggerChildren: STAGGER_BASE } },
-};
-
 const menuItems = [
-  { label: 'New Game',    key: 'new',     variant: 'primary' as const },
-  { label: 'Continue',   key: 'continue', variant: 'ghost'   as const, disabled: true  },
-  { label: 'Settings',   key: 'settings', variant: 'ghost'   as const },
-  { label: 'Credits',    key: 'credits',  variant: 'ghost'   as const },
-  { label: 'Exit Game',  key: 'exit',     variant: 'ghost'   as const },
+  { label: 'New Story',  key: 'new',      variant: 'primary' as const },
+  { label: 'Load',      key: 'continue', variant: 'primary' as const, disabled: true  },
+  { label: 'Settings',  key: 'settings', variant: 'primary' as const },
+  { label: 'Credits',   key: 'credits',  variant: 'primary' as const },
+  { label: 'Exit',      key: 'exit',     variant: 'primary' as const },
 ];
+
+/* ── SVG Icons ── */
+const MusicOnIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 18V5l12-2v13" />
+    <circle cx="6" cy="18" r="3" />
+    <circle cx="18" cy="16" r="3" />
+  </svg>
+);
+
+const MusicOffIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 18V5l12-2v13" />
+    <circle cx="6" cy="18" r="3" />
+    <circle cx="18" cy="16" r="3" />
+    <line x1="2" y1="2" x2="22" y2="22" />
+  </svg>
+);
+
+const SettingsIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+  </svg>
+);
 
 export function MainMenu() {
   const navigate  = useNavigate();
@@ -31,7 +51,10 @@ export function MainMenu() {
   const videoRef  = useRef<HTMLVideoElement>(null);
   const audioRef  = useRef<HTMLAudioElement | null>(null);
   const musicVolumeRef = useRef(1);
+  const [, forceUpdate] = useState({});
+
   const musicVolume = useSettingsStore((s) => s.audio.master * s.audio.music);
+  const isMusicOn = musicVolume > 0;
 
   if (!audioRef.current) {
     audioRef.current = new Audio('/assets/audio/music/main-menu-bs.mp3');
@@ -88,8 +111,16 @@ export function MainMenu() {
     return item;
   });
 
+  /* Toggle music on/off */
+  const toggleMusic = () => {
+    const settings = useSettingsStore.getState();
+    const newMusicVolume = settings.audio.music > 0 ? 0 : 1;
+    useSettingsStore.getState().setVolume('music', newMusicVolume);
+    forceUpdate({});
+  };
+
   return (
-    <div className="relative flex h-screen w-screen items-center overflow-hidden bg-[var(--color-void)]">
+    <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden bg-[var(--color-void)]">
 
       {/* ── Video Background ── */}
       <video
@@ -104,72 +135,114 @@ export function MainMenu() {
       />
 
       {/* ── Atmospheric Overlays ── */}
-      {/* Dark vignette from the left — where UI lives */}
+      {/* Center dark vignette */}
       <div className="pointer-events-none absolute inset-0 z-[1]
-        bg-[linear-gradient(to right,rgba(5,5,7,0.88)_0%,rgba(5,5,7,0.62)_42%,rgba(5,5,7,0.30)_100%)]" />
-      {/* Subtle crimson bleed top-right */}
+        bg-[radial-gradient(ellipse_at_center,rgba(5,5,7,0.50)_0%,rgba(5,5,7,0.75)_50%,rgba(5,5,7,0.92)_100%)]" />
+      {/* Subtle crimson bleed top */}
       <div className="pointer-events-none absolute inset-0 z-[1]
-        bg-[radial-gradient(ellipse_at_85%_15%,rgba(122,16,16,0.18)_0%,transparent_55%)]" />
+        bg-[radial-gradient(ellipse_at_50%_0%,rgba(139,26,26,0.15)_0%,transparent_50%)]" />
       {/* Film grain overlay */}
       <div
-        className="pointer-events-none absolute inset-0 z-[2] opacity-[0.035]
+        className="pointer-events-none absolute inset-0 z-[2] opacity-[0.04]
           bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%224%22 stitchTiles=%22stitch%22/></filter><rect width=%22300%22 height=%22300%22 filter=%22url(%23n)%22 opacity=%221%22 fill=%22white%22/></svg>')]
           mix-blend-mode: overlay"
       />
 
-      {/* ── Decorative vertical line (left accent) ── */}
+      {/* ── Top Right Icons (Settings & Music) ── */}
       <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        transition={{ duration: 1.4, ease: EASE, delay: 0.2 }}
-        className="pointer-events-none absolute left-[9rem] top-0 z-[3] h-full w-px
-          bg-[linear-gradient(to bottom,transparent_0%,rgba(181,25,25,0.6)_30%,rgba(181,25,25,0.6)_70%,transparent_100%)]"
-      />
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: EASE, delay: 0.6 }}
+        className="absolute right-8 top-8 z-20 flex items-center gap-4"
+      >
+        {/* Music Toggle */}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={toggleMusic}
+          className="group flex items-center justify-center p-2"
+          title={isMusicOn ? 'Music On' : 'Music Off'}
+        >
+          <motion.div
+            animate={{ opacity: isMusicOn ? 1 : 0.4 }}
+            className="text-[#A05252] group-hover:text-[#DC143C] transition-colors duration-300"
+          >
+            {isMusicOn ? <MusicOnIcon /> : <MusicOffIcon />}
+          </motion.div>
+        </motion.button>
 
-      {/* ── Main Content ── */}
+        {/* Settings */}
+        <motion.button
+          whileHover={{ scale: 1.1, rotate: 45 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => navigate('/settings')}
+          className="group flex items-center justify-center p-2"
+          title="Settings"
+        >
+          <div className="text-[#A05252] group-hover:text-[#DC143C] transition-colors duration-300">
+            <SettingsIcon />
+          </div>
+        </motion.button>
+      </motion.div>
+
+      {/* ── Main Content (Centered) ── */}
       <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-10 ml-[10rem] flex max-w-[30rem] flex-col items-start"
+        className="relative z-10 flex w-full max-w-2xl flex-col items-center"
       >
 
         {/* Logo mark */}
-        <motion.div variants={FADE_UP} transition={{ duration: 0.9, ease: EASE }}>
+        <motion.div
+          variants={FADE_UP}
+          transition={{ duration: 1.0, ease: EASE }}
+          className="mb-4"
+        >
           <img
             src="/assets/logo/logo-darknes.png"
-            alt="Darknes"
-            className="mb-1 mx-auto block h-10 w-auto select-none object-contain"
+            alt="Darknes Logo"
+            className="h-20 w-auto select-none object-contain"
             draggable={false}
+            style={{
+              filter: 'drop-shadow(0 0 20px rgba(139, 26, 26, 0.6)) drop-shadow(0 0 40px rgba(220, 20, 60, 0.3))'
+            }}
           />
         </motion.div>
 
-        {/* Game title */}
+        {/* Game title - Ornate serif with crimson glow */}
         <motion.h1
           variants={FADE_UP}
-          transition={{ duration: 1.1, ease: EASE }}
-          className="mb-1 mt-2 font-display text-8xl font-bold uppercase tracking-[0.10em]
-            text-[var(--color-ink)] [text-shadow:0_0_40px_rgba(181,25,25,0.25)]"
+          transition={{ duration: 1.2, ease: EASE }}
+          className="mb-3 text-7xl font-bold uppercase tracking-[0.30em]
+            text-[#DC143C]
+            [text-shadow:0_0_30px_rgba(220,20,60,0.6),0_0_60px_rgba(220,20,60,0.4),0_0_90px_rgba(139,26,26,0.3)]"
+          style={{ fontFamily: '"Cinzel", serif' }}
         >
           Darknes
         </motion.h1>
 
-        {/* Subtitle — Cormorant Garamond */}
+        {/* Subtitle — Ornate italic serif */}
         <motion.p
           variants={FADE_UP}
           transition={{ duration: 1.0, ease: EASE }}
-          className="mb-12 font-subtitle text-xl italic uppercase tracking-[0.35em]
-            text-[var(--color-accent-strong)] opacity-90"
+          className="mb-8 text-xl italic tracking-[0.15em]
+            text-[#A05252]/90"
+          style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
         >
-          An Interactive Novel
+          A Story of Light &amp; Darkness
         </motion.p>
 
-        {/* Thin ornamental rule */}
+        {/* Decorative divider */}
         <motion.div
           variants={FADE_UP}
           transition={{ duration: 0.8, ease: EASE }}
-          className="mb-10 h-px w-16 bg-[var(--color-accent-strong)] opacity-70"
-        />
+          className="mb-8 flex items-center gap-3"
+        >
+          <span className="h-px w-20 bg-gradient-to-r from-transparent to-[#8B1A1A]/50" />
+          <span className="text-[#8B1A1A]/40 text-sm">&#10041;</span>
+          <span className="h-px w-20 bg-gradient-to-l from-transparent to-[#8B1A1A]/50" />
+        </motion.div>
 
         {/* Menu */}
         <motion.div variants={FADE_UP} transition={{ duration: 0.8, ease: EASE }}>
@@ -189,17 +262,34 @@ export function MainMenu() {
           />
         </motion.div>
 
+        {/* Bottom decorative ornament */}
+        <motion.div
+          variants={FADE_UP}
+          transition={{ duration: 0.8, ease: EASE }}
+          className="mt-10 flex items-center gap-4"
+        >
+          <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#8B1A1A]/40" />
+          <span className="text-[#8B1A1A]/40 text-xs">&#10022;</span>
+          <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#8B1A1A]/40" />
+        </motion.div>
+
         {/* Bottom tagline */}
         <motion.p
           variants={FADE_UP}
           transition={{ duration: 0.8, ease: EASE }}
-          className="mt-16 font-body text-[10px] uppercase tracking-[0.22em]
-            text-[var(--color-ink-faint)]"
+          className="mt-8 font-body text-[9px] uppercase tracking-[0.25em]
+            text-[#A05252]/40"
         >
-          &copy; 2026 Kai Shi & Sei Ryuka &nbsp;&middot;&nbsp; All Rights Reserved
+          &#169; 2026 Kai Shi &amp; Sei Ryuka &nbsp;&middot;&nbsp; All Rights Reserved
         </motion.p>
       </motion.div>
 
     </div>
   );
 }
+
+/* Container variant for stagger animation */
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: STAGGER_BASE } },
+};
