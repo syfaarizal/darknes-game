@@ -1,4 +1,6 @@
+import { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { useSettingsStore } from '@darknes/engine';
 
 export interface MenuItem {
   label: string;
@@ -12,6 +14,46 @@ export interface MenuProps {
 }
 
 export function Menu({ items }: MenuProps) {
+  const hoverSoundRef = useRef<HTMLAudioElement | null>(null);
+  const lastPlayedRef = useRef<number>(0);
+  const sfxVolume = useSettingsStore((s) => s.audio.sfx * s.audio.master);
+
+  /* Initialize hover sound */
+  useEffect(() => {
+    hoverSoundRef.current = new Audio('/assets/audio/sfx/button-hover-sfx.mp3');
+    hoverSoundRef.current.volume = sfxVolume;
+    hoverSoundRef.current.preload = 'auto';
+
+    return () => {
+      if (hoverSoundRef.current) {
+        hoverSoundRef.current.pause();
+        hoverSoundRef.current = null;
+      }
+    };
+  }, []);
+
+  /* Update volume when settings change */
+  useEffect(() => {
+    if (hoverSoundRef.current) {
+      hoverSoundRef.current.volume = sfxVolume;
+    }
+  }, [sfxVolume]);
+
+  /* Play hover sound with debounce to prevent rapid re-playing */
+  const handleHover = useCallback(() => {
+    const now = Date.now();
+    if (now - lastPlayedRef.current < 150) return; // 150ms debounce
+    if (sfxVolume <= 0) return;
+
+    lastPlayedRef.current = now;
+    if (hoverSoundRef.current) {
+      hoverSoundRef.current.currentTime = 0;
+      hoverSoundRef.current.play().catch(() => {
+        // Ignore autoplay errors
+      });
+    }
+  }, [sfxVolume]);
+
   return (
     <nav className="flex w-full flex-col items-center gap-3">
       {items.map((item) => {
@@ -25,6 +67,7 @@ export function Menu({ items }: MenuProps) {
             whileHover="hover"
             whileTap="tap"
             initial="rest"
+            onMouseEnter={handleHover}
             className="group relative disabled:cursor-not-allowed disabled:opacity-30"
           >
             {/* Ornate button frame */}

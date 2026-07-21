@@ -202,7 +202,7 @@ export function MainMenu() {
           <img
             src="/assets/logo/logo-darknes.png"
             alt="Darknes Logo"
-            className="h-20 w-auto select-none object-contain"
+            className="h-[4rem] w-auto select-none object-contain"
             draggable={false}
             style={{
               filter: 'drop-shadow(0 0 20px rgba(139, 26, 26, 0.6)) drop-shadow(0 0 40px rgba(220, 20, 60, 0.3))'
@@ -215,8 +215,8 @@ export function MainMenu() {
           variants={FADE_UP}
           transition={{ duration: 1.2, ease: EASE }}
           className="mb-3 text-7xl font-bold uppercase tracking-[0.30em]
-            text-[#DC143C]
-            [text-shadow:0_0_30px_rgba(220,20,60,0.6),0_0_60px_rgba(220,20,60,0.4),0_0_90px_rgba(139,26,26,0.3)]"
+            text-[#fffff]
+            [text-shadow:0_0_30px_rgba(320,0,0,0.4),0_0_60px_rgba(220,20,60,0.4),0_0_90px_rgba(139,26,26,0.3)]"
           style={{ fontFamily: '"Cinzel", serif' }}
         >
           Darknes
@@ -227,10 +227,10 @@ export function MainMenu() {
           variants={FADE_UP}
           transition={{ duration: 1.0, ease: EASE }}
           className="mb-8 text-xl italic tracking-[0.15em]
-            text-[#A05252]/90"
+            text-[#fffff]"
           style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
         >
-          A Story of Light &amp; Darkness
+          A Story of Light &amp; <span className="text-[#dc1414]">Darkness</span>
         </motion.p>
 
         {/* Decorative divider */}
@@ -278,7 +278,7 @@ export function MainMenu() {
           variants={FADE_UP}
           transition={{ duration: 0.8, ease: EASE }}
           className="mt-8 font-body text-[9px] uppercase tracking-[0.25em]
-            text-[#A05252]/40"
+            text-[#fffff]/60"
         >
           &#169; 2026 Kai Shi &amp; Sei Ryuka &nbsp;&middot;&nbsp; All Rights Reserved
         </motion.p>
