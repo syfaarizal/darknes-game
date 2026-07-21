@@ -5,6 +5,7 @@ import { IdentityLayout } from './IdentityLayout';
 import { PlayerNameInput } from './PlayerNameInput';
 import { PrimaryButton } from '@darknes/ui';
 import { SaveEngine, useGameStore } from '@darknes/engine';
+import { HeadsetReminder } from './HeadsetReminder';
 
 const CINEMATIC_SENTENCES = [
   '...',
@@ -36,6 +37,7 @@ export function IdentitySetup() {
   const [name, setName] = useState('');
   const [isReady, setIsReady] = useState(false); // input visible
   const [isWelcome, setIsWelcome] = useState(false); // welcome screen
+  const [isHeadset, setIsHeadset] = useState(false); // headset reminder
   const [currentSentence, setCurrentSentence] = useState(0);
 
   const { isValid, trimmed } = useInputValidation(name);
@@ -84,15 +86,20 @@ export function IdentitySetup() {
     // Show welcome screen
     setIsWelcome(true);
 
-    // Wait, then navigate to intro video
+    // Wait, then show headset reminder
     await new Promise((resolve) => setTimeout(resolve, 2200));
-    navigate('/intro');
-  }, [isValid, trimmed, navigate]);
+    setIsHeadset(true);
+  }, [isValid, trimmed]);
 
   return (
     <IdentityLayout onClick={handleCinematicClick}>
       <AnimatePresence mode="wait">
-        {isWelcome ? (
+        {isHeadset ? (
+          <HeadsetReminder
+            key="headset"
+            onSkip={() => navigate('/intro')}
+          />
+        ) : isWelcome ? (
           // Welcome back screen
           <motion.div
             key="welcome"
@@ -173,6 +180,7 @@ export function IdentitySetup() {
                       ref={inputRef}
                       value={name}
                       onChange={handleNameChange}
+                      onEnter={isValid ? handleContinue : undefined}
                     />
                   </div>
 

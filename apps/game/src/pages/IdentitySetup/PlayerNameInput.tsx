@@ -4,6 +4,7 @@ export interface PlayerNameInputProps {
   id?: string;
   value: string;
   onChange: (value: string) => void;
+  onEnter?: () => void;
   disabled?: boolean;
   className?: string;
 }
@@ -13,7 +14,7 @@ export interface PlayerNameInputProps {
  * Styled to match the DARKNES dark luxury aesthetic.
  */
 export const PlayerNameInput = forwardRef<HTMLInputElement, PlayerNameInputProps>(
-  ({ id = 'player-name-input', value, onChange, disabled = false, className = '' }, ref) => {
+  ({ id = 'player-name-input', value, onChange, onEnter, disabled = false, className = '' }, ref) => {
     return (
       <div className={`w-full ${className}`}>
         {/* Label */}
@@ -31,6 +32,12 @@ export const PlayerNameInput = forwardRef<HTMLInputElement, PlayerNameInputProps
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              onEnter?.();
+            }
+          }}
           disabled={disabled}
           placeholder="Enter your name..."
           autoComplete="off"

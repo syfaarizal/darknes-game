@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu } from '@darknes/ui';
-import { useSaveStore, useSettingsStore } from '@darknes/engine';
+import { useSaveStore, useSettingsStore, useSfxClick } from '@darknes/engine';
 
 /* ── Staggered entrance animation constants ── */
 const FADE_UP = {
@@ -50,49 +50,16 @@ export function MainMenu() {
   const hasSaves  = useSaveStore((s) => s.slots.length > 0);
   const videoRef  = useRef<HTMLVideoElement>(null);
   const audioRef  = useRef<HTMLAudioElement | null>(null);
-  const clickSoundRef = useRef<HTMLAudioElement | null>(null);
   const musicVolumeRef = useRef(1);
-  const [, forceUpdate] = useState({});
 
   const musicVolume = useSettingsStore((s) => s.audio.master * s.audio.music);
-  const sfxVolume = useSettingsStore((s) => s.audio.sfx * s.audio.master);
   const isMusicOn = musicVolume > 0;
+
+  const { playClick } = useSfxClick();
 
   if (!audioRef.current) {
     audioRef.current = new Audio('/assets/audio/music/main-menu-bs.mp3');
   }
-
-  /* Initialize click sound */
-  useEffect(() => {
-    clickSoundRef.current = new Audio('/assets/audio/sfx/click-sfx.mp3');
-    clickSoundRef.current.volume = sfxVolume;
-    clickSoundRef.current.preload = 'auto';
-
-    return () => {
-      if (clickSoundRef.current) {
-        clickSoundRef.current.pause();
-        clickSoundRef.current = null;
-      }
-    };
-  }, []);
-
-  /* Update click sound volume when settings change */
-  useEffect(() => {
-    if (clickSoundRef.current) {
-      clickSoundRef.current.volume = sfxVolume;
-    }
-  }, [sfxVolume]);
-
-  /* Play click sound */
-  const playClickSound = () => {
-    if (sfxVolume <= 0) return;
-    if (clickSoundRef.current) {
-      clickSoundRef.current.currentTime = 0;
-      clickSoundRef.current.play().catch(() => {});
-    }
-  };
-
-  musicVolumeRef.current = musicVolume;
 
   /* Keep the menu backsound in sync with the settings panel. */
   useEffect(() => {
@@ -144,36 +111,32 @@ export function MainMenu() {
     return item;
   });
 
-  /* Toggle music on/off with click sound */
+  /* Toggle music on/off */
   const toggleMusic = () => {
-    playClickSound();
+    playClick();
     const settings = useSettingsStore.getState();
     const newMusicVolume = settings.audio.music > 0 ? 0 : 1;
     useSettingsStore.getState().setVolume('music', newMusicVolume);
-    forceUpdate({});
   };
 
-  /* Navigate to settings with click sound */
+  /* Navigate to settings */
   const navigateToSettings = () => {
-    playClickSound();
+    playClick();
     navigate('/settings');
   };
 
-  /* Navigate to credits with click sound */
+  /* Navigate to credits */
   const navigateToCredits = () => {
-    playClickSound();
     navigate('/credits');
   };
 
-  /* Navigate to identity with click sound */
+  /* Navigate to identity */
   const navigateToIdentity = () => {
-    playClickSound();
     navigate('/identity');
   };
 
-  /* Navigate to load with click sound */
+  /* Navigate to load */
   const navigateToLoad = () => {
-    playClickSound();
     navigate('/load');
   };
 
