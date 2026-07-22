@@ -222,8 +222,9 @@
       "characters": [
         {
           "characterId": "nathael",
-          "expression": "nathael-pat-scene02",
+          "expression": "nathael-speak-scene02",
           "position": "center",
+          "style": "scale(1.5)",
           "isSpeaking": false
         }
       ],
