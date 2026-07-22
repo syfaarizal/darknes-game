@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { StoryEngine } from '@darknes/engine';
+import { StoryEngine, useSfxClick } from '@darknes/engine';
 
 const INTRO_VIDEO_PATH = '/assets/videos/intro.mp4';
 const FIRST_SCENE_ID = 'scene02';
@@ -13,6 +13,7 @@ export function Intro() {
 
   const [isLaunching, setIsLaunching] = useState(false);
   const [showSkip, setShowSkip] = useState(false);
+  const { playClick } = useSfxClick();
 
   useEffect(() => {
     const timer = window.setTimeout(() => setShowSkip(true), 2000);
@@ -104,6 +105,7 @@ export function Intro() {
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
+                playClick();
                 handleSkip();
               }}
               className="rounded-full border border-white/20 bg-black/50 px-5 py-2 font-display text-xs uppercase tracking-[0.2em] text-white backdrop-blur-md transition hover:border-[var(--color-accent-strong)] hover:text-[var(--color-accent-strong)]"

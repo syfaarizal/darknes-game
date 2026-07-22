@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEventHandler } from 'react';
 import { motion, type HTMLMotionProps } from 'framer-motion';
-import { useSfxClick } from '@darknes/engine';
+import { useSfxClick, useHoverSound } from '@darknes/engine';
 
 type BaseProps = Omit<HTMLMotionProps<'button'>, 'children'> & {
   children: ReactNode;
@@ -24,12 +24,14 @@ function useButtonClickHandler(
 
 export function PrimaryButton({ children, className = '', onClick, ...rest }: BaseProps) {
   const handleClick = useButtonClickHandler(onClick);
+  const { playHover } = useHoverSound();
 
   return (
     <motion.button
       whileHover={{ x: 2 }}
       whileTap={{ scale: 0.98 }}
       onClick={handleClick}
+      onMouseEnter={playHover}
       className={`${baseClasses} bg-[var(--color-accent)] text-[var(--color-ink)] px-6 py-3 border border-[var(--color-accent-strong)] hover:bg-[var(--color-accent-strong)] ${className}`}
       {...rest}
     >
@@ -40,12 +42,14 @@ export function PrimaryButton({ children, className = '', onClick, ...rest }: Ba
 
 export function SecondaryButton({ children, className = '', onClick, ...rest }: BaseProps) {
   const handleClick = useButtonClickHandler(onClick);
+  const { playHover } = useHoverSound();
 
   return (
     <motion.button
       whileHover={{ x: 2 }}
       whileTap={{ scale: 0.98 }}
       onClick={handleClick}
+      onMouseEnter={playHover}
       className={`${baseClasses} bg-transparent text-[var(--color-ink)] px-6 py-3 border border-[var(--color-hairline)] hover:border-[var(--color-ink-muted)] hover:bg-[var(--color-graphite)] ${className}`}
       {...rest}
     >
@@ -56,10 +60,12 @@ export function SecondaryButton({ children, className = '', onClick, ...rest }: 
 
 export function GhostButton({ children, className = '', onClick, ...rest }: BaseProps) {
   const handleClick = useButtonClickHandler(onClick);
+  const { playHover } = useHoverSound();
 
   return (
     <motion.button
       onClick={handleClick}
+      onMouseEnter={playHover}
       className={`${baseClasses} bg-transparent text-[var(--color-ink-muted)] px-3 py-2 hover:text-[var(--color-ink)] ${className}`}
       {...rest}
     >
@@ -75,6 +81,7 @@ type IconButtonProps = Omit<HTMLMotionProps<'button'>, 'children'> & {
 
 export function IconButton({ icon, label, className = '', onClick, ...rest }: IconButtonProps) {
   const handleClick = useButtonClickHandler(onClick);
+  const { playHover } = useHoverSound();
 
   return (
     <motion.button
@@ -82,6 +89,7 @@ export function IconButton({ icon, label, className = '', onClick, ...rest }: Ic
       title={label}
       whileHover={{ scale: 1.08 }}
       onClick={handleClick}
+      onMouseEnter={playHover}
       className={`p-2 text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] transition-colors duration-150 ${className}`}
       {...rest}
     >

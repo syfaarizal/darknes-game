@@ -1,5 +1,5 @@
 import { TextSpeed } from '@darknes/shared';
-import { useSettingsStore } from '@darknes/engine';
+import { useSettingsStore, useSfxClick, useHoverSound } from '@darknes/engine';
 
 const TEXT_SPEED_OPTIONS: TextSpeed[] = [
   TextSpeed.Slow,
@@ -15,6 +15,8 @@ export function SettingsPanel() {
   const setTextSpeed = useSettingsStore((s) => s.setTextSpeed);
   const fullscreen = useSettingsStore((s) => s.fullscreen);
   const toggleFullscreen = useSettingsStore((s) => s.toggleFullscreen);
+  const { playClick } = useSfxClick();
+  const { playHover } = useHoverSound();
 
   return (
     <div className="w-full max-w-md space-y-6 font-body text-[var(--color-ink)]">
@@ -50,7 +52,8 @@ export function SettingsPanel() {
           {TEXT_SPEED_OPTIONS.map((option) => (
             <button
               key={option}
-              onClick={() => setTextSpeed(option)}
+              onClick={() => { playClick(); setTextSpeed(option); }}
+              onMouseEnter={playHover}
               className={`flex-1 border px-3 py-2 text-xs uppercase tracking-[0.08em] transition-colors ${
                 textSpeedPreset === option
                   ? 'border-[var(--color-accent-strong)] bg-[var(--color-accent-soft)] text-[var(--color-ink)]'
@@ -68,7 +71,8 @@ export function SettingsPanel() {
           Fullscreen
         </span>
         <button
-          onClick={toggleFullscreen}
+          onClick={() => { playClick(); toggleFullscreen(); }}
+          onMouseEnter={playHover}
           className={`h-6 w-11 rounded-full border border-[var(--color-hairline)] p-0.5 transition-colors ${
             fullscreen ? 'bg-[var(--color-accent-strong)]' : 'bg-[var(--color-graphite)]'
           }`}

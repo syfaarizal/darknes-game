@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu } from '@darknes/ui';
-import { useSaveStore, useSettingsStore, useSfxClick } from '@darknes/engine';
+import { useSaveStore, useSettingsStore, useSfxClick, useHoverSound } from '@darknes/engine';
 
 /* ── Staggered entrance animation constants ── */
 const FADE_UP = {
@@ -56,6 +56,7 @@ export function MainMenu() {
   const isMusicOn = musicVolume > 0;
 
   const { playClick } = useSfxClick();
+  const { playHover } = useHoverSound();
 
   if (!audioRef.current) {
     audioRef.current = new Audio('/assets/audio/music/main-menu-bs.mp3');
@@ -127,6 +128,7 @@ export function MainMenu() {
 
   /* Navigate to credits */
   const navigateToCredits = () => {
+    playClick();
     navigate('/credits');
   };
 
@@ -181,6 +183,7 @@ export function MainMenu() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleMusic}
+          onMouseEnter={playHover}
           className="group flex items-center justify-center p-2"
           title={isMusicOn ? 'Music On' : 'Music Off'}
         >
@@ -197,6 +200,7 @@ export function MainMenu() {
           whileHover={{ scale: 1.1, rotate: 45 }}
           whileTap={{ scale: 0.95 }}
           onClick={navigateToSettings}
+          onMouseEnter={playHover}
           className="group flex items-center justify-center p-2"
           title="Settings"
         >

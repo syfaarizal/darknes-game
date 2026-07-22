@@ -5,6 +5,8 @@ import {
   useDialogueStore,
   useGameStore,
   VariableEngine,
+  useSfxClick,
+  useHoverSound,
 } from '@darknes/engine';
 import { DialogueBox } from '../DialogueBox';
 import { Typewriter } from '../Typewriter';
@@ -28,6 +30,8 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
   const history = useDialogueStore((s) => s.history);
   const { playerName, variables } = useGameStore();
   const ctx = getVariableContext(playerName, variables);
+  const { playClick } = useSfxClick();
+  const { playHover } = useHoverSound();
 
   if (!currentNode) return null;
 
@@ -45,7 +49,8 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
             {pendingChoices.map((option, i) => (
               <motion.button
                 key={option.id}
-                onClick={() => pick(option)}
+                onClick={() => { playClick(); pick(option); }}
+                onMouseEnter={playHover}
                 initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
