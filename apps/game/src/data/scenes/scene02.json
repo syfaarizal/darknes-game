@@ -11,6 +11,7 @@
       "type": "narration",
       "characters": [],
       "text": "Di meja kerja, PLAYER terbangun dari tidurnya, nafas tidak teratur dan keringat dingin, pikirannya kacau.",
+      "audio": [{ "channel": "sfx", "id": "footsteps" }],
       "next": "scene02_n002"
     },
     {
@@ -214,6 +215,7 @@
       "type": "narration",
       "characters": [],
       "text": "Nathael mendekat ke arah Player, duduk di atas meja, wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
+      "audio": [{ "channel": "sfx", "id": "stroking_hair" }],
       "next": "scene02_n010"
     },
     {

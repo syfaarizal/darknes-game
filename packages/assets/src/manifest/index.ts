@@ -1,4 +1,4 @@
-import type { AudioChannel } from '@darknes/shared';
+import { AudioChannel } from '@darknes/shared';
 
 /**
  * Single source of truth mapping short asset ids to file paths under
@@ -133,4 +133,15 @@ export interface AudioManifestEntry {
  * Empty by default — populate as real music/sfx/voice files are added.
  * Kept as a typed map (not an array) so `AudioEngine` lookups are O(1).
  */
-export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {};
+export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {
+  footsteps: {
+    id: 'footsteps',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/footsteps-fsx.mp3',
+  },
+  stroking_hair: {
+    id: 'stroking_hair',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/stroking-hair-sfx.mp3',
+  },
+};

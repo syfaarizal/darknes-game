@@ -79,13 +79,22 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
       if (node.transition) {
         // ui layer reads dialogueStore.currentNode.transition directly
       }
+
+      // Play any audio cues attached to this node before the typewriter starts.
+      const lineNode = node as import('@darknes/shared').LineNode;
+      if (lineNode.audio) {
+        for (const cue of lineNode.audio) {
+          playCue(cue);
+        }
+      }
+
       const { playerName, variables } = useGameStore.getState();
       const ctx = getVariableContext(playerName, variables);
-      const resolvedText = replaceVariables(node.text, ctx);
+      const resolvedText = replaceVariables(lineNode.text, ctx);
       const { textSpeedPreset } = useSettingsStore.getState();
       const { promise } = runTypewriter(resolvedText, textSpeedPreset);
       await promise;
-      recordHistory(buildHistoryEntry(node, scene.meta.id, resolvedText, playerName, variables));
+      recordHistory(buildHistoryEntry(lineNode, scene.meta.id, resolvedText, playerName, variables));
 
       if (useDialogueStore.getState().isAutoMode) {
         const delay = useSettingsStore.getState().text.autoModeDelayMs;

@@ -100,6 +100,24 @@
                   },
                   {
                       "id":  "scene03_n006b",
+                      "type":  "narration",
+                      "speaker":  "mike",
+                      "expression":  "smile",
+                      "characters":  [
+                                         {
+                                             "characterId":  "mike",
+                                             "image":  "/assets/characters/mike/mike-patted-scene03.webp",
+                                             "expression":  "smile",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
+                      "audio":  [{ "channel":  "sfx", "id":  "stroking_hair" }],
+                      "text":  "Mmmm~",
+                      "next":  "scene03_n006b_react"
+                  },
+                  {
+                      "id":  "scene03_n006b_react",
                       "type":  "line",
                       "speaker":  "mike",
                       "expression":  "smile",
@@ -136,6 +154,7 @@
                       "id":  "scene03_n007",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "footsteps" }],
                       "text":  "Alaric berjalan mendekat sambil membawa tablet.",
                       "next":  "scene03_n008"
                   },
