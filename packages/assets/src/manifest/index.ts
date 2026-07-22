@@ -1,17 +1,5 @@
 import { AudioChannel } from '@darknes/shared';
 
-/**
- * Single source of truth mapping short asset ids to file paths under
- * `darknes/assets/`. Components and engine modules should only ever
- * reference assets by id, never by raw path.
- *
- * Paths are relative to the project's `assets/` root and are resolved to
- * real URLs by the loaders (see `../loaders`), which use
- * `import.meta.glob` under the hood so real files just need to be dropped
- * into the matching folder — no manifest edit required for the URL to
- * resolve, only for it to have a friendly id.
- */
-
 export interface BackgroundManifestEntry {
   id: string;
   path: string;
@@ -143,5 +131,10 @@ export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {
     id: 'stroking_hair',
     channel: AudioChannel.Sfx,
     path: 'audio/sfx/stroking-hair-sfx.mp3',
+  },
+  rustling: {
+    id: 'rustling',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/rustling-sfx.mp3',
   },
 };

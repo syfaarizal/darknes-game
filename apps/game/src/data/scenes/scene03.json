@@ -335,6 +335,7 @@
                       "id":  "scene03_n013",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "rustling" }],
                       "text":  "Henry meregangkan badan dari sofa.",
                       "next":  "scene03_n014"
                   },
