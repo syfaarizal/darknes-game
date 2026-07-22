@@ -9,14 +9,7 @@
     {
       "id": "scene02_n001",
       "type": "narration",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
+      "characters": [],
       "text": "Di meja kerja, PLAYER terbangun dari tidurnya, nafas tidak teratur dan keringat dingin, pikirannya kacau.",
       "next": "scene02_n002"
     },
@@ -219,15 +212,7 @@
     {
       "id": "scene02_n009",
       "type": "narration",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
-          "position": "center",
-          "style": "scale(1.5)",
-          "isSpeaking": false
-        }
-      ],
+      "characters": [],
       "text": "Nathael mendekat ke arah Player, duduk di atas meja, wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
       "next": "scene02_n010"
     },
@@ -290,14 +275,7 @@
     {
       "id": "scene02_n012b",
       "type": "narration",
-      "characters": [
-        {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
-          "position": "center",
-          "isSpeaking": false
-        }
-      ],
+      "characters": [],
       "text": "Player terdiam sejenak, membalas senyuman Nathael dengan pelan.",
       "next": "scene02_end"
     },

@@ -33,15 +33,7 @@
                   {
                       "id":  "scene03_n003",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-hug-scene03.webp",
-                                             "expression":  "smile",
-                                             "position":  "center",
-                                             "isSpeaking":  true
-                                         }
-                                     ],
+                      "characters":  [],
                       "text":  "Mike berlari dan memeluk {playerName} erat.",
                       "next":  "scene03_n004"
                   },
@@ -68,7 +60,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-patted-scene03.webp",
+                                             "image":  "/assets/characters/mike/mike-hug-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -374,15 +366,7 @@
                   {
                       "id":  "scene03_n016a",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "henry",
-                                             "image":  "/assets/characters/henry/henry-shut-scene03.webp",
-                                             "expression":  "neutral",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
                       "text":  "Henry hanya terdiam dan menggelengkan kepalanya.",
                       "next":  "scene03_end"
                   },
