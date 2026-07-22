@@ -5,9 +5,9 @@ import { resolveCharacterExpressionUrl } from '@darknes/assets';
 
 const POSITION_CLASSES: Record<CharacterPosition, string> = {
   [CharacterPosition.FarLeft]: 'left-[2%]',
-  [CharacterPosition.Left]: 'left-[14%]',
+  [CharacterPosition.Left]: 'left-[5%]',
   [CharacterPosition.Center]: 'left-1/2 -translate-x-1/2',
-  [CharacterPosition.Right]: 'right-[14%]',
+  [CharacterPosition.Right]: 'right-[5%]',
   [CharacterPosition.FarRight]: 'right-[2%]',
   [CharacterPosition.Offscreen]: 'opacity-0 pointer-events-none',
 };
@@ -33,7 +33,10 @@ export function CharacterLayer({ characters }: CharacterLayerProps) {
 }
 
 function CharacterPortrait({ state }: { state: CharacterStageState }) {
-  const url = resolveCharacterExpressionUrl(state.characterId, state.expression);
+  // Prefer explicit image path from scene data; fall back to expression-based URL.
+  const imagePath = state.image
+    ? state.image
+    : resolveCharacterExpressionUrl(state.characterId, state.expression);
   const positionClass =
     state.position === CharacterPosition.Center
       ? 'center left-[10rem] -translate-x-1/2 w-auto'
@@ -41,7 +44,7 @@ function CharacterPortrait({ state }: { state: CharacterStageState }) {
 
   return (
     <motion.img
-      src={url}
+      src={imagePath}
       alt={state.characterId}
       initial={{ opacity: 0, y: 24 }}
       animate={{

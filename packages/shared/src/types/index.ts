@@ -107,6 +107,12 @@ export interface CharacterStageState {
   animation?: CharacterAnimation;
   /** Dim/highlight non-speaking characters. */
   isSpeaking?: boolean;
+  /**
+   * Optional explicit image path override for this appearance.
+   * If provided, this is used instead of the expression-based image URL.
+   * Must start with "/".
+   */
+  image?: string;
 }
 
 /* -------------------------------------------------------------------------- */

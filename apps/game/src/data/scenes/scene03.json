@@ -2,14 +2,14 @@
     "meta":  {
                  "id":  "scene03",
                  "title":  "Ruang Keluarga — Pagi Hari",
-                 "background":  "family-room",
-                 "backgroundImage":  "/assets/backgrounds/living-room/bg-living-room-scene03.webp",
+                 "background":  "living-room-scene03",
                  "entry":  "scene03_n001"
              },
     "nodes":  [
                   {
                       "id":  "scene03_n001",
                       "type":  "narration",
+                      "characters":  [],
                       "text":  "Keesokan harinya, di kediaman Ravenscroft, semua sedang asik melakukan kesibukannya masing-masing. Sampai akhirnya {playerName} keluar kamar.",
                       "next":  "scene03_n002"
                   },
@@ -33,6 +33,7 @@
                   {
                       "id":  "scene03_n003",
                       "type":  "narration",
+                      "characters":  [],
                       "text":  "Mike berlari dan memeluk {playerName} erat.",
                       "next":  "scene03_n004"
                   },

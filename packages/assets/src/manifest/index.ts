@@ -31,6 +31,11 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
     path: 'backgrounds/living-room/default.webp',
     label: 'Living Room',
   },
+  'living-room-scene03': {
+    id: 'living-room-scene03',
+    path: 'backgrounds/living-room/bg-living-room-scene03.webp',
+    label: 'Living Room — Scene 03',
+  },
   library: { id: 'library', path: 'backgrounds/library/default.webp', label: 'Library' },
   'scene02-office': {
     id: 'scene02-office',
@@ -85,6 +90,36 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     characterId: 'nathael',
     expression: 'nathael-pat-scene02',
     path: 'characters/nathael/nathael-pat-scene02.webp',
+  },
+  'mike.mike-hug-scene03': {
+    characterId: 'mike',
+    expression: 'mike-hug-scene03',
+    path: 'characters/mike/mike-hug-scene03.webp',
+  },
+  'mike.mike-patted-scene03': {
+    characterId: 'mike',
+    expression: 'mike-patted-scene03',
+    path: 'characters/mike/mike-patted-scene03.webp',
+  },
+  'alaric.alaric-akward-speak-scene03': {
+    characterId: 'alaric',
+    expression: 'alaric-akward-speak-scene03',
+    path: 'characters/alaric/alaric-akward-speak-scene03.webp',
+  },
+  'alaric.alaric-akward-shut-scene03': {
+    characterId: 'alaric',
+    expression: 'alaric-akward-shut-scene03',
+    path: 'characters/alaric/alaric-akward-shut-scene03.webp',
+  },
+  'henry.henry-yawn-scene03': {
+    characterId: 'henry',
+    expression: 'henry-yawn-scene03',
+    path: 'characters/henry/henry-yawn-scene03.webp',
+  },
+  'henry.henry-shut-scene03': {
+    characterId: 'henry',
+    expression: 'henry-shut-scene03',
+    path: 'characters/henry/henry-shut-scene03.webp',
   },
 };
 
