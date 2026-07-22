@@ -1,4 +1,4 @@
-import type { CharacterDefinition, CharacterStageState, LineNode } from '@darknes/shared';
+import type { CharacterDefinition, CharacterStageState, ChoiceNode, LineNode } from '@darknes/shared';
 import { useSceneStore } from '../../store/sceneStore';
 
 let characterRegistry: Record<string, CharacterDefinition> = {};
@@ -16,13 +16,13 @@ export function getCharacterDefinition(id: string): CharacterDefinition | undefi
 }
 
 /**
- * Applies a line node's `characters` stage directions (if present), or,
- * when a line only sets a single `speaker`, marks that speaker as
- * highlighted while leaving everyone else's position untouched.
+ * Applies character stage directions from any node that carries them
+ * (Line, Narration, or Choice), or falls back to marking the speaker
+ * as highlighted when no explicit directions are given.
  */
-export function applyLineToStage(node: LineNode): CharacterStageState[] {
+export function applyNodeCharactersToStage(node: LineNode | ChoiceNode): CharacterStageState[] {
   const current = useSceneStore.getState().stageCharacters;
-  const stageDirections = node.characters as CharacterStageState[] | CharacterStageState | undefined;
+  const stageDirections = (node as LineNode).characters as CharacterStageState[] | CharacterStageState | undefined;
 
   const normalizeStageDirections = (
     value: CharacterStageState[] | CharacterStageState,
@@ -34,13 +34,9 @@ export function applyLineToStage(node: LineNode): CharacterStageState[] {
     return next;
   }
 
-  if (node.speaker) {
-    // "player" is not a real character — don't update stage, just leave
-    // whatever characters are currently on screen untouched.
-    if (node.speaker.toLowerCase() === 'player') {
-      return current;
-    }
-    const next = current.map((c) => ({ ...c, isSpeaking: c.characterId === node.speaker }));
+  const speaker = (node as LineNode).speaker;
+  if (speaker && speaker.toLowerCase() !== 'player') {
+    const next = current.map((c) => ({ ...c, isSpeaking: c.characterId === speaker }));
     useSceneStore.getState().setStageCharacters(next);
     return next;
   }

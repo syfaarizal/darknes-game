@@ -17,7 +17,7 @@
           "isSpeaking": false
         }
       ],
-      "text": "PLAYER terbangun dari tidur dengan nafas tidak teratur dan keringat dingin. Malam hari, di ruang kerja, Player fokus mengurus dokumen-dokumen bisnisnya.",
+      "text": "Di meja kerja, PLAYER terbangun dari tidurnya, nafas tidak teratur dan keringat dingin, pikirannya kacau.",
       "next": "scene02_n002"
     },
     {
@@ -33,7 +33,7 @@
           "isSpeaking": true
         }
       ],
-      "text": "Masih belum tidur?",
+      "text": "Kau terbangun?",
       "next": "scene02_n003"
     },
     {
@@ -49,7 +49,7 @@
           "isSpeaking": false
         }
       ],
-      "text": "Masih banyak yang perlu aku urus.",
+      "text": "Iya, mimpi sialan itu lagi.",
       "next": "scene02_n004"
     },
     {
@@ -81,7 +81,7 @@
       ],
       "options": [
         {
-          "text": "Iya, aku sangat lelah tapi aku tidak punya pilihan lain",
+          "text": "Iya, aku sangat lelah",
           "goTo": "scene02_n006a"
         },
         {
@@ -155,7 +155,7 @@
       ],
       "options": [
         {
-          "text": "Baiklah, hanya sebentar lagi, setelah itu aku akan beristirahat",
+          "text": "Iya, aku mengerti",
           "goTo": "scene02_n008a"
         },
         {
@@ -163,7 +163,7 @@
           "goTo": "scene02_n008b"
         },
         {
-          "text": "Aku hanya tidak ingin melakukan kesalahan sedikitpun",
+          "text": "Aku butuh waktu sedikit lagi",
           "goTo": "scene02_n008c"
         }
       ]
@@ -181,7 +181,7 @@
           "isSpeaking": true
         }
       ],
-      "text": "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
+      "text": "Kau tahu? Dunia ini memang tidak pernah adil, tapi kau harus ingat satu hal, kau tidak sendiri. Banyak yang peduli denganmu, termasuk aku.",
       "next": "scene02_n009"
     },
     {
@@ -197,7 +197,7 @@
           "isSpeaking": true
         }
       ],
-      "text": "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
+      "text": "Kau tahu? Dunia ini memang tidak pernah adil, tapi kau harus ingat satu hal, kau tidak sendiri. Banyak yang peduli denganmu, termasuk aku.",
       "next": "scene02_n009"
     },
     {
@@ -213,7 +213,7 @@
           "isSpeaking": true
         }
       ],
-      "text": "Kau tahu? Dunia ini memang tidak pernah adil. Tapi kau harus ingat satu hal, kau tidak sendiri, banyak yang peduli denganmu, termasuk aku.",
+      "text": "Kau tahu? Dunia ini memang tidak pernah adil, tapi kau harus ingat satu hal, kau tidak sendiri. Banyak yang peduli denganmu, termasuk aku.",
       "next": "scene02_n009"
     },
     {
@@ -227,7 +227,7 @@
           "isSpeaking": false
         }
       ],
-      "text": "Nathael mendekat ke arah Player, duduk di atas meja. Wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
+      "text": "Nathael mendekat ke arah Player, duduk di atas meja, wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
       "next": "scene02_n010"
     },
     {

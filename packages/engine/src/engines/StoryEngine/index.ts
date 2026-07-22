@@ -4,7 +4,7 @@ import { useGameStore } from '../../store/gameStore';
 import { useDialogueStore } from '../../store/dialogueStore';
 import { useSceneStore } from '../../store/sceneStore';
 import { getNodeById, loadScene } from '../SceneEngine';
-import { applyLineToStage } from '../CharacterEngine';
+import { applyNodeCharactersToStage } from '../CharacterEngine';
 import { presentChoices, resolveChoice } from '../ChoiceEngine';
 import { buildHistoryEntry, finishTypewriter, recordHistory, runTypewriter } from '../DialogueEngine';
 import { replaceVariables, getVariableContext } from '../VariableEngine';
@@ -75,7 +75,7 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
   switch (node.type) {
     case DialogueNodeType.Line:
     case DialogueNodeType.Narration: {
-      applyLineToStage(node);
+      applyNodeCharactersToStage(node);
       if (node.transition) {
         // ui layer reads dialogueStore.currentNode.transition directly
       }
@@ -94,6 +94,7 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
       return;
     }
     case DialogueNodeType.Choice: {
+      applyNodeCharactersToStage(node);
       presentChoices(node);
       return;
     }

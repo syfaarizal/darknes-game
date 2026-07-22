@@ -153,6 +153,8 @@ export interface ChoiceNode extends BaseDialogueNode {
   type: DialogueNodeType.Choice;
   prompt?: string;
   options: SceneChoiceOption[];
+  /** Stage directions for characters during this choice node. */
+  characters?: CharacterStageState[];
 }
 
 export interface SceneChangeNode extends BaseDialogueNode {
