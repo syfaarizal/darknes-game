@@ -316,7 +316,8 @@
     },
     {
       "id": "scene02_end",
-      "type": "end"
+      "type": "end",
+      "nextScene": "scene03"
     }
   ]
 }

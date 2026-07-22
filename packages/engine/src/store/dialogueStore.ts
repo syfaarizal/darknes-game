@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import type { HistoryEntry, SceneChoiceOption, SceneNode } from '@darknes/shared';
 
+export type SceneTransitionPhase = 'idle' | 'fading-out' | 'fading-in';
+
 export interface DialogueState {
   currentNode: SceneNode | null;
   isTyping: boolean;
@@ -9,6 +11,10 @@ export interface DialogueState {
   history: HistoryEntry[];
   isAutoMode: boolean;
   isSkipping: boolean;
+  /** Set by StoryEngine when an End node with nextScene is reached. */
+  sceneTransitionPhase: SceneTransitionPhase;
+  /** The next scene to load after the fade-to-black. */
+  sceneTransitionNext: string | null;
 
   setCurrentNode: (node: SceneNode | null) => void;
   setTyping: (isTyping: boolean) => void;
@@ -18,6 +24,7 @@ export interface DialogueState {
   clearHistory: () => void;
   toggleAutoMode: () => void;
   setSkipping: (isSkipping: boolean) => void;
+  setSceneTransition: (phase: SceneTransitionPhase, nextScene?: string | null) => void;
 }
 
 export const useDialogueStore = create<DialogueState>((set) => ({
@@ -28,6 +35,8 @@ export const useDialogueStore = create<DialogueState>((set) => ({
   history: [],
   isAutoMode: false,
   isSkipping: false,
+  sceneTransitionPhase: 'idle',
+  sceneTransitionNext: null,
 
   setCurrentNode: (node) => set({ currentNode: node, revealedCharCount: 0 }),
   setTyping: (isTyping) => set({ isTyping }),
@@ -42,4 +51,7 @@ export const useDialogueStore = create<DialogueState>((set) => ({
   toggleAutoMode: () => set((state) => ({ isAutoMode: !state.isAutoMode })),
 
   setSkipping: (isSkipping) => set({ isSkipping }),
+
+  setSceneTransition: (phase, nextScene = null) =>
+    set({ sceneTransitionPhase: phase, sceneTransitionNext: nextScene }),
 }));

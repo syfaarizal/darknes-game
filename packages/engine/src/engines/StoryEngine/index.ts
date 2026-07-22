@@ -126,7 +126,14 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
       return;
     }
     case DialogueNodeType.End: {
-      useGameStore.getState().setPhase(GamePhase.Ending);
+      const endNode = node as import('@darknes/shared').EndNode;
+      if (endNode.nextScene) {
+        // Trigger fade-to-black before loading the next scene.
+        // The Game UI reads sceneTransitionPhase and handles the fade animation.
+        useDialogueStore.getState().setSceneTransition('fading-out', endNode.nextScene);
+      } else {
+        useGameStore.getState().setPhase(GamePhase.Ending);
+      }
       return;
     }
     default:

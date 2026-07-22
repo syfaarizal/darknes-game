@@ -185,6 +185,8 @@ export interface EndNode extends BaseDialogueNode {
   type: DialogueNodeType.End;
   /** Ending id, resolved against data/endings/*.json */
   endingId?: string;
+  /** Automatically transition to this scene after the fade-to-black effect. */
+  nextScene?: string;
 }
 
 export type SceneNode =

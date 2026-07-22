@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Background,
@@ -20,15 +20,40 @@ const CHARACTER_COLORS: Record<string, string> = {
   azaroth: '#4C1D95',
 };
 
+const FADE_DURATION_MS = 700;
+
 export function Game() {
   const navigate = useNavigate();
-  const { scene, backgroundId, stageCharacters, currentNode } = useDialogueRunner();
+  const {
+    scene,
+    backgroundId,
+    stageCharacters,
+    currentNode,
+    sceneTransitionPhase,
+    sceneTransitionNext,
+    begin,
+  } = useDialogueRunner();
   const isSkipping = useDialogueStore((s) => s.isSkipping);
   const setSkipping = useDialogueStore((s) => s.setSkipping);
+  const setSceneTransition = useDialogueStore((s) => s.setSceneTransition);
   const history = useDialogueStore((s) => s.history);
 
   const [historyOpen, setHistoryOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null);
+  /** Stays true from the moment fade-out starts until fade-in finishes. */
+  const [fadeOverlayActive, setFadeOverlayActive] = useState(false);
+
+  const prevPhaseRef = useRef(sceneTransitionPhase);
+
+  useEffect(() => {
+    if (prevPhaseRef.current !== sceneTransitionPhase) {
+      prevPhaseRef.current = sceneTransitionPhase;
+      if (sceneTransitionPhase === 'fading-out') {
+        // Screen goes black
+        setFadeOverlayActive(true);
+      }
+    }
+  });
 
   const notify = (message: string) => {
     setNotification(message);
@@ -38,6 +63,20 @@ export function Game() {
   const camera = currentNode && 'camera' in currentNode ? currentNode.camera : undefined;
   const transition = currentNode && 'transition' in currentNode ? currentNode.transition : undefined;
 
+  const handleFadeInComplete = () => {
+    // Screen is fully black → load next scene
+    if (sceneTransitionNext) {
+      begin(sceneTransitionNext);
+    }
+    setSceneTransition('fading-in');
+    // Fade-out the overlay to reveal the new scene
+    setFadeOverlayActive(false);
+  };
+
+  const handleFadeOutComplete = () => {
+    setSceneTransition('idle');
+  };
+
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-[var(--color-void)]">
       <Camera instruction={camera}>
@@ -45,6 +84,12 @@ export function Game() {
         <CharacterLayer characters={stageCharacters} />
       </Camera>
 
+      <ScreenFade
+        active={fadeOverlayActive}
+        durationMs={FADE_DURATION_MS}
+        onFadeInComplete={handleFadeInComplete}
+        onFadeOutComplete={handleFadeOutComplete}
+      />
       <ScreenFade active={transition?.type === 'flash'} />
 
       <TopBar

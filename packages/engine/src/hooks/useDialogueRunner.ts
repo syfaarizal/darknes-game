@@ -18,6 +18,8 @@ export function useDialogueRunner() {
   const isAutoMode = useDialogueStore((s) => s.isAutoMode);
   const toggleAutoMode = useDialogueStore((s) => s.toggleAutoMode);
   const history = useDialogueStore((s) => s.history);
+  const sceneTransitionPhase = useDialogueStore((s) => s.sceneTransitionPhase);
+  const sceneTransitionNext = useDialogueStore((s) => s.sceneTransitionNext);
   const scene = useSceneStore((s) => s.scene);
   const backgroundId = useSceneStore((s) => s.backgroundId);
   const stageCharacters = useSceneStore((s) => s.stageCharacters);
@@ -37,6 +39,8 @@ export function useDialogueRunner() {
     isAutoMode,
     toggleAutoMode,
     history,
+    sceneTransitionPhase,
+    sceneTransitionNext,
     begin,
     next,
     pick,
