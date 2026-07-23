@@ -408,7 +408,7 @@
                       "id":  "scene03_fadeout",
                       "type":  "narration",
                       "characters":  [],
-                      "text":  "Layar perlahan menggelap. Hari itu berlalu seperti biasanya. Tapi di balik ketenangan itu, sesuatu sedang menunggu.",
+                      "text":  "Semua orang kembali melakukan kesibukannya masing-masing. {playerName} menatap mereka sebentar, lalu kembali ke ruang kerjanya.",
                       "next":  "scene03_end"
                   },
                   {
