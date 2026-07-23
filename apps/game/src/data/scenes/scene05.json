@@ -2,7 +2,7 @@
     "meta":  {
                  "id":  "scene05",
                  "title":  "Rumah Ravenscroft â€” Ruang Kerja â€” Malam Hari",
-                 "background":  "workspace-night",
+                 "background":  "player-office-night",
                  "entry":  "scene05_n001"
              },
     "nodes":  [

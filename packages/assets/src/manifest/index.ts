@@ -26,18 +26,18 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
   },
   'player-office-morning': {
     id: 'player-office-morning',
-    path: 'backgrounds/office/player-office-morning.png',
+    path: 'backgrounds/office/player-office-morning.webp',
     label: 'Player Office — Morning',
   },
-  'workspace-night': {
-    id: 'workspace-night',
-    path: 'backgrounds/workspace/workspace-night.webp',
+  'player-office-night': {
+    id: 'player-office-night',
+    path: 'backgrounds/office/player-office-night.webp',
     label: 'Ravenscroft House — Workspace — Night',
   },
   library: { id: 'library', path: 'backgrounds/library/default.webp', label: 'Library' },
-  'scene02-office': {
-    id: 'scene02-office',
-    path: 'backgrounds/office/bg-scene-two-nathael.png',
+  'player-office-night-scene02': {
+    id: 'player-office-night-scene02',
+    path: 'backgrounds/office/player-office-night-scene02.webp',
     label: 'Scene 02 — Office Night',
   },
 };
@@ -196,5 +196,10 @@ export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {
     id: 'open_close_door',
     channel: AudioChannel.Sfx,
     path: 'audio/sfx/open-close-door-sfx.mp3',
+  },
+  'small-footsteps-hug': {
+    id: 'small-footsteps-hug',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/small-footsteps-hug.mp3',
   },
 };

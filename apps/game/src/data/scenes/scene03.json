@@ -35,6 +35,7 @@
                       "type":  "narration",
                       "characters":  [],
                       "text":  "Mike berlari dan memeluk {playerName} erat.",
+                      "audio":  [{ "channel":  "sfx", "id":  "small-footsteps-hug" }],
                       "next":  "scene03_n004"
                   },
                   {

@@ -65,7 +65,14 @@
                   {
                       "id":  "scene04_n006",
                       "type":  "choice",
-                      "characters":  [],
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "damian-shut-scene04",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Aku akan merevisinya",
@@ -148,7 +155,14 @@
                   {
                       "id":  "scene04_n009",
                       "type":  "choice",
-                      "characters":  [],
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "damian-shut-scene04",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Tolak",
@@ -232,7 +246,14 @@
                   {
                       "id":  "scene04_n012",
                       "type":  "choice",
-                      "characters":  [],
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "damian-shut-scene04",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Audit semuanya",
@@ -323,7 +344,14 @@
                   {
                       "id":  "scene04_n016",
                       "type":  "choice",
-                      "characters":  [],
+                      "characters":  [
+                                         {
+                                             "characterId":  "damian",
+                                             "expression":  "damian-shut-scene04",
+                                             "position":  "center",
+                                             "isSpeaking":  true
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Sedikit",

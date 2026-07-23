@@ -2,7 +2,7 @@
   "meta": {
     "id": "scene02",
     "title": "Ruang Kerja — Dua Minggu Kemudian",
-    "background": "scene02-office",
+    "background": "player-office-night-scene02",
     "entry": "scene02_n001"
   },
   "nodes": [
