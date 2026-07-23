@@ -147,4 +147,44 @@ export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {
     channel: AudioChannel.Sfx,
     path: 'audio/sfx/rustling-sfx.mp3',
   },
+  opendoor_footstep_dropbook: {
+    id: 'opendoor_footstep_dropbook',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/opendoor-footstep-dropbook.mp3',
+  },
+  take_flip_papper: {
+    id: 'take_flip_papper',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/take-flip-papper.mp3',
+  },
+  page_flip: {
+    id: 'page_flip',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/page-flip-sfx.mp3',
+  },
+  take_papper: {
+    id: 'take_papper',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/take-papper-sfx.mp3',
+  },
+  drop_book: {
+    id: 'drop_book',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/drop-book-sfx.mp3',
+  },
+  writing_on_paper: {
+    id: 'writing_on_paper',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/writing-on-paper-fsx.mp3',
+  },
+  take_paper_footsteps: {
+    id: 'take_paper_footsteps',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/take-paper-footsteps.mp3',
+  },
+  open_close_door: {
+    id: 'open_close_door',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/open-close-door-sfx.mp3',
+  },
 };

@@ -9,14 +9,8 @@
                   {
                       "id":  "scene04_n001",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "opendoor_footstep_dropbook" }],
                       "text":  "Beberapa saat setelah rapat. Pintu ruang direktur terbuka. Seorang pria berambut hitam memasuki ruangan sambil membawa beberapa map. Tatapannya tajam. Langkahnya tenang. Ia meletakkan dokumen di atas meja tanpa banyak bicara.",
                       "next":  "scene04_n002"
                   },
@@ -39,14 +33,8 @@
                   {
                       "id":  "scene04_n003",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "take_flip_papper" }],
                       "text":  "{playerName} mengambil dokumen tersebut. Baru beberapa detik membaca...",
                       "next":  "scene04_n004"
                   },
@@ -69,28 +57,15 @@
                   {
                       "id":  "scene04_n005",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "page_flip" }],
                       "text":  "{playerName} berhenti membaca. Ia membuka halaman yang dimaksud. Benar saja. Ada satu angka yang tertukar.",
                       "next":  "scene04_n006"
                   },
                   {
                       "id":  "scene04_n006",
                       "type":  "choice",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
                       "options":  [
                                       {
                                           "text":  "Aku akan merevisinya",
@@ -173,14 +148,7 @@
                   {
                       "id":  "scene04_n009",
                       "type":  "choice",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
                       "options":  [
                                       {
                                           "text":  "Tolak",
@@ -257,20 +225,14 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "sfx", "id":  "drop_book" }],
                       "text":  "(menaruh satu map terakhir) Ini laporan Gudang, ada selisih stok.",
                       "next":  "scene04_n012"
                   },
                   {
                       "id":  "scene04_n012",
                       "type":  "choice",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
                       "options":  [
                                       {
                                           "text":  "Audit semuanya",
@@ -337,14 +299,8 @@
                   {
                       "id":  "scene04_n014",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "writing_on_paper" }],
                       "text":  "Ruangan kembali hening. {playerName} menandatangani beberapa dokumen. Damian memperhatikannya beberapa saat. Lalu berkata pelan.",
                       "next":  "scene04_n015"
                   },
@@ -367,14 +323,7 @@
                   {
                       "id":  "scene04_n016",
                       "type":  "choice",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
                       "options":  [
                                       {
                                           "text":  "Sedikit",
@@ -441,14 +390,8 @@
                   {
                       "id":  "scene04_n018",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "take_paper_footsteps" }],
                       "text":  "Damian mengambil kembali seluruh dokumen. Ia berjalan menuju pintu. Sebelum keluar, ia berhenti sejenak. Tanpa menoleh.",
                       "next":  "scene04_n019"
                   },
@@ -471,14 +414,8 @@
                   {
                       "id":  "scene04_n020",
                       "type":  "narration",
-                      "characters":  [
-                                         {
-                                             "characterId":  "damian",
-                                             "expression":  "damian-shut-scene04",
-                                             "position":  "center",
-                                             "isSpeaking":  false
-                                         }
-                                     ],
+                      "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "open_close_door" }],
                       "text":  "Ia membuka pintu dan pergi. {playerName} menatap pintu yang perlahan tertutup. Kalimat itu terdengar seperti perintah. Namun entah mengapa, untuk sesaat, kalimat itu terdengar seperti seseorang yang sedang mengkhawatirkannya.",
                       "next":  "scene04_end"
                   },
