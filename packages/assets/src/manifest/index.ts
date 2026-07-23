@@ -29,6 +29,11 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
     path: 'backgrounds/office/player-office-morning.png',
     label: 'Player Office — Morning',
   },
+  'workspace-night': {
+    id: 'workspace-night',
+    path: 'backgrounds/workspace/workspace-night.webp',
+    label: 'Ravenscroft House — Workspace — Night',
+  },
   library: { id: 'library', path: 'backgrounds/library/default.webp', label: 'Library' },
   'scene02-office': {
     id: 'scene02-office',
