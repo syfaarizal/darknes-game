@@ -1,4 +1,4 @@
-﻿{
+{
     "meta":  {
                  "id":  "scene03",
                  "title":  "Ruang Keluarga — Pagi Hari",
@@ -388,25 +388,33 @@
                       "type":  "narration",
                       "characters":  [],
                       "text":  "Henry hanya terdiam dan menggelengkan kepalanya.",
-                      "next":  "scene03_end"
+                      "next":  "scene03_fadeout"
                   },
                   {
                       "id":  "scene03_n016b",
                       "type":  "narration",
                       "characters":  [],
                       "text":  "Henry hanya terdiam dan menggelengkan kepalanya.",
-                      "next":  "scene03_end"
+                      "next":  "scene03_fadeout"
                   },
                   {
                       "id":  "scene03_n016c",
                       "type":  "narration",
                       "characters":  [],
                       "text":  "Henry hanya terdiam dan menggelengkan kepalanya.",
+                      "next":  "scene03_fadeout"
+                  },
+                  {
+                      "id":  "scene03_fadeout",
+                      "type":  "narration",
+                      "characters":  [],
+                      "text":  "Layar perlahan menggelap. Hari itu berlalu seperti biasanya. Tapi di balik ketenangan itu, sesuatu sedang menunggu.",
                       "next":  "scene03_end"
                   },
                   {
                       "id":  "scene03_end",
-                      "type":  "end"
+                      "type":  "end",
+                      "nextScene":  "scene04"
                   }
               ]
 }
