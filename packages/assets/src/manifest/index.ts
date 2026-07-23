@@ -109,6 +109,16 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     expression: 'henry-shut-scene03',
     path: 'characters/henry/henry-shut-scene03.webp',
   },
+  'damian.damian-shut-scene04': {
+    characterId: 'damian',
+    expression: 'damian-shut-scene04',
+    path: 'characters/damian/damian-shut-scene04.webp',
+  },
+  'damian.damian-speak-scene04': {
+    characterId: 'damian',
+    expression: 'damian-speak-scene04',
+    path: 'characters/damian/damian-speak-scene04.webp',
+  },
 };
 
 export interface AudioManifestEntry {
