@@ -89,15 +89,15 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     expression: 'xyera-pat-scene02',
     path: 'characters/xyera/xyera-pat-scene02.webp',
   },
-  'mike.mike-hug-scene03': {
-    characterId: 'mike',
-    expression: 'mike-hug-scene03',
-    path: 'characters/mike/mike-hug-scene03.webp',
+  'rachel.rachel-hug-scene03': {
+    characterId: 'rachel',
+    expression: 'rachel-hug-scene03',
+    path: 'characters/rachel/rachel-hug-scene03.webp',
   },
-  'mike.mike-patted-scene03': {
-    characterId: 'mike',
-    expression: 'mike-patted-scene03',
-    path: 'characters/mike/mike-patted-scene03.webp',
+  'rachel.rachel-patted-scene03': {
+    characterId: 'rachel',
+    expression: 'rachel-patted-scene03',
+    path: 'characters/rachel/rachel-patted-scene03.webp',
   },
   'elenna.elenna-akward-speak-scene03': {
     characterId: 'elenna',

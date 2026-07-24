@@ -4,11 +4,11 @@ import type { CharacterStageState } from '@darknes/shared';
 import { resolveCharacterExpressionUrl } from '@darknes/assets';
 
 const POSITION_CLASSES: Record<CharacterPosition, string> = {
-  [CharacterPosition.FarLeft]: 'left-[2%]',
-  [CharacterPosition.Left]: 'left-[5%]',
+  [CharacterPosition.FarLeft]: 'left-[25%] -translate-x-1/2',
+  [CharacterPosition.Left]: 'left-1/3 -translate-x-1/2',
   [CharacterPosition.Center]: 'left-1/2 -translate-x-1/2',
-  [CharacterPosition.Right]: 'right-[5%]',
-  [CharacterPosition.FarRight]: 'right-[2%]',
+  [CharacterPosition.Right]: 'left-2/3 -translate-x-1/2',
+  [CharacterPosition.FarRight]: 'left-[75%] -translate-x-1/2',
   [CharacterPosition.Offscreen]: 'opacity-0 pointer-events-none',
 };
 
@@ -39,7 +39,7 @@ function CharacterPortrait({ state }: { state: CharacterStageState }) {
     : resolveCharacterExpressionUrl(state.characterId, state.expression);
   const positionClass =
     state.position === CharacterPosition.Center
-      ? 'center left-[10rem] -translate-x-1/2 w-auto'
+      ? 'left-1/2 -translate-x-1/2'
       : POSITION_CLASSES[state.position];
 
   return (
@@ -55,7 +55,7 @@ function CharacterPortrait({ state }: { state: CharacterStageState }) {
       }}
       exit={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      className={`absolute bottom-0 h-[95%] object-contain object-bottom mx-auto ${positionClass}`}
+      className={`absolute bottom-0 h-[95%] aspect-[5/4] object-contain object-bottom mx-auto ${positionClass}`}
     />
   );
 }

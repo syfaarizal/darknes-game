@@ -16,12 +16,12 @@
                   {
                       "id":  "scene03_n002",
                       "type":  "line",
-                      "speaker":  "mike",
+                      "speaker":  "rachel",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-hug-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-hug-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -34,19 +34,19 @@
                       "id":  "scene03_n003",
                       "type":  "narration",
                       "characters":  [],
-                      "text":  "Mike berlari dan memeluk {playerName} erat.",
+                      "text":  "Rachel berlari dan memeluk {playerName} erat.",
                       "audio":  [{ "channel":  "sfx", "id":  "small-footsteps-hug" }],
                       "next":  "scene03_n004"
                   },
                   {
                       "id":  "scene03_n004",
                       "type":  "line",
-                      "speaker":  "mike",
+                      "speaker":  "rachel",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-hug-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-hug-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -60,8 +60,8 @@
                       "type":  "choice",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-hug-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-hug-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -69,11 +69,11 @@
                                      ],
                       "options":  [
                                       {
-                                          "text":  "Selamat pagi, Mike",
+                                          "text":  "Selamat pagi, Rachel",
                                           "goTo":  "scene03_n006a"
                                       },
                                       {
-                                          "text":  "(Mengusap kepala Mike tanpa berkata apa pun)",
+                                          "text":  "(Mengusap kepala Rachel tanpa berkata apa pun)",
                                           "goTo":  "scene03_n006b"
                                       },
                                       {
@@ -85,12 +85,12 @@
                   {
                       "id":  "scene03_n006a",
                       "type":  "line",
-                      "speaker":  "mike",
+                      "speaker":  "rachel",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-patted-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-patted-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -102,12 +102,12 @@
                   {
                       "id":  "scene03_n006b",
                       "type":  "narration",
-                      "speaker":  "mike",
+                      "speaker":  "rachel",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-patted-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-patted-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -120,12 +120,12 @@
                   {
                       "id":  "scene03_n006b_react",
                       "type":  "line",
-                      "speaker":  "mike",
+                      "speaker":  "rachel",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-patted-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-patted-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -137,12 +137,12 @@
                   {
                       "id":  "scene03_n006c",
                       "type":  "line",
-                      "speaker":  "mike",
+                      "speaker":  "rachel",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "mike",
-                                             "image":  "/assets/characters/mike/mike-patted-scene03.webp",
+                                             "characterId":  "rachel",
+                                             "image":  "/assets/characters/rachel/rachel-patted-scene03.webp",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
