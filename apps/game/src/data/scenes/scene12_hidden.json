@@ -9,7 +9,7 @@
                   {
                       "id":  "scene12_hidden_n001",
                       "type":  "narration",
-                      "text":  "Gelap. {playerName} membuka mata. Di hadapannya, ada Nathael.",
+                      "text":  "Gelap. {playerName} membuka mata. Di hadapannya, ada Xyera.",
                       "next":  "scene12_hidden_n002"
                   },
                   {
@@ -19,7 +19,7 @@
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "Xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -31,11 +31,11 @@
                   {
                       "id":  "scene12_hidden_n003",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "Xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "Xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -117,7 +117,7 @@
                                              "isSpeaking":  false
                                          }
                                      ],
-                      "text":  "(tersenyum) Iya. (menoleh kepada Nathael) Dia selalu menemaniku di saat aku merasa sendiri.",
+                      "text":  "(tersenyum) Iya. (menoleh kepada Xyera) Dia selalu menemaniku di saat aku merasa sendiri.",
                       "next":  "scene12_hidden_n010"
                   },
                   {
@@ -149,17 +149,17 @@
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Jadi... Hatimu menciptakan seseorang... yang bisa menggantikan kami. Seseorang itu adalah Nathael.",
+                      "text":  "Jadi... Hatimu menciptakan seseorang... yang bisa menggantikan kami. Seseorang itu adalah Xyera.",
                       "next":  "scene12_hidden_n012"
                   },
                   {
                       "id":  "scene12_hidden_n012",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "Xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "Xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -175,7 +175,7 @@
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "Xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -187,17 +187,17 @@
                   {
                       "id":  "scene12_hidden_n014",
                       "type":  "narration",
-                      "text":  "Nathael mengusap kepala {playerName}, seperti yang selalu ia lakukan.",
+                      "text":  "Xyera mengusap kepala {playerName}, seperti yang selalu ia lakukan.",
                       "next":  "scene12_hidden_n015"
                   },
                   {
                       "id":  "scene12_hidden_n015",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "Xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "Xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -209,7 +209,7 @@
                   {
                       "id":  "scene12_hidden_n016",
                       "type":  "narration",
-                      "text":  "Perlahan, tubuh Nathael menghilang yang menyatu dengan pelukan kedua orang tua {playerName}. Cahaya putih memenuhi layar.",
+                      "text":  "Perlahan, tubuh Xyera menghilang yang menyatu dengan pelukan kedua orang tua {playerName}. Cahaya putih memenuhi layar.",
                       "next":  "scene12_hidden_end"
                   },
                   {

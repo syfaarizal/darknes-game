@@ -48,9 +48,9 @@ export interface CharacterManifestEntry {
   path: string;
 }
 
-const characterIds = ['nathael', 'damian', 'alaric', 'azaroth'] as const;
+const characterIds = ['xyera', 'keyna', 'elenna', 'azaroth'] as const;
 const defaultExpressions = ['neutral', 'smile', 'serious'] as const;
-const sceneExpressions = ['scene-two-dlg1', 'nathael-shut-scene02', 'nathael-speak-scene02', 'nathael-pat-scene02'] as const;
+const sceneExpressions = ['scene-two-dlg1', 'xyera-shut-scene02', 'xyera-speak-scene02', 'xyera-pat-scene02'] as const;
 
 export const CHARACTERS: Record<string, CharacterManifestEntry> = characterIds.reduce(
   (acc, characterId) => {
@@ -69,25 +69,25 @@ export const CHARACTERS: Record<string, CharacterManifestEntry> = characterIds.r
 
 // Scene-specific expressions (not all characters have all scene expressions)
 export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
-  'nathael.scene-two-dlg1': {
-    characterId: 'nathael',
+  'xyera.scene-two-dlg1': {
+    characterId: 'xyera',
     expression: 'scene-two-dlg1',
-    path: 'characters/nathael/nathael-scene-two-dlg1.png',
+    path: 'characters/xyera/xyera-scene-two-dlg1.png',
   },
-  'nathael.nathael-shut-scene02': {
-    characterId: 'nathael',
-    expression: 'nathael-shut-scene02',
-    path: 'characters/nathael/nathael-shut-scene02.webp',
+  'xyera.xyera-shut-scene02': {
+    characterId: 'xyera',
+    expression: 'xyera-shut-scene02',
+    path: 'characters/xyera/xyera-shut-scene02.webp',
   },
-  'nathael.nathael-speak-scene02': {
-    characterId: 'nathael',
-    expression: 'nathael-speak-scene02',
-    path: 'characters/nathael/nathael-speak-scene02.webp',
+  'xyera.xyera-speak-scene02': {
+    characterId: 'xyera',
+    expression: 'xyera-speak-scene02',
+    path: 'characters/xyera/xyera-speak-scene02.webp',
   },
-  'nathael.nathael-pat-scene02': {
-    characterId: 'nathael',
-    expression: 'nathael-pat-scene02',
-    path: 'characters/nathael/nathael-pat-scene02.webp',
+  'xyera.xyera-pat-scene02': {
+    characterId: 'xyera',
+    expression: 'xyera-pat-scene02',
+    path: 'characters/xyera/xyera-pat-scene02.webp',
   },
   'mike.mike-hug-scene03': {
     characterId: 'mike',
@@ -99,15 +99,15 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     expression: 'mike-patted-scene03',
     path: 'characters/mike/mike-patted-scene03.webp',
   },
-  'alaric.alaric-akward-speak-scene03': {
-    characterId: 'alaric',
-    expression: 'alaric-akward-speak-scene03',
-    path: 'characters/alaric/alaric-akward-speak-scene03.webp',
+  'elenna.elenna-akward-speak-scene03': {
+    characterId: 'elenna',
+    expression: 'elenna-akward-speak-scene03',
+    path: 'characters/elenna/elenna-akward-speak-scene03.webp',
   },
-  'alaric.alaric-akward-shut-scene03': {
-    characterId: 'alaric',
-    expression: 'alaric-akward-shut-scene03',
-    path: 'characters/alaric/alaric-akward-shut-scene03.webp',
+  'elenna.elenna-akward-shut-scene03': {
+    characterId: 'elenna',
+    expression: 'elenna-akward-shut-scene03',
+    path: 'characters/elenna/elenna-akward-shut-scene03.webp',
   },
   'henry.henry-yawn-scene03': {
     characterId: 'henry',
@@ -119,15 +119,15 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     expression: 'henry-shut-scene03',
     path: 'characters/henry/henry-shut-scene03.webp',
   },
-  'damian.damian-shut-scene04': {
-    characterId: 'damian',
-    expression: 'damian-shut-scene04',
-    path: 'characters/damian/damian-shut-scene04.webp',
+  'keyna.keyna-shut-scene04': {
+    characterId: 'keyna',
+    expression: 'keyna-shut-scene04',
+    path: 'characters/keyna/keyna-shut-scene04.webp',
   },
-  'damian.damian-speak-scene04': {
-    characterId: 'damian',
-    expression: 'damian-speak-scene04',
-    path: 'characters/damian/damian-speak-scene04.webp',
+  'keyna.keyna-speak-scene04': {
+    characterId: 'keyna',
+    expression: 'keyna-speak-scene04',
+    path: 'characters/keyna/keyna-speak-scene04.webp',
   },
 };
 

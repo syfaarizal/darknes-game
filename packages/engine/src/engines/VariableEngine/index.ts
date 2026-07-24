@@ -12,7 +12,7 @@ export interface VariableContext {
  * Supported placeholders:
  *   {playerName} or {PLAYER} — the player's chosen name from Identity Setup
  *   {variableKey}           — any variable in gameStore.variables
- *                             e.g. {money}, {chapter}, {damianTrust},
+ *                             e.g. {money}, {chapter}, {keynaTrust},
  *                             {mentalState}, {date}, {time}, etc.
  *   PLAYER / Player / player (standalone word) — replaced with playerName
  *

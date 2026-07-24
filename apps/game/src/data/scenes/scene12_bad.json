@@ -9,7 +9,7 @@
         {
             "id": "scene12_bad_n001",
             "type": "narration",
-            "text": "Damian berada di ICU. {playerName} berdiri sendirian di lorong rumah sakit. Tangannya masih berlumuran darah Damian.",
+            "text": "Keyna berada di ICU. {playerName} berdiri sendirian di lorong rumah sakit. Tangannya masih berlumuran darah Keyna.",
             "next": "scene12_bad_n002"
         },
         {
@@ -17,7 +17,7 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "text": "...Nathael?",
+            "text": "...Xyera?",
             "next": "scene12_bad_n003"
         },
         {
@@ -31,7 +31,7 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "text": "Nathael... aku harus bagaimana?",
+            "text": "Xyera... aku harus bagaimana?",
             "next": "scene12_bad_n005"
         },
         {
@@ -45,23 +45,23 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "text": "Nathael! Nathael!",
+            "text": "Xyera! Xyera!",
             "next": "scene12_bad_n007"
         },
         {
             "id": "scene12_bad_n007",
             "type": "narration",
-            "text": "Alaric berlari menghampiri.",
+            "text": "Elenna berlari menghampiri.",
             "next": "scene12_bad_n008"
         },
         {
             "id": "scene12_bad_n008",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "Elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -75,7 +75,7 @@
             "type": "choice",
             "options": [
                 {
-                    "text": "Di mana Nathael?",
+                    "text": "Di mana Xyera?",
                     "goTo": "scene12_bad_n010a"
                 },
                 {
@@ -91,49 +91,49 @@
         {
             "id": "scene12_bad_n010a",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "Elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menundukkan kepala) ...{playerName}, soal Nathael... dia... dia nggak pernah ada.",
+            "text": "(menundukkan kepala) ...{playerName}, soal Xyera... dia... dia nggak pernah ada.",
             "next": "scene12_bad_n011"
         },
         {
             "id": "scene12_bad_n010b",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "Elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menundukkan kepala) ...{playerName}, soal Nathael... dia... dia nggak pernah ada.",
+            "text": "(menundukkan kepala) ...{playerName}, soal Xyera... dia... dia nggak pernah ada.",
             "next": "scene12_bad_n011"
         },
         {
             "id": "scene12_bad_n010c",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "Elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menundukkan kepala) ...{playerName}, soal Nathael... dia... dia nggak pernah ada.",
+            "text": "(menundukkan kepala) ...{playerName}, soal Xyera... dia... dia nggak pernah ada.",
             "next": "scene12_bad_n011"
         },
         {
@@ -143,7 +143,7 @@
             "expression": "serious",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -155,17 +155,17 @@
         {
             "id": "scene12_bad_n012",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "Elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(ragu) Selama ini... yang kami lihat... dirimu selalu bicara sendiri. Orang yang kamu panggil Nathael itu tidak pernah bisa kami lihat wujudnya.",
+            "text": "(ragu) Selama ini... yang kami lihat... dirimu selalu bicara sendiri. Orang yang kamu panggil Xyera itu tidak pernah bisa kami lihat wujudnya.",
             "next": "scene12_bad_n013"
         },
         {
@@ -175,7 +175,7 @@
             "expression": "serious",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -187,11 +187,11 @@
         {
             "id": "scene12_bad_n014",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "Elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -213,7 +213,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "Elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -225,17 +225,17 @@
         {
             "id": "scene12_bad_n017",
             "type": "narration",
-            "text": "Saat itulah, sosok Nathael muncul di ujung lorong. Tersenyum. Mengulurkan tangan.",
+            "text": "Saat itulah, sosok Xyera muncul di ujung lorong. Tersenyum. Mengulurkan tangan.",
             "next": "scene12_bad_n018"
         },
         {
             "id": "scene12_bad_n018",
             "type": "line",
-            "speaker": "nathael",
+            "speaker": "Xyera",
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "nathael",
+                    "characterId": "Xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
@@ -247,7 +247,7 @@
         {
             "id": "scene12_bad_n019",
             "type": "narration",
-            "text": "{playerName} langsung berlari ke arahnya. Alaric hanya melihat {playerName} berlari ke lorong kosong. Ia menangis.",
+            "text": "{playerName} langsung berlari ke arahnya. Elenna hanya melihat {playerName} berlari ke lorong kosong. Ia menangis.",
             "next": "scene12_bad_n020"
         },
         {
@@ -257,19 +257,19 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "nathael",
+                    "characterId": "Xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
-            "text": "(memeluk Nathael) Mereka semua bohong...",
+            "text": "(memeluk Xyera) Mereka semua bohong...",
             "next": "scene12_bad_n021"
         },
         {
             "id": "scene12_bad_n021",
             "type": "narration",
-            "text": "Alaric menatap {playerName} tidak tega. Layar perlahan menghitam.",
+            "text": "Elenna menatap {playerName} tidak tega. Layar perlahan menghitam.",
             "next": "scene12_bad_end"
         },
         {

@@ -3,9 +3,9 @@ import { useSceneLoader } from '@darknes/engine';
 import type { CharacterDefinition, SceneFile } from '@darknes/shared';
 import { router } from '../router';
 
-import nathael from '../data/characters/nathael.json';
-import damian from '../data/characters/damian.json';
-import alaric from '../data/characters/alaric.json';
+import xyera from '../data/characters/xyera.json';
+import keyna from '../data/characters/keyna.json';
+import elenna from '../data/characters/elenna.json';
 import azaroth from '../data/characters/azaroth.json';
 
 // Vite glob-imports every scene JSON file so SceneEngine can lazily resolve
@@ -20,7 +20,7 @@ for (const path in sceneModules) {
   }
 }
 
-const characters = [nathael, damian, alaric, azaroth] as CharacterDefinition[];
+const characters = [xyera, keyna, elenna, azaroth] as CharacterDefinition[];
 
 export function App() {
   useSceneLoader({ scenes, characters });

@@ -14,9 +14,9 @@ import {
 import { useDialogueRunner, useDialogueStore, SaveEngine } from '@darknes/engine';
 
 const CHARACTER_COLORS: Record<string, string> = {
-  nathael: '#B91C1C',
-  damian: '#8B0000',
-  alaric: '#B45309',
+  xyera: '#B91C1C',
+  keyna: '#8B0000',
+  elenna: '#B45309',
   azaroth: '#4C1D95',
 };
 
