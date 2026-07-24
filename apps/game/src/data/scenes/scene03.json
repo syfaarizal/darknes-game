@@ -156,18 +156,18 @@
                       "type":  "narration",
                       "characters":  [],
                       "audio":  [{ "channel":  "sfx", "id":  "footsteps" }],
-                      "text":  "Alaric berjalan mendekat sambil membawa tablet.",
+                      "text":  "Elenna berjalan mendekat sambil membawa tablet.",
                       "next":  "scene03_n008"
                   },
                   {
                       "id":  "scene03_n008",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -181,8 +181,8 @@
                       "type":  "choice",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-shut-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-shut-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -206,12 +206,12 @@
                   {
                       "id":  "scene03_n010a",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -223,12 +223,12 @@
                   {
                       "id":  "scene03_n010b",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -240,12 +240,12 @@
                   {
                       "id":  "scene03_n010c",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -259,8 +259,8 @@
                       "type":  "choice",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-shut-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-shut-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -272,11 +272,11 @@
                                           "goTo":  "scene03_n012a"
                                       },
                                       {
-                                          "text":  "Apa kata Damian?",
+                                          "text":  "Apa kata Keyna?",
                                           "goTo":  "scene03_n012b"
                                       },
                                       {
-                                          "text":  "Damian sudah tahu?",
+                                          "text":  "Keyna sudah tahu?",
                                           "goTo":  "scene03_n012c"
                                       }
                                   ]
@@ -284,52 +284,52 @@
                   {
                       "id":  "scene03_n012a",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
+                      "text":  "Aku barusaja memberi tahu Keyna tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
                       "next":  "scene03_n013"
                   },
                   {
                       "id":  "scene03_n012b",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
+                      "text":  "Aku barusaja memberi tahu Keyna tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
                       "next":  "scene03_n013"
                   },
                   {
                       "id":  "scene03_n012c",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
-                                             "image":  "/assets/characters/alaric/alaric-akward-speak-scene03.webp",
+                                             "characterId":  "elenna",
+                                             "image":  "/assets/characters/elenna/elenna-akward-speak-scene03.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Aku barusaja memberi tahu Damian tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
+                      "text":  "Aku barusaja memberi tahu Keyna tadi malam. Dia bilang keputusan akhir tetap ada di tanganmu.",
                       "next":  "scene03_n013"
                   },
                   {

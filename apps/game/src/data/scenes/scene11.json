@@ -83,17 +83,17 @@
         {
             "id": "scene11_n008",
             "type": "narration",
-            "text": "Beberapa pria bersenjata masuk. Mereka menyeret Alaric. Tangannya terikat. Sebuah pistol menempel di kepalanya.",
+            "text": "Beberapa pria bersenjata masuk. Mereka menyeret Elenna. Tangannya terikat. Sebuah pistol menempel di kepalanya.",
             "next": "scene11_n009"
         },
         {
             "id": "scene11_n009",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -137,17 +137,17 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "Tandatangani. Bisnismu menjadi milikku. Atau... (menodongkan pistol ke kepala Alaric) ...dia mati.",
+            "text": "Tandatangani. Bisnismu menjadi milikku. Atau... (menodongkan pistol ke kepala Elenna) ...dia mati.",
             "next": "scene11_n013"
         },
         {
             "id": "scene11_n013",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -167,7 +167,7 @@
             "type": "choice",
             "options": [
                 {
-                    "text": "Tandatangani kontrak â€” 'Setidaknya Alaric selamat...'",
+                    "text": "Tandatangani kontrak â€” "Setidaknya Elenna selamat...'",
                     "goTo": "scene11_sign"
                 },
                 {
@@ -205,11 +205,11 @@
         {
             "id": "scene11_sign_03",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -259,17 +259,17 @@
         {
             "id": "scene11_sign_07",
             "type": "narration",
-            "text": "BRAK!! Pintu ruang kerja terbuka. Damian masuk bersama beberapa anak buah Ravenscroft.",
+            "text": "BRAK!! Pintu ruang kerja terbuka. Keyna masuk bersama beberapa anak buah Ravenscroft.",
             "next": "scene11_sign_08"
         },
         {
             "id": "scene11_sign_08",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -281,7 +281,7 @@
         {
             "id": "scene11_sign_09",
             "type": "narration",
-            "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Damian mendorong {playerName} menjauh. DOR!! Peluru menembus tubuh Damian.",
+            "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Keyna mendorong {playerName} menjauh. DOR!! Peluru menembus tubuh Keyna.",
             "next": "scene11_sign_10"
         },
         {
@@ -291,19 +291,19 @@
             "expression": "serious",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
-            "text": "...DAMIAN!!",
+            "text": "...KEYNA!!",
             "next": "scene11_sign_11"
         },
         {
             "id": "scene11_sign_11",
             "type": "narration",
-            "text": "Damian roboh. Pasukan Ravenscroft membalas tembakan. Azaroth mundur bersama anak buahnya. Sebelum pergi, ia tersenyum.",
+            "text": "Keyna roboh. Pasukan Ravenscroft membalas tembakan. Azaroth mundur bersama anak buahnya. Sebelum pergi, ia tersenyum.",
             "next": "scene11_sign_12"
         },
         {
@@ -400,17 +400,17 @@
         {
             "id": "scene11_stall_06",
             "type": "narration",
-            "text": "BRAK!! Pintu didobrak. Damian masuk bersama beberapa anak buah Ravenscroft.",
+            "text": "BRAK!! Pintu didobrak. Keyna masuk bersama beberapa anak buah Ravenscroft.",
             "next": "scene11_stall_07"
         },
         {
             "id": "scene11_stall_07",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -422,7 +422,7 @@
         {
             "id": "scene11_stall_08",
             "type": "narration",
-            "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Damian mendorong {playerName} menjauh. DOR! Sebuah peluru menggores bahu Damian.",
+            "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Keyna mendorong {playerName} menjauh. DOR! Sebuah peluru menggores bahu Keyna.",
             "next": "scene11_stall_09"
         },
         {
@@ -432,29 +432,29 @@
             "expression": "serious",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
-            "text": "Damian!",
+            "text": "Keyna!",
             "next": "scene11_stall_10"
         },
         {
             "id": "scene11_stall_10",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "Hanya lecet. Alaric, cepat keluar bersama {playerName}.",
+            "text": "Hanya lecet. Elenna, cepat keluar bersama {playerName}.",
             "next": "scene11_stall_11"
         },
         {
@@ -521,17 +521,17 @@
         {
             "id": "scene11_rip_04",
             "type": "narration",
-            "text": "BRAK!! Pintu didobrak. Damian masuk bersama beberapa anak buah Ravenscroft.",
+            "text": "BRAK!! Pintu didobrak. Keyna masuk bersama beberapa anak buah Ravenscroft.",
             "next": "scene11_rip_05"
         },
         {
             "id": "scene11_rip_05",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -549,11 +549,11 @@
         {
             "id": "scene11_rip_07",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -571,11 +571,11 @@
         {
             "id": "scene11_rip_09",
             "type": "line",
-            "speaker": "nathael",
+            "speaker": "xyera",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "nathael",
+                    "characterId": "xyera",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -591,7 +591,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "nathael",
+                    "characterId": "xyera",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -603,11 +603,11 @@
         {
             "id": "scene11_rip_11",
             "type": "line",
-            "speaker": "nathael",
+            "speaker": "xyera",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "nathael",
+                    "characterId": "xyera",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true

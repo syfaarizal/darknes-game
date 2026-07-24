@@ -15,11 +15,11 @@
                   {
                       "id":  "scene05_n002",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -35,7 +35,7 @@
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -47,11 +47,11 @@
                   {
                       "id":  "scene05_n004",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -63,17 +63,17 @@
                   {
                       "id":  "scene05_n005",
                       "type":  "narration",
-                      "text":  "Nathael berjalan masuk. Ia duduk santai di atas meja.",
+                      "text":  "Xyera berjalan masuk. Ia duduk santai di atas meja.",
                       "next":  "scene05_n006"
                   },
                   {
                       "id":  "scene05_n006",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -103,11 +103,11 @@
                   {
                       "id":  "scene05_n008a",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -119,11 +119,11 @@
                   {
                       "id":  "scene05_n008b",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -135,11 +135,11 @@
                   {
                       "id":  "scene05_n008c",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -151,17 +151,17 @@
                   {
                       "id":  "scene05_n009",
                       "type":  "narration",
-                      "text":  "Ruangan kembali hening. Nathael mengambil salah satu map di meja.",
+                      "text":  "Ruangan kembali hening. Xyera mengambil salah satu map di meja.",
                       "next":  "scene05_n010"
                   },
                   {
                       "id":  "scene05_n010",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -191,11 +191,11 @@
                   {
                       "id":  "scene05_n012a",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -207,11 +207,11 @@
                   {
                       "id":  "scene05_n012b",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -223,11 +223,11 @@
                   {
                       "id":  "scene05_n012c",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -243,7 +243,7 @@
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -255,11 +255,11 @@
                   {
                       "id":  "scene05_n014",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -289,11 +289,11 @@
                   {
                       "id":  "scene05_n016a",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -305,11 +305,11 @@
                   {
                       "id":  "scene05_n016b",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -321,11 +321,11 @@
                   {
                       "id":  "scene05_n016c",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -361,11 +361,11 @@
                   {
                       "id":  "scene05_n019a",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -377,11 +377,11 @@
                   {
                       "id":  "scene05_n019b",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -393,11 +393,11 @@
                   {
                       "id":  "scene05_n019c",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -427,11 +427,11 @@
                   {
                       "id":  "scene05_n021a",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -443,11 +443,11 @@
                   {
                       "id":  "scene05_n021b",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -459,11 +459,11 @@
                   {
                       "id":  "scene05_n021c",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -479,7 +479,7 @@
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -491,17 +491,17 @@
                   {
                       "id":  "scene05_n023",
                       "type":  "narration",
-                      "text":  "Nathael tersenyum lembut. Ia turun dari meja. Kemudian mengusap pelan kepala {playerName}. Seketika {playerName} mulai tenang dan nyaman.",
+                      "text":  "Xyera tersenyum lembut. Ia turun dari meja. Kemudian mengusap pelan kepala {playerName}. Seketika {playerName} mulai tenang dan nyaman.",
                       "next":  "scene05_n024"
                   },
                   {
                       "id":  "scene05_n024",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -531,11 +531,11 @@
                   {
                       "id":  "scene05_n026a",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -547,11 +547,11 @@
                   {
                       "id":  "scene05_n026b",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -563,11 +563,11 @@
                   {
                       "id":  "scene05_n026c",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "smile",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "smile",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -585,11 +585,11 @@
                   {
                       "id":  "scene05_n028",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -601,7 +601,7 @@
                   {
                       "id":  "scene05_n029",
                       "type":  "narration",
-                      "text":  "Nathael meninggalkan ruangan. {playerName} menatap punggungnya yang perlahan menghilang dalam gelap. Tanpa sadar, sudut bibirnya terangkat membentuk senyum tipis.",
+                      "text":  "Xyera meninggalkan ruangan. {playerName} menatap punggungnya yang perlahan menghilang dalam gelap. Tanpa sadar, sudut bibirnya terangkat membentuk senyum tipis.",
                       "next":  "scene05_end"
                   },
                   {

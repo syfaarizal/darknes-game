@@ -15,11 +15,11 @@
                   {
                       "id":  "scene01_n002",
                       "type":  "line",
-                      "speaker":  "nathael",
+                      "speaker":  "xyera",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "nathael",
+                                             "characterId":  "xyera",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true

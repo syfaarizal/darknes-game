@@ -9,7 +9,7 @@
         {
             "id": "scene12_n001",
             "type": "narration",
-            "text": "Damian berada di ICU. {playerName} duduk di samping ranjangnya.",
+            "text": "Keyna berada di ICU. {playerName} duduk di samping ranjangnya.",
             "next": "scene12_n002"
         },
         {
@@ -19,7 +19,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -31,11 +31,11 @@
         {
             "id": "scene12_n003",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
@@ -51,7 +51,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": false
@@ -63,11 +63,11 @@
         {
             "id": "scene12_n005",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -87,13 +87,13 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "text": "...Nathael?",
+            "text": "...Xyera?",
             "next": "scene12_n008"
         },
         {
             "id": "scene12_n008",
             "type": "narration",
-            "text": "{playerName} melihat samar-samar keberadaan Nathael. Ia berjalan lebih cepat.",
+            "text": "{playerName} melihat samar-samar keberadaan Xyera. Ia berjalan lebih cepat.",
             "next": "scene12_n009"
         },
         {
@@ -101,23 +101,23 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "text": "Nathael?",
+            "text": "Xyera?",
             "next": "scene12_n010"
         },
         {
             "id": "scene12_n010",
             "type": "narration",
-            "text": "Tidak ada. Alaric melihat tingkah {playerName} lalu menghampirinya.",
+            "text": "Tidak ada. Elenna melihat tingkah {playerName} lalu menghampirinya.",
             "next": "scene12_n011"
         },
         {
             "id": "scene12_n011",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -131,7 +131,7 @@
             "type": "choice",
             "options": [
                 {
-                    "text": "Di mana Nathael?",
+                    "text": "Di mana Xyera?",
                     "goTo": "scene12_n013a"
                 },
                 {
@@ -147,49 +147,49 @@
         {
             "id": "scene12_n013a",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menghela nafas) Dengarkan aku baik-baik. Nathael... nggak pernah ada.",
+            "text": "(menghela nafas) Dengarkan aku baik-baik. Xyera... nggak pernah ada.",
             "next": "scene12_n014"
         },
         {
             "id": "scene12_n013b",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menghela nafas) Dengarkan aku baik-baik. Nathael... nggak pernah ada.",
+            "text": "(menghela nafas) Dengarkan aku baik-baik. Xyera... nggak pernah ada.",
             "next": "scene12_n014"
         },
         {
             "id": "scene12_n013c",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menghela nafas) Dengarkan aku baik-baik. Nathael... nggak pernah ada.",
+            "text": "(menghela nafas) Dengarkan aku baik-baik. Xyera... nggak pernah ada.",
             "next": "scene12_n014"
         },
         {
@@ -199,7 +199,7 @@
             "expression": "serious",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -211,11 +211,11 @@
         {
             "id": "scene12_n015",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -237,7 +237,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -249,11 +249,11 @@
         {
             "id": "scene12_n018",
             "type": "line",
-            "speaker": "alaric",
+            "speaker": "elenna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -265,17 +265,17 @@
         {
             "id": "scene12_n019",
             "type": "narration",
-            "text": "Rachel datang. Henry. Mike. Damian keluar dari kamar sambil memegang bahunya yang diperban.",
+            "text": "Rachel datang. Henry. Mike. Keyna keluar dari kamar sambil memegang bahunya yang diperban.",
             "next": "scene12_n020"
         },
         {
             "id": "scene12_n020",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -297,13 +297,13 @@
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
                 },
                 {
-                    "characterId": "alaric",
+                    "characterId": "elenna",
                     "expression": "neutral",
                     "position": "left",
                     "isSpeaking": false
@@ -315,11 +315,11 @@
         {
             "id": "scene12_n023",
             "type": "line",
-            "speaker": "damian",
+            "speaker": "keyna",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
@@ -335,7 +335,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "damian",
+                    "characterId": "keyna",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false

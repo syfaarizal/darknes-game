@@ -231,7 +231,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Ngomong-ngomong... bagaimana kabar Alaric?",
+                      "text":  "Ngomong-ngomong... bagaimana kabar Elenna?",
                       "next":  "scene10_n015"
                   },
                   {
@@ -467,7 +467,7 @@
                   {
                       "id":  "scene10_n027",
                       "type":  "narration",
-                      "text":  "Ia berjalan meninggalkan ruang tamu. Pintu perlahan tertutup. {playerName} terdiam. Ia mengingat kembali ucapan Victor. \u0027Alaric sering mengunjungiku.\u0027 Tangannya perlahan mengepal.",
+                      "text":  "Ia berjalan meninggalkan ruang tamu. Pintu perlahan tertutup. {playerName} terdiam. Ia mengingat kembali ucapan Victor. \u0027Elenna sering mengunjungiku.\u0027 Tangannya perlahan mengepal.",
                       "next":  "scene10_end"
                   },
                   {

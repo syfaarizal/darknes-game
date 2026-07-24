@@ -9,17 +9,17 @@
                   {
                       "id":  "scene08_n001",
                       "type":  "narration",
-                      "text":  "{playerName} baru saja pulang. Belum sempat menuju pintu ruang kerja, Alaric menghentikannya.",
+                      "text":  "{playerName} baru saja pulang. Belum sempat menuju pintu ruang kerja, Elenna menghentikannya.",
                       "next":  "scene08_n002"
                   },
                   {
                       "id":  "scene08_n002",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -49,11 +49,11 @@
                   {
                       "id":  "scene08_n004a",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -65,11 +65,11 @@
                   {
                       "id":  "scene08_n004b",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -81,11 +81,11 @@
                   {
                       "id":  "scene08_n004c",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -115,11 +115,11 @@
                   {
                       "id":  "scene08_n006a",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -131,11 +131,11 @@
                   {
                       "id":  "scene08_n006b",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -147,11 +147,11 @@
                   {
                       "id":  "scene08_n006c",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -181,11 +181,11 @@
                   {
                       "id":  "scene08_n008a",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -197,11 +197,11 @@
                   {
                       "id":  "scene08_n008b",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -213,11 +213,11 @@
                   {
                       "id":  "scene08_n008c",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -247,11 +247,11 @@
                   {
                       "id":  "scene08_n010a",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -263,11 +263,11 @@
                   {
                       "id":  "scene08_n010b",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -279,11 +279,11 @@
                   {
                       "id":  "scene08_n010c",
                       "type":  "line",
-                      "speaker":  "alaric",
+                      "speaker":  "elenna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "alaric",
+                                             "characterId":  "elenna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true

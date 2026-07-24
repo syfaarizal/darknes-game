@@ -9,17 +9,17 @@
                   {
                       "id":  "scene07_n001",
                       "type":  "narration",
-                      "text":  "Matahari mulai tenggelam di balik gedung-gedung kota. {playerName} menutup map berisi informasi mengenai Victor Hale. Ia berdiri, mengambil mantel hitamnya. Belum sempat melangkah keluar, suara Damian menghentikannya.",
+                      "text":  "Matahari mulai tenggelam di balik gedung-gedung kota. {playerName} menutup map berisi informasi mengenai Victor Hale. Ia berdiri, mengambil mantel hitamnya. Belum sempat melangkah keluar, suara Keyna menghentikannya.",
                       "next":  "scene07_n002"
                   },
                   {
                       "id":  "scene07_n002",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -49,59 +49,59 @@
                   {
                       "id":  "scene07_n004a",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
+                      "text":  "Keyna menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
                   {
                       "id":  "scene07_n004b",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
+                      "text":  "Keyna menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
                   {
                       "id":  "scene07_n004c",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Damian menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
+                      "text":  "Keyna menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
                   {
                       "id":  "scene07_n005",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -123,7 +123,7 @@
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -135,11 +135,11 @@
                   {
                       "id":  "scene07_n008",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "serious",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "serious",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -169,11 +169,11 @@
                   {
                       "id":  "scene07_n010a",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "serious",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "serious",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -185,11 +185,11 @@
                   {
                       "id":  "scene07_n010b",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "serious",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "serious",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -201,11 +201,11 @@
                   {
                       "id":  "scene07_n010c",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "serious",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "serious",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -235,11 +235,11 @@
                   {
                       "id":  "scene07_n012a",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -251,11 +251,11 @@
                   {
                       "id":  "scene07_n012b",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -267,11 +267,11 @@
                   {
                       "id":  "scene07_n012c",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -289,11 +289,11 @@
                   {
                       "id":  "scene07_n014",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -323,11 +323,11 @@
                   {
                       "id":  "scene07_n016a",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -339,11 +339,11 @@
                   {
                       "id":  "scene07_n016b",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -355,11 +355,11 @@
                   {
                       "id":  "scene07_n016c",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -375,7 +375,7 @@
                       "expression":  "serious",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -387,17 +387,17 @@
                   {
                       "id":  "scene07_n018",
                       "type":  "narration",
-                      "text":  "{playerName} langsung pergi meninggalkan Damian sendiri di ruang kerjanya.",
+                      "text":  "{playerName} langsung pergi meninggalkan Keyna sendiri di ruang kerjanya.",
                       "next":  "scene07_n019"
                   },
                   {
                       "id":  "scene07_n019",
                       "type":  "line",
-                      "speaker":  "damian",
+                      "speaker":  "keyna",
                       "expression":  "neutral",
                       "characters":  [
                                          {
-                                             "characterId":  "damian",
+                                             "characterId":  "keyna",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true

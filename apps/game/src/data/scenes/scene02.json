@@ -17,12 +17,12 @@
     {
       "id": "scene02_n002",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -34,11 +34,11 @@
       "id": "scene02_n003",
       "type": "line",
       "speaker": "{playerName}",
-      "expression": "nathael-shut-scene02",
+      "expression": "xyera-shut-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -49,12 +49,12 @@
     {
       "id": "scene02_n004",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -67,8 +67,8 @@
       "type": "choice",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -91,12 +91,12 @@
     {
       "id": "scene02_n006a",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -107,12 +107,12 @@
     {
       "id": "scene02_n006b",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -123,12 +123,12 @@
     {
       "id": "scene02_n006c",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -141,8 +141,8 @@
       "type": "choice",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -165,12 +165,12 @@
     {
       "id": "scene02_n008a",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -181,12 +181,12 @@
     {
       "id": "scene02_n008b",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -197,12 +197,12 @@
     {
       "id": "scene02_n008c",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -214,19 +214,19 @@
       "id": "scene02_n009",
       "type": "narration",
       "characters": [],
-      "text": "Nathael mendekat ke arah Player, duduk di atas meja, wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
+      "text": "Xyera mendekat ke arah Player, duduk di atas meja, wajahnya tersenyum tipis sambil mengusap kepala Player. Rasa nyaman dan tenang seketika menguasai Player.",
       "audio": [{ "channel": "sfx", "id": "stroking_hair" }],
       "next": "scene02_n010"
     },
     {
       "id": "scene02_n010",
       "type": "line",
-      "speaker": "nathael",
-      "expression": "nathael-speak-scene02",
+      "speaker": "xyera",
+      "expression": "xyera-speak-scene02",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-speak-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-speak-scene02",
           "position": "center",
           "isSpeaking": true
         }
@@ -239,8 +239,8 @@
       "type": "choice",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
@@ -265,20 +265,20 @@
       "type": "narration",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
       ],
-      "text": "Player tersenyum tipis mendengar kata-kata Nathael. Untuk sesaat, rasa lelah dan sunyi terasa sedikit berkurang.",
+      "text": "Player tersenyum tipis mendengar kata-kata Xyera. Untuk sesaat, rasa lelah dan sunyi terasa sedikit berkurang.",
       "next": "scene02_end"
     },
     {
       "id": "scene02_n012b",
       "type": "narration",
       "characters": [],
-      "text": "Player terdiam sejenak, membalas senyuman Nathael dengan pelan.",
+      "text": "Player terdiam sejenak, membalas senyuman Xyera dengan pelan.",
       "next": "scene02_end"
     },
     {
@@ -286,8 +286,8 @@
       "type": "narration",
       "characters": [
         {
-          "characterId": "nathael",
-          "expression": "nathael-shut-scene02",
+          "characterId": "xyera",
+          "expression": "xyera-shut-scene02",
           "position": "center",
           "isSpeaking": false
         }
