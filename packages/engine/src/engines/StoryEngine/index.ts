@@ -47,6 +47,16 @@ export async function advance(): Promise<void> {
     return;
   }
 
+  if (currentNode.type === DialogueNodeType.End) {
+    const endNode = currentNode as import('@darknes/shared').EndNode;
+    if (endNode.nextScene) {
+      useDialogueStore.getState().setSceneTransition('fading-out', endNode.nextScene);
+    } else {
+      useGameStore.getState().setPhase(GamePhase.Ending);
+    }
+    return;
+  }
+
   if ('next' in currentNode && currentNode.next) {
     await goToNode(scene, currentNode.next);
   }
