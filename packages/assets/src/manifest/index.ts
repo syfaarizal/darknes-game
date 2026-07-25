@@ -241,4 +241,24 @@ export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {
     channel: AudioChannel.Sfx,
     path: 'audio/sfx/small-footsteps-hug.mp3',
   },
+  open_door: {
+    id: 'open_door',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/open-door-sfx.mp3',
+  },
+  footsteps_sitting: {
+    id: 'footsteps_sitting',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/footsteps-sitting-sfx.mp3',
+  },
+  grab_pen_tight: {
+    id: 'grab_pen_tight',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/grab-pen-tight-sfx.mp3',
+  },
+  up_stroking: {
+    id: 'up_stroking',
+    channel: AudioChannel.Sfx,
+    path: 'audio/sfx/up-stroking-sfx.mp3',
+  },
 };

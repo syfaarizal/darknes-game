@@ -10,6 +10,7 @@
                       "id":  "scene05_n001",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "open_door" }],
                       "text":  "Tumpukan dokumen memenuhi meja kerja. {playerName} masih sibuk membaca laporan. Suara pintu balkon terbuka pelan. Angin malam masuk membawa udara dingin. Seorang pria berambut hitam bersandar di kusen pintu sambil tersenyum kecil.",
                       "next":  "scene05_n002"
                   },
@@ -68,6 +69,7 @@
                       "id":  "scene05_n005",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "footsteps_sitting" }],
                       "text":  "Xyera berjalan masuk. Ia duduk santai di atas meja.",
                       "next":  "scene05_n006"
                   },
@@ -170,6 +172,7 @@
                       "id":  "scene05_n009",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "take_papper" }],
                       "text":  "Ruangan kembali hening. Xyera mengambil salah satu map di meja.",
                       "next":  "scene05_n010"
                   },
@@ -384,6 +387,7 @@
                       "id":  "scene05_n017",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "grab_pen_tight" }],
                       "text":  "Ruangan mendadak sunyi. {playerName} menggenggam pulpen sedikit lebih erat.",
                       "next":  "scene05_n018"
                   },
@@ -564,6 +568,7 @@
                       "id":  "scene05_n023",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "up_stroking" }],
                       "text":  "Xyera tersenyum lembut. Ia turun dari meja. Kemudian mengusap pelan kepala {playerName}. Seketika {playerName} mulai tenang dan nyaman.",
                       "next":  "scene05_n024"
                   },
@@ -666,6 +671,7 @@
                       "id":  "scene05_n027",
                       "type":  "narration",
                       "characters":  [],
+                      "audio":  [{ "channel":  "sfx", "id":  "footsteps" }],
                       "text":  "Ia berjalan menuju balkon. Sebelum keluar, ia berhenti. Tanpa menoleh.",
                       "next":  "scene05_n028"
                   },
