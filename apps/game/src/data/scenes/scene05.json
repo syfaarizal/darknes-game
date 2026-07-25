@@ -1,7 +1,7 @@
-﻿{
+{
     "meta":  {
                  "id":  "scene05",
-                 "title":  "Rumah Ravenscroft â€” Ruang Kerja â€” Malam Hari",
+                 "title":  "Rumah Ravenscroft — Ruang Kerja — Malam Hari",
                  "background":  "player-office-night",
                  "entry":  "scene05_n001"
              },
@@ -16,11 +16,12 @@
                       "id":  "scene05_n002",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -36,6 +37,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-scene05.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -48,11 +50,12 @@
                       "id":  "scene05_n004",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -70,11 +73,12 @@
                       "id":  "scene05_n006",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -85,6 +89,15 @@
                   {
                       "id":  "scene05_n007",
                       "type":  "choice",
+                      "characters":  [
+                                         {
+                                             "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-scene05.webp",
+                                             "expression":  "shut",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Masih banyak yang harus kuselesaikan",
@@ -104,11 +117,12 @@
                       "id":  "scene05_n008a",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -120,11 +134,12 @@
                       "id":  "scene05_n008b",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -136,11 +151,12 @@
                       "id":  "scene05_n008c",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -158,11 +174,12 @@
                       "id":  "scene05_n010",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-map",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-map-scene05.webp",
+                                             "expression":  "speak-map",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -173,6 +190,15 @@
                   {
                       "id":  "scene05_n011",
                       "type":  "choice",
+                      "characters":  [
+                                         {
+                                             "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-map-scene-05.webp",
+                                             "expression":  "shut-map",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Kalau aku berhenti, perusahaan ini ikut berhenti",
@@ -192,11 +218,12 @@
                       "id":  "scene05_n012a",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak-map",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-map-scene05.webp",
+                                             "expression":  "speak-map",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -208,11 +235,12 @@
                       "id":  "scene05_n012b",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak-map",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-map-scene05.webp",
+                                             "expression":  "speak-map",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -224,11 +252,12 @@
                       "id":  "scene05_n012c",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak-map",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-map-scene05.webp",
+                                             "expression":  "speak-map",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -244,6 +273,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-scene05.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -256,11 +286,12 @@
                       "id":  "scene05_n014",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "smile-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-smile-crossarm-scene05.webp",
+                                             "expression":  "smile-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -271,6 +302,15 @@
                   {
                       "id":  "scene05_n015",
                       "type":  "choice",
+                      "characters":  [
+                                         {
+                                             "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-scene05.webp",
+                                             "expression":  "shut-crossarm",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Aku sudah banyak berubah",
@@ -290,11 +330,12 @@
                       "id":  "scene05_n016a",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -306,11 +347,12 @@
                       "id":  "scene05_n016b",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -322,11 +364,12 @@
                       "id":  "scene05_n016c",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -343,6 +386,15 @@
                   {
                       "id":  "scene05_n018",
                       "type":  "choice",
+                      "characters":  [
+                                         {
+                                             "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-crossarm-scene05.webp",
+                                             "expression":  "shut-crossarm",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Aku tidak tahu",
@@ -362,11 +414,12 @@
                       "id":  "scene05_n019a",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -378,11 +431,12 @@
                       "id":  "scene05_n019b",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -394,11 +448,12 @@
                       "id":  "scene05_n019c",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -409,6 +464,15 @@
                   {
                       "id":  "scene05_n020",
                       "type":  "choice",
+                      "characters":  [
+                                         {
+                                             "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-crossarm-scene05.webp",
+                                             "expression":  "shut-crossarm",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Kalau malam itu aku lebih kuat...",
@@ -428,11 +492,12 @@
                       "id":  "scene05_n021a",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -444,11 +509,12 @@
                       "id":  "scene05_n021b",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -460,11 +526,12 @@
                       "id":  "scene05_n021c",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "neutral",
+                      "expression":  "speak-crossarm",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "neutral",
+                                             "image":  "/assets/characters/xyera/xyera-speak-crossarm-scene05.webp",
+                                             "expression":  "speak-crossarm",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -480,6 +547,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-crossarm-scene05.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  false
@@ -498,11 +566,12 @@
                       "id":  "scene05_n024",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -513,6 +582,15 @@
                   {
                       "id":  "scene05_n025",
                       "type":  "choice",
+                      "characters":  [
+                                         {
+                                             "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-shut-scene05.webp",
+                                             "expression":  "shut",
+                                             "position":  "center",
+                                             "isSpeaking":  false
+                                         }
+                                     ],
                       "options":  [
                                       {
                                           "text":  "Aku akan mencoba",
@@ -532,11 +610,12 @@
                       "id":  "scene05_n026a",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-smile-crossarm-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -548,11 +627,12 @@
                       "id":  "scene05_n026b",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-smile-crossarm-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -564,11 +644,12 @@
                       "id":  "scene05_n026c",
                       "type":  "line",
                       "speaker":  "xyera",
-                      "expression":  "smile",
+                      "expression":  "speak",
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
-                                             "expression":  "smile",
+                                             "image":  "/assets/characters/xyera/xyera-smile-crossarm-scene05.webp",
+                                             "expression":  "speak",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }
@@ -590,6 +671,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "xyera",
+                                             "image":  "/assets/characters/xyera/xyera-speak-scene05.webp",
                                              "expression":  "neutral",
                                              "position":  "center",
                                              "isSpeaking":  true

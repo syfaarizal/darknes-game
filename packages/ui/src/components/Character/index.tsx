@@ -31,18 +31,18 @@ export function CharacterLayer({ characters }: CharacterLayerProps) {
 }
 
 function CharacterPortrait({ state }: { state: CharacterStageState }) {
-  const url = resolveCharacterExpressionUrl(state.characterId, state.expression);
+  const imagePath = state.image ?? resolveCharacterExpressionUrl(state.characterId, state.expression);
   const positionClass = POSITION_CLASSES[state.position];
 
   return (
     <motion.img
-      src={url}
+      src={imagePath}
       alt={state.characterId}
       initial={{ opacity: 0, y: 24 }}
       animate={{
-        opacity: state.isSpeaking === false ? 0.55 : 1,
+        opacity: state.isSpeaking ? 1 : 1,
         y: 0,
-        filter: state.isSpeaking === false ? 'brightness(0.6) saturate(0.7)' : 'brightness(1)',
+        filter: state.isSpeaking ? 'brightness(1)' : 'brightness(1) saturate(1)',
       }}
       exit={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}

@@ -22,6 +22,8 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -46,6 +48,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -68,9 +71,10 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-shut-scene04.webp",
                                              "expression":  "keyna-shut-scene04",
                                              "position":  "center",
-                                             "isSpeaking":  true
+                                             "isSpeaking":  false
                                          }
                                      ],
                       "options":  [
@@ -96,6 +100,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -112,6 +117,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -128,6 +134,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -144,6 +151,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -158,9 +166,10 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-shut-scene04.webp",
                                              "expression":  "keyna-shut-scene04",
                                              "position":  "center",
-                                             "isSpeaking":  true
+                                             "isSpeaking":  false
                                          }
                                      ],
                       "options":  [
@@ -186,6 +195,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -202,6 +212,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -218,6 +229,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -234,6 +246,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -249,9 +262,10 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-shut-scene04.webp",
                                              "expression":  "keyna-shut-scene04",
                                              "position":  "center",
-                                             "isSpeaking":  true
+                                             "isSpeaking":  false
                                          }
                                      ],
                       "options":  [
@@ -277,6 +291,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -293,6 +308,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -309,6 +325,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -333,6 +350,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -347,9 +365,10 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-shut-scene04.webp",
                                              "expression":  "keyna-shut-scene04",
                                              "position":  "center",
-                                             "isSpeaking":  true
+                                             "isSpeaking":  false
                                          }
                                      ],
                       "options":  [
@@ -375,6 +394,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -391,6 +411,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -407,6 +428,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
@@ -431,6 +453,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
+                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true

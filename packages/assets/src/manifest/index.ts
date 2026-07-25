@@ -119,6 +119,7 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     expression: 'henry-shut-scene03',
     path: 'characters/henry/henry-shut-scene03.webp',
   },
+  // scene04 — keyna
   'keyna.keyna-shut-scene04': {
     characterId: 'keyna',
     expression: 'keyna-shut-scene04',
@@ -128,6 +129,44 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     characterId: 'keyna',
     expression: 'keyna-speak-scene04',
     path: 'characters/keyna/keyna-speak-scene04.webp',
+  },
+  // scene05 — xyera default
+  'xyera.xyera-speak-scene05': {
+    characterId: 'xyera',
+    expression: 'speak',
+    path: 'characters/xyera/xyera-speak-scene05.webp',
+  },
+  'xyera.xyera-shut-scene05': {
+    characterId: 'xyera',
+    expression: 'neutral',
+    path: 'characters/xyera/xyera-shut-scene05.webp',
+  },
+  // scene05 — xyera map variant
+  'xyera.xyera-speak-map-scene05': {
+    characterId: 'xyera',
+    expression: 'speak-map',
+    path: 'characters/xyera/xyera-speak-map-scene05.webp',
+  },
+  'xyera.xyera-shut-map-scene-05': {
+    characterId: 'xyera',
+    expression: 'shut-map',
+    path: 'characters/xyera/xyera-shut-map-scene-05.webp',
+  },
+  // scene05 — xyera crossarm variant
+  'xyera.xyera-smile-crossarm-scene05': {
+    characterId: 'xyera',
+    expression: 'smile-crossarm',
+    path: 'characters/xyera/xyera-smile-crossarm-scene05.webp',
+  },
+  'xyera.xyera-shut-crossarm-scene05': {
+    characterId: 'xyera',
+    expression: 'shut-crossarm',
+    path: 'characters/xyera/xyera-shut-crossarm-scene05.webp',
+  },
+  'xyera.xyera-speak-crossarm-scene05': {
+    characterId: 'xyera',
+    expression: 'speak-crossarm',
+    path: 'characters/xyera/xyera-speak-crossarm-scene05.webp',
   },
 };
 
