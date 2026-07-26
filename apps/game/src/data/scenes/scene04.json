@@ -448,12 +448,12 @@
                       "id":  "scene04_n019",
                       "type":  "line",
                       "speaker":  "keyna",
-                      "expression":  "keyna-speak-scene04",
+                      "expression":  "keyna-turn-around-scene04",
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
                                              "image":  "/assets/characters/keyna/keyna-turn-around-scene04.webp",
-                                             "expression":  "keyna-speak-scene04",
+                                             "expression":  "keyna-turn-around-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
                                          }

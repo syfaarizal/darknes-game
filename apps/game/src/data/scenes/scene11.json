@@ -324,6 +324,11 @@
         },
         {
             "id": "scene11_sign_13",
+            "type": "fadeout",
+            "next": "scene11_sign_14"
+        },
+        {
+            "id": "scene11_sign_14",
             "type": "scene-change",
             "targetSceneId": "scene12_bad"
         },
@@ -624,6 +629,11 @@
         },
         {
             "id": "scene11_rip_13",
+            "type": "fadeout",
+            "next": "scene11_rip_14"
+        },
+        {
+            "id": "scene11_rip_14",
             "type": "scene-change",
             "targetSceneId": "scene12_hidden"
         }
