@@ -130,6 +130,11 @@ export const SCENE_CHARACTERS: Record<string, CharacterManifestEntry> = {
     expression: 'keyna-speak-scene04',
     path: 'characters/keyna/keyna-speak-scene04.webp',
   },
+  'keyna.keyna-turn-around-scene04': {
+    characterId: 'keyna',
+    expression: 'keyna-turn-around-scene04',
+    path: 'characters/keyna/keyna-turn-around-scene04.webp',
+  },
   // scene05 — xyera default
   'xyera.xyera-speak-scene05': {
     characterId: 'xyera',

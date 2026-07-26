@@ -452,7 +452,7 @@
                       "characters":  [
                                          {
                                              "characterId":  "keyna",
-                                             "image":  "/assets/characters/keyna/keyna-speak-scene04.webp",
+                                             "image":  "/assets/characters/keyna/keyna-turn-around-scene04.webp",
                                              "expression":  "keyna-speak-scene04",
                                              "position":  "center",
                                              "isSpeaking":  true
