@@ -299,14 +299,9 @@
                       "next":  "scene08_end"
                   },
                   {
-                      "id": "scene08_end",
-                      "type": "fadeout",
-                      "next": "scene08_finish"
-                  },
-                  {
-                      "id": "scene08_finish",
-                      "type": "scene-change",
-                      "targetSceneId": "scene09"
+                      "id":  "scene08_end",
+                      "type":  "end",
+                      "nextScene": "scene09"
                   }
               ]
 }

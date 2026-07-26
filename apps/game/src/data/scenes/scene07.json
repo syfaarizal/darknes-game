@@ -408,13 +408,8 @@
                   },
                   {
                       "id":  "scene07_end",
-                      "type":  "fadeout",
-                      "next": "scene07_finish"
-                  },
-                  {
-                      "id": "scene07_finish",
-                      "type": "scene-change",
-                      "targetSceneId": "scene08"
+                      "type":  "end",
+                      "nextScene": "scene08"
                   }
               ]
 }

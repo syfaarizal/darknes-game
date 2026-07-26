@@ -701,7 +701,8 @@
                   },
                   {
                       "id":  "scene05_end",
-                      "type":  "end"
+                      "type":  "end",
+                      "nextScene":  "scene06"
                   }
               ]
 }

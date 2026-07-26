@@ -472,13 +472,8 @@
                   },
                   {
                       "id": "scene10_end",
-                      "type": "fadeout",
-                      "next": "scene10_finish"
-                  },
-                  {
-                      "id": "scene10_finish",
-                      "type": "scene-change",
-                      "targetSceneId": "scene11"
+                      "type": "end",
+                      "nextScene": "scene11"
                   }
               ]
 }
