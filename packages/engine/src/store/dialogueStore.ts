@@ -48,7 +48,10 @@ export const useDialogueStore = create<DialogueState>((set) => ({
 
   clearHistory: () => set({ history: [] }),
 
-  toggleAutoMode: () => set((state) => ({ isAutoMode: !state.isAutoMode })),
+  toggleAutoMode: () => {
+    console.log('[AutoMode] Toggle called, current state:', useDialogueStore.getState().isAutoMode);
+    set((state) => ({ isAutoMode: !state.isAutoMode }));
+  },
 
   setSkipping: (isSkipping) => set({ isSkipping }),
 

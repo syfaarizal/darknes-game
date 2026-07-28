@@ -108,7 +108,11 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
 
       if (useDialogueStore.getState().isAutoMode) {
         const delay = useSettingsStore.getState().text.autoModeDelayMs;
-        setTimeout(() => advance(), delay);
+        console.log('[AutoMode] Scheduling auto-advance in', delay, 'ms');
+        setTimeout(() => {
+          console.log('[AutoMode] Firing auto-advance');
+          advance();
+        }, delay);
       }
       return;
     }
