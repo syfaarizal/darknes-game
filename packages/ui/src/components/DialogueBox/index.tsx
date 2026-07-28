@@ -28,6 +28,11 @@ export function DialogueBox({
       className="relative mx-auto w-[90%] max-w-4xl cursor-pointer border border-[var(--color-glass-border)] bg-[var(--color-glass-fill)] px-6 pt-5 pb-4 backdrop-blur-md"
       style={{ borderRadius: 'var(--radius-panel)' }}
     >
+      {/* Auto mode indicator */}
+      {isAutoMode && (
+        <div className="absolute -top-px left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-[var(--color-accent-strong)] to-transparent animate-pulse" />
+      )}
+
       {name && (
         <div className="mb-3 flex items-center gap-3">
           <div
@@ -51,9 +56,13 @@ export function DialogueBox({
               e.stopPropagation();
               onToggleAuto();
             }}
-            className={`!p-0 uppercase ${isAutoMode ? 'text-[var(--color-accent-strong)]' : ''}`}
+            className={`!p-0 uppercase transition-all ${
+              isAutoMode
+                ? 'text-[var(--color-accent-strong)] font-bold'
+                : 'text-[var(--color-ink-muted)]'
+            }`}
           >
-            Auto
+            {isAutoMode ? '▶ Auto' : 'Auto'}
           </GhostButton>
           <GhostButton
             onClick={(e) => {
@@ -66,7 +75,9 @@ export function DialogueBox({
           </GhostButton>
         </div>
         {isAdvanceable && (
-          <span className="uppercase text-[var(--color-ink-muted)]">Next &rsaquo;</span>
+          <span className={`uppercase ${isAutoMode ? 'animate-pulse text-[var(--color-accent-strong)]' : 'text-[var(--color-ink-muted)]'}`}>
+            {isAutoMode ? '▶▶' : 'Next'} &rsaquo;
+          </span>
         )}
       </div>
     </div>

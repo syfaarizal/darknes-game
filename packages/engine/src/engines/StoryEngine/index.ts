@@ -31,6 +31,12 @@ export async function advance(): Promise<void> {
   const { currentSceneId } = useGameStore.getState();
   if (!currentNode || !currentSceneId) return;
 
+  // If auto mode is active and there's a scheduled advance, cancel it
+  const scheduled = useDialogueStore.getState().autoAdvanceScheduled;
+  if (scheduled) {
+    useDialogueStore.getState().setAutoAdvanceScheduled(false);
+  }
+
   if (
     (currentNode.type === DialogueNodeType.Line || currentNode.type === DialogueNodeType.Narration) &&
     useDialogueStore.getState().isTyping
@@ -39,6 +45,11 @@ export async function advance(): Promise<void> {
     const ctx = getVariableContext(playerName, variables);
     finishTypewriter(replaceVariables(currentNode.text, ctx));
     return;
+  }
+
+  // If auto mode is on and user manually advanced, turn off auto mode
+  if (useDialogueStore.getState().isAutoMode) {
+    useDialogueStore.getState().setAutoMode(false);
   }
 
   const scene = requireCurrentScene();
@@ -108,10 +119,14 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
 
       if (useDialogueStore.getState().isAutoMode) {
         const delay = useSettingsStore.getState().text.autoModeDelayMs;
-        console.log('[AutoMode] Scheduling auto-advance in', delay, 'ms');
+        // Mark that an auto-advance is scheduled
+        useDialogueStore.getState().setAutoAdvanceScheduled(true);
         setTimeout(() => {
-          console.log('[AutoMode] Firing auto-advance');
-          advance();
+          // Only advance if still scheduled and auto mode is still on
+          if (useDialogueStore.getState().autoAdvanceScheduled && useDialogueStore.getState().isAutoMode) {
+            useDialogueStore.getState().setAutoAdvanceScheduled(false);
+            advance();
+          }
         }, delay);
       }
       return;

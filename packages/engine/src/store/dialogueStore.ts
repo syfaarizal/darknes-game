@@ -15,6 +15,8 @@ export interface DialogueState {
   sceneTransitionPhase: SceneTransitionPhase;
   /** The next scene to load after the fade-to-black. */
   sceneTransitionNext: string | null;
+  /** Prevents double-auto-advance when user manually advances during auto mode */
+  autoAdvanceScheduled: boolean;
 
   setCurrentNode: (node: SceneNode | null) => void;
   setTyping: (isTyping: boolean) => void;
@@ -23,8 +25,10 @@ export interface DialogueState {
   pushHistory: (entry: HistoryEntry) => void;
   clearHistory: () => void;
   toggleAutoMode: () => void;
+  setAutoMode: (enabled: boolean) => void;
   setSkipping: (isSkipping: boolean) => void;
   setSceneTransition: (phase: SceneTransitionPhase, nextScene?: string | null) => void;
+  setAutoAdvanceScheduled: (scheduled: boolean) => void;
 }
 
 export const useDialogueStore = create<DialogueState>((set) => ({
@@ -37,6 +41,7 @@ export const useDialogueStore = create<DialogueState>((set) => ({
   isSkipping: false,
   sceneTransitionPhase: 'idle',
   sceneTransitionNext: null,
+  autoAdvanceScheduled: false,
 
   setCurrentNode: (node) => set({ currentNode: node, revealedCharCount: 0 }),
   setTyping: (isTyping) => set({ isTyping }),
@@ -48,13 +53,14 @@ export const useDialogueStore = create<DialogueState>((set) => ({
 
   clearHistory: () => set({ history: [] }),
 
-  toggleAutoMode: () => {
-    console.log('[AutoMode] Toggle called, current state:', useDialogueStore.getState().isAutoMode);
-    set((state) => ({ isAutoMode: !state.isAutoMode }));
-  },
+  toggleAutoMode: () => set((state) => ({ isAutoMode: !state.isAutoMode })),
+
+  setAutoMode: (enabled) => set({ isAutoMode: enabled }),
 
   setSkipping: (isSkipping) => set({ isSkipping }),
 
   setSceneTransition: (phase, nextScene = null) =>
     set({ sceneTransitionPhase: phase, sceneTransitionNext: nextScene }),
+
+  setAutoAdvanceScheduled: (scheduled) => set({ autoAdvanceScheduled: scheduled }),
 }));
