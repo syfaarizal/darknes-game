@@ -40,6 +40,24 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
     path: 'backgrounds/office/player-office-night-scene02.webp',
     label: 'Scene 02 — Office Night',
   },
+  // Scene 06-12 placeholders (use existing assets as fallback until real assets are added)
+  'family-room': {
+    id: 'family-room',
+    path: 'backgrounds/living-room/bg-living-room-scene03.webp',
+    label: 'Family Room (Placeholder)',
+  },
+  'workspace-night': {
+    id: 'workspace-night',
+    path: 'backgrounds/office/player-office-night.webp',
+    label: 'Workspace Night (Placeholder)',
+  },
+  mansion: { id: 'mansion', path: 'backgrounds/office/default.webp', label: 'Mansion (Placeholder)' },
+  'mansion-office': {
+    id: 'mansion-office',
+    path: 'backgrounds/office/default.webp',
+    label: 'Mansion Office (Placeholder)',
+  },
+  hospital: { id: 'hospital', path: 'backgrounds/office/default.webp', label: 'Hospital (Placeholder)' },
 };
 
 export interface CharacterManifestEntry {

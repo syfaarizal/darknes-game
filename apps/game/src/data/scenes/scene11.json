@@ -1,7 +1,7 @@
 {
     "meta": {
         "id": "scene11",
-        "title": "Ruang Kerja Victor Hale â€” Konfrontasi",
+        "title": "Ruang Kerja Victor Hale — Konfrontasi",
         "background": "mansion-office",
         "entry": "scene11_n001"
     },
@@ -167,15 +167,15 @@
             "type": "choice",
             "options": [
                 {
-                    "text": "Tandatangani kontrak â€” "Setidaknya Elenna selamat...'",
+                    "text": "Tandatangani kontrak - Setidaknya Elenna selamat...",
                     "goTo": "scene11_sign"
                 },
                 {
-                    "text": "Mengulur waktu â€” 'Aku butuh kesempatan...'",
+                    "text": "Mengulur waktu - Aku butuh kesempatan...",
                     "goTo": "scene11_stall"
                 },
                 {
-                    "text": "Robek kontrak â€” 'Sejarah tidak akan terulang lagi.'",
+                    "text": "Robek kontrak - Sejarah tidak akan terulang lagi.",
                     "goTo": "scene11_rip"
                 }
             ]
