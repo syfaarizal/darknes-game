@@ -8,7 +8,7 @@ export const STORAGE_KEYS = {
   autosave: 'darknes.autosave.v1',
 } as const;
 
-export const MAX_MANUAL_SAVE_SLOTS = 12;
+export const MAX_MANUAL_SAVE_SLOTS = 3;
 
 export const TEXT_SPEED_MS_PER_CHAR: Record<TextSpeed, number> = {
   [TextSpeed.Slow]: 55,
