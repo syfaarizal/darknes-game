@@ -32,10 +32,8 @@ export function Game() {
     sceneTransitionPhase,
     sceneTransitionNext,
     begin,
+    skip,
   } = useDialogueRunner();
-  const isSkipping = useDialogueStore((s) => s.isSkipping);
-  const setSkipping = useDialogueStore((s) => s.setSkipping);
-  const setSceneTransition = useDialogueStore((s) => s.setSceneTransition);
   const history = useDialogueStore((s) => s.history);
 
   const [historyOpen, setHistoryOpen] = useState(false);
@@ -77,6 +75,9 @@ export function Game() {
     setSceneTransition('idle');
   };
 
+  // Helper to access setSceneTransition from dialogueStore
+  const setSceneTransition = useDialogueStore((s) => s.setSceneTransition);
+
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-[var(--color-void)]">
       <Camera instruction={camera}>
@@ -100,8 +101,7 @@ export function Game() {
       />
 
       <BottomBar
-        isSkipping={isSkipping}
-        onSkip={() => setSkipping(!isSkipping)}
+        onSkip={skip}
         onQuickSave={() => {
           SaveEngine.saveAuto();
           notify('Saved');

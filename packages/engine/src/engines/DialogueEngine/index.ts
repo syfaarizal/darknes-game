@@ -15,7 +15,8 @@ export function runTypewriter(
   const msPerChar = TEXT_SPEED_MS_PER_CHAR[speed];
   const generation = ++typewriterGeneration;
 
-  if (msPerChar === 0 || store.isSkipping) {
+  // Instant mode only for TextSpeed.Instant (msPerChar === 0)
+  if (msPerChar === 0) {
     store.setRevealedCharCount(text.length);
     return { promise: Promise.resolve(), cancel: () => {} };
   }

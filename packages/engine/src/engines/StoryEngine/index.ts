@@ -1,5 +1,5 @@
 import { AudioChannel, DialogueNodeType, evaluateConditions, GamePhase } from '@darknes/shared';
-import type { SceneChoiceOption, SceneFile, SceneNode } from '@darknes/shared';
+import type { SceneChoiceOption, SceneFile, SceneNode, EndNode } from '@darknes/shared';
 import { useGameStore } from '../../store/gameStore';
 import { useDialogueStore } from '../../store/dialogueStore';
 import { useSceneStore } from '../../store/sceneStore';
@@ -26,6 +26,67 @@ export async function startScene(
   await goToFirstNode;
 }
 
+/**
+ * Skip to the next scene without playing dialogue.
+ * Traverses from current node to the End node, then loads the next scene.
+ */
+export async function skipScene(): Promise<void> {
+  const scene = useSceneStore.getState().scene;
+  if (!scene) return;
+
+  // Find the end node by traversing the scene graph
+  // Start from the last node we were at, or the entry point
+  const currentNode = useDialogueStore.getState().currentNode;
+  const startId = currentNode?.id || scene.meta.entry;
+
+  // Find the end node by following next pointers
+  const endNode = findEndNode(scene, startId);
+  if (endNode && endNode.nextScene) {
+    // Turn off skip mode
+    useDialogueStore.getState().setSkipping(false);
+    // Trigger fade transition to next scene
+    useDialogueStore.getState().setSceneTransition('fading-out', endNode.nextScene);
+  } else {
+    // No next scene found, just turn off skip
+    useDialogueStore.getState().setSkipping(false);
+  }
+}
+
+/**
+ * Recursively find an End node in the scene, starting from a given node ID.
+ * Follows next pointers, choices, and conditionals.
+ */
+function findEndNode(scene: SceneFile, startId: string): EndNode | null {
+  const node = getNodeById(scene, startId);
+  if (!node) return null;
+
+  if (node.type === DialogueNodeType.End) {
+    return node as EndNode;
+  }
+
+  // Handle different node types
+  if (node.type === DialogueNodeType.Choice) {
+    // For choices, follow the first option
+    if (node.options && node.options.length > 0) {
+      return findEndNode(scene, node.options[0].goTo);
+    }
+  }
+
+  if (node.type === DialogueNodeType.Conditional) {
+    // For conditionals, try the ifTrue path first (most common)
+    const ifTrueEnd = findEndNode(scene, node.ifTrue);
+    if (ifTrueEnd) return ifTrueEnd;
+    return findEndNode(scene, node.ifFalse);
+  }
+
+  // For Line, Narration, SetFlag, SetVariable - follow next
+  if ('next' in node && node.next) {
+    return findEndNode(scene, node.next);
+  }
+
+  return null;
+}
+
 export async function advance(fromAuto: boolean = false): Promise<void> {
   const { currentNode } = useDialogueStore.getState();
   const { currentSceneId } = useGameStore.getState();
@@ -37,6 +98,7 @@ export async function advance(fromAuto: boolean = false): Promise<void> {
     useDialogueStore.getState().setAutoAdvanceScheduled(false);
   }
 
+  // If text is still typing, finish it and wait for next click
   if (
     (currentNode.type === DialogueNodeType.Line || currentNode.type === DialogueNodeType.Narration) &&
     useDialogueStore.getState().isTyping

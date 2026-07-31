@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import type { SceneChoiceOption } from '@darknes/shared';
-import { advance, choose, startScene } from '../engines/StoryEngine';
+import { advance, choose, startScene, skipScene } from '../engines/StoryEngine';
 import { useDialogueStore } from '../store/dialogueStore';
 import { useSceneStore } from '../store/sceneStore';
 
 /**
  * The primary hook `pages/Game` reaches for. Exposes the current node,
  * typewriter/choice state, and the three actions a player can take
- * (advance, pick a choice, or jump to a scene) without touching the raw
+ * (advance, pick a choice, skip scene, or jump to a scene) without touching the raw
  * stores or `StoryEngine` directly.
  */
 export function useDialogueRunner() {
@@ -26,6 +26,7 @@ export function useDialogueRunner() {
 
   const begin = useCallback((sceneId: string) => startScene(sceneId), []);
   const next = useCallback((fromAuto: boolean = false) => advance(fromAuto), []);
+  const skip = useCallback(() => skipScene(), []);
   const pick = useCallback((option: SceneChoiceOption) => choose(option), []);
 
   return {
@@ -43,6 +44,7 @@ export function useDialogueRunner() {
     sceneTransitionNext,
     begin,
     next,
+    skip,
     pick,
   };
 }
