@@ -26,7 +26,7 @@ export async function startScene(
   await goToFirstNode;
 }
 
-export async function advance(): Promise<void> {
+export async function advance(fromAuto: boolean = false): Promise<void> {
   const { currentNode } = useDialogueStore.getState();
   const { currentSceneId } = useGameStore.getState();
   if (!currentNode || !currentSceneId) return;
@@ -47,8 +47,8 @@ export async function advance(): Promise<void> {
     return;
   }
 
-  // If auto mode is on and user manually advanced, turn off auto mode
-  if (useDialogueStore.getState().isAutoMode) {
+  // If user manually advanced (not from auto mode), turn off auto mode
+  if (!fromAuto && useDialogueStore.getState().isAutoMode) {
     useDialogueStore.getState().setAutoMode(false);
   }
 
@@ -125,7 +125,7 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
           // Only advance if still scheduled and auto mode is still on
           if (useDialogueStore.getState().autoAdvanceScheduled && useDialogueStore.getState().isAutoMode) {
             useDialogueStore.getState().setAutoAdvanceScheduled(false);
-            advance();
+            advance(true); // Pass true to indicate this is from auto mode
           }
         }, delay);
       }

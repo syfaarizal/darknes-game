@@ -25,7 +25,7 @@ export function useDialogueRunner() {
   const stageCharacters = useSceneStore((s) => s.stageCharacters);
 
   const begin = useCallback((sceneId: string) => startScene(sceneId), []);
-  const next = useCallback(() => advance(), []);
+  const next = useCallback((fromAuto: boolean = false) => advance(fromAuto), []);
   const pick = useCallback((option: SceneChoiceOption) => choose(option), []);
 
   return {
