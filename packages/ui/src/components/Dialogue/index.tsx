@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { DialogueNodeType } from '@darknes/shared';
 import {
@@ -28,10 +29,22 @@ export function DialogueLayer({ onToggleLog, speakerColorOf }: DialogueLayerProp
   const { currentNode, pendingChoices, isAutoMode, toggleAutoMode, next, pick } =
     useDialogueRunner();
   const history = useDialogueStore((s) => s.history);
+  const isTyping = useDialogueStore((s) => s.isTyping);
   const { playerName, variables } = useGameStore();
   const ctx = getVariableContext(playerName, variables);
   const { playClick } = useSfxClick();
   const { playHover } = useHoverSound();
+
+  // When auto mode is turned on and text is already done typing, immediately advance
+  useEffect(() => {
+    if (isAutoMode && !isTyping && currentNode && pendingChoices === null) {
+      // Small delay to ensure the UI has updated, then advance
+      const timer = setTimeout(() => {
+        next(true); // true = from auto mode
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isAutoMode]);
 
   if (!currentNode) return null;
 
