@@ -75,6 +75,14 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
+            "characters": [
+                {
+                    "characterId": "elenna",
+                    "expression": "sad",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
             "text": "Di mana Xyera?",
             "next": "scene12_bad_n010"
         },
@@ -99,6 +107,14 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
+            "characters": [
+                {
+                    "characterId": "elenna",
+                    "expression": "sad",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
             "text": "(membeku) Apa?",
             "next": "scene12_bad_n012"
         },
@@ -123,6 +139,14 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
+            "characters": [
+                {
+                    "characterId": "elenna",
+                    "expression": "sad",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
             "text": "(menggeleng) Tidak, itu tidak mungkin. Dia selalu ada dan selalu menemaniku.",
             "next": "scene12_bad_n014"
         },
@@ -189,6 +213,14 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
+            "characters": [
+                {
+                    "characterId": "xyera",
+                    "expression": "smile",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
             "text": "(memeluk Xyera) Mereka semua bohong...",
             "next": "scene12_bad_n021"
         },

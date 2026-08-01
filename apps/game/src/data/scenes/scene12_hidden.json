@@ -2,7 +2,7 @@
     "meta": {
         "id": "scene12_hidden",
         "title": "Rumah Sakit — Hidden Ending",
-        "background": "white",
+        "background": "basement",
         "entry": "scene12_hidden_n001"
     },
     "nodes": [
@@ -19,7 +19,7 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "Xyera",
+                    "characterId": "xyera",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": false
@@ -31,11 +31,11 @@
         {
             "id": "scene12_hidden_n003",
             "type": "line",
-            "speaker": "Xyera",
+            "speaker": "xyera",
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "Xyera",
+                    "characterId": "xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
@@ -53,161 +53,117 @@
         {
             "id": "scene12_hidden_n005",
             "type": "narration",
-            "text": "Samuel dan ibunya berdiri. {playerName} terkejut, matanya berkaca-kaca. Ia berlari dan langsung memeluk mereka. Tangisnya pecah.",
+            "text": "Dua sosok berdiri di bawah pohon. {playerName} terkejut — itu wajah yang sudah lama ia lihat hanya di foto lama. Ayah dan ibunya.",
             "next": "scene12_hidden_n006"
         },
         {
             "id": "scene12_hidden_n006",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "father",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "Aku merindukan kalian.",
+            "type": "narration",
+            "text": "{playerName} berlari dan langsung memeluk mereka. Tangisnya pecah.",
             "next": "scene12_hidden_n007"
         },
         {
             "id": "scene12_hidden_n007",
-            "type": "line",
-            "speaker": "mother",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "mother",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(mengusap rambutnya) Kami juga.",
+            "type": "narration",
+            "text": "\"Aku merindukan kalian.\"",
             "next": "scene12_hidden_n008"
         },
         {
             "id": "scene12_hidden_n008",
-            "type": "line",
-            "speaker": "father",
-            "expression": "smile",
-            "characters": [
-                {
-                    "characterId": "father",
-                    "expression": "smile",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(tersenyum) Kau hebat sekali, anakku.",
+            "type": "narration",
+            "text": "(mengusap rambutnya) \"Kami juga, nak.\"",
             "next": "scene12_hidden_n009"
         },
         {
             "id": "scene12_hidden_n009",
+            "type": "narration",
+            "text": "(tersenyum) \"Kau hebat sekali, anakku.\"",
+            "next": "scene12_hidden_n010"
+        },
+        {
+            "id": "scene12_hidden_n010",
             "type": "line",
             "speaker": "{playerName}",
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "father",
+                    "characterId": "xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
             "text": "(tersenyum) Iya. (menoleh kepada Xyera) Dia selalu menemaniku di saat aku merasa sendiri.",
-            "next": "scene12_hidden_n010"
-        },
-        {
-            "id": "scene12_hidden_n010",
-            "type": "line",
-            "speaker": "father",
-            "expression": "smile",
-            "characters": [
-                {
-                    "characterId": "father",
-                    "expression": "smile",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(tersenyum hangat) Setelah malam itu... Kami tidak bisa lagi menjagamu.",
             "next": "scene12_hidden_n011"
         },
         {
             "id": "scene12_hidden_n011",
-            "type": "line",
-            "speaker": "mother",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "mother",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "Jadi... Hatimu menciptakan seseorang... yang bisa menggantikan kami. Seseorang itu adalah Xyera.",
+            "type": "narration",
+            "text": "(tersenyum hangat) \"Setelah malam itu... Kami tidak bisa lagi menjagamu.\"",
             "next": "scene12_hidden_n012"
         },
         {
             "id": "scene12_hidden_n012",
+            "type": "narration",
+            "text": "\"Jadi... Hatimu menciptakan seseorang... yang bisa menggantikan kami. Seseorang itu adalah Xyera.\"",
+            "next": "scene12_hidden_n013"
+        },
+        {
+            "id": "scene12_hidden_n013",
             "type": "line",
-            "speaker": "Xyera",
+            "speaker": "xyera",
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "Xyera",
+                    "characterId": "xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
             "text": "Aku bukan ayahmu. Aku bukan ibumu. Aku hanyalah... wujud kasih sayang yang tidak sempat mereka berikan.",
-            "next": "scene12_hidden_n013"
+            "next": "scene12_hidden_n014"
         },
         {
-            "id": "scene12_hidden_n013",
+            "id": "scene12_hidden_n014",
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "Xyera",
+                    "characterId": "xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
             "text": "(menangis) Terima kasih...",
-            "next": "scene12_hidden_n014"
-        },
-        {
-            "id": "scene12_hidden_n014",
-            "type": "narration",
-            "text": "Xyera mengusap kepala {playerName}, seperti yang selalu ia lakukan.",
             "next": "scene12_hidden_n015"
         },
         {
             "id": "scene12_hidden_n015",
+            "type": "narration",
+            "text": "Xyera mengusap kepala {playerName}, seperti yang selalu ia lakukan.",
+            "next": "scene12_hidden_n016"
+        },
+        {
+            "id": "scene12_hidden_n016",
             "type": "line",
-            "speaker": "Xyera",
+            "speaker": "xyera",
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "Xyera",
+                    "characterId": "xyera",
                     "expression": "neutral",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
             "text": "Sekarang... mereka yang akan menjagamu.",
-            "next": "scene12_hidden_n016"
+            "next": "scene12_hidden_n017"
         },
         {
-            "id": "scene12_hidden_n016",
+            "id": "scene12_hidden_n017",
             "type": "narration",
             "text": "Perlahan, tubuh Xyera menghilang yang menyatu dengan pelukan kedua orang tua {playerName}. Cahaya putih memenuhi layar.",
             "next": "scene12_hidden_end"

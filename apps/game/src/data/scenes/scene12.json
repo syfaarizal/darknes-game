@@ -2,8 +2,7 @@
     "meta": {
         "id": "scene12",
         "title": "Keadilan Terhidang",
-        "background": "mansion-foyer",
-        "music": "victory-theme",
+        "background": "mansion",
         "entry": "scene12_n001"
     },
     "nodes": [
@@ -118,23 +117,15 @@
         {
             "id": "scene12_n009",
             "type": "narration",
-            "text": "{playerName} berjalan ke teras. Di sana, seorang pria tua duduk di kursi roda. Rambutnya putih. Wajahnya... familiar.",
+            "text": "{playerName} berjalan ke teras. Di sana, Keyna berdiri dengan pria tua di kursi roda. Rambutnya putih. Wajahnya... familiar.",
             "next": "scene12_n010"
         },
         {
             "id": "scene12_n010",
             "type": "line",
-            "speaker": "samuel",
-            "expression": "sad",
-            "characters": [
-                {
-                    "characterId": "samuel",
-                    "expression": "sad",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "{playerName}... kau... sudah tumbuh besar.",
+            "speaker": "{playerName}",
+            "expression": "neutral",
+            "text": "Kamu... kamu masih hidup?",
             "next": "scene12_n011"
         },
         {
@@ -142,46 +133,18 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
-            "characters": [
-                {
-                    "characterId": "samuel",
-                    "expression": "sad",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "(berlutut di hadapan kursi roda) Paman Samuel... mereka bilang kamu sudah mati.",
+            "text": "(berlutut di hadapan kursi roda) Mereka bilang kamu sudah mati.",
             "next": "scene12_n012"
         },
         {
             "id": "scene12_n012",
-            "type": "line",
-            "speaker": "samuel",
-            "expression": "sad",
-            "characters": [
-                {
-                    "characterId": "samuel",
-                    "expression": "sad",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
+            "type": "narration",
             "text": "Secara resmi... ya. Aku 'mati'. Keyna yang menyelamatkanku dari ledakan sepuluh tahun lalu. Aku... bersembunyi. Terlalu pengecut untuk kembali.",
             "next": "scene12_n013"
         },
         {
             "id": "scene12_n013",
-            "type": "line",
-            "speaker": "samuel",
-            "expression": "sad",
-            "characters": [
-                {
-                    "characterId": "samuel",
-                    "expression": "sad",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
+            "type": "narration",
             "text": "Setiap malam aku memikirkan kalian. Tapi aku terlalu takut. Azaroth... dia akan membunuh kalian jika aku kembali.",
             "next": "scene12_n014"
         },
@@ -190,30 +153,12 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
-            "characters": [
-                {
-                    "characterId": "samuel",
-                    "expression": "sad",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
             "text": "Sepuluh tahun. Sepuluh tahun kami mengira kamu... meninggalkannya.",
             "next": "scene12_n015"
         },
         {
             "id": "scene12_n015",
-            "type": "line",
-            "speaker": "samuel",
-            "expression": "sad",
-            "characters": [
-                {
-                    "characterId": "samuel",
-                    "expression": "sad",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
+            "type": "narration",
             "text": "(meneteskan air mata) Aku tahu. Aku tahu aku bukan paman yang baik. Tapi hari ini... aku di sini.",
             "next": "scene12_n016"
         },

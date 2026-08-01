@@ -7,7 +7,7 @@ export interface BackgroundManifestEntry {
 }
 
 export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
-  office: { id: 'office', path: 'backgrounds/office/default.webp', label: 'Office' },
+  office: { id: 'office', path: 'backgrounds/office/player-office-night.webp', label: 'Office' },
   'office-room-player': {
     id: 'office-room-player',
     path: 'backgrounds/office/office-room-player.webp',
@@ -16,7 +16,7 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
   basement: { id: 'basement', path: 'backgrounds/basement/default.webp', label: 'Basement' },
   'living-room': {
     id: 'living-room',
-    path: 'backgrounds/living-room/default.webp',
+    path: 'backgrounds/living-room/bg-living-room-scene03.webp',
     label: 'Living Room',
   },
   'living-room-scene03': {
@@ -34,30 +34,30 @@ export const BACKGROUNDS: Record<string, BackgroundManifestEntry> = {
     path: 'backgrounds/office/player-office-night.webp',
     label: 'Ravenscroft House — Workspace — Night',
   },
-  library: { id: 'library', path: 'backgrounds/library/default.webp', label: 'Library' },
+  library: { id: 'library', path: 'backgrounds/library/main-menu-bg.webp', label: 'Library' },
   'player-office-night-scene02': {
     id: 'player-office-night-scene02',
     path: 'backgrounds/office/player-office-night-scene02.webp',
     label: 'Scene 02 — Office Night',
   },
-  // Scene 06-12 placeholders (use existing assets as fallback until real assets are added)
+  // Scene 06-12 backgrounds
   'family-room': {
     id: 'family-room',
     path: 'backgrounds/living-room/bg-living-room-scene03.webp',
-    label: 'Family Room (Placeholder)',
+    label: 'Family Room',
   },
   'workspace-night': {
     id: 'workspace-night',
     path: 'backgrounds/office/player-office-night.webp',
-    label: 'Workspace Night (Placeholder)',
+    label: 'Workspace Night',
   },
-  mansion: { id: 'mansion', path: 'backgrounds/office/default.webp', label: 'Mansion (Placeholder)' },
+  mansion: { id: 'mansion', path: 'backgrounds/mansion/default.webp', label: 'Mansion' },
   'mansion-office': {
     id: 'mansion-office',
-    path: 'backgrounds/office/default.webp',
-    label: 'Mansion Office (Placeholder)',
+    path: 'backgrounds/office/player-office-night.webp',
+    label: 'Mansion Office',
   },
-  hospital: { id: 'hospital', path: 'backgrounds/office/default.webp', label: 'Hospital (Placeholder)' },
+  hospital: { id: 'hospital', path: 'backgrounds/hospital/default.webp', label: 'Hospital' },
 };
 
 export interface CharacterManifestEntry {
@@ -74,11 +74,26 @@ export const CHARACTERS: Record<string, CharacterManifestEntry> = characterIds.r
   (acc, characterId) => {
     for (const expression of defaultExpressions) {
       const key = `${characterId}.${expression}`;
-      acc[key] = {
-        characterId,
-        expression,
-        path: `characters/${characterId}/${expression}.webp`,
-      };
+      // Map standard expressions to actual available files
+      let path = `characters/${characterId}/${expression}.webp`;
+      if (characterId === 'xyera') {
+        if (expression === 'neutral') path = 'characters/xyera/xyera-shut-scene05.webp';
+        if (expression === 'smile') path = 'characters/xyera/xyera-smile-crossarm-scene05.webp';
+        if (expression === 'serious') path = 'characters/xyera/xyera-shut-scene05.webp';
+      } else if (characterId === 'keyna') {
+        if (expression === 'neutral') path = 'characters/keyna/keyna-shut-scene04.webp';
+        if (expression === 'smile') path = 'characters/keyna/keyna-shut-scene04.webp';
+        if (expression === 'serious') path = 'characters/keyna/keyna-shut-scene04.webp';
+      } else if (characterId === 'elenna') {
+        if (expression === 'neutral') path = 'characters/elenna/elenna-akward-shut-scene03.webp';
+        if (expression === 'smile') path = 'characters/elenna/elenna-akward-shut-scene03.webp';
+        if (expression === 'serious') path = 'characters/elenna/elenna-akward-shut-scene03.webp';
+      } else if (characterId === 'azaroth') {
+        if (expression === 'neutral') path = 'characters/xyera/xyera-shut-scene05.webp';
+        if (expression === 'smile') path = 'characters/xyera/xyera-smile-crossarm-scene05.webp';
+        if (expression === 'serious') path = 'characters/xyera/xyera-shut-scene05.webp';
+      }
+      acc[key] = { characterId, expression, path };
     }
     return acc;
   },
