@@ -228,6 +228,10 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
     }
     case DialogueNodeType.End: {
       const endNode = node as import('@darknes/shared').EndNode;
+      // Save endingId before transitioning
+      if (endNode.endingId) {
+        useGameStore.getState().setEndingId(endNode.endingId);
+      }
       if (endNode.nextScene) {
         // Trigger fade-to-black before loading the next scene.
         // The Game UI reads sceneTransitionPhase and handles the fade animation.

@@ -1,5 +1,6 @@
-import { RouterProvider } from 'react-router-dom';
-import { useSceneLoader } from '@darknes/engine';
+import { useEffect, useRef } from 'react';
+import { useNavigate, RouterProvider } from 'react-router-dom';
+import { useSceneLoader, useGameStore } from '@darknes/engine';
 import type { CharacterDefinition, SceneFile } from '@darknes/shared';
 import { router } from '../router';
 
@@ -22,8 +23,51 @@ for (const path in sceneModules) {
 
 const characters = [xyera, keyna, elenna, azaroth] as CharacterDefinition[];
 
+/**
+ * Handles navigation based on game phase changes.
+ * Must be rendered inside RouterProvider context.
+ */
+function PhaseNavigation() {
+  const navigate = useNavigate();
+  const phase = useGameStore((s) => s.phase);
+  const lastPhaseRef = useRef(phase);
+
+  useEffect(() => {
+    // Avoid navigating to the same route
+    if (lastPhaseRef.current === phase) return;
+    lastPhaseRef.current = phase;
+
+    switch (phase) {
+      case 'main-menu':
+        navigate('/menu');
+        break;
+      case 'ending':
+        navigate('/ending');
+        break;
+      case 'credits':
+        navigate('/credits');
+        break;
+      case 'in-game':
+        navigate('/game');
+        break;
+      default:
+        break;
+    }
+  }, [phase, navigate]);
+
+  return null;
+}
+
+/**
+ * App root with scene loader and phase-based navigation.
+ */
 export function App() {
   useSceneLoader({ scenes, characters });
 
-  return <RouterProvider router={router} />;
+  // PhaseNavigation is rendered as a child of RouterProvider so it has access to router context
+  return (
+    <RouterProvider router={router}>
+      <PhaseNavigation />
+    </RouterProvider>
+  );
 }

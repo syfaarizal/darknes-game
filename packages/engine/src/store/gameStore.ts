@@ -7,12 +7,14 @@ export interface GameState {
   currentSceneId: string | null;
   currentNodeId: string | null;
   playerName: string;
+  endingId: string | null;
   flags: Record<string, FlagValue>;
   variables: Record<string, VariableValue>;
 
   setPhase: (phase: GamePhase) => void;
   setPosition: (sceneId: string, nodeId: string) => void;
   setPlayerName: (name: string) => void;
+  setEndingId: (id: string | null) => void;
   setFlag: (key: string, value: FlagValue) => void;
   setVariable: (key: string, value: VariableValue) => void;
   addToVariable: (key: string, delta: number) => void;
@@ -26,6 +28,7 @@ const initial = {
   currentSceneId: null as string | null,
   currentNodeId: null as string | null,
   playerName: '' as string,
+  endingId: null as string | null,
   flags: {} as Record<string, FlagValue>,
   variables: {} as Record<string, VariableValue>,
 };
@@ -39,6 +42,8 @@ export const useGameStore = create<GameState>((set) => ({
 
   setPlayerName: (name) => set({ playerName: name }),
 
+  setEndingId: (id) => set({ endingId: id }),
+
   setFlag: (key, value) =>
     set((state) => ({ flags: { ...state.flags, [key]: value } })),
 
@@ -51,7 +56,7 @@ export const useGameStore = create<GameState>((set) => ({
       return { variables: { ...state.variables, [key]: current + delta } };
     }),
 
-  resetGame: () => set({ ...initial, phase: GamePhase.MainMenu }),
+  resetGame: () => set({ ...initial, phase: GamePhase.MainMenu, endingId: null }),
 
   createNewGame: (playerName) =>
     set({
