@@ -1,7 +1,7 @@
 {
     "meta": {
         "id": "scene12_bad",
-        "title": "Rumah Sakit â€” Bad Ending",
+        "title": "Rumah Sakit — Bad Ending",
         "background": "hospital",
         "entry": "scene12_bad_n001"
     },
@@ -76,52 +76,20 @@
             "options": [
                 {
                     "text": "Di mana Xyera?",
-                    "goTo": "scene12_bad_n010a"
+                    "goTo": "scene12_bad_n010"
                 },
                 {
                     "text": "Tolong panggilkan dia",
-                    "goTo": "scene12_bad_n010b"
+                    "goTo": "scene12_bad_n010"
                 },
                 {
                     "text": "Aku butuh dia...",
-                    "goTo": "scene12_bad_n010c"
+                    "goTo": "scene12_bad_n010"
                 }
             ]
         },
         {
-            "id": "scene12_bad_n010a",
-            "type": "line",
-            "speaker": "Elenna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(menundukkan kepala) ...{playerName}, soal Xyera... dia... dia nggak pernah ada.",
-            "next": "scene12_bad_n011"
-        },
-        {
-            "id": "scene12_bad_n010b",
-            "type": "line",
-            "speaker": "Elenna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(menundukkan kepala) ...{playerName}, soal Xyera... dia... dia nggak pernah ada.",
-            "next": "scene12_bad_n011"
-        },
-        {
-            "id": "scene12_bad_n010c",
+            "id": "scene12_bad_n010",
             "type": "line",
             "speaker": "Elenna",
             "expression": "neutral",

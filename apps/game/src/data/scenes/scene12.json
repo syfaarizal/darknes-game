@@ -1,47 +1,38 @@
 {
     "meta": {
         "id": "scene12",
-        "title": "Rumah Sakit â€” Akhir Cerita",
-        "background": "hospital",
+        "title": "Keadilan Terhidang",
+        "background": "mansion-foyer",
+        "music": "victory-theme",
         "entry": "scene12_n001"
     },
     "nodes": [
         {
             "id": "scene12_n001",
             "type": "narration",
-            "text": "Keyna berada di ICU. {playerName} duduk di samping ranjangnya.",
+            "text": "Pagi datang. Sinar matahari menembus jendela mansion Ravenscroft yang sudah lama tidak melihat cahaya.",
             "next": "scene12_n002"
         },
         {
             "id": "scene12_n002",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "...Maaf.",
+            "type": "narration",
+            "text": "Azaroth ditahan di sel bawah tanahnya sendiri. Bukan di sel biasa — di ruang kerja ayah {playerName} dulu. Ironis.",
             "next": "scene12_n003"
         },
         {
             "id": "scene12_n003",
             "type": "line",
-            "speaker": "keyna",
-            "expression": "smile",
+            "speaker": "elenna",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "keyna",
-                    "expression": "smile",
+                    "characterId": "elenna",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(tersenyum kecil) Kau selamat. Itu sudah cukup.",
+            "text": "{playerName}... aku tahu aku nggak bisa minta maaf dengan kata-kata saja.",
             "next": "scene12_n004"
         },
         {
@@ -51,17 +42,65 @@
             "expression": "neutral",
             "characters": [
                 {
-                    "characterId": "keyna",
-                    "expression": "smile",
+                    "characterId": "elenna",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
-            "text": "...Terima kasih.",
+            "text": "Elenna...",
             "next": "scene12_n005"
         },
         {
             "id": "scene12_n005",
+            "type": "line",
+            "speaker": "elenna",
+            "expression": "sad",
+            "characters": [
+                {
+                    "characterId": "elenna",
+                    "expression": "sad",
+                    "position": "center",
+                    "isSpeaking": true
+                }
+            ],
+            "text": "Aku memanfaatkan kepercayaan keluarga ini. Aku pengkhianat. Tapi aku janji... aku akan memperbaiki semuanya.",
+            "next": "scene12_n006"
+        },
+        {
+            "id": "scene12_n006",
+            "type": "line",
+            "speaker": "elenna",
+            "expression": "neutral",
+            "characters": [
+                {
+                    "characterId": "elenna",
+                    "expression": "neutral",
+                    "position": "center",
+                    "isSpeaking": true
+                }
+            ],
+            "text": "Apartemen Om Samuel ada di atas namaku. Perusahaan juga. Aku akan serahkan semuanya ke kak {playerName}.",
+            "next": "scene12_n007"
+        },
+        {
+            "id": "scene12_n007",
+            "type": "line",
+            "speaker": "{playerName}",
+            "expression": "smile",
+            "characters": [
+                {
+                    "characterId": "elenna",
+                    "expression": "neutral",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
+            "text": "(mengelus kepalanya) Yang penting kamu selamat, Elenna.",
+            "next": "scene12_n008"
+        },
+        {
+            "id": "scene12_n008",
             "type": "line",
             "speaker": "keyna",
             "expression": "neutral",
@@ -73,123 +112,77 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "(hanya mengangguk)",
-            "next": "scene12_n006"
-        },
-        {
-            "id": "scene12_n006",
-            "type": "narration",
-            "text": "{playerName} keluar dari kamar. Ia menoleh ke kanan.",
-            "next": "scene12_n007"
-        },
-        {
-            "id": "scene12_n007",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "neutral",
-            "text": "...Xyera?",
-            "next": "scene12_n008"
-        },
-        {
-            "id": "scene12_n008",
-            "type": "narration",
-            "text": "{playerName} melihat samar-samar keberadaan Xyera. Ia berjalan lebih cepat.",
+            "text": "{playerName}. Ada seseorang yang mau kamu temui.",
             "next": "scene12_n009"
         },
         {
             "id": "scene12_n009",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "neutral",
-            "text": "Xyera?",
+            "type": "narration",
+            "text": "{playerName} berjalan ke teras. Di sana, seorang pria tua duduk di kursi roda. Rambutnya putih. Wajahnya... familiar.",
             "next": "scene12_n010"
         },
         {
             "id": "scene12_n010",
-            "type": "narration",
-            "text": "Tidak ada. Elenna melihat tingkah {playerName} lalu menghampirinya.",
+            "type": "line",
+            "speaker": "samuel",
+            "expression": "sad",
+            "characters": [
+                {
+                    "characterId": "samuel",
+                    "expression": "sad",
+                    "position": "center",
+                    "isSpeaking": true
+                }
+            ],
+            "text": "{playerName}... kau... sudah tumbuh besar.",
             "next": "scene12_n011"
         },
         {
             "id": "scene12_n011",
             "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
+            "speaker": "{playerName}",
+            "expression": "serious",
             "characters": [
                 {
-                    "characterId": "elenna",
-                    "expression": "neutral",
+                    "characterId": "samuel",
+                    "expression": "sad",
                     "position": "center",
-                    "isSpeaking": true
+                    "isSpeaking": false
                 }
             ],
-            "text": "{playerName}, ada sesuatu yang harus aku katakan.",
+            "text": "(berlutut di hadapan kursi roda) Paman Samuel... mereka bilang kamu sudah mati.",
             "next": "scene12_n012"
         },
         {
             "id": "scene12_n012",
-            "type": "choice",
-            "options": [
-                {
-                    "text": "Di mana Xyera?",
-                    "goTo": "scene12_n013a"
-                },
-                {
-                    "text": "Apa dia pergi?",
-                    "goTo": "scene12_n013b"
-                },
-                {
-                    "text": "(Diam)",
-                    "goTo": "scene12_n013c"
-                }
-            ]
-        },
-        {
-            "id": "scene12_n013a",
             "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
+            "speaker": "samuel",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "elenna",
-                    "expression": "neutral",
+                    "characterId": "samuel",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menghela nafas) Dengarkan aku baik-baik. Xyera... nggak pernah ada.",
-            "next": "scene12_n014"
+            "text": "Secara resmi... ya. Aku 'mati'. Keyna yang menyelamatkanku dari ledakan sepuluh tahun lalu. Aku... bersembunyi. Terlalu pengecut untuk kembali.",
+            "next": "scene12_n013"
         },
         {
-            "id": "scene12_n013b",
+            "id": "scene12_n013",
             "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
+            "speaker": "samuel",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "elenna",
-                    "expression": "neutral",
+                    "characterId": "samuel",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(menghela nafas) Dengarkan aku baik-baik. Xyera... nggak pernah ada.",
-            "next": "scene12_n014"
-        },
-        {
-            "id": "scene12_n013c",
-            "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(menghela nafas) Dengarkan aku baik-baik. Xyera... nggak pernah ada.",
+            "text": "Setiap malam aku memikirkan kalian. Tapi aku terlalu takut. Azaroth... dia akan membunuh kalian jika aku kembali.",
             "next": "scene12_n014"
         },
         {
@@ -199,161 +192,77 @@
             "expression": "serious",
             "characters": [
                 {
-                    "characterId": "elenna",
-                    "expression": "neutral",
+                    "characterId": "samuel",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": false
                 }
             ],
-            "text": "Apa maksudmu?",
+            "text": "Sepuluh tahun. Sepuluh tahun kami mengira kamu... meninggalkannya.",
             "next": "scene12_n015"
         },
         {
             "id": "scene12_n015",
             "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
+            "speaker": "samuel",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "elenna",
-                    "expression": "neutral",
+                    "characterId": "samuel",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(tersenyum pahit) Selama ini... yang kamu ajak bicara... nggak pernah bisa kami lihat. Kami diam... karena kami takut kamu semakin hancur.",
+            "text": "(meneteskan air mata) Aku tahu. Aku tahu aku bukan paman yang baik. Tapi hari ini... aku di sini.",
             "next": "scene12_n016"
         },
         {
             "id": "scene12_n016",
             "type": "narration",
-            "text": "{playerName} menoleh ke arah lorong. Kosong. Air matanya perlahan jatuh.",
+            "text": "{playerName} memeluk pria tua itu. Dalam pelukannya, ia merasakan kehangatan keluarga yang sudah lama hilang.",
             "next": "scene12_n017"
         },
         {
             "id": "scene12_n017",
             "type": "line",
-            "speaker": "{playerName}",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "...Jadi... selama ini aku sendirian?",
-            "next": "scene12_n018"
-        },
-        {
-            "id": "scene12_n018",
-            "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(langsung memegang tangan {playerName}) Tidak. Kamu nggak pernah sendirian.",
-            "next": "scene12_n019"
-        },
-        {
-            "id": "scene12_n019",
-            "type": "narration",
-            "text": "Rachel datang. Henry. Keyna keluar dari kamar sambil memegang bahunya yang diperban.",
-            "next": "scene12_n020"
-        },
-        {
-            "id": "scene12_n020",
-            "type": "line",
             "speaker": "keyna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "Kau masih punya kami.",
-            "next": "scene12_n021"
-        },
-        {
-            "id": "scene12_n021",
-            "type": "narration",
-            "text": "{playerName} menatap mereka satu per satu. Lalu tersenyum. Untuk pertama kalinya, senyum itu bukan topeng.",
-            "next": "scene12_n022"
-        },
-        {
-            "id": "scene12_n022",
-            "type": "line",
-            "speaker": "{playerName}",
             "expression": "smile",
             "characters": [
                 {
                     "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                },
-                {
-                    "characterId": "elenna",
-                    "expression": "neutral",
-                    "position": "left",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "(tersenyum tipis) Jadi selama ini aku selalu berhalusinasi ya? Pantas saja dia selalu menghilang begitu saja.",
-            "next": "scene12_n023"
-        },
-        {
-            "id": "scene12_n023",
-            "type": "line",
-            "speaker": "keyna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
+                    "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "Mungkin sosok itu menghilang karena kini kamu sudah menyadari sesuatu.",
-            "next": "scene12_n024"
+            "text": "Selamat, {playerName}. Ravenscroft Group sudah kembali. Dan yang lebih penting... keluarga ini kembali.",
+            "next": "scene12_n018"
         },
         {
-            "id": "scene12_n024",
+            "id": "scene12_n018",
+            "type": "narration",
+            "text": "Pagi itu, untuk pertama kalinya dalam sepuluh tahun... mansion Ravenscroft terasa seperti rumah.",
+            "next": "scene12_n019"
+        },
+        {
+            "id": "scene12_n019",
             "type": "line",
             "speaker": "{playerName}",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "Iya, aku baru menyadarinya sekarang, bahwa aku tidak pernah sendiri. Selalu ada kalian yang menjaga dan menemaniku. Maaf ya...",
-            "next": "scene12_n025"
+            "expression": "smile",
+            "text": "Selamat datang, Paman.",
+            "next": "scene12_n020"
         },
         {
-            "id": "scene12_n025",
+            "id": "scene12_n020",
             "type": "narration",
-            "text": "Mereka semua saling berpelukan. Layar gelap.",
-            "next": "scene12_happy_ending"
+            "text": "Samuel tersenyum untuk pertama kalinya dalam satu dekade.",
+            "next": "scene12_end"
         },
         {
-            "id": "scene12_happy_ending",
+            "id": "scene12_end",
             "type": "end",
-            "endingId": "happy-ending"
+            "endingId": "good-end"
         }
     ]
 }

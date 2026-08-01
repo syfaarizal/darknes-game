@@ -183,7 +183,7 @@
         {
             "id": "scene11_sign",
             "type": "narration",
-            "text": "{playerName} perlahan mengambil pena. Tangannya gemetar. Azaroth tersenyum puas.",
+            "text": "{playerName} perlahan mengambil pena. Tangannya gemetar.",
             "next": "scene11_sign_02"
         },
         {
@@ -199,136 +199,47 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "Seperti ayahmu. Pada akhirnya... keluarga Ravenscroft selalu memilih orang yang mereka cintai.",
+            "text": "Seperti ayahmu. Keluarga Ravenscroft... selalu memilih cinta di atas segalanya.",
             "next": "scene11_sign_03"
         },
         {
             "id": "scene11_sign_03",
-            "type": "line",
-            "speaker": "elenna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(menggeleng sambil menangis) Jangan... Aku nggak pantas diselamatkan...",
+            "type": "narration",
+            "text": "{playerName} menandatangani kontrak. Pulpen jatuh dari tangannya.",
             "next": "scene11_sign_04"
         },
         {
             "id": "scene11_sign_04",
-            "type": "narration",
-            "text": "{playerName} menandatangani kontrak.",
-            "next": "scene11_sign_05"
-        },
-        {
-            "id": "scene11_sign_05",
             "type": "line",
-            "speaker": "{playerName}",
-            "expression": "neutral",
+            "speaker": "azaroth",
+            "expression": "smile",
             "characters": [
                 {
                     "characterId": "azaroth",
                     "expression": "smile",
                     "position": "center",
-                    "isSpeaking": false
+                    "isSpeaking": true
                 }
             ],
-            "text": "...Lepaskan dia.",
+            "text": "Terima kasih... atas perusahaanmu. Releas kan dia.",
+            "next": "scene11_sign_05"
+        },
+        {
+            "id": "scene11_sign_05",
+            "type": "narration",
+            "text": "BRAK!! Pintu didobrak. Keyna masuk... tapi terlambat. Azaroth sudah menghilang bersama anak buahnya. Yang tersisa hanyalah kontrak yang tertandatangani dan rasa sesal yang tak terperi.",
             "next": "scene11_sign_06"
         },
         {
             "id": "scene11_sign_06",
             "type": "line",
-            "speaker": "azaroth",
-            "expression": "smile",
-            "characters": [
-                {
-                    "characterId": "azaroth",
-                    "expression": "smile",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "(tertawa) Hahaha... Hebat. ternyata sejarah memang suka mengulang dirinya.",
+            "speaker": "{playerName}",
+            "expression": "neutral",
+            "text": "(mata berkaca-kaca) ...Aku sudah memilih.",
             "next": "scene11_sign_07"
         },
         {
             "id": "scene11_sign_07",
-            "type": "narration",
-            "text": "BRAK!! Pintu ruang kerja terbuka. Keyna masuk bersama beberapa anak buah Ravenscroft.",
-            "next": "scene11_sign_08"
-        },
-        {
-            "id": "scene11_sign_08",
-            "type": "line",
-            "speaker": "keyna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "{playerName}!",
-            "next": "scene11_sign_09"
-        },
-        {
-            "id": "scene11_sign_09",
-            "type": "narration",
-            "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Keyna mendorong {playerName} menjauh. DOR!! Peluru menembus tubuh Keyna.",
-            "next": "scene11_sign_10"
-        },
-        {
-            "id": "scene11_sign_10",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "serious",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "...KEYNA!!",
-            "next": "scene11_sign_11"
-        },
-        {
-            "id": "scene11_sign_11",
-            "type": "narration",
-            "text": "Keyna roboh. Pasukan Ravenscroft membalas tembakan. Azaroth mundur bersama anak buahnya. Sebelum pergi, ia tersenyum.",
-            "next": "scene11_sign_12"
-        },
-        {
-            "id": "scene11_sign_12",
-            "type": "line",
-            "speaker": "azaroth",
-            "expression": "smile",
-            "characters": [
-                {
-                    "characterId": "azaroth",
-                    "expression": "smile",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "Terima kasih... atas perusahaanmu.",
-            "next": "scene11_sign_13"
-        },
-        {
-            "id": "scene11_sign_13",
-            "type": "fadeout",
-            "next": "scene11_sign_14"
-        },
-        {
-            "id": "scene11_sign_14",
             "type": "scene-change",
             "targetSceneId": "scene12_bad"
         },
@@ -345,7 +256,7 @@
                     "isSpeaking": false
                 }
             ],
-            "text": "Aku punya satu pertanyaan.",
+            "text": "Aku mau tanya dulu. Sebelum aku putuskan.",
             "next": "scene11_stall_02"
         },
         {
@@ -361,7 +272,7 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "Tapi silakan.",
+            "text": "(mengangguk) Silakan. Pertanyaan terakhir adalah hakmu.",
             "next": "scene11_stall_03"
         },
         {
@@ -377,35 +288,35 @@
                     "isSpeaking": false
                 }
             ],
-            "text": "Kenapa keluargaku?",
+            "text": "Kenapa harus keluargaku?",
             "next": "scene11_stall_04"
         },
         {
             "id": "scene11_stall_04",
             "type": "line",
             "speaker": "azaroth",
-            "expression": "neutral",
+            "expression": "smile",
             "characters": [
                 {
                     "characterId": "azaroth",
-                    "expression": "neutral",
+                    "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "(berjalan perlahan) Karena ayahmu... terlalu mudah percaya pada orang lain.",
+            "text": "Karena mereka... adalah satu-satunya yang bisa kupaksa menandatangani kontrak ini. Tidak dengan ancaman ke orang asing. Harus keluarga.",
             "next": "scene11_stall_05"
         },
         {
             "id": "scene11_stall_05",
             "type": "narration",
-            "text": "{playerName} melirik jam di dinding. Azaroth menyadarinya.",
+            "text": "{playerName} melirik jam di dinding. Azaroth menyadari... terlambat.",
             "next": "scene11_stall_06"
         },
         {
             "id": "scene11_stall_06",
             "type": "narration",
-            "text": "BRAK!! Pintu didobrak. Keyna masuk bersama beberapa anak buah Ravenscroft.",
+            "text": "BRAK!! Pintu didobrak. Keyna masuk dengan pasukannya. Dalam sekejap, Azaroth dan anak buahnya sudah terkepung.",
             "next": "scene11_stall_07"
         },
         {
@@ -421,94 +332,11 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "{playerName}!",
+            "text": "Azaroth. Akhirnya kita ketemu. Atau lebih tepatnya... kita harusnya ketemu sepuluh tahun lalu.",
             "next": "scene11_stall_08"
         },
         {
             "id": "scene11_stall_08",
-            "type": "narration",
-            "text": "Azaroth langsung berteriak. Suara tembakan memenuhi ruangan. Keyna mendorong {playerName} menjauh. DOR! Sebuah peluru menggores bahu Keyna.",
-            "next": "scene11_stall_09"
-        },
-        {
-            "id": "scene11_stall_09",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "serious",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "Keyna!",
-            "next": "scene11_stall_10"
-        },
-        {
-            "id": "scene11_stall_10",
-            "type": "line",
-            "speaker": "keyna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "Hanya lecet. Elenna, cepat keluar bersama {playerName}.",
-            "next": "scene11_stall_11"
-        },
-        {
-            "id": "scene11_stall_11",
-            "type": "narration",
-            "text": "Azaroth dan pasukannya lumpuh. {playerName} berjalan mendekati Azaroth yang sudah tidak berdaya. Menodongkan pistol ke kepala Azaroth.",
-            "next": "scene11_stall_12"
-        },
-        {
-            "id": "scene11_stall_12",
-            "type": "line",
-            "speaker": "{playerName}",
-            "expression": "smile",
-            "characters": [
-                {
-                    "characterId": "azaroth",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
-            "text": "(tersenyum tipis) Aku akan mengambil sesuatu yang harusnya menjadi milikku.",
-            "next": "scene11_stall_13"
-        },
-        {
-            "id": "scene11_stall_13",
-            "type": "narration",
-            "text": "DOR! Layar perlahan menggelap.",
-            "next": "scene11_stall_14"
-        },
-        {
-            "id": "scene11_stall_14",
-            "type": "end",
-            "endingId": "neutral-end"
-        },
-        {
-            "id": "scene11_rip",
-            "type": "narration",
-            "text": "{playerName} menatap kontrak itu beberapa detik. Lalu...",
-            "next": "scene11_rip_02"
-        },
-        {
-            "id": "scene11_rip_02",
-            "type": "narration",
-            "text": "SREEK!! Ia merobeknya menjadi dua. Ruangan langsung hening. Senyum Azaroth menghilang.",
-            "next": "scene11_rip_03"
-        },
-        {
-            "id": "scene11_rip_03",
             "type": "line",
             "speaker": "azaroth",
             "expression": "serious",
@@ -520,57 +348,118 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "...Berani sekali (mengangkat senjatanya)",
-            "next": "scene11_rip_04"
+            "text": "(terdiam) ...Kau? Bagaimana bisa—",
+            "next": "scene11_stall_09"
         },
         {
-            "id": "scene11_rip_04",
+            "id": "scene11_stall_09",
+            "type": "line",
+            "speaker": "{playerName}",
+            "expression": "smile",
+            "characters": [
+                {
+                    "characterId": "azaroth",
+                    "expression": "serious",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
+            "text": "(tersenyum) Aku punya waktu. Dan aku tahu siapa yang perlu kutelepon.",
+            "next": "scene11_stall_10"
+        },
+        {
+            "id": "scene11_stall_10",
             "type": "narration",
-            "text": "BRAK!! Pintu didobrak. Keyna masuk bersama beberapa anak buah Ravenscroft.",
-            "next": "scene11_rip_05"
+            "text": "Elenna dibebaskan. Azaroth ditembak di kakinya agar tidak bisa kabur. Akhirnya, setelah sepuluh tahun... keadilan datang.",
+            "next": "scene11_stall_11"
         },
         {
-            "id": "scene11_rip_05",
+            "id": "scene11_stall_11",
             "type": "line",
             "speaker": "keyna",
-            "expression": "neutral",
+            "expression": "smile",
             "characters": [
                 {
                     "characterId": "keyna",
-                    "expression": "neutral",
+                    "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "{playerName}!",
+            "text": "Kau melakukan hal yang benar, {playerName}. Ravenscroft... sudah lama menunggu untuk ini.",
+            "next": "scene11_stall_12"
+        },
+        {
+            "id": "scene11_stall_12",
+            "type": "scene-change",
+            "targetSceneId": "scene12"
+        },
+        {
+            "id": "scene11_rip",
+            "type": "narration",
+            "text": "{playerName} menatap kontrak itu. Bayangan ayahterangnya melintas di benak. Bayangan kesepuluh tahun yang hilang.",
+            "next": "scene11_rip_02"
+        },
+        {
+            "id": "scene11_rip_02",
+            "type": "line",
+            "speaker": "{playerName}",
+            "expression": "serious",
+            "characters": [
+                {
+                    "characterId": "azaroth",
+                    "expression": "neutral",
+                    "position": "center",
+                    "isSpeaking": false
+                }
+            ],
+            "text": "Tidak.",
+            "next": "scene11_rip_03"
+        },
+        {
+            "id": "scene11_rip_03",
+            "type": "narration",
+            "text": "SREEK!! {playerName} merobek kontrak menjadi dua. Lalu lagi. Lalu lagi. Kertas berserakan di lantai.",
+            "next": "scene11_rip_04"
+        },
+        {
+            "id": "scene11_rip_04",
+            "type": "line",
+            "speaker": "azaroth",
+            "expression": "serious",
+            "characters": [
+                {
+                    "characterId": "azaroth",
+                    "expression": "serious",
+                    "position": "center",
+                    "isSpeaking": true
+                }
+            ],
+            "text": "(menggenggam pistolnya erat) Kau... baru saja membuat kesalahan terbesar dalam hidupmu.",
+            "next": "scene11_rip_05"
+        },
+        {
+            "id": "scene11_rip_05",
+            "type": "narration",
+            "text": "BRAK!! {playerName} melompat ke samping saat Azaroth menembak. DOR! DOR! DOR! Peluru menghantam dinding di belakang tempatnya berdiri.",
             "next": "scene11_rip_06"
         },
         {
             "id": "scene11_rip_06",
             "type": "narration",
-            "text": "DOR!! Suara tembakan memenuhi ruangan.",
+            "text": "BRAK!! Pintu didobrak. Keyna masuk... tapi di saat yang sama, peluru juga找到了 sasaran. Rasa panas menembus dada {playerName}.",
             "next": "scene11_rip_07"
         },
         {
             "id": "scene11_rip_07",
-            "type": "line",
-            "speaker": "keyna",
-            "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "keyna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
-            "text": "{playerName}!",
+            "type": "narration",
+            "text": "{playerName} jatuh. Darah mengucur. Pandangannya kabur. Suara tembakan bergema... lalu perlahan... hening.",
             "next": "scene11_rip_08"
         },
         {
             "id": "scene11_rip_08",
             "type": "narration",
-            "text": "Peluru menembus dada {playerName}. Tubuhnya jatuh ke lantai. Pandangannya mulai kabur. Suara tembakan semakin jauh. Samar-samar, ia melihat seseorang berlutut di sampingnya. Pria berambut hitam. Mata biru seperti lautan.",
+            "text": "Samar-samar, seseorang berlutut di samping {playerName}. Rambut hitam. Mata biru yang familiar.",
             "next": "scene11_rip_09"
         },
         {
@@ -602,38 +491,33 @@
                     "isSpeaking": false
                 }
             ],
-            "text": "...Maaf.",
+            "text": "...Xyera? Kau... nyata?",
             "next": "scene11_rip_11"
         },
         {
             "id": "scene11_rip_11",
             "type": "line",
             "speaker": "xyera",
-            "expression": "neutral",
+            "expression": "smile",
             "characters": [
                 {
                     "characterId": "xyera",
-                    "expression": "neutral",
+                    "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
                 }
             ],
-            "text": "Sudah. Ayo pulang.",
+            "text": "Selalu. Sudah. Ayo pulang.",
             "next": "scene11_rip_12"
         },
         {
             "id": "scene11_rip_12",
             "type": "narration",
-            "text": "Cahaya putih mulai memenuhi pandangan. Suara tembakan perlahan menghilang. Yang tersisa, hanya genggaman hangat di tangan {playerName}. Layar berubah putih.",
+            "text": "Tangan yang kuat menarik {playerName} berdiri. Cahaya putih memenuhi pandangan. Satu hal terakhir yang ia rasakan... kehangatan yang sudah lama ia rindukan.",
             "next": "scene11_rip_13"
         },
         {
             "id": "scene11_rip_13",
-            "type": "fadeout",
-            "next": "scene11_rip_14"
-        },
-        {
-            "id": "scene11_rip_14",
             "type": "scene-change",
             "targetSceneId": "scene12_hidden"
         }
