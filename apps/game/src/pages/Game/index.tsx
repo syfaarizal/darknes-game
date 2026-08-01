@@ -11,7 +11,7 @@ import {
   Notification,
   ScreenFade,
 } from '@darknes/ui';
-import { useDialogueRunner, useDialogueStore, SaveEngine } from '@darknes/engine';
+import { useDialogueRunner, useDialogueStore, useGameStore, SaveEngine } from '@darknes/engine';
 
 const CHARACTER_COLORS: Record<string, string> = {
   xyera: '#B91C1C',
@@ -35,6 +35,7 @@ export function Game() {
     skip,
   } = useDialogueRunner();
   const history = useDialogueStore((s) => s.history);
+  const endingId = useGameStore((s) => s.endingId);
 
   const [historyOpen, setHistoryOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null);
@@ -42,6 +43,14 @@ export function Game() {
   const [fadeOverlayActive, setFadeOverlayActive] = useState(false);
 
   const prevPhaseRef = useRef(sceneTransitionPhase);
+
+  // Navigate to ending page when endingId is set
+  useEffect(() => {
+    if (endingId) {
+      console.log('[Game] endingId detected:', endingId, 'navigating to /ending');
+      navigate('/ending');
+    }
+  }, [endingId, navigate]);
 
   useEffect(() => {
     if (prevPhaseRef.current !== sceneTransitionPhase) {

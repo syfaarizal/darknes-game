@@ -1,22 +1,22 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { PrimaryButton, SecondaryButton } from '@darknes/ui';
 import { useGameStore, StoryEngine } from '@darknes/engine';
+import { Background } from '@darknes/ui';
 
 const ENDING_DATA: Record<string, { title: string; description: string; bg: string }> = {
   'good-end': {
-    title: 'Good Ending',
-    description: '{playerName}, kau telah membuat pilihan yang tepat. Ravenscroft Group kembali, keluarga bersatu kembali, dan keadilan akhirnya datang.',
+    title: 'GOOD ENDING',
+    description: 'Kamu memilih untuk menunda waktu. Dengan kesabaranmu, Keyna datang tepat waktu. Azaroth berhasil ditangkap, dan keluarga Ravenscroft reunited kembali.',
     bg: 'mansion',
   },
   'bad-ending': {
-    title: 'Bad Ending',
-    description: '{playerName}, kau memilih dengan hatimu. Tapi dalam dunia ini, cinta bisa menjadi senjata yang memakan pemiliknya.',
+    title: 'BAD ENDING',
+    description: 'Kamu memilih untuk menandatangani kontrak demi menyelamatkan Elenna. Tapi pilihan itu membuat Azaroth menang, dan kau kehilangan segalanya kecuali ilusi yang kau sebut teman.',
     bg: 'hospital',
   },
   'hidden-ending': {
-    title: 'Hidden Ending',
-    description: '{playerName}, ada jalan yang bahkan tidak kau duga. Mungkin... ini adalah akhir yang sebenarnya.',
+    title: 'HIDDEN ENDING',
+    description: 'Kamu merobek kontrak dan menolak untuk tunduk pada Azaroth. Meskipun peluru menemukan sasarannya, kau akhirnya reunited dengan keluarga yang sudah lama pergi. Mungkin... ini adalah akhir yang sebenarnya.',
     bg: 'basement',
   },
 };
@@ -27,107 +27,106 @@ export function Ending() {
 
   const ending = endingId ? ENDING_DATA[endingId] : ENDING_DATA['good-end'];
 
-  // Replace {playerName} in description
-  const description = ending.description.replace('{playerName}', playerName);
-
   const handleReplay = () => {
-    // Reset endingId
     useGameStore.getState().setEndingId(null);
-    // Load scene11 and skip to the choice node (scene11_n015)
-    StoryEngine.startScene('scene11', { waitForText: false }).then(() => {
-      // After scene loads, we need to skip to the choice
-      // The scene will auto-play, user can click to advance to choice
-    });
+    StoryEngine.startScene('scene11', { waitForText: false });
     navigate('/game');
   };
 
   const handleMainMenu = () => {
     useGameStore.getState().setEndingId(null);
-    useGameStore.getState().setPhase('main-menu' as any);
+    useGameStore.getState().resetGame();
     navigate('/menu');
   };
 
   const handleExit = () => {
-    // Close the browser tab/window
     window.close();
   };
 
   return (
-    <div className="relative flex h-screen w-screen flex-col items-center justify-center bg-[var(--color-void)]">
-      {/* Background gradient overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(139,0,0,0.15),transparent_60%)]" />
+    <div className="relative h-screen w-screen overflow-hidden">
+      {/* Background */}
+      <Background backgroundId={ending.bg} />
 
-      {/* Ending Card */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full max-w-md rounded-2xl border border-[var(--color-accent)]/30 bg-[var(--color-ink)]/90 p-8 shadow-2xl backdrop-blur-sm"
-      >
-        {/* Accent line */}
-        <div className="mb-6 h-1 w-16 rounded-full bg-gradient-to-r from-[var(--color-accent-strong)] to-transparent" />
+      {/* Overlay gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
 
-        {/* Ending Label */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.4 }}
-          className="mb-2 font-display text-xs uppercase tracking-[0.3em] text-[var(--color-accent-strong)]"
-        >
-          Ending
-        </motion.p>
-
+      {/* Content */}
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-8">
         {/* Ending Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="mb-6 font-display text-4xl uppercase tracking-wider text-[var(--color-accent-strong)]"
+          transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-2 text-center font-display text-2xl tracking-[0.4em] text-[var(--color-accent-strong)]"
+        >
+          ━━━━━━
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-4 text-center font-display text-5xl uppercase tracking-[0.3em] text-white drop-shadow-lg"
         >
           {ending.title}
         </motion.h1>
 
-        {/* Ending Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="mb-8 font-body text-sm leading-relaxed text-[var(--color-ink-light)]"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-10 text-center font-display text-2xl tracking-[0.4em] text-[var(--color-accent-strong)]"
         >
-          {description}
-        </motion.p>
+          ━━━━━━
+        </motion.div>
 
-        {/* Divider */}
-        <div className="mb-6 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent" />
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="mb-12 max-w-lg text-center font-body text-base leading-relaxed text-white/90 drop-shadow-md"
+        >
+          {ending.description}
+        </motion.p>
 
         {/* Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.4 }}
+          transition={{ delay: 1, duration: 0.5 }}
           className="flex flex-col gap-3"
         >
-          <PrimaryButton onClick={handleReplay} className="w-full justify-center">
-            Play Again from Scene 11
-          </PrimaryButton>
-          <SecondaryButton onClick={handleMainMenu} className="w-full justify-center">
+          <button
+            onClick={handleReplay}
+            className="min-w-[280px] rounded-lg border border-white/30 bg-white/10 px-8 py-3 font-display text-sm uppercase tracking-wider text-white backdrop-blur-sm transition-all hover:border-white/60 hover:bg-white/20"
+          >
+            Back to Scene 11
+          </button>
+
+          <button
+            onClick={handleMainMenu}
+            className="min-w-[280px] rounded-lg border border-white/30 bg-white/10 px-8 py-3 font-display text-sm uppercase tracking-wider text-white backdrop-blur-sm transition-all hover:border-white/60 hover:bg-white/20"
+          >
             Main Menu
-          </SecondaryButton>
+          </button>
+
           <button
             onClick={handleExit}
-            className="w-full rounded-lg border border-[var(--color-ink-light)]/30 py-3 font-display text-xs uppercase tracking-wider text-[var(--color-ink-light)] transition-colors hover:border-[var(--color-accent)]/50 hover:text-[var(--color-accent)]"
+            className="min-w-[280px] rounded-lg border border-red-500/30 bg-red-500/10 px-8 py-3 font-display text-sm uppercase tracking-wider text-red-400 backdrop-blur-sm transition-all hover:border-red-500/60 hover:bg-red-500/20"
           >
             Exit
           </button>
         </motion.div>
-      </motion.div>
+      </div>
 
-      {/* Decorative elements */}
+      {/* Game title */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
-        className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 text-xs text-[var(--color-ink-muted)]"
+        transition={{ delay: 1.2, duration: 0.5 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 font-display text-xs uppercase tracking-[0.3em] text-white/30"
       >
         Darknes
       </motion.div>
