@@ -14,7 +14,7 @@ const sceneModules = import.meta.glob<{ default: SceneFile }>('../data/scenes/sc
 
 const scenes: Record<string, () => Promise<{ default: SceneFile }>> = {};
 for (const path in sceneModules) {
-  const match = path.match(/(scene\d+)\.json$/);
+  const match = path.match(/(scene[\w]+)\.json$/);
   if (match?.[1]) {
     scenes[match[1]] = sceneModules[path] as () => Promise<{ default: SceneFile }>;
   }

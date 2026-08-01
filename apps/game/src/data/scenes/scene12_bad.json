@@ -57,12 +57,12 @@
         {
             "id": "scene12_bad_n008",
             "type": "line",
-            "speaker": "Elenna",
-            "expression": "neutral",
+            "speaker": "elenna",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
+                    "characterId": "elenna",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
@@ -72,31 +72,21 @@
         },
         {
             "id": "scene12_bad_n009",
-            "type": "choice",
-            "options": [
-                {
-                    "text": "Di mana Xyera?",
-                    "goTo": "scene12_bad_n010"
-                },
-                {
-                    "text": "Tolong panggilkan dia",
-                    "goTo": "scene12_bad_n010"
-                },
-                {
-                    "text": "Aku butuh dia...",
-                    "goTo": "scene12_bad_n010"
-                }
-            ]
+            "type": "line",
+            "speaker": "{playerName}",
+            "expression": "neutral",
+            "text": "Di mana Xyera?",
+            "next": "scene12_bad_n010"
         },
         {
             "id": "scene12_bad_n010",
             "type": "line",
-            "speaker": "Elenna",
-            "expression": "neutral",
+            "speaker": "elenna",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
+                    "characterId": "elenna",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
@@ -109,26 +99,18 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
-            "characters": [
-                {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
             "text": "(membeku) Apa?",
             "next": "scene12_bad_n012"
         },
         {
             "id": "scene12_bad_n012",
             "type": "line",
-            "speaker": "Elenna",
-            "expression": "neutral",
+            "speaker": "elenna",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
+                    "characterId": "elenna",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
@@ -141,26 +123,18 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
-            "characters": [
-                {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
             "text": "(menggeleng) Tidak, itu tidak mungkin. Dia selalu ada dan selalu menemaniku.",
             "next": "scene12_bad_n014"
         },
         {
             "id": "scene12_bad_n014",
             "type": "line",
-            "speaker": "Elenna",
-            "expression": "neutral",
+            "speaker": "elenna",
+            "expression": "sad",
             "characters": [
                 {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
+                    "characterId": "elenna",
+                    "expression": "sad",
                     "position": "center",
                     "isSpeaking": true
                 }
@@ -179,14 +153,6 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "Elenna",
-                    "expression": "neutral",
-                    "position": "center",
-                    "isSpeaking": true
-                }
-            ],
             "text": "Dia nyata. Dia selalu ada...",
             "next": "scene12_bad_n017"
         },
@@ -199,11 +165,11 @@
         {
             "id": "scene12_bad_n018",
             "type": "line",
-            "speaker": "Xyera",
+            "speaker": "xyera",
             "expression": "smile",
             "characters": [
                 {
-                    "characterId": "Xyera",
+                    "characterId": "xyera",
                     "expression": "smile",
                     "position": "center",
                     "isSpeaking": true
@@ -223,14 +189,6 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "neutral",
-            "characters": [
-                {
-                    "characterId": "Xyera",
-                    "expression": "smile",
-                    "position": "center",
-                    "isSpeaking": false
-                }
-            ],
             "text": "(memeluk Xyera) Mereka semua bohong...",
             "next": "scene12_bad_n021"
         },

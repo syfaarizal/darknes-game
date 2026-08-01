@@ -199,7 +199,8 @@ async function processNode(scene: SceneFile, node: SceneNode): Promise<void> {
       return;
     }
     case DialogueNodeType.SceneChange: {
-      await startScene(node.targetSceneId);
+      // Use the same fade transition system as End node
+      useDialogueStore.getState().setSceneTransition('fading-out', node.targetSceneId);
       return;
     }
     case DialogueNodeType.SetFlag: {
