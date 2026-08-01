@@ -240,8 +240,8 @@
         },
         {
             "id": "scene11_sign_07",
-            "type": "scene-change",
-            "targetSceneId": "scene12_bad"
+            "type": "end",
+            "nextScene": "scene12_bad"
         },
         {
             "id": "scene11_stall",
@@ -518,8 +518,8 @@
         },
         {
             "id": "scene11_rip_13",
-            "type": "scene-change",
-            "targetSceneId": "scene12_hidden"
+            "type": "end",
+            "nextScene": "scene12_hidden"
         }
     ]
 }
