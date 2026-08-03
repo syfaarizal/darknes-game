@@ -10,6 +10,7 @@ import { Load } from '../pages/Load';
 import { Save } from '../pages/Save';
 import { Ending } from '../pages/Ending';
 import { Credits } from '../pages/Credits';
+import { Gallery } from '../pages/Gallery';
 
 /**
  * Hash router — DARKNES is a desktop-first, potentially file:// or static-host
@@ -27,4 +28,5 @@ export const router = createHashRouter([
   { path: '/save', element: <Save /> },
   { path: '/ending', element: <Ending /> },
   { path: '/credits', element: <Credits /> },
+  { path: '/gallery', element: <Gallery /> },
 ]);

@@ -105,6 +105,7 @@ export function Game() {
       <TopBar
         onLog={() => setHistoryOpen(true)}
         onSave={() => navigate('/save')}
+        onGallery={() => navigate('/gallery')}
         onSettings={() => navigate('/settings')}
         onMenu={() => navigate('/pause')}
       />
