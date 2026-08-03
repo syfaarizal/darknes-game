@@ -26,8 +26,7 @@ export function Gallery() {
   const collectedCharacters = useGameStore((s) => s.collectedCharacters);
 
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const cardRef = useRef<HTMLDivElement>(null);
+  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Filter collected characters
@@ -35,7 +34,7 @@ export function Gallery() {
     collectedCharacters.includes(c.id)
   );
 
-  // Mouse tracking for card movement
+  // Mouse tracking for aggressive tilt effect
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
     if (selectedCard && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
@@ -44,18 +43,18 @@ export function Gallery() {
       const mouseX = e.clientX - rect.left;
       const mouseY = e.clientY - rect.top;
 
-      // Calculate offset from center (-15 to 15 range)
-      const offsetX = ((mouseX - centerX) / centerX) * 15;
-      const offsetY = ((mouseY - centerY) / centerY) * 15;
+      // More aggressive rotation - up to 30 degrees
+      const rotateY = ((mouseX - centerX) / centerX) * 30;
+      const rotateX = -((mouseY - centerY) / centerY) * 30;
 
-      setMousePos({ x: offsetX, y: offsetY });
+      setTilt({ rotateX, rotateY });
     }
   }, [selectedCard]);
 
-  // Reset mouse position when card is closed
+  // Reset tilt when card is closed
   useEffect(() => {
     if (!selectedCard) {
-      setMousePos({ x: 0, y: 0 });
+      setTilt({ rotateX: 0, rotateY: 0 });
     }
   }, [selectedCard]);
 
@@ -87,7 +86,7 @@ export function Gallery() {
       </header>
 
       {/* Content */}
-      <main ref={containerRef} className="flex-1 overflow-auto p-4" onMouseMove={handleMouseMove}>
+      <main ref={containerRef} className="flex-1 overflow-auto p-4">
         {/* Empty State */}
         {collectedChars.length === 0 ? (
           <div className="flex h-full flex-col items-center justify-center">
@@ -139,19 +138,24 @@ export function Gallery() {
                     alt={char.name}
                     className="absolute inset-0 h-full w-full object-cover object-top"
                     onError={(e) => {
-                      // Fallback to initial if image not found
-                      e.currentTarget.style.display = 'none';
+                      const target = e.currentTarget;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
                     }}
                   />
 
-                  {/* Fallback initial (shown if image fails) */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]">
+                  {/* Fallback initial */}
+                  <div
+                    className="absolute inset-0 hidden items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]"
+                    style={{ display: 'none' }}
+                  >
                     <span className="text-4xl font-display text-white/10">
                       {char.name[0]}
                     </span>
                   </div>
 
-                  {/* Gradient overlay for text readability */}
+                  {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
                   {/* Rarity badge */}
@@ -184,35 +188,43 @@ export function Gallery() {
         </span>
       </footer>
 
-      {/* Zoomed Card Modal */}
+      {/* zoomed Card Modal with Aggressive Tilt Effect */}
       <AnimatePresence>
         {selectedChar && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md"
+            transition={{ duration: 0.3 }}
+            className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center"
+            style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', backgroundColor: 'rgba(0,0,0,0.15)' }}
             onClick={() => setSelectedCard(null)}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })}
           >
+            {/* Card with aggressive 3D tilt - stays centered, rotates more dramatically */}
             <motion.div
-              ref={cardRef}
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.7, opacity: 0 }}
               animate={{
                 scale: 1,
                 opacity: 1,
+                rotateX: tilt.rotateX,
+                rotateY: tilt.rotateY,
               }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+              exit={{ scale: 0.7, opacity: 0 }}
+              // Slower, more dramatic spring
+              transition={{
+                rotateX: { type: 'spring', stiffness: 100, damping: 15 },
+                rotateY: { type: 'spring', stiffness: 100, damping: 15 },
+                scale: { type: 'spring', stiffness: 200, damping: 20 },
+              }}
+              style={{ perspective: 800 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-72 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_80px_rgba(139,0,0,0.4),0_25px_50px_-12px_rgba(0,0,0,0.9)]"
-              style={{
-                x: mousePos.x * 2,
-                y: mousePos.y * 2,
-              }}
+              className="relative w-72 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_80px_rgba(139,0,0,0.4),0_25px_50px_-12px_rgba(0,0,0,0.6)]"
             >
-              {/* Glow effect based on rarity */}
+              {/* Strong glow effect */}
               <div
-                className="absolute inset-0 opacity-20 blur-3xl"
+                className="absolute inset-0 opacity-15 blur-2xl"
                 style={{ backgroundColor: selectedChar.accent }}
               />
 
@@ -223,11 +235,12 @@ export function Gallery() {
                   {RARITY_INFO[selectedChar.rarity].label}
                 </div>
 
-                {/* Character image area */}
+                {/* Character image area with aggressive tilt */}
                 <div
                   className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
                   style={{
-                    boxShadow: `inset 0 0 40px ${selectedChar.accent}33`,
+                    boxShadow: `inset 0 0 60px ${selectedChar.accent}44`,
+                    transform: `rotateX(${tilt.rotateX * 0.5}deg) scale(1.05)`,
                   }}
                 >
                   {/* Character Image */}
@@ -236,42 +249,46 @@ export function Gallery() {
                     alt={selectedChar.name}
                     className="h-full w-full object-cover object-top"
                     onError={(e) => {
-                      // Fallback to initial if image not found
-                      e.currentTarget.style.display = 'none';
+                      const target = e.currentTarget;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
                     }}
                   />
 
                   {/* Fallback initial */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black">
-                    <motion.span
-                      animate={{
-                        scale: [1, 1.02, 1],
-                      }}
-                      transition={{ duration: 4, repeat: Infinity }}
+                  <div
+                    className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black"
+                    style={{ display: 'none' }}
+                  >
+                    <span
                       className="text-9xl font-display text-white/5"
                       style={{ color: selectedChar.accent }}
                     >
                       {selectedChar.name[0]}
-                    </motion.span>
+                    </span>
                   </div>
 
                   {/* Overlay gradients */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                  {/* Animated border glow */}
+                  {/* Pulsing border glow */}
                   <motion.div
-                    animate={{ opacity: [0.3, 0.6, 0.3] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute inset-0 rounded-xl border border-white/10"
-                    style={{ borderColor: `${selectedChar.accent}40` }}
+                    animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.02, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="absolute inset-0 rounded-xl"
+                    style={{
+                      border: `2px solid ${selectedChar.accent}60`,
+                      boxShadow: `0 0 20px ${selectedChar.accent}40`,
+                    }}
                   />
                 </div>
 
                 {/* Character info */}
                 <div className="text-center">
                   <motion.h3
-                    animate={{ y: [0, -2, 0] }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                    animate={{ y: [0, -3, 0] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
                     className="font-display text-3xl uppercase tracking-widest text-white drop-shadow-lg"
                   >
                     {selectedChar.name}
@@ -291,15 +308,15 @@ export function Gallery() {
               </div>
 
               {/* Corner decorations */}
-              <div className="absolute left-3 top-3 h-3 w-3 border-l-2 border-t-2 border-red-700/40" />
-              <div className="absolute right-3 top-3 h-3 w-3 border-r-2 border-t-2 border-red-700/40" />
-              <div className="absolute bottom-3 left-3 h-3 w-3 border-b-2 border-l-2 border-red-700/40" />
-              <div className="absolute bottom-3 right-3 h-3 w-3 border-b-2 border-r-2 border-red-700/40" />
+              <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-red-700/40" />
+              <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-red-700/40" />
+              <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-red-700/40" />
+              <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-red-700/40" />
 
-              {/* Close hint */}
+              {/* Pulsing close hint */}
               <motion.div
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                animate={{ opacity: [0.4, 0.9, 0.4] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
                 className="absolute bottom-2 left-0 right-0 text-center"
               >
                 <span className="text-[9px] uppercase tracking-widest text-[var(--color-ink-faint)]">
