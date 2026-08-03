@@ -1,138 +1,296 @@
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Sparkles } from 'lucide-react';
 import { IconButton } from '@darknes/ui';
 import { useGameStore } from '@darknes/engine';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ALL_CHARACTERS = [
-  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', border: 'red' },
-  { id: 'elenna', name: 'Elenna', role: 'Enforcer', rarity: 'epic', border: 'gold' },
-  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', border: 'purple' },
-  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', border: 'blue' },
-  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', border: 'gray' },
-  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', border: 'red' },
+  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', accent: '#dc2626' },
+  { id: 'elenna', name: 'Elenna', role: 'Enforcer', rarity: 'epic', accent: '#9333ea' },
+  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', accent: '#2563eb' },
+  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', accent: '#0891b2' },
+  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', accent: '#64748b' },
+  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', accent: '#dc2626' },
 ];
 
-const RARITY_STYLES: Record<string, { bg: string; text: string; glow: string }> = {
-  legendary: { bg: 'from-red-600 to-red-800', text: 'text-white', glow: 'shadow-[0_0_12px_rgba(220,38,38,0.5)]' },
-  epic: { bg: 'from-purple-600 to-purple-800', text: 'text-white', glow: 'shadow-[0_0_12px_rgba(147,51,234,0.5)]' },
-  rare: { bg: 'from-blue-600 to-blue-800', text: 'text-white', glow: 'shadow-[0_0_12px_rgba(59,130,246,0.5)]' },
-  common: { bg: 'from-gray-600 to-gray-800', text: 'text-gray-200', glow: '' },
-};
-
-const BORDER_COLORS: Record<string, string> = {
-  red: 'border-red-900/60',
-  gold: 'border-yellow-600/60',
-  purple: 'border-purple-700/60',
-  blue: 'border-blue-700/60',
-  gray: 'border-gray-600/60',
+const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> = {
+  legendary: { label: 'Legendary', color: 'text-red-400', bg: 'bg-red-900/30 border-red-800/40' },
+  epic: { label: 'Epic', color: 'text-purple-400', bg: 'bg-purple-900/30 border-purple-800/40' },
+  rare: { label: 'Rare', color: 'text-blue-400', bg: 'bg-blue-900/30 border-blue-800/40' },
+  common: { label: 'Common', color: 'text-gray-400', bg: 'bg-gray-900/30 border-gray-700/40' },
 };
 
 export function Gallery() {
   const navigate = useNavigate();
   const collectedCharacters = useGameStore((s) => s.collectedCharacters);
 
-  // Filter to only show collected characters, sorted by order in ALL_CHARACTERS
+  const [selectedCard, setSelectedCard] = useState<string | null>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const cardRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Filter collected characters
   const collectedChars = ALL_CHARACTERS.filter((c) =>
     collectedCharacters.includes(c.id)
   );
 
+  // Mouse tracking for card movement
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (selectedCard && containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      // Calculate offset from center (-15 to 15 range)
+      const offsetX = ((mouseX - centerX) / centerX) * 15;
+      const offsetY = ((mouseY - centerY) / centerY) * 15;
+
+      setMousePos({ x: offsetX, y: offsetY });
+    }
+  }, [selectedCard]);
+
+  // Reset mouse position when card is closed
+  useEffect(() => {
+    if (!selectedCard) {
+      setMousePos({ x: 0, y: 0 });
+    }
+  }, [selectedCard]);
+
+  // Get selected character data
+  const selectedChar = selectedCard
+    ? ALL_CHARACTERS.find((c) => c.id === selectedCard)
+    : null;
+
   return (
     <div className="flex h-screen w-screen flex-col bg-[var(--color-void)] overflow-hidden">
       {/* Header */}
-      <div className="shrink-0 border-b border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] px-4 py-3">
-        <div className="flex items-center gap-3">
-          <IconButton icon={<ArrowLeft size={18} />} label="Back" onClick={() => navigate(-1)} />
-          <h2 className="font-display text-lg uppercase tracking-[0.15em] text-[var(--color-ink)]">
-            Collection
-          </h2>
-          <span className="ml-auto text-xs text-red-500/80">
-            {collectedChars.length}/{ALL_CHARACTERS.length}
+      <header className="shrink-0 border-b border-red-900/20 bg-gradient-to-b from-[var(--color-graphite)]/80 to-transparent backdrop-blur-md">
+        <div className="flex items-center gap-4 px-4 py-3">
+          <IconButton
+            icon={<ArrowLeft size={18} />}
+            label="Back"
+            onClick={() => navigate(-1)}
+          />
+          <div className="flex items-center gap-2">
+            <Sparkles size={18} className="text-red-500" />
+            <h2 className="font-display text-base uppercase tracking-widest text-[var(--color-ink)]">
+              Collection
+            </h2>
+          </div>
+          <span className="ml-auto rounded-full border border-red-900/30 bg-red-900/10 px-3 py-1 text-xs text-red-400/80">
+            {collectedChars.length} / {ALL_CHARACTERS.length}
           </span>
         </div>
-      </div>
+      </header>
 
       {/* Content */}
-      <div className="flex-1 overflow-auto p-4">
+      <main ref={containerRef} className="flex-1 overflow-auto p-4" onMouseMove={handleMouseMove}>
         {/* Empty State */}
         {collectedChars.length === 0 ? (
           <div className="flex h-full flex-col items-center justify-center">
-            <div className="mb-4 text-5xl text-red-900/30">
-              <svg className="h-16 w-16" fill="currentColor" viewBox="0 0 24 24">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="mb-6 text-6xl text-red-900/30"
+            >
+              <svg className="h-20 w-20" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm0-2h2V7h-2z"/>
               </svg>
-            </div>
-            <p className="text-sm uppercase tracking-wider text-[var(--color-ink-muted)]">
+            </motion.div>
+            <motion.p
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              className="mb-2 text-sm uppercase tracking-wider text-[var(--color-ink-muted)]"
+            >
               No Characters Collected
-            </p>
-            <p className="mt-1 text-xs text-[var(--color-ink-faint)]">
+            </motion.p>
+            <motion.p
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-xs text-[var(--color-ink-faint)]"
+            >
               Meet characters in the story to add them here
-            </p>
+            </motion.p>
           </div>
         ) : (
-          /* Grid of small cards */
+          /* Grid of cards */
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {collectedChars.map((char) => {
-              const rarityStyle = RARITY_STYLES[char.rarity];
-              return (
+            {collectedChars.map((char, index) => (
+              <motion.div
+                key={char.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className="group cursor-pointer"
+                onClick={() => setSelectedCard(char.id)}
+              >
+                {/* Card */}
                 <div
-                  key={char.id}
-                  className="group relative aspect-[3/4] cursor-pointer overflow-hidden rounded-lg border-2 transition-all duration-200 hover:scale-105 hover:z-10"
-                  style={{
-                    borderColor: BORDER_COLORS[char.border],
-                    boxShadow: `0 0 15px ${char.border === 'red' ? 'rgba(139,0,0,0.3)' : char.border === 'gold' ? 'rgba(201,162,39,0.2)' : 'transparent'}`,
-                  }}
+                  className="relative aspect-[3/4] overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 hover:border-red-800/50 hover:shadow-[0_0_20px_rgba(139,0,0,0.2)] active:scale-95"
                 >
-                  {/* Background gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-b ${rarityStyle.bg} opacity-20`} />
-
-                  {/* Placeholder character initial */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]">
-                    <span className="text-4xl font-display text-white/15">
-                      {char.name[0]}
-                    </span>
-                  </div>
-
-                  {/* Vignette overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-
-                  {/* Rarity Badge - smaller */}
-                  <span
-                    className={`absolute right-1 top-1 rounded px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wider ${rarityStyle.text} ${rarityStyle.glow} bg-black/50`}
-                  >
-                    {char.rarity}
-                  </span>
-
-                  {/* Character Initial overlay */}
+                  {/* Character initial */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-5xl font-display text-white/10">
+                    <span className="text-4xl font-display text-white/10">
                       {char.name[0]}
                     </span>
                   </div>
 
-                  {/* Info at bottom */}
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                  {/* Rarity badge */}
+                  <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity].color} ${RARITY_INFO[char.rarity].bg}`}>
+                    {char.rarity}
+                  </div>
+
+                  {/* Info */}
                   <div className="absolute bottom-0 left-0 right-0 p-2">
                     <h3 className="font-display text-xs uppercase tracking-wide text-white drop-shadow-md">
                       {char.name}
                     </h3>
-                    <p className="text-[9px] uppercase tracking-wider text-red-400/80">
+                    <p className="text-[9px] uppercase tracking-wider text-red-400/70">
                       {char.role}
                     </p>
                   </div>
                 </div>
-              );
-            })}
+              </motion.div>
+            ))}
           </div>
         )}
-      </div>
+      </main>
 
-      {/* Footer hint */}
-      <div className="shrink-0 border-t border-red-900/20 px-4 py-2 text-center">
+      {/* Footer */}
+      <footer className="shrink-0 border-t border-red-900/10 px-4 py-2 text-center">
         <span className="text-[10px] uppercase tracking-wider text-[var(--color-ink-faint)]">
           {collectedChars.length === 0
             ? 'Explore the story to discover characters'
-            : `${collectedChars.length} of ${ALL_CHARACTERS.length} characters discovered`}
+            : `Tap a card to view details`}
         </span>
-      </div>
+      </footer>
+
+      {/* Zoomed Card Modal */}
+      <AnimatePresence>
+        {selectedChar && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md"
+            onClick={() => setSelectedCard(null)}
+          >
+            <motion.div
+              ref={cardRef}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                x: mousePos.x * 2,
+                y: mousePos.y * 2,
+              }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-64 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_80px_rgba(139,0,0,0.4),0_25px_50px_-12px_rgba(0,0,0,0.9)]"
+              style={{
+                x: mousePos.x * 2,
+                y: mousePos.y * 2,
+              }}
+            >
+              {/* Glow effect based on rarity */}
+              <div
+                className="absolute inset-0 opacity-20 blur-3xl"
+                style={{ backgroundColor: selectedChar.accent }}
+              />
+
+              {/* Card content */}
+              <div className="relative p-5">
+                {/* Rarity badge */}
+                <div className={`absolute right-4 top-4 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity].color} ${RARITY_INFO[selectedChar.rarity].bg}`}>
+                  {RARITY_INFO[selectedChar.rarity].label}
+                </div>
+
+                {/* Character image area */}
+                <div
+                  className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-[var(--color-graphite)] via-black to-black shadow-inner"
+                  style={{
+                    boxShadow: `inset 0 0 40px ${selectedChar.accent}33`,
+                  }}
+                >
+                  {/* Character initial */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.span
+                      animate={{
+                        scale: [1, 1.02, 1],
+                        rotate: [0, 1, 0, -1, 0],
+                      }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      className="text-9xl font-display text-white/5"
+                      style={{ color: selectedChar.accent }}
+                    >
+                      {selectedChar.name[0]}
+                    </motion.span>
+                  </div>
+
+                  {/* Overlay gradients */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+
+                  {/* Animated border glow */}
+                  <motion.div
+                    animate={{ opacity: [0.3, 0.6, 0.3] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="absolute inset-0 rounded-xl border border-white/10"
+                    style={{ borderColor: `${selectedChar.accent}40` }}
+                  />
+                </div>
+
+                {/* Character info */}
+                <div className="text-center">
+                  <motion.h3
+                    animate={{ y: [0, -2, 0] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                    className="font-display text-3xl uppercase tracking-widest text-white drop-shadow-lg"
+                  >
+                    {selectedChar.name}
+                  </motion.h3>
+                  <p className="mt-2 text-xs uppercase tracking-[0.2em] text-red-400/80">
+                    {selectedChar.role}
+                  </p>
+                </div>
+
+                {/* Decorative line */}
+                <div className="my-4 h-px bg-gradient-to-r from-transparent via-red-800/50 to-transparent" />
+
+                {/* Status */}
+                <p className="text-center text-[10px] uppercase tracking-widest text-[var(--color-ink-muted)]">
+                  ✦ Collected ✦
+                </p>
+              </div>
+
+              {/* Corner decorations */}
+              <div className="absolute left-3 top-3 h-3 w-3 border-l-2 border-t-2 border-red-700/40" />
+              <div className="absolute right-3 top-3 h-3 w-3 border-r-2 border-t-2 border-red-700/40" />
+              <div className="absolute bottom-3 left-3 h-3 w-3 border-b-2 border-l-2 border-red-700/40" />
+              <div className="absolute bottom-3 right-3 h-3 w-3 border-b-2 border-r-2 border-red-700/40" />
+
+              {/* Close hint */}
+              <motion.div
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute bottom-2 left-0 right-0 text-center"
+              >
+                <span className="text-[9px] uppercase tracking-widest text-[var(--color-ink-faint)]">
+                  Tap anywhere to close
+                </span>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
