@@ -13,5 +13,6 @@ export * from './components/TopBar';
 export * from './components/BottomBar';
 export * from './components/History';
 export * from './components/Notification';
+export * from './components/CharacterNotification';
 export * from './components/Menu';
 export * from './components/Settings';

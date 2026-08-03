@@ -10,6 +10,7 @@ import {
   HistoryLog,
   Notification,
   ScreenFade,
+  CharacterNotification,
 } from '@darknes/ui';
 import { useDialogueRunner, useDialogueStore, useGameStore, SaveEngine } from '@darknes/engine';
 
@@ -19,6 +20,9 @@ const CHARACTER_COLORS: Record<string, string> = {
   elenna: '#B45309',
   azaroth: '#4C1D95',
 };
+
+// Character IDs that can be collected
+const COLLECTIBLE_CHARACTERS = ['xyera', 'elenna', 'keyna', 'rachel', 'henry', 'azaroth'];
 
 const FADE_DURATION_MS = 700;
 
@@ -36,6 +40,8 @@ export function Game() {
   } = useDialogueRunner();
   const history = useDialogueStore((s) => s.history);
   const endingId = useGameStore((s) => s.endingId);
+  const collectCharacter = useGameStore((s) => s.collectCharacter);
+  const collectedCharacters = useGameStore((s) => s.collectedCharacters);
 
   const [historyOpen, setHistoryOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null);
@@ -43,6 +49,15 @@ export function Game() {
   const [fadeOverlayActive, setFadeOverlayActive] = useState(false);
 
   const prevPhaseRef = useRef(sceneTransitionPhase);
+
+  // Collect characters when they first appear on stage
+  useEffect(() => {
+    stageCharacters.forEach((char) => {
+      if (COLLECTIBLE_CHARACTERS.includes(char.id) && !collectedCharacters.includes(char.id)) {
+        collectCharacter(char.id);
+      }
+    });
+  }, [stageCharacters, collectCharacter, collectedCharacters]);
 
   // Navigate to ending page when endingId is set
   useEffect(() => {
@@ -128,6 +143,7 @@ export function Game() {
 
       <HistoryLog open={historyOpen} entries={history} onClose={() => setHistoryOpen(false)} />
       <Notification message={notification} />
+      <CharacterNotification />
 
       {!scene && !currentNode && (
         <div className="absolute inset-0 flex items-center justify-center text-[var(--color-ink-muted)]">

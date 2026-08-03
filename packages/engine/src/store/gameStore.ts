@@ -10,6 +10,8 @@ export interface GameState {
   endingId: string | null;
   flags: Record<string, FlagValue>;
   variables: Record<string, VariableValue>;
+  collectedCharacters: string[];
+  newCharacterNotification: string | null;
 
   setPhase: (phase: GamePhase) => void;
   setPosition: (sceneId: string, nodeId: string) => void;
@@ -18,9 +20,11 @@ export interface GameState {
   setFlag: (key: string, value: FlagValue) => void;
   setVariable: (key: string, value: VariableValue) => void;
   addToVariable: (key: string, delta: number) => void;
+  collectCharacter: (characterId: string) => void;
+  clearNewCharacterNotification: () => void;
   resetGame: () => void;
   createNewGame: (playerName: string) => void;
-  hydrate: (partial: Partial<Pick<GameState, 'flags' | 'variables' | 'currentSceneId' | 'currentNodeId' | 'playerName'>>) => void;
+  hydrate: (partial: Partial<Pick<GameState, 'flags' | 'variables' | 'currentSceneId' | 'currentNodeId' | 'playerName' | 'collectedCharacters'>>) => void;
 }
 
 const initial = {
@@ -31,6 +35,8 @@ const initial = {
   endingId: null as string | null,
   flags: {} as Record<string, FlagValue>,
   variables: {} as Record<string, VariableValue>,
+  collectedCharacters: [] as string[],
+  newCharacterNotification: null as string | null,
 };
 
 export const useGameStore = create<GameState>((set) => ({
@@ -55,6 +61,19 @@ export const useGameStore = create<GameState>((set) => ({
       const current = Number(state.variables[key] ?? 0);
       return { variables: { ...state.variables, [key]: current + delta } };
     }),
+
+  collectCharacter: (characterId) =>
+    set((state) => {
+      if (state.collectedCharacters.includes(characterId)) {
+        return state;
+      }
+      return {
+        collectedCharacters: [...state.collectedCharacters, characterId],
+        newCharacterNotification: characterId,
+      };
+    }),
+
+  clearNewCharacterNotification: () => set({ newCharacterNotification: null }),
 
   resetGame: () => set({ ...initial, phase: GamePhase.MainMenu, endingId: null }),
 
