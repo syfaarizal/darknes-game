@@ -1,13 +1,13 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '@darknes/engine';
 
-const CHARACTERS: Record<string, { name: string; role: string }> = {
-  xyera: { name: 'Xyera', role: 'Boss Lady' },
-  elenna: { name: 'Elenna', role: 'Enforcer' },
-  keyna: { name: 'Keyna', role: 'Informant' },
-  rachel: { name: 'Rachel', role: 'Accountant' },
-  henry: { name: 'Henry', role: 'Soldier' },
-  azaroth: { name: 'Azaroth', role: 'Rival Boss' },
+const CHARACTERS: Record<string, { name: string; role: string; image: string }> = {
+  xyera: { name: 'Xyera', role: 'Boss Lady', image: '/assets/cards/xyera.webp' },
+  elenna: { name: 'Elenna', role: 'Enforcer', image: '/assets/cards/elenna-id-card.webp' },
+  keyna: { name: 'Keyna', role: 'Informant', image: '/assets/cards/keyna.webp' },
+  rachel: { name: 'Rachel', role: 'Accountant', image: '/assets/cards/rachel.webp' },
+  henry: { name: 'Henry', role: 'Soldier', image: '/assets/cards/henry.webp' },
+  azaroth: { name: 'Azaroth', role: 'Rival Boss', image: '/assets/cards/azaroth.webp' },
 };
 
 export function CharacterNotification() {
@@ -57,13 +57,26 @@ export function CharacterNotification() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.15 }}
-                className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-red-900/40 bg-gradient-to-b from-[var(--color-graphite)] via-black to-black shadow-inner"
+                className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-red-900/40 bg-black shadow-inner"
               >
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                {/* Character Image */}
+                <img
+                  src={char.image}
+                  alt={char.name}
+                  className="h-full w-full object-cover object-top"
+                  onError={(e) => {
+                    // Fallback to initial if image not found
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
 
-                {/* Character initial - large */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* Fallback initial */}
+                <div
+                  className="absolute inset-0 hidden items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black"
+                  style={{ display: 'none' }}
+                >
                   <motion.span
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -73,6 +86,9 @@ export function CharacterNotification() {
                     {char.name[0]}
                   </motion.span>
                 </div>
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Inner glow */}
                 <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(139,0,0,0.3)]" />

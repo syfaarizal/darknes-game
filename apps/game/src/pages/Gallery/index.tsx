@@ -6,12 +6,12 @@ import { useGameStore } from '@darknes/engine';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ALL_CHARACTERS = [
-  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', accent: '#dc2626' },
-  { id: 'elenna', name: 'Elenna', role: 'Enforcer', rarity: 'epic', accent: '#9333ea' },
-  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', accent: '#2563eb' },
-  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', accent: '#0891b2' },
-  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', accent: '#64748b' },
-  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', accent: '#dc2626' },
+  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/xyera.webp' },
+  { id: 'elenna', name: 'Elenna', role: 'Enforcer', rarity: 'epic', accent: '#9333ea', image: '/assets/cards/elenna-id-card.webp' },
+  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', accent: '#2563eb', image: '/assets/cards/keyna.webp' },
+  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', accent: '#0891b2', image: '/assets/cards/rachel.webp' },
+  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', accent: '#64748b', image: '/assets/cards/henry.webp' },
+  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/azaroth.webp' },
 ];
 
 const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> = {
@@ -133,15 +133,26 @@ export function Gallery() {
                 <div
                   className="relative aspect-[3/4] overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 hover:border-red-800/50 hover:shadow-[0_0_20px_rgba(139,0,0,0.2)] active:scale-95"
                 >
-                  {/* Character initial */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Character Image */}
+                  <img
+                    src={char.image}
+                    alt={char.name}
+                    className="absolute inset-0 h-full w-full object-cover object-top"
+                    onError={(e) => {
+                      // Fallback to initial if image not found
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+
+                  {/* Fallback initial (shown if image fails) */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]">
                     <span className="text-4xl font-display text-white/10">
                       {char.name[0]}
                     </span>
                   </div>
 
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                  {/* Gradient overlay for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
                   {/* Rarity badge */}
                   <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity].color} ${RARITY_INFO[char.rarity].bg}`}>
@@ -189,13 +200,11 @@ export function Gallery() {
               animate={{
                 scale: 1,
                 opacity: 1,
-                x: mousePos.x * 2,
-                y: mousePos.y * 2,
               }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-64 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_80px_rgba(139,0,0,0.4),0_25px_50px_-12px_rgba(0,0,0,0.9)]"
+              className="relative w-72 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_80px_rgba(139,0,0,0.4),0_25px_50px_-12px_rgba(0,0,0,0.9)]"
               style={{
                 x: mousePos.x * 2,
                 y: mousePos.y * 2,
@@ -210,23 +219,33 @@ export function Gallery() {
               {/* Card content */}
               <div className="relative p-5">
                 {/* Rarity badge */}
-                <div className={`absolute right-4 top-4 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity].color} ${RARITY_INFO[selectedChar.rarity].bg}`}>
+                <div className={`absolute right-4 top-4 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity].color} ${RARITY_INFO[selectedChar.rarity].bg}`}>
                   {RARITY_INFO[selectedChar.rarity].label}
                 </div>
 
                 {/* Character image area */}
                 <div
-                  className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-[var(--color-graphite)] via-black to-black shadow-inner"
+                  className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
                   style={{
                     boxShadow: `inset 0 0 40px ${selectedChar.accent}33`,
                   }}
                 >
-                  {/* Character initial */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Character Image */}
+                  <img
+                    src={selectedChar.image}
+                    alt={selectedChar.name}
+                    className="h-full w-full object-cover object-top"
+                    onError={(e) => {
+                      // Fallback to initial if image not found
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+
+                  {/* Fallback initial */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black">
                     <motion.span
                       animate={{
                         scale: [1, 1.02, 1],
-                        rotate: [0, 1, 0, -1, 0],
                       }}
                       transition={{ duration: 4, repeat: Infinity }}
                       className="text-9xl font-display text-white/5"
