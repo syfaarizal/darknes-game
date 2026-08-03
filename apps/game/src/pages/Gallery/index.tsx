@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Sparkles } from 'lucide-react';
 import { IconButton } from '@darknes/ui';
@@ -43,9 +43,9 @@ export function Gallery() {
       const mouseX = e.clientX - rect.left;
       const mouseY = e.clientY - rect.top;
 
-      // More aggressive rotation - up to 30 degrees
-      const rotateY = ((mouseX - centerX) / centerX) * 30;
-      const rotateX = -((mouseY - centerY) / centerY) * 30;
+      // Maximum 35 degrees rotation - aggressive but not too extreme
+      const rotateY = ((mouseX - centerX) / centerX) * 35;
+      const rotateX = -((mouseY - centerY) / centerY) * 35;
 
       setTilt({ rotateX, rotateY });
     }
@@ -188,59 +188,58 @@ export function Gallery() {
         </span>
       </footer>
 
-      {/* zoomed Card Modal with Aggressive Tilt Effect */}
+      {/* Zoomed Card Modal with Aggressive Tilt */}
       <AnimatePresence>
         {selectedChar && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.25 }}
             className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center"
             style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', backgroundColor: 'rgba(0,0,0,0.15)' }}
             onClick={() => setSelectedCard(null)}
             onMouseMove={handleMouseMove}
             onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })}
           >
-            {/* Card with aggressive 3D tilt - stays centered, rotates more dramatically */}
+            {/* Card with extreme 3D tilt */}
             <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
+              initial={{ scale: 0.6, opacity: 0 }}
               animate={{
                 scale: 1,
                 opacity: 1,
                 rotateX: tilt.rotateX,
                 rotateY: tilt.rotateY,
               }}
-              exit={{ scale: 0.7, opacity: 0 }}
-              // Slower, more dramatic spring
+              exit={{ scale: 0.6, opacity: 0 }}
               transition={{
-                rotateX: { type: 'spring', stiffness: 100, damping: 15 },
-                rotateY: { type: 'spring', stiffness: 100, damping: 15 },
-                scale: { type: 'spring', stiffness: 200, damping: 20 },
+                rotateX: { type: 'spring', stiffness: 80, damping: 12 },
+                rotateY: { type: 'spring', stiffness: 80, damping: 12 },
+                scale: { type: 'spring', stiffness: 180, damping: 18 },
               }}
-              style={{ perspective: 800 }}
+              style={{ perspective: 700 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-72 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_80px_rgba(139,0,0,0.4),0_25px_50px_-12px_rgba(0,0,0,0.6)]"
+              className="relative w-80 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.7)]"
             >
               {/* Strong glow effect */}
               <div
-                className="absolute inset-0 opacity-15 blur-2xl"
+                className="absolute inset-0 opacity-20 blur-3xl"
                 style={{ backgroundColor: selectedChar.accent }}
               />
 
               {/* Card content */}
-              <div className="relative p-5">
+              <div className="relative p-6">
                 {/* Rarity badge */}
-                <div className={`absolute right-4 top-4 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity].color} ${RARITY_INFO[selectedChar.rarity].bg}`}>
+                <div className={`absolute right-5 top-5 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity].color} ${RARITY_INFO[selectedChar.rarity].bg}`}>
                   {RARITY_INFO[selectedChar.rarity].label}
                 </div>
 
-                {/* Character image area with aggressive tilt */}
+                {/* Character image area */}
                 <div
-                  className="relative mx-auto mb-4 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
+                  className="relative mx-auto mb-5 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
                   style={{
-                    boxShadow: `inset 0 0 60px ${selectedChar.accent}44`,
-                    transform: `rotateX(${tilt.rotateX * 0.5}deg) scale(1.05)`,
+                    boxShadow: `inset 0 0 80px ${selectedChar.accent}44`,
+                    transform: `rotateX(${tilt.rotateX * 0.4}deg) scale(1.08)`,
                   }}
                 >
                   {/* Character Image */}
@@ -272,14 +271,14 @@ export function Gallery() {
                   {/* Overlay gradients */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                  {/* Pulsing border glow */}
+                  {/* Dynamic glowing border */}
                   <motion.div
-                    animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.02, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
+                    animate={{ opacity: [0.5, 0.9, 0.5], scale: [1, 1.03, 1] }}
+                    transition={{ duration: 1.2, repeat: Infinity }}
                     className="absolute inset-0 rounded-xl"
                     style={{
-                      border: `2px solid ${selectedChar.accent}60`,
-                      boxShadow: `0 0 20px ${selectedChar.accent}40`,
+                      border: `3px solid ${selectedChar.accent}70`,
+                      boxShadow: `0 0 30px ${selectedChar.accent}50, inset 0 0 30px ${selectedChar.accent}20`,
                     }}
                   />
                 </div>
@@ -287,19 +286,19 @@ export function Gallery() {
                 {/* Character info */}
                 <div className="text-center">
                   <motion.h3
-                    animate={{ y: [0, -3, 0] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-                    className="font-display text-3xl uppercase tracking-widest text-white drop-shadow-lg"
+                    animate={{ y: [0, -4, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                    className="font-display text-4xl uppercase tracking-widest text-white drop-shadow-lg"
                   >
                     {selectedChar.name}
                   </motion.h3>
-                  <p className="mt-2 text-xs uppercase tracking-[0.2em] text-red-400/80">
+                  <p className="mt-2 text-sm uppercase tracking-[0.2em] text-red-400/80">
                     {selectedChar.role}
                   </p>
                 </div>
 
                 {/* Decorative line */}
-                <div className="my-4 h-px bg-gradient-to-r from-transparent via-red-800/50 to-transparent" />
+                <div className="my-5 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent" />
 
                 {/* Status */}
                 <p className="text-center text-[10px] uppercase tracking-widest text-[var(--color-ink-muted)]">
@@ -308,16 +307,16 @@ export function Gallery() {
               </div>
 
               {/* Corner decorations */}
-              <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-red-700/40" />
-              <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-red-700/40" />
-              <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-red-700/40" />
-              <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-red-700/40" />
+              <div className="absolute left-4 top-4 h-5 w-5 border-l-2 border-t-2 border-red-700/50" />
+              <div className="absolute right-4 top-4 h-5 w-5 border-r-2 border-t-2 border-red-700/50" />
+              <div className="absolute bottom-4 left-4 h-5 w-5 border-b-2 border-l-2 border-red-700/50" />
+              <div className="absolute bottom-4 right-4 h-5 w-5 border-b-2 border-r-2 border-red-700/50" />
 
               {/* Pulsing close hint */}
               <motion.div
-                animate={{ opacity: [0.4, 0.9, 0.4] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="absolute bottom-2 left-0 right-0 text-center"
+                animate={{ opacity: [0.3, 0.8, 0.3] }}
+                transition={{ duration: 1.2, repeat: Infinity }}
+                className="absolute bottom-3 left-0 right-0 text-center"
               >
                 <span className="text-[9px] uppercase tracking-widest text-[var(--color-ink-faint)]">
                   Tap anywhere to close
