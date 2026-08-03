@@ -21,7 +21,7 @@ const CHARACTER_COLORS: Record<string, string> = {
   azaroth: '#4C1D95',
 };
 
-// Character IDs that can be collected
+// Character IDs that can be collected (tracked by first dialogue/speech)
 const COLLECTIBLE_CHARACTERS = ['xyera', 'elenna', 'keyna', 'rachel', 'henry', 'azaroth'];
 
 const FADE_DURATION_MS = 700;
@@ -49,15 +49,29 @@ export function Game() {
   const [fadeOverlayActive, setFadeOverlayActive] = useState(false);
 
   const prevPhaseRef = useRef(sceneTransitionPhase);
+  const prevNodeIdRef = useRef<string | null>(null);
 
-  // Collect characters when they first appear on stage
+  // Collect characters when they first SPEAK (not just on stage)
   useEffect(() => {
-    stageCharacters.forEach((char) => {
-      if (COLLECTIBLE_CHARACTERS.includes(char.id) && !collectedCharacters.includes(char.id)) {
-        collectCharacter(char.id);
+    // Only collect on new dialogue nodes (when nodeId changes)
+    if (currentNode && currentNode.id !== prevNodeIdRef.current) {
+      prevNodeIdRef.current = currentNode.id;
+
+      // Check if this node has a speaker that's collectible
+      if ('speaker' in currentNode && currentNode.speaker) {
+        const speaker = currentNode.speaker;
+
+        // Skip player placeholder
+        if (speaker !== '{playerName}' && COLLECTIBLE_CHARACTERS.includes(speaker)) {
+          // Only collect if not already collected
+          if (!collectedCharacters.includes(speaker)) {
+            console.log('[Game] First meeting:', speaker);
+            collectCharacter(speaker);
+          }
+        }
       }
-    });
-  }, [stageCharacters, collectCharacter, collectedCharacters]);
+    }
+  }, [currentNode, collectCharacter, collectedCharacters]);
 
   // Navigate to ending page when endingId is set
   useEffect(() => {
