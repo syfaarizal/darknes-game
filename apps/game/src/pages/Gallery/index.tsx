@@ -159,7 +159,7 @@ export function Gallery() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
                   {/* Rarity badge */}
-                  <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity].color} ${RARITY_INFO[char.rarity].bg}`}>
+                  <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity]?.color ?? RARITY_INFO.common.color} ${RARITY_INFO[char.rarity]?.bg ?? RARITY_INFO.common.bg}`}>
                     {char.rarity}
                   </div>
 
@@ -230,8 +230,8 @@ export function Gallery() {
               {/* Card content */}
               <div className="relative p-6">
                 {/* Rarity badge */}
-                <div className={`absolute right-5 top-5 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity].color} ${RARITY_INFO[selectedChar.rarity].bg}`}>
-                  {RARITY_INFO[selectedChar.rarity].label}
+                <div className={`absolute right-5 top-5 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity]?.color ?? ''} ${RARITY_INFO[selectedChar.rarity]?.bg ?? ''}`}>
+                  {RARITY_INFO[selectedChar.rarity]?.label ?? selectedChar.rarity}
                 </div>
 
                 {/* Character image area */}
