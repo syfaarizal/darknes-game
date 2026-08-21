@@ -6,12 +6,12 @@ import { useGameStore } from '@darknes/engine';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ALL_CHARACTERS = [
-  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/xyera.webp' },
+  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/xyera-id-card.webp' },
   { id: 'elenna', name: 'Elenna', role: 'Enforcer', rarity: 'epic', accent: '#9333ea', image: '/assets/cards/elenna-id-card.webp' },
-  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', accent: '#2563eb', image: '/assets/cards/keyna.webp' },
-  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', accent: '#0891b2', image: '/assets/cards/rachel.webp' },
-  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', accent: '#64748b', image: '/assets/cards/henry.webp' },
-  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/azaroth.webp' },
+  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', accent: '#2563eb', image: '/assets/cards/keyna-id-card.webp' },
+  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', accent: '#0891b2', image: '/assets/cards/rachel-id-card.webp' },
+  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', accent: '#64748b', image: '/assets/cards/henry-id-card.webp' },
+  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/azaroth-id-card.webp' },
 ];
 
 const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> = {
