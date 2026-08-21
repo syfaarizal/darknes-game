@@ -9,7 +9,7 @@
         {
             "id": "scene12_n001",
             "type": "narration",
-            "text": "Pagi datang. Sinar matahari menembus jendela mansion Ravenscroft yang sudah lama tidak melihat cahaya.",
+            "text": "Pagi datang. Sinar matahari menembus jendela mansion Rosenvelt yang sudah lama tidak melihat cahaya.",
             "next": "scene12_n002"
         },
         {
@@ -181,13 +181,13 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "Selamat, {playerName}. Ravenscroft Group sudah kembali. Dan yang lebih penting... keluarga ini kembali.",
+            "text": "Selamat, {playerName}. Rosenvelt Group sudah kembali. Dan yang lebih penting... keluarga ini kembali.",
             "next": "scene12_n018"
         },
         {
             "id": "scene12_n018",
             "type": "narration",
-            "text": "Pagi itu, untuk pertama kalinya dalam sepuluh tahun... mansion Ravenscroft terasa seperti rumah.",
+            "text": "Pagi itu, untuk pertama kalinya dalam sepuluh tahun... mansion Rosenvelt terasa seperti rumah.",
             "next": "scene12_n019"
         },
         {

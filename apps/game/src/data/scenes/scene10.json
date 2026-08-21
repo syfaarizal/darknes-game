@@ -1,7 +1,7 @@
-﻿{
+{
     "meta":  {
                  "id":  "scene10",
-                 "title":  "Kediaman Victor Hale â€” Sore Hari",
+                 "title":  "Kediaman Victor Hale — Sore Hari",
                  "background":  "mansion",
                  "entry":  "scene10_n001"
              },
@@ -25,7 +25,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
-                      "text":  "Sudah lama aku ingin bertemu langsung dengan putri Samuel Ravenscroft.",
+                      "text":  "Sudah lama aku ingin bertemu langsung dengan putri Samuel Rosenvelt.",
                       "next":  "scene10_n003"
                   },
                   {

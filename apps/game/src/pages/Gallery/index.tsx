@@ -14,8 +14,8 @@ const ALL_CHARACTERS = [
   {id: 'mike', name: 'Mike', role: 'Little Brother', rarity: 'common', accent: '#16a34a', image: '/assets/cards/mike-id-card.webp'},
   {id: 'victor', name: 'Victor Hale', role: 'Business Associate', rarity: 'rare', accent: '#64748b', image: '/assets/cards/victor-id-card.webp'},
   {id: 'azaroth', name: 'Azaroth', role: 'Main Antagonist', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/azaroth-id-card.webp'},
-  {id: 'samuel', name: 'Samuel Ravenscroft', role: 'Player Father', rarity: 'legendary', accent: '#7c3aed', image: '/assets/cards/samuel-id-card.webp'},
-  {id: 'mother', name: 'Ravenscroft Mother', role: 'Player Mother', rarity: 'legendary', accent: '#db2777', image: '/assets/cards/mother-id-card.webp'},
+  {id: 'samuel', name: 'Samuel Rosenvelt', role: 'Player Father', rarity: 'legendary', accent: '#7c3aed', image: '/assets/cards/samuel-id-card.webp'},
+  {id: 'mother', name: 'Rosenvelt Mother', role: 'Player Mother', rarity: 'legendary', accent: '#db2777', image: '/assets/cards/mother-id-card.webp'},
 ];
 
 const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> = {
@@ -135,9 +135,21 @@ function MiniCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
           {/* Rarity badge */}
-          <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity]?.color ?? RARITY_INFO.common.color} ${RARITY_INFO[char.rarity]?.bg ?? RARITY_INFO.common.bg}`}>
-            {char.rarity}
-          </div>
+          {(() => {
+            const rarityInfo = RARITY_INFO[char.rarity] ?? RARITY_INFO.common ?? {
+              label: 'Common',
+              color: 'text-gray-400',
+              bg: 'bg-gray-900/30 border-gray-700/40',
+            };
+
+            return (
+              <div
+                className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${rarityInfo.color} ${rarityInfo.bg}`}
+              >
+                {char.rarity}
+              </div>
+            );
+          })()}
 
           {/* Info */}
           <div className="absolute bottom-0 left-0 right-0 p-2">

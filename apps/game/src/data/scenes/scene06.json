@@ -17,7 +17,7 @@
             "type": "line",
             "speaker": "{playerName}",
             "expression": "serious",
-            "text": "Aku hanya akan bertanya sekali. Siapa yang berada di rumah keluarga Ravenscroft malam itu?",
+            "text": "Aku hanya akan bertanya sekali. Siapa yang berada di rumah keluarga Rosenvelt malam itu?",
             "next": "scene06_n003"
         },
         {
@@ -47,7 +47,7 @@
         {
             "id": "scene06_n005",
             "type": "narration",
-            "text": "{playerName} meletakkan sebuah foto lama di hadapan pria tersebut. Foto keluarga Ravenscroft. Di belakangnya tampak beberapa pria mengenakan jas. Mata pria itu langsung membelalak.",
+            "text": "{playerName} meletakkan sebuah foto lama di hadapan pria tersebut. Foto keluarga Rosenvelt. Di belakangnya tampak beberapa pria mengenakan jas. Mata pria itu langsung membelalak.",
             "next": "scene06_n006"
         },
         {
@@ -173,7 +173,7 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "(mengangguk) Baik, Nona Ravenscroft.",
+            "text": "(mengangguk) Baik, Nona Rosenvelt.",
             "next": "scene06_n017"
         },
         {

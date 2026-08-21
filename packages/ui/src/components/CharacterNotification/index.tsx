@@ -10,8 +10,8 @@ const CHARACTERS: Record<string, { name: string; role: string; image: string }> 
   henry: { name: 'Henry', role: 'Little Brother', image: '/assets/cards/henry-id-card.webp' },
   azaroth: { name: 'Azaroth', role: 'Main Antagonist', image: '/assets/cards/azaroth-id-card.webp' },
   victor: { name: 'Victor', role: 'Business Associate', image: '/assets/cards/victor-id-card.webp' },
-  samuel: { name: 'Samuel Ravenscroft', role: 'Player Father', image: '/assets/cards/samuel-id-card.webp' },
-  mother: { name: 'Ravenscroft Mother', role: 'Player Mother', image: '/assets/cards/mother-id-card.webp' },
+  samuel: { name: 'Samuel Rosenvelt', role: 'Player Father', image: '/assets/cards/samuel-id-card.webp' },
+  mother: { name: 'Rosenvelt Mother', role: 'Player Mother', image: '/assets/cards/mother-id-card.webp' },
   
 };
 

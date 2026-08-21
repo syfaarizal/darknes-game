@@ -10,7 +10,7 @@
                       "id":  "scene03_n001",
                       "type":  "narration",
                       "characters":  [],
-                      "text":  "Keesokan harinya, di kediaman Ravenscroft, semua sedang asik melakukan kesibukannya masing-masing. Sampai akhirnya {playerName} keluar kamar.",
+                      "text":  "Keesokan harinya, di kediaman Rosenvelt, semua sedang asik melakukan kesibukannya masing-masing. Sampai akhirnya {playerName} keluar kamar.",
                       "next":  "scene03_n002"
                   },
                   {

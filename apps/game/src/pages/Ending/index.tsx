@@ -6,7 +6,7 @@ import { Background } from '@darknes/ui';
 const ENDING_DATA: Record<string, { title: string; description: string; bg: string }> = {
   'good-end': {
     title: 'GOOD ENDING',
-    description: 'Kamu memilih untuk menunda waktu. Dengan kesabaranmu, Keyna datang tepat waktu. Azaroth berhasil ditangkap, dan keluarga Ravenscroft reunited kembali.',
+    description: 'Kamu memilih untuk menunda waktu. Dengan kesabaranmu, Keyna datang tepat waktu. Azaroth berhasil ditangkap, dan keluarga Rosenvelt reunited kembali.',
     bg: 'mansion',
   },
   'bad-ending': {

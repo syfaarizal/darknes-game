@@ -9,13 +9,13 @@
         {
             "id": "scene11_n001",
             "type": "narration",
-            "text": "{playerName} tanpa sengaja masuk ke ruang kerja. Ia melihat sebuah foto lama di atas meja. Foto Samuel Ravenscroft bersama Victor Hale. Di belakangnya tertulis: 'Kesepakatan terakhir.'",
+            "text": "{playerName} tanpa sengaja masuk ke ruang kerja. Ia melihat sebuah foto lama di atas meja. Foto Samuel Rosenvelt bersama Victor Hale. Di belakangnya tertulis: 'Kesepakatan terakhir.'",
             "next": "scene11_n002"
         },
         {
             "id": "scene11_n002",
             "type": "narration",
-            "text": "{playerName} membuka laci. Puluhan dokumen bertuliskan RAVENSCROFT memenuhi isinya. Di halaman terakhir, dua tanda tangan: Samuel Ravenscroft. Azaroth.",
+            "text": "{playerName} membuka laci. Puluhan dokumen bertuliskan Rosenvelt memenuhi isinya. Di halaman terakhir, dua tanda tangan: Samuel Rosenvelt. Azaroth.",
             "next": "scene11_n003"
         },
         {
@@ -199,7 +199,7 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "Seperti ayahmu. Keluarga Ravenscroft... selalu memilih cinta di atas segalanya.",
+            "text": "Seperti ayahmu. Keluarga Rosenvelt... selalu memilih cinta di atas segalanya.",
             "next": "scene11_sign_03"
         },
         {
@@ -386,7 +386,7 @@
                     "isSpeaking": true
                 }
             ],
-            "text": "Kau melakukan hal yang benar, {playerName}. Ravenscroft... sudah lama menunggu untuk ini.",
+            "text": "Kau melakukan hal yang benar, {playerName}. Rosenvelt... sudah lama menunggu untuk ini.",
             "next": "scene11_stall_12"
         },
         {

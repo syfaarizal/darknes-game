@@ -1,7 +1,7 @@
-﻿{
+{
     "meta":  {
                  "id":  "scene07",
-                 "title":  "Kantor Ravenscroft Corporation â€” Keesokan Hari",
+                 "title":  "Kantor Rosenvelt Corporation — Keesokan Hari",
                  "background":  "office",
                  "entry":  "scene07_n001"
              },
@@ -47,50 +47,20 @@
                                   ]
                   },
                   {
-                      "id":  "scene07_n004a",
-                      "type":  "line",
-                      "speaker":  "keyna",
-                      "expression":  "neutral",
-                      "characters":  [
-                                         {
-                                             "characterId":  "keyna",
-                                             "expression":  "neutral",
-                                             "position":  "center",
-                                             "isSpeaking":  true
-                                         }
-                                     ],
+                      "id":  "scene07_n004",
+                      "type":  "narration",
                       "text":  "Keyna menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
                   {
-                      "id":  "scene07_n004b",
-                      "type":  "line",
-                      "speaker":  "keyna",
-                      "expression":  "neutral",
-                      "characters":  [
-                                         {
-                                             "characterId":  "keyna",
-                                             "expression":  "neutral",
-                                             "position":  "center",
-                                             "isSpeaking":  true
-                                         }
-                                     ],
+                      "id":  "scene07_n004",
+                      "type":  "narration",
                       "text":  "Keyna menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
                   {
-                      "id":  "scene07_n004c",
-                      "type":  "line",
-                      "speaker":  "keyna",
-                      "expression":  "neutral",
-                      "characters":  [
-                                         {
-                                             "characterId":  "keyna",
-                                             "expression":  "neutral",
-                                             "position":  "center",
-                                             "isSpeaking":  true
-                                         }
-                                     ],
+                      "id":  "scene07_n004",
+                      "type":  "narration",
                       "text":  "Keyna menyandarkan tubuhnya di depan pintu. Tatapannya tajam.",
                       "next":  "scene07_n005"
                   },
