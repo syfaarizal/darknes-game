@@ -299,7 +299,7 @@ export function Gallery() {
               onClick={(e) => e.stopPropagation()}
               onMouseEnter={() => setIsModalFlipped(true)}
               onMouseLeave={() => setIsModalFlipped(false)}
-              className="relative w-[260px] cursor-pointer [transform-style:preserve-3d]"
+              className="relative w-[300px] cursor-pointer [transform-style:preserve-3d]"
             >
               {/* Inner flip card */}
               <motion.div

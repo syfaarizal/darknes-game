@@ -18,6 +18,42 @@ const CHARACTERS: Record<string, { name: string; role: string; image: string }> 
 // Audio notification sound
 const NOTIF_SFX = new Audio('/assets/audio/sfx/notif-sfx.wav');
 
+// Back face component - shared with Gallery
+function CardBackFace({ className = '' }: { className?: string }) {
+  return (
+    <div
+      className={`absolute inset-0 overflow-hidden rounded-[inherit] border border-red-700/40 bg-black [backface-visibility:hidden] [transform:rotateY(180deg)] ${className}`}
+      style={{ boxShadow: 'inset 0 0 30px rgba(139,0,0,0.4), 0 0 20px rgba(139,0,0,0.25)' }}
+    >
+      {/* Back artwork */}
+      <img
+        src="/assets/cards/darknes-back-card.webp"
+        alt="Card back"
+        className="absolute inset-0 h-full w-full object-cover"
+        onError={(e) => {
+          (e.currentTarget as HTMLImageElement).style.display = 'none';
+        }}
+      />
+
+      {/* Subtle red vignette */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
+
+      {/* Corner decorations - slightly rounded */}
+      <div className="absolute left-1.5 top-1.5 h-2.5 w-2.5 rounded-sm border-l border-t border-red-700/60" />
+      <div className="absolute right-1.5 top-1.5 h-2.5 w-2.5 rounded-sm border-r border-t border-red-700/60" />
+      <div className="absolute bottom-1.5 left-1.5 h-2.5 w-2.5 rounded-sm border-b border-l border-red-700/60" />
+      <div className="absolute bottom-1.5 right-1.5 h-2.5 w-2.5 rounded-sm border-b border-r border-red-700/60" />
+
+      {/* Wordmark */}
+      <div className="absolute inset-x-0 bottom-3 text-center">
+        <span className="font-display text-[10px] uppercase tracking-[0.3em] text-red-500/70 drop-shadow-[0_0_8px_rgba(139,0,0,0.6)]">
+          ✦ Darknes ✦
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function CharacterNotification() {
   const { newCharacterNotification, clearNewCharacterNotification } = useGameStore();
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
@@ -62,6 +98,13 @@ export function CharacterNotification() {
     setIsFlipped(false);
   }, []);
 
+  // Reset flip when modal closes
+  useEffect(() => {
+    if (!char) {
+      setIsFlipped(false);
+    }
+  }, [char]);
+
   return (
     <AnimatePresence>
       {char && (
@@ -76,7 +119,7 @@ export function CharacterNotification() {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
-          {/* Outer card with aggressive 3D tilt */}
+          {/* Outer card with 3D tilt */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0, y: 60 }}
             animate={{
@@ -95,48 +138,27 @@ export function CharacterNotification() {
             style={{ perspective: 700, transformStyle: 'preserve-3d' }}
             onClick={(e) => e.stopPropagation()}
             onMouseEnter={() => setIsFlipped(true)}
-            className="relative aspect-[9/16] w-[280px] cursor-pointer [transform-style:preserve-3d]"
+            onMouseLeave={() => setIsFlipped(false)}
+            className="relative aspect-[9/16] w-[300px] cursor-pointer [transform-style:preserve-3d]"
           >
-            {/* Inner flip card. Tilt (outer) and flip (inner) compose on the Y-axis. */}
+            {/* Inner flip card */}
             <motion.div
               animate={{ rotateY: isFlipped ? 180 : 0 }}
               transition={{ type: 'spring', stiffness: 110, damping: 18 }}
-              className="relative w-full [transform-style:preserve-3d]"
+              className="relative h-full [transform-style:preserve-3d]"
             >
-            {/* Animated pulsing glow */}
-            <motion.div
-              animate={{ opacity: [0.4, 0.8, 0.4] }}
-              transition={{ duration: 1, repeat: Infinity }}
-              className="absolute inset-0 rounded-2xl border-2 border-red-600/40"
-              style={{ boxShadow: '0 0 40px rgba(139,0,0,0.5), inset 0 0 30px rgba(139,0,0,0.2)' }}
-            />
-            <div className="absolute inset-0 rounded-2xl shadow-[inset_0_0_50px_rgba(139,0,0,0.25)]" />
-
-            {/* Content — FRONT FACE */}
-            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-red-900/60 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] p-4 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.8)] [backface-visibility:hidden]">
-              {/* Badge */}
-              <motion.div
-                initial={{ y: -6, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.1 }}
-                className="shrink-0 text-center"
-              >
-                <span className="inline-block rounded-full border border-red-800/60 bg-red-900/40 px-2 py-0.5 mb-2 text-[9px] font-bold uppercase tracking-[0.12em] text-red-400">
+              {/* Card content — FRONT FACE */}
+              <div className="relative h-full overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] [backface-visibility:hidden]">
+                {/* Badge */}
+                <motion.div
+                  initial={{ y: -6, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.1 }}
+                  className="absolute right-1.5 top-1.5 z-10 shrink-0 rounded border border-red-800/60 bg-red-900/40 px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider text-red-400"
+                >
                   ✦ New ✦
-                </span>
-              </motion.div>
+                </motion.div>
 
-              {/* Character Card Preview - 9:16 Aspect Ratio */}
-              <motion.div
-                initial={{ y: 15, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.08 }}
-                className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-xl border border-red-900/50 bg-black shadow-inner"
-                style={{
-                  transform: `rotateX(${tilt.rotateX * 0.3}deg) scale(1.03)`,
-                  boxShadow: 'inset 0 0 40px rgba(139,0,0,0.35)',
-                }}
-              >
                 {/* Character Image - fit perfectly */}
                 <img
                   src={char.image}
@@ -152,103 +174,30 @@ export function CharacterNotification() {
 
                 {/* Fallback initial */}
                 <div
-                  className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black"
+                  className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]"
                   style={{ display: 'none' }}
                 >
-                  <span className="text-7xl font-display text-red-900/40">
+                  <span className="text-4xl font-display text-white/10">
                     {char.name[0]}
                   </span>
                 </div>
 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                {/* Inner glow */}
-                <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(139,0,0,0.35)]" />
-              </motion.div>
-
-              {/* Character Info */}
-              <motion.div
-                initial={{ y: 8, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.15 }}
-                className="shrink-0 text-center"
-              >
-                <h3 className="font-display text-lg mt-2 uppercase tracking-wider text-white drop-shadow-lg">
-                  {char.name}
-                </h3>
-                <p className="text-[10px] uppercase tracking-[0.1em] text-red-400/80">
-                  {char.role}
-                </p>
-              </motion.div>
-
-              {/* Divider */}
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.2 }}
-                className="shrink-0 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent"
-              />
-
-              {/* Collection text */}
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.25 }}
-                className="shrink-0 text-center text-[8px] uppercase tracking-[0.1em] text-[var(--color-ink-muted)]"
-              >
-                Added to collection
-              </motion.p>
-
-              {/* Click hint */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="mt-auto text-center"
-              >
-                <span className="text-[7px] text-[var(--color-ink-faint)]">
-                  Tap to continue
-                </span>
-              </motion.div>
-
-              {/* Corner decorations - slightly rounded */}
-              <div className="absolute left-1.5 top-1.5 h-2 w-2 rounded-sm border-l border-t border-red-800/50" />
-              <div className="absolute right-1.5 top-1.5 h-2 w-2 rounded-sm border-r border-t border-red-800/50" />
-              <div className="absolute bottom-1.5 left-1.5 h-2 w-2 rounded-sm border-b border-l border-red-800/50" />
-              <div className="absolute bottom-1.5 right-1.5 h-2 w-2 rounded-sm border-b border-r border-red-800/50" />
-            </div>
-
-            {/* BACK FACE */}
-            <div
-              className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl border border-red-700/50 bg-black [backface-visibility:hidden] [transform:rotateY(180deg)]"
-              style={{ boxShadow: 'inset 0 0 30px rgba(139,0,0,0.4), 0 0 40px rgba(139,0,0,0.3)' }}
-            >
-              <img
-                src="/assets/cards/darknes-back-card.webp"
-                alt="Card back"
-                className="h-full w-full object-contain"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = 'none';
-                }}
-              />
-
-              {/* Subtle red vignette */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
-
-              {/* Corner decorations - slightly rounded */}
-              <div className="absolute left-2 top-2 h-3 w-3 rounded-sm border-l border-t border-red-700/60" />
-              <div className="absolute right-2 top-2 h-3 w-3 rounded-sm border-r border-t border-red-700/60" />
-              <div className="absolute bottom-2 left-2 h-3 w-3 rounded-sm border-b border-l border-red-700/60" />
-              <div className="absolute bottom-2 right-2 h-3 w-3 rounded-sm border-b border-r border-red-700/60" />
-
-              {/* Wordmark */}
-              <div className="absolute inset-x-0 bottom-4 text-center">
-                <span className="font-display text-[11px] uppercase tracking-[0.3em] text-red-500/80 drop-shadow-[0_0_10px_rgba(139,0,0,0.7)]">
-                  ✦ Darknes ✦
-                </span>
+                {/* Info at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-2">
+                  <h3 className="font-display text-xs uppercase tracking-wide text-white drop-shadow-md">
+                    {char.name}
+                  </h3>
+                  <p className="text-[9px] uppercase tracking-wider text-red-400/70">
+                    {char.role}
+                  </p>
+                </div>
               </div>
-            </div>
+
+              {/* BACK FACE */}
+              <CardBackFace className="rounded-lg" />
             </motion.div>
           </motion.div>
         </motion.div>
