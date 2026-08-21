@@ -49,11 +49,11 @@ function CardBackFace({ className = '' }: { className?: string }) {
       {/* Subtle red vignette */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
 
-      {/* Corner decorations */}
-      <div className="absolute left-2 top-2 h-3 w-3 border-l-2 border-t-2 border-red-700/60" />
-      <div className="absolute right-2 top-2 h-3 w-3 border-r-2 border-t-2 border-red-700/60" />
-      <div className="absolute bottom-2 left-2 h-3 w-3 border-b-2 border-l-2 border-red-700/60" />
-      <div className="absolute bottom-2 right-2 h-3 w-3 border-b-2 border-r-2 border-red-700/60" />
+      {/* Corner decorations - slightly rounded */}
+      <div className="absolute left-1.5 top-1.5 h-2.5 w-2.5 rounded-sm border-l border-t border-red-700/60" />
+      <div className="absolute right-1.5 top-1.5 h-2.5 w-2.5 rounded-sm border-r border-t border-red-700/60" />
+      <div className="absolute bottom-1.5 left-1.5 h-2.5 w-2.5 rounded-sm border-b border-l border-red-700/60" />
+      <div className="absolute bottom-1.5 right-1.5 h-2.5 w-2.5 rounded-sm border-b border-r border-red-700/60" />
 
       {/* Wordmark */}
       <div className="absolute inset-x-0 bottom-3 text-center">
@@ -93,17 +93,17 @@ function MiniCard({
       <motion.div
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ type: 'spring', stiffness: 120, damping: 18 }}
-        className="relative aspect-[3/4] w-full [transform-style:preserve-3d]"
+        className="relative aspect-[9/16] w-full [transform-style:preserve-3d]"
       >
         {/* Front face */}
         <div
-          className="absolute inset-0 overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 group-hover:border-red-800/50 group-hover:shadow-[0_0_20px_rgba(139,0,0,0.2)] [backface-visibility:hidden]"
+          className="absolute inset-0 overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 group-hover:border-red-800/50 group-hover:shadow-[0_0_18px_rgba(139,0,0,0.18)] [backface-visibility:hidden]"
         >
           {/* Character Image */}
           <img
             src={char.image}
             alt={char.name}
-            className="absolute inset-0 h-full w-full object-cover object-top"
+            className="absolute inset-0 h-full w-full object-contain"
             onError={(e) => {
               const target = e.currentTarget;
               target.style.display = 'none';
@@ -247,7 +247,7 @@ export function Gallery() {
           </div>
         ) : (
           /* Grid of cards */
-          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
             {collectedChars.map((char, index) => (
               <MiniCard
                 key={char.id}
@@ -302,7 +302,7 @@ export function Gallery() {
               onClick={(e) => e.stopPropagation()}
               onMouseEnter={() => setIsModalFlipped(true)}
               onMouseLeave={() => setIsModalFlipped(false)}
-              className="relative w-80 cursor-pointer [transform-style:preserve-3d]"
+              className="relative w-[288px] cursor-pointer [transform-style:preserve-3d]"
             >
               {/* Inner flip card. The tilt and flip compose: outer tilts within ±35°, inner flips 0↔180°. */}
               <motion.div
@@ -317,15 +317,15 @@ export function Gallery() {
               />
 
               {/* Card content — FRONT FACE */}
-              <div className="relative rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] p-6 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.7)] [backface-visibility:hidden]">
+              <div className="relative rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] p-4 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.7)] [backface-visibility:hidden]">
                 {/* Rarity badge */}
-                <div className={`absolute right-5 top-5 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity]?.color ?? ''} ${RARITY_INFO[selectedChar.rarity]?.bg ?? ''}`}>
+                <div className={`absolute right-3 top-3 z-10 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity]?.color ?? ''} ${RARITY_INFO[selectedChar.rarity]?.bg ?? ''}`}>
                   {RARITY_INFO[selectedChar.rarity]?.label ?? selectedChar.rarity}
                 </div>
 
-                {/* Character image area */}
+                {/* Character image area - 9:16 */}
                 <div
-                  className="relative mx-auto mb-5 aspect-[3/4] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
+                  className="relative mx-auto mb-3 aspect-[9/16] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
                   style={{
                     boxShadow: `inset 0 0 80px ${selectedChar.accent}44`,
                     transform: `rotateX(${tilt.rotateX * 0.4}deg) scale(1.08)`,
@@ -335,7 +335,7 @@ export function Gallery() {
                   <img
                     src={selectedChar.image}
                     alt={selectedChar.name}
-                    className="h-full w-full object-cover object-top"
+                    className="absolute inset-0 h-full w-full object-contain"
                     onError={(e) => {
                       const target = e.currentTarget;
                       target.style.display = 'none';
@@ -375,38 +375,38 @@ export function Gallery() {
                 {/* Character info */}
                 <div className="text-center">
                   <motion.h3
-                    animate={{ y: [0, -4, 0] }}
+                    animate={{ y: [0, -3, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                    className="font-display text-4xl uppercase tracking-widest text-white drop-shadow-lg"
+                    className="font-display text-2xl uppercase tracking-wider text-white drop-shadow-lg"
                   >
                     {selectedChar.name}
                   </motion.h3>
-                  <p className="mt-2 text-sm uppercase tracking-[0.2em] text-red-400/80">
+                  <p className="mt-1 text-xs uppercase tracking-[0.15em] text-red-400/80">
                     {selectedChar.role}
                   </p>
                 </div>
 
                 {/* Decorative line */}
-                <div className="my-5 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent" />
+                <div className="my-3 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent" />
 
                 {/* Status */}
-                <p className="text-center text-[10px] uppercase tracking-widest text-[var(--color-ink-muted)]">
+                <p className="text-center text-[9px] uppercase tracking-widest text-[var(--color-ink-muted)]">
                   ✦ Collected ✦
                 </p>
 
-                {/* Corner decorations */}
-                <div className="absolute left-4 top-4 h-5 w-5 border-l-2 border-t-2 border-red-700/50" />
-                <div className="absolute right-4 top-4 h-5 w-5 border-r-2 border-t-2 border-red-700/50" />
-                <div className="absolute bottom-4 left-4 h-5 w-5 border-b-2 border-l-2 border-red-700/50" />
-                <div className="absolute bottom-4 right-4 h-5 w-5 border-b-2 border-r-2 border-red-700/50" />
+                {/* Corner decorations - slightly rounded */}
+                <div className="absolute left-3 top-3 h-2.5 w-2.5 rounded-sm border-l border-t border-red-700/50" />
+                <div className="absolute right-3 top-3 h-2.5 w-2.5 rounded-sm border-r border-t border-red-700/50" />
+                <div className="absolute bottom-3 left-3 h-2.5 w-2.5 rounded-sm border-b border-l border-red-700/50" />
+                <div className="absolute bottom-3 right-3 h-2.5 w-2.5 rounded-sm border-b border-r border-red-700/50" />
 
                 {/* Pulsing close hint */}
                 <motion.div
-                  animate={{ opacity: [0.3, 0.8, 0.3] }}
+                  animate={{ opacity: [0.3, 0.7, 0.3] }}
                   transition={{ duration: 1.2, repeat: Infinity }}
-                  className="absolute bottom-3 left-0 right-0 text-center"
+                  className="absolute bottom-2 left-0 right-0 text-center"
                 >
-                  <span className="text-[9px] uppercase tracking-widest text-[var(--color-ink-faint)]">
+                  <span className="text-[8px] uppercase tracking-widest text-[var(--color-ink-faint)]">
                     Tap anywhere to close
                   </span>
                 </motion.div>
