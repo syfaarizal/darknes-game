@@ -27,9 +27,6 @@ const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> 
 
 const BACK_CARD_IMAGE = '/assets/cards/darknes-back-card.webp';
 
-// Shared back face used by every card in this file.
-// Pre-rotated 180° so when the parent flips via rotateY(180deg),
-// the back image reads correctly to the viewer.
 function CardBackFace({ className = '' }: { className?: string }) {
   return (
     <div
@@ -103,7 +100,7 @@ function MiniCard({
           <img
             src={char.image}
             alt={char.name}
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover object-top"
             onError={(e) => {
               const target = e.currentTarget;
               target.style.display = 'none';
@@ -269,7 +266,7 @@ export function Gallery() {
         </span>
       </footer>
 
-      {/* Zoomed Card Modal with Aggressive Tilt */}
+      {/* Zoomed Card Modal */}
       <AnimatePresence>
         {selectedChar && (
           <motion.div
@@ -283,7 +280,7 @@ export function Gallery() {
             onMouseMove={handleMouseMove}
             onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })}
           >
-            {/* Outer card with aggressive 3D tilt */}
+            {/* Outer card with 3D tilt */}
             <motion.div
               initial={{ scale: 0.6, opacity: 0 }}
               animate={{
@@ -302,40 +299,26 @@ export function Gallery() {
               onClick={(e) => e.stopPropagation()}
               onMouseEnter={() => setIsModalFlipped(true)}
               onMouseLeave={() => setIsModalFlipped(false)}
-              className="relative w-[288px] cursor-pointer [transform-style:preserve-3d]"
+              className="relative w-[260px] cursor-pointer [transform-style:preserve-3d]"
             >
-              {/* Inner flip card. The tilt and flip compose: outer tilts within ±35°, inner flips 0↔180°. */}
+              {/* Inner flip card */}
               <motion.div
                 animate={{ rotateY: isModalFlipped ? 180 : 0 }}
                 transition={{ type: 'spring', stiffness: 110, damping: 18 }}
                 className="relative w-full [transform-style:preserve-3d]"
               >
-              {/* Strong glow effect */}
-              <div
-                className="absolute inset-0 opacity-20 blur-3xl"
-                style={{ backgroundColor: selectedChar.accent }}
-              />
+                {/* Card content — FRONT FACE */}
+                <div className="relative aspect-[9/16] overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 [backface-visibility:hidden]">
+                  {/* Rarity badge */}
+                  <div className={`absolute right-1.5 top-1.5 z-10 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[selectedChar.rarity]?.color ?? ''} ${RARITY_INFO[selectedChar.rarity]?.bg ?? ''}`}>
+                    {RARITY_INFO[selectedChar.rarity]?.label ?? selectedChar.rarity}
+                  </div>
 
-              {/* Card content — FRONT FACE */}
-              <div className="relative rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] p-4 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.7)] [backface-visibility:hidden]">
-                {/* Rarity badge */}
-                <div className={`absolute right-3 top-3 z-10 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity]?.color ?? ''} ${RARITY_INFO[selectedChar.rarity]?.bg ?? ''}`}>
-                  {RARITY_INFO[selectedChar.rarity]?.label ?? selectedChar.rarity}
-                </div>
-
-                {/* Character image area - 9:16 */}
-                <div
-                  className="relative mx-auto mb-3 aspect-[9/16] w-full overflow-hidden rounded-xl border border-white/10 bg-black shadow-inner"
-                  style={{
-                    boxShadow: `inset 0 0 80px ${selectedChar.accent}44`,
-                    transform: `rotateX(${tilt.rotateX * 0.4}deg) scale(1.08)`,
-                  }}
-                >
-                  {/* Character Image */}
+                  {/* Character Image - fit perfectly */}
                   <img
                     src={selectedChar.image}
                     alt={selectedChar.name}
-                    className="absolute inset-0 h-full w-full object-contain"
+                    className="absolute inset-0 h-full w-full object-cover"
                     onError={(e) => {
                       const target = e.currentTarget;
                       target.style.display = 'none';
@@ -346,74 +329,30 @@ export function Gallery() {
 
                   {/* Fallback initial */}
                   <div
-                    className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black"
+                    className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]"
                     style={{ display: 'none' }}
                   >
-                    <span
-                      className="text-9xl font-display text-white/5"
-                      style={{ color: selectedChar.accent }}
-                    >
+                    <span className="text-4xl font-display text-white/10">
                       {selectedChar.name[0]}
                     </span>
                   </div>
 
-                  {/* Overlay gradients */}
+                  {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                  {/* Dynamic glowing border */}
-                  <motion.div
-                    animate={{ opacity: [0.5, 0.9, 0.5], scale: [1, 1.03, 1] }}
-                    transition={{ duration: 1.2, repeat: Infinity }}
-                    className="absolute inset-0 rounded-xl"
-                    style={{
-                      border: `3px solid ${selectedChar.accent}70`,
-                      boxShadow: `0 0 30px ${selectedChar.accent}50, inset 0 0 30px ${selectedChar.accent}20`,
-                    }}
-                  />
+                  {/* Info at bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 p-2">
+                    <h3 className="font-display text-xs uppercase tracking-wide text-white drop-shadow-md">
+                      {selectedChar.name}
+                    </h3>
+                    <p className="text-[9px] uppercase tracking-wider text-red-400/70">
+                      {selectedChar.role}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Character info */}
-                <div className="text-center">
-                  <motion.h3
-                    animate={{ y: [0, -3, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                    className="font-display text-2xl uppercase tracking-wider text-white drop-shadow-lg"
-                  >
-                    {selectedChar.name}
-                  </motion.h3>
-                  <p className="mt-1 text-xs uppercase tracking-[0.15em] text-red-400/80">
-                    {selectedChar.role}
-                  </p>
-                </div>
-
-                {/* Decorative line */}
-                <div className="my-3 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent" />
-
-                {/* Status */}
-                <p className="text-center text-[9px] uppercase tracking-widest text-[var(--color-ink-muted)]">
-                  ✦ Collected ✦
-                </p>
-
-                {/* Corner decorations - slightly rounded */}
-                <div className="absolute left-3 top-3 h-2.5 w-2.5 rounded-sm border-l border-t border-red-700/50" />
-                <div className="absolute right-3 top-3 h-2.5 w-2.5 rounded-sm border-r border-t border-red-700/50" />
-                <div className="absolute bottom-3 left-3 h-2.5 w-2.5 rounded-sm border-b border-l border-red-700/50" />
-                <div className="absolute bottom-3 right-3 h-2.5 w-2.5 rounded-sm border-b border-r border-red-700/50" />
-
-                {/* Pulsing close hint */}
-                <motion.div
-                  animate={{ opacity: [0.3, 0.7, 0.3] }}
-                  transition={{ duration: 1.2, repeat: Infinity }}
-                  className="absolute bottom-2 left-0 right-0 text-center"
-                >
-                  <span className="text-[8px] uppercase tracking-widest text-[var(--color-ink-faint)]">
-                    Tap anywhere to close
-                  </span>
-                </motion.div>
-              </div>
-
-              {/* BACK FACE */}
-              <CardBackFace />
+                {/* BACK FACE */}
+                <CardBackFace className="rounded-lg" />
               </motion.div>
             </motion.div>
           </motion.div>

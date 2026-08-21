@@ -95,7 +95,7 @@ export function CharacterNotification() {
             style={{ perspective: 700, transformStyle: 'preserve-3d' }}
             onClick={(e) => e.stopPropagation()}
             onMouseEnter={() => setIsFlipped(true)}
-            className="relative w-[288px] cursor-pointer [transform-style:preserve-3d]"
+            className="relative aspect-[9/16] w-[280px] cursor-pointer [transform-style:preserve-3d]"
           >
             {/* Inner flip card. Tilt (outer) and flip (inner) compose on the Y-axis. */}
             <motion.div
@@ -113,35 +113,35 @@ export function CharacterNotification() {
             <div className="absolute inset-0 rounded-2xl shadow-[inset_0_0_50px_rgba(139,0,0,0.25)]" />
 
             {/* Content — FRONT FACE */}
-            <div className="relative overflow-hidden rounded-2xl border border-red-900/60 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] px-6 pt-8 pb-5 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.8)] [backface-visibility:hidden]">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-red-900/60 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] p-4 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.8)] [backface-visibility:hidden]">
               {/* Badge */}
               <motion.div
-                initial={{ y: -10, opacity: 0 }}
+                initial={{ y: -6, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className="mb-3 text-center"
+                className="shrink-0 text-center"
               >
-                <span className="inline-block rounded-full border border-red-800/60 bg-red-900/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-red-400">
-                  ✦ New Character ✦
+                <span className="inline-block rounded-full border border-red-800/60 bg-red-900/40 px-2 py-0.5 mb-2 text-[9px] font-bold uppercase tracking-[0.12em] text-red-400">
+                  ✦ New ✦
                 </span>
               </motion.div>
 
               {/* Character Card Preview - 9:16 Aspect Ratio */}
               <motion.div
-                initial={{ y: 30, opacity: 0 }}
+                initial={{ y: 15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.08 }}
-                className="relative mx-auto mb-4 aspect-[9/16] w-full overflow-hidden rounded-xl border border-red-900/50 bg-black shadow-inner"
+                className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-xl border border-red-900/50 bg-black shadow-inner"
                 style={{
                   transform: `rotateX(${tilt.rotateX * 0.3}deg) scale(1.03)`,
-                  boxShadow: 'inset 0 0 60px rgba(139,0,0,0.35)',
+                  boxShadow: 'inset 0 0 40px rgba(139,0,0,0.35)',
                 }}
               >
-                {/* Character Image */}
+                {/* Character Image - fit perfectly */}
                 <img
                   src={char.image}
                   alt={char.name}
-                  className="absolute inset-0 h-full w-full object-contain"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                   onError={(e) => {
                     const target = e.currentTarget;
                     target.style.display = 'none';
@@ -155,7 +155,7 @@ export function CharacterNotification() {
                   className="absolute inset-0 hidden flex-col items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-black"
                   style={{ display: 'none' }}
                 >
-                  <span className="text-8xl font-display text-red-900/40">
+                  <span className="text-7xl font-display text-red-900/40">
                     {char.name[0]}
                   </span>
                 </div>
@@ -164,20 +164,20 @@ export function CharacterNotification() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
 
                 {/* Inner glow */}
-                <div className="absolute inset-0 shadow-[inset_0_0_60px_rgba(139,0,0,0.35)]" />
+                <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(139,0,0,0.35)]" />
               </motion.div>
 
               {/* Character Info */}
               <motion.div
-                initial={{ y: 10, opacity: 0 }}
+                initial={{ y: 8, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.15 }}
-                className="text-center"
+                className="shrink-0 text-center"
               >
-                <h3 className="font-display text-2xl uppercase tracking-wider text-white drop-shadow-lg">
+                <h3 className="font-display text-lg mt-2 uppercase tracking-wider text-white drop-shadow-lg">
                   {char.name}
                 </h3>
-                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-red-400/80">
+                <p className="text-[10px] uppercase tracking-[0.1em] text-red-400/80">
                   {char.role}
                 </p>
               </motion.div>
@@ -187,7 +187,7 @@ export function CharacterNotification() {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.2 }}
-                className="my-4 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent"
+                className="shrink-0 h-px bg-gradient-to-r from-transparent via-red-800/60 to-transparent"
               />
 
               {/* Collection text */}
@@ -195,9 +195,9 @@ export function CharacterNotification() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.25 }}
-                className="text-center text-[9px] uppercase tracking-[0.1em] text-[var(--color-ink-muted)]"
+                className="shrink-0 text-center text-[8px] uppercase tracking-[0.1em] text-[var(--color-ink-muted)]"
               >
-                Added to your collection
+                Added to collection
               </motion.p>
 
               {/* Click hint */}
@@ -205,36 +205,36 @@ export function CharacterNotification() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="absolute bottom-2 left-0 right-0 text-center"
+                className="mt-auto text-center"
               >
-                <span className="text-[8px] text-[var(--color-ink-faint)]">
-                  Tap anywhere to continue
+                <span className="text-[7px] text-[var(--color-ink-faint)]">
+                  Tap to continue
                 </span>
               </motion.div>
 
               {/* Corner decorations - slightly rounded */}
-              <div className="absolute left-2 top-2 h-3 w-3 rounded-sm border-l border-t border-red-800/50" />
-              <div className="absolute right-2 top-2 h-3 w-3 rounded-sm border-r border-t border-red-800/50" />
-              <div className="absolute bottom-2 left-2 h-3 w-3 rounded-sm border-b border-l border-red-800/50" />
-              <div className="absolute bottom-2 right-2 h-3 w-3 rounded-sm border-b border-r border-red-800/50" />
+              <div className="absolute left-1.5 top-1.5 h-2 w-2 rounded-sm border-l border-t border-red-800/50" />
+              <div className="absolute right-1.5 top-1.5 h-2 w-2 rounded-sm border-r border-t border-red-800/50" />
+              <div className="absolute bottom-1.5 left-1.5 h-2 w-2 rounded-sm border-b border-l border-red-800/50" />
+              <div className="absolute bottom-1.5 right-1.5 h-2 w-2 rounded-sm border-b border-r border-red-800/50" />
             </div>
 
             {/* BACK FACE */}
             <div
-              className="absolute inset-0 overflow-hidden rounded-2xl border border-red-700/50 bg-black [backface-visibility:hidden] [transform:rotateY(180deg)]"
+              className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl border border-red-700/50 bg-black [backface-visibility:hidden] [transform:rotateY(180deg)]"
               style={{ boxShadow: 'inset 0 0 30px rgba(139,0,0,0.4), 0 0 40px rgba(139,0,0,0.3)' }}
             >
               <img
                 src="/assets/cards/darknes-back-card.webp"
                 alt="Card back"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="h-full w-full object-contain"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = 'none';
                 }}
               />
 
               {/* Subtle red vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
 
               {/* Corner decorations - slightly rounded */}
               <div className="absolute left-2 top-2 h-3 w-3 rounded-sm border-l border-t border-red-700/60" />
