@@ -3,12 +3,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '@darknes/engine';
 
 const CHARACTERS: Record<string, { name: string; role: string; image: string }> = {
-  xyera: { name: 'Xyera', role: 'Boss Lady', image: '/assets/cards/xyera-id-card.webp' },
-  elenna: { name: 'Elenna', role: 'Enforcer', image: '/assets/cards/elenna-id-card.webp' },
-  keyna: { name: 'Keyna', role: 'Informant', image: '/assets/cards/keyna-id-card.webp' },
-  rachel: { name: 'Rachel', role: 'Accountant', image: '/assets/cards/rachel.webp' },
-  henry: { name: 'Henry', role: 'Soldier', image: '/assets/cards/henry.webp' },
-  azaroth: { name: 'Azaroth', role: 'Rival Boss', image: '/assets/cards/azaroth.webp' },
+  xyera: { name: 'Xyera', role: 'Companion', image: '/assets/cards/xyera-id-card.webp' },
+  elenna: { name: 'Elenna', role: 'Childhood Friend', image: '/assets/cards/elenna-id-card.webp' },
+  keyna: { name: 'Keyna', role: 'Business Partner', image: '/assets/cards/keyna-id-card.webp' },
+  rachel: { name: 'Rachel', role: 'Little Sister', image: '/assets/cards/rachel-id-card.webp' },
+  henry: { name: 'Henry', role: 'Little Brother', image: '/assets/cards/henry-id-card.webp' },
+  azaroth: { name: 'Azaroth', role: 'Main Antagonist', image: '/assets/cards/azaroth-id-card.webp' },
+  victor: { name: 'Victor', role: 'Business Associate', image: '/assets/cards/victor-id-card.webp' },
+  samuel: { name: 'Samuel Ravenscroft', role: 'Player Father', image: '/assets/cards/samuel-id-card.webp' },
+  mother: { name: 'Ravenscroft Mother', role: 'Player Mother', image: '/assets/cards/mother-id-card.webp' },
+  
 };
 
 // Audio notification sound

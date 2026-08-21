@@ -6,12 +6,16 @@ import { useGameStore } from '@darknes/engine';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ALL_CHARACTERS = [
-  { id: 'xyera', name: 'Xyera', role: 'Boss Lady', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/xyera-id-card.webp' },
-  { id: 'elenna', name: 'Elenna', role: 'Enforcer', rarity: 'epic', accent: '#9333ea', image: '/assets/cards/elenna-id-card.webp' },
-  { id: 'keyna', name: 'Keyna', role: 'Informant', rarity: 'rare', accent: '#2563eb', image: '/assets/cards/keyna-id-card.webp' },
-  { id: 'rachel', name: 'Rachel', role: 'Accountant', rarity: 'rare', accent: '#0891b2', image: '/assets/cards/rachel-id-card.webp' },
-  { id: 'henry', name: 'Henry', role: 'Soldier', rarity: 'common', accent: '#64748b', image: '/assets/cards/henry-id-card.webp' },
-  { id: 'azaroth', name: 'Azaroth', role: 'Rival Boss', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/azaroth-id-card.webp' },
+  {id: 'xyera', name: 'Xyera', role: 'Companion', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/xyera-id-card.webp'},
+  {id: 'elenna', name: 'Elenna', role: 'Childhood Friend', rarity: 'epic', accent: '#9333ea', image: '/assets/cards/elenna-id-card.webp'},
+  {id: 'keyna', name: 'Keyna', role: 'Business Partner', rarity: 'epic', accent: '#2563eb', image: '/assets/cards/keyna-id-card.webp'},
+  {id: 'rachel', name: 'Rachel', role: 'Little Sister', rarity: 'common', accent: '#0891b2', image: '/assets/cards/rachel-id-card.webp'},
+  {id: 'henry', name: 'Henry', role: 'Little Brother', rarity: 'common', accent: '#64748b', image: '/assets/cards/henry-id-card.webp'},
+  {id: 'mike', name: 'Mike', role: 'Little Brother', rarity: 'common', accent: '#16a34a', image: '/assets/cards/mike-id-card.webp'},
+  {id: 'victor', name: 'Victor Hale', role: 'Business Associate', rarity: 'rare', accent: '#64748b', image: '/assets/cards/victor-id-card.webp'},
+  {id: 'azaroth', name: 'Azaroth', role: 'Main Antagonist', rarity: 'legendary', accent: '#dc2626', image: '/assets/cards/azaroth-id-card.webp'},
+  {id: 'samuel', name: 'Samuel Ravenscroft', role: 'Player Father', rarity: 'legendary', accent: '#7c3aed', image: '/assets/cards/samuel-id-card.webp'},
+  {id: 'mother', name: 'Ravenscroft Mother', role: 'Player Mother', rarity: 'legendary', accent: '#db2777', image: '/assets/cards/mother-id-card.webp'},
 ];
 
 const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> = {
