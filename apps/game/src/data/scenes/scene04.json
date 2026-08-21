@@ -11,7 +11,7 @@
                       "type":  "narration",
                       "characters":  [],
                       "audio":  [{ "channel":  "sfx", "id":  "opendoor_footstep_dropbook" }],
-                      "text":  "Beberapa saat setelah rapat. Pintu ruang direktur terbuka. Seorang pria berambut hitam memasuki ruangan sambil membawa beberapa map. Tatapannya tajam. Langkahnya tenang. Ia meletakkan dokumen di atas meja tanpa banyak bicara.",
+                      "text":  "Beberapa saat setelah rapat. Pintu ruang direktur terbuka. Seorang wanita berambut hitam dengan gradian merah memasuki ruangan sambil membawa beberapa map. Tatapannya tajam. Langkahnya tenang. Ia meletakkan dokumen di atas meja tanpa banyak bicara.",
                       "next":  "scene04_n002"
                   },
                   {
@@ -28,6 +28,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "voice", "id":  "keyna/scene04_n002" }],
                       "text":  "Kontrak bisnis di Asia. Aku sudah memeriksanya.",
                       "next":  "scene04_n003"
                   },
@@ -53,6 +54,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "voice", "id":  "keyna/scene04_n004" }],
                       "text":  "Halaman tujuh. Baris kedua. Angkanya salah.",
                       "next":  "scene04_n005"
                   },
@@ -105,6 +107,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "voice", "id":  "keyna/scene04_n007a" }],
                       "text":  "(mengangguk pelan) Bagus. Kesalahan yang diperbaiki lebih baik daripada kesalahan yang dipertahankan.",
                       "next":  "scene04_n008"
                   },
@@ -122,6 +125,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "voice", "id":  "keyna/scene04_n007b" }],
                       "text":  "(menatap tajam {playerName}) Dalam bisnis... tidak ada yang namanya kesalahan kecil.",
                       "next":  "scene04_n008"
                   },
@@ -156,6 +160,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "voice", "id":  "keyna/scene04_n008" }],
                       "text":  "Investor dari Jerman meminta negosiasi ulang. Mereka ingin menaikkan harga lima belas persen.",
                       "next":  "scene04_n009"
                   },
@@ -234,6 +239,7 @@
                                              "isSpeaking":  true
                                          }
                                      ],
+                      "audio":  [{ "channel":  "voice", "id":  "keyna/scene04_n010c" }],
                       "text":  "(menatap {playerName} beberapa saat) Kau mulai berpikir beberapa langkah ke depan ya?",
                       "next":  "scene04_n011"
                   },

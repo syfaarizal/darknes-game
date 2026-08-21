@@ -299,4 +299,35 @@ export const AUDIO_TRACKS: Record<string, AudioManifestEntry> = {
     channel: AudioChannel.Sfx,
     path: 'audio/sfx/up-stroking-sfx.mp3',
   },
+  // Voice — Keyna Scene 04
+  'keyna/scene04_n002': {
+    id: 'keyna/scene04_n002',
+    channel: AudioChannel.Voice,
+    path: 'audio/voice/keyna/scene04_n002.mp3',
+  },
+  'keyna/scene04_n004': {
+    id: 'keyna/scene04_n004',
+    channel: AudioChannel.Voice,
+    path: 'audio/voice/keyna/scene04_n004.mp3',
+  },
+  'keyna/scene04_n007a': {
+    id: 'keyna/scene04_n007a',
+    channel: AudioChannel.Voice,
+    path: 'audio/voice/keyna/scene04_n007a.mp3',
+  },
+  'keyna/scene04_n007b': {
+    id: 'keyna/scene04_n007b',
+    channel: AudioChannel.Voice,
+    path: 'audio/voice/keyna/scene04_n007b.mp3',
+  },
+  'keyna/scene04_n008': {
+    id: 'keyna/scene04_n008',
+    channel: AudioChannel.Voice,
+    path: 'audio/voice/keyna/scene04_n008.mp3',
+  },
+  'keyna/scene04_n010c': {
+    id: 'keyna/scene04_n010c',
+    channel: AudioChannel.Voice,
+    path: 'audio/voice/keyna/scene04_n010c.mp3',
+  },
 };
