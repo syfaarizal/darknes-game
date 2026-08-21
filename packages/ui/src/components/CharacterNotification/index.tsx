@@ -3,9 +3,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '@darknes/engine';
 
 const CHARACTERS: Record<string, { name: string; role: string; image: string }> = {
-  xyera: { name: 'Xyera', role: 'Boss Lady', image: '/assets/cards/xyera.webp' },
+  xyera: { name: 'Xyera', role: 'Boss Lady', image: '/assets/cards/xyera-id-card.webp' },
   elenna: { name: 'Elenna', role: 'Enforcer', image: '/assets/cards/elenna-id-card.webp' },
-  keyna: { name: 'Keyna', role: 'Informant', image: '/assets/cards/keyna.webp' },
+  keyna: { name: 'Keyna', role: 'Informant', image: '/assets/cards/keyna-id-card.webp' },
   rachel: { name: 'Rachel', role: 'Accountant', image: '/assets/cards/rachel.webp' },
   henry: { name: 'Henry', role: 'Soldier', image: '/assets/cards/henry.webp' },
   azaroth: { name: 'Azaroth', role: 'Rival Boss', image: '/assets/cards/azaroth.webp' },
