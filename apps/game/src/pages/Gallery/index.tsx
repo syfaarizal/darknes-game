@@ -26,6 +26,7 @@ const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> 
 };
 
 const BACK_CARD_IMAGE = '/assets/cards/darknes-back-card.webp';
+const FLIP_SFX = new Audio('/assets/audio/sfx/flipcard-sfx.mp3');
 
 function CardBackFace({ className = '' }: { className?: string }) {
   return (
@@ -75,6 +76,17 @@ function MiniCard({
   onOpen: () => void;
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const prevFlipped = useRef(false);
+
+  // Play flip sound when state changes
+  useEffect(() => {
+    if (isFlipped !== prevFlipped.current) {
+      FLIP_SFX.currentTime = 0;
+      FLIP_SFX.volume = 0.3;
+      FLIP_SFX.play().catch(() => {});
+      prevFlipped.current = isFlipped;
+    }
+  }, [isFlipped]);
 
   return (
     <motion.div
@@ -183,6 +195,17 @@ export function Gallery() {
       setIsModalFlipped(false);
     }
   }, [selectedCard]);
+
+  // Play flip sound for modal
+  const prevModalFlipped = useRef(false);
+  useEffect(() => {
+    if (isModalFlipped !== prevModalFlipped.current) {
+      FLIP_SFX.currentTime = 0;
+      FLIP_SFX.volume = 0.4;
+      FLIP_SFX.play().catch(() => {});
+      prevModalFlipped.current = isModalFlipped;
+    }
+  }, [isModalFlipped]);
 
   // Get selected character data
   const selectedChar = selectedCard

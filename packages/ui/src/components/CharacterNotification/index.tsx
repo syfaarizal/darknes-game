@@ -17,6 +17,7 @@ const CHARACTERS: Record<string, { name: string; role: string; image: string }> 
 
 // Audio notification sound
 const NOTIF_SFX = new Audio('/assets/audio/sfx/notif-sfx.wav');
+const FLIP_SFX = new Audio('/assets/audio/sfx/flipcard-sfx.mp3');
 
 // Back face component - shared with Gallery
 function CardBackFace({ className = '' }: { className?: string }) {
@@ -104,6 +105,17 @@ export function CharacterNotification() {
       setIsFlipped(false);
     }
   }, [char]);
+
+  // Play flip sound
+  const prevFlipped = useRef(false);
+  useEffect(() => {
+    if (isFlipped !== prevFlipped.current) {
+      FLIP_SFX.currentTime = 0;
+      FLIP_SFX.volume = 0.4;
+      FLIP_SFX.play().catch(() => {});
+      prevFlipped.current = isFlipped;
+    }
+  }, [isFlipped]);
 
   return (
     <AnimatePresence>
