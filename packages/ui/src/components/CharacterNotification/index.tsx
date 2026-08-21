@@ -21,6 +21,7 @@ const NOTIF_SFX = new Audio('/assets/audio/sfx/notif-sfx.wav');
 export function CharacterNotification() {
   const { newCharacterNotification, clearNewCharacterNotification } = useGameStore();
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
+  const [isFlipped, setIsFlipped] = useState(false);
   const hasPlayedSound = useRef(false);
 
   const char = newCharacterNotification ? CHARACTERS[newCharacterNotification] : null;
@@ -58,6 +59,7 @@ export function CharacterNotification() {
 
   const handleMouseLeave = useCallback(() => {
     setTilt({ rotateX: 0, rotateY: 0 });
+    setIsFlipped(false);
   }, []);
 
   return (
@@ -74,6 +76,7 @@ export function CharacterNotification() {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
+          {/* Outer card with aggressive 3D tilt */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0, y: 60 }}
             animate={{
@@ -89,10 +92,17 @@ export function CharacterNotification() {
               rotateY: { type: 'spring', stiffness: 80, damping: 12 },
               scale: { type: 'spring', stiffness: 150, damping: 15 },
             }}
-            style={{ perspective: 700 }}
+            style={{ perspective: 700, transformStyle: 'preserve-3d' }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-72 cursor-pointer overflow-hidden rounded-2xl border border-red-900/60 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.8)]"
+            onMouseEnter={() => setIsFlipped(true)}
+            className="relative w-72 cursor-pointer [transform-style:preserve-3d]"
           >
+            {/* Inner flip card. Tilt (outer) and flip (inner) compose on the Y-axis. */}
+            <motion.div
+              animate={{ rotateY: isFlipped ? 180 : 0 }}
+              transition={{ type: 'spring', stiffness: 110, damping: 18 }}
+              className="relative w-full [transform-style:preserve-3d]"
+            >
             {/* Animated pulsing glow */}
             <motion.div
               animate={{ opacity: [0.4, 0.8, 0.4] }}
@@ -102,8 +112,8 @@ export function CharacterNotification() {
             />
             <div className="absolute inset-0 rounded-2xl shadow-[inset_0_0_50px_rgba(139,0,0,0.25)]" />
 
-            {/* Content */}
-            <div className="relative px-6 pt-8 pb-5">
+            {/* Content — FRONT FACE */}
+            <div className="relative overflow-hidden rounded-2xl border border-red-900/60 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] px-6 pt-8 pb-5 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.8)] [backface-visibility:hidden]">
               {/* Badge */}
               <motion.div
                 initial={{ y: -15, opacity: 0 }}
@@ -189,25 +199,57 @@ export function CharacterNotification() {
               >
                 Added to your collection
               </motion.p>
+
+              {/* Click hint */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="absolute bottom-2 left-0 right-0 text-center"
+              >
+                <span className="text-[9px] text-[var(--color-ink-faint)]">
+                  Tap anywhere to continue
+                </span>
+              </motion.div>
+
+              {/* Corner decorations */}
+              <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-red-800/50" />
+              <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-red-800/50" />
+              <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-red-800/50" />
+              <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-red-800/50" />
             </div>
 
-            {/* Click hint */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="absolute bottom-2 left-0 right-0 text-center"
+            {/* BACK FACE */}
+            <div
+              className="absolute inset-0 overflow-hidden rounded-2xl border border-red-700/50 bg-black [backface-visibility:hidden] [transform:rotateY(180deg)]"
+              style={{ boxShadow: 'inset 0 0 30px rgba(139,0,0,0.4), 0 0 40px rgba(139,0,0,0.3)' }}
             >
-              <span className="text-[9px] text-[var(--color-ink-faint)]">
-                Tap anywhere to continue
-              </span>
-            </motion.div>
+              <img
+                src="/assets/cards/darknes-back-card.webp"
+                alt="Card back"
+                className="absolute inset-0 h-full w-full object-cover"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = 'none';
+                }}
+              />
 
-            {/* Corner decorations */}
-            <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-red-800/50" />
-            <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-red-800/50" />
-            <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-red-800/50" />
-            <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-red-800/50" />
+              {/* Subtle red vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
+
+              {/* Corner decorations */}
+              <div className="absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-red-700/60" />
+              <div className="absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-red-700/60" />
+              <div className="absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-red-700/60" />
+              <div className="absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-red-700/60" />
+
+              {/* Wordmark */}
+              <div className="absolute inset-x-0 bottom-4 text-center">
+                <span className="font-display text-[11px] uppercase tracking-[0.3em] text-red-500/80 drop-shadow-[0_0_10px_rgba(139,0,0,0.7)]">
+                  ✦ Darknes ✦
+                </span>
+              </div>
+            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}

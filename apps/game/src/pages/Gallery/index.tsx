@@ -25,12 +25,136 @@ const RARITY_INFO: Record<string, { label: string; color: string; bg: string }> 
   common: { label: 'Common', color: 'text-gray-400', bg: 'bg-gray-900/30 border-gray-700/40' },
 };
 
+const BACK_CARD_IMAGE = '/assets/cards/darknes-back-card.webp';
+
+// Shared back face used by every card in this file.
+// Pre-rotated 180° so when the parent flips via rotateY(180deg),
+// the back image reads correctly to the viewer.
+function CardBackFace({ className = '' }: { className?: string }) {
+  return (
+    <div
+      className={`absolute inset-0 overflow-hidden rounded-[inherit] border border-red-700/40 bg-black [backface-visibility:hidden] [transform:rotateY(180deg)] ${className}`}
+      style={{ boxShadow: 'inset 0 0 30px rgba(139,0,0,0.4), 0 0 20px rgba(139,0,0,0.25)' }}
+    >
+      {/* Back artwork */}
+      <img
+        src={BACK_CARD_IMAGE}
+        alt="Card back"
+        className="absolute inset-0 h-full w-full object-cover"
+        onError={(e) => {
+          (e.currentTarget as HTMLImageElement).style.display = 'none';
+        }}
+      />
+
+      {/* Subtle red vignette */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-red-900/20" />
+
+      {/* Corner decorations */}
+      <div className="absolute left-2 top-2 h-3 w-3 border-l-2 border-t-2 border-red-700/60" />
+      <div className="absolute right-2 top-2 h-3 w-3 border-r-2 border-t-2 border-red-700/60" />
+      <div className="absolute bottom-2 left-2 h-3 w-3 border-b-2 border-l-2 border-red-700/60" />
+      <div className="absolute bottom-2 right-2 h-3 w-3 border-b-2 border-r-2 border-red-700/60" />
+
+      {/* Wordmark */}
+      <div className="absolute inset-x-0 bottom-3 text-center">
+        <span className="font-display text-[10px] uppercase tracking-[0.3em] text-red-500/70 drop-shadow-[0_0_8px_rgba(139,0,0,0.6)]">
+          ✦ Darknes ✦
+        </span>
+      </div>
+    </div>
+  );
+}
+
+type Character = (typeof ALL_CHARACTERS)[number];
+
+// Mini-card in the gallery grid. Flips on hover to reveal the back face.
+function MiniCard({
+  char,
+  index,
+  onOpen,
+}: {
+  char: Character;
+  index: number;
+  onOpen: () => void;
+}) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05 }}
+      className="group cursor-pointer"
+      style={{ perspective: 600 }}
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+      onClick={onOpen}
+    >
+      <motion.div
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ type: 'spring', stiffness: 120, damping: 18 }}
+        className="relative aspect-[3/4] w-full [transform-style:preserve-3d]"
+      >
+        {/* Front face */}
+        <div
+          className="absolute inset-0 overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 group-hover:border-red-800/50 group-hover:shadow-[0_0_20px_rgba(139,0,0,0.2)] [backface-visibility:hidden]"
+        >
+          {/* Character Image */}
+          <img
+            src={char.image}
+            alt={char.name}
+            className="absolute inset-0 h-full w-full object-cover object-top"
+            onError={(e) => {
+              const target = e.currentTarget;
+              target.style.display = 'none';
+              const fallback = target.nextElementSibling as HTMLElement;
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+
+          {/* Fallback initial */}
+          <div
+            className="absolute inset-0 hidden items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]"
+            style={{ display: 'none' }}
+          >
+            <span className="text-4xl font-display text-white/10">
+              {char.name[0]}
+            </span>
+          </div>
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+
+          {/* Rarity badge */}
+          <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity]?.color ?? RARITY_INFO.common.color} ${RARITY_INFO[char.rarity]?.bg ?? RARITY_INFO.common.bg}`}>
+            {char.rarity}
+          </div>
+
+          {/* Info */}
+          <div className="absolute bottom-0 left-0 right-0 p-2">
+            <h3 className="font-display text-xs uppercase tracking-wide text-white drop-shadow-md">
+              {char.name}
+            </h3>
+            <p className="text-[9px] uppercase tracking-wider text-red-400/70">
+              {char.role}
+            </p>
+          </div>
+        </div>
+
+        {/* Back face */}
+        <CardBackFace className="rounded-lg" />
+      </motion.div>
+    </motion.div>
+  );
+}
+
 export function Gallery() {
   const navigate = useNavigate();
   const collectedCharacters = useGameStore((s) => s.collectedCharacters);
 
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
+  const [isModalFlipped, setIsModalFlipped] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Filter collected characters
@@ -59,6 +183,7 @@ export function Gallery() {
   useEffect(() => {
     if (!selectedCard) {
       setTilt({ rotateX: 0, rotateY: 0 });
+      setIsModalFlipped(false);
     }
   }, [selectedCard]);
 
@@ -124,60 +249,12 @@ export function Gallery() {
           /* Grid of cards */
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
             {collectedChars.map((char, index) => (
-              <motion.div
+              <MiniCard
                 key={char.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className="group cursor-pointer"
-                onClick={() => setSelectedCard(char.id)}
-              >
-                {/* Card */}
-                <div
-                  className="relative aspect-[3/4] overflow-hidden rounded-lg border border-red-900/30 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] transition-all duration-200 hover:border-red-800/50 hover:shadow-[0_0_20px_rgba(139,0,0,0.2)] active:scale-95"
-                >
-                  {/* Character Image */}
-                  <img
-                    src={char.image}
-                    alt={char.name}
-                    className="absolute inset-0 h-full w-full object-cover object-top"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      target.style.display = 'none';
-                      const fallback = target.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-
-                  {/* Fallback initial */}
-                  <div
-                    className="absolute inset-0 hidden items-center justify-center bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)]"
-                    style={{ display: 'none' }}
-                  >
-                    <span className="text-4xl font-display text-white/10">
-                      {char.name[0]}
-                    </span>
-                  </div>
-
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-
-                  {/* Rarity badge */}
-                  <div className={`absolute right-1.5 top-1.5 rounded border px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wider ${RARITY_INFO[char.rarity]?.color ?? RARITY_INFO.common.color} ${RARITY_INFO[char.rarity]?.bg ?? RARITY_INFO.common.bg}`}>
-                    {char.rarity}
-                  </div>
-
-                  {/* Info */}
-                  <div className="absolute bottom-0 left-0 right-0 p-2">
-                    <h3 className="font-display text-xs uppercase tracking-wide text-white drop-shadow-md">
-                      {char.name}
-                    </h3>
-                    <p className="text-[9px] uppercase tracking-wider text-red-400/70">
-                      {char.role}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+                char={char}
+                index={index}
+                onOpen={() => setSelectedCard(char.id)}
+              />
             ))}
           </div>
         )}
@@ -206,7 +283,7 @@ export function Gallery() {
             onMouseMove={handleMouseMove}
             onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })}
           >
-            {/* Card with extreme 3D tilt */}
+            {/* Outer card with aggressive 3D tilt */}
             <motion.div
               initial={{ scale: 0.6, opacity: 0 }}
               animate={{
@@ -221,18 +298,26 @@ export function Gallery() {
                 rotateY: { type: 'spring', stiffness: 80, damping: 12 },
                 scale: { type: 'spring', stiffness: 180, damping: 18 },
               }}
-              style={{ perspective: 700 }}
+              style={{ perspective: 700, transformStyle: 'preserve-3d' }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-80 cursor-pointer overflow-hidden rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.7)]"
+              onMouseEnter={() => setIsModalFlipped(true)}
+              onMouseLeave={() => setIsModalFlipped(false)}
+              className="relative w-80 cursor-pointer [transform-style:preserve-3d]"
             >
+              {/* Inner flip card. The tilt and flip compose: outer tilts within ±35°, inner flips 0↔180°. */}
+              <motion.div
+                animate={{ rotateY: isModalFlipped ? 180 : 0 }}
+                transition={{ type: 'spring', stiffness: 110, damping: 18 }}
+                className="relative w-full [transform-style:preserve-3d]"
+              >
               {/* Strong glow effect */}
               <div
                 className="absolute inset-0 opacity-20 blur-3xl"
                 style={{ backgroundColor: selectedChar.accent }}
               />
 
-              {/* Card content */}
-              <div className="relative p-6">
+              {/* Card content — FRONT FACE */}
+              <div className="relative rounded-2xl border-2 border-red-900/50 bg-gradient-to-b from-[var(--color-graphite)] to-[var(--color-void)] p-6 shadow-[0_0_100px_rgba(139,0,0,0.5),0_30px_60px_-15px_rgba(0,0,0,0.7)] [backface-visibility:hidden]">
                 {/* Rarity badge */}
                 <div className={`absolute right-5 top-5 z-10 rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${RARITY_INFO[selectedChar.rarity]?.color ?? ''} ${RARITY_INFO[selectedChar.rarity]?.bg ?? ''}`}>
                   {RARITY_INFO[selectedChar.rarity]?.label ?? selectedChar.rarity}
@@ -308,23 +393,27 @@ export function Gallery() {
                 <p className="text-center text-[10px] uppercase tracking-widest text-[var(--color-ink-muted)]">
                   ✦ Collected ✦
                 </p>
+
+                {/* Corner decorations */}
+                <div className="absolute left-4 top-4 h-5 w-5 border-l-2 border-t-2 border-red-700/50" />
+                <div className="absolute right-4 top-4 h-5 w-5 border-r-2 border-t-2 border-red-700/50" />
+                <div className="absolute bottom-4 left-4 h-5 w-5 border-b-2 border-l-2 border-red-700/50" />
+                <div className="absolute bottom-4 right-4 h-5 w-5 border-b-2 border-r-2 border-red-700/50" />
+
+                {/* Pulsing close hint */}
+                <motion.div
+                  animate={{ opacity: [0.3, 0.8, 0.3] }}
+                  transition={{ duration: 1.2, repeat: Infinity }}
+                  className="absolute bottom-3 left-0 right-0 text-center"
+                >
+                  <span className="text-[9px] uppercase tracking-widest text-[var(--color-ink-faint)]">
+                    Tap anywhere to close
+                  </span>
+                </motion.div>
               </div>
 
-              {/* Corner decorations */}
-              <div className="absolute left-4 top-4 h-5 w-5 border-l-2 border-t-2 border-red-700/50" />
-              <div className="absolute right-4 top-4 h-5 w-5 border-r-2 border-t-2 border-red-700/50" />
-              <div className="absolute bottom-4 left-4 h-5 w-5 border-b-2 border-l-2 border-red-700/50" />
-              <div className="absolute bottom-4 right-4 h-5 w-5 border-b-2 border-r-2 border-red-700/50" />
-
-              {/* Pulsing close hint */}
-              <motion.div
-                animate={{ opacity: [0.3, 0.8, 0.3] }}
-                transition={{ duration: 1.2, repeat: Infinity }}
-                className="absolute bottom-3 left-0 right-0 text-center"
-              >
-                <span className="text-[9px] uppercase tracking-widest text-[var(--color-ink-faint)]">
-                  Tap anywhere to close
-                </span>
+              {/* BACK FACE */}
+              <CardBackFace />
               </motion.div>
             </motion.div>
           </motion.div>
